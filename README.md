@@ -1,8 +1,15 @@
-# React + Vite
+// steps to push the code as collaborator 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+git clone https://github.com/Writo03/Writo-Education-Frontend.git
+// add the changes by creating your files and adding the componenets  
+// new branch creation 
+git  checkout -b feature-branch-name
+// switch to an existing branch 
+git checkout existing-branch-name
+git add .
+git commit -m "Descriptive commit message"
+git push origin feature-branch-name
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ // if anyone is facing any problem then do contact on slack .
+
