@@ -4,10 +4,40 @@ import './App.css';
 import MentorCard from './Components/MentorCard';
 
 const App = () => {
+    const mentors = [
+        {
+          name: "Rashmi Poonea",
+          image: "https://dummyimage.com/81x81",
+          subjects: ["Maths", "Physics"],
+          university: "IIT Madras",
+          year: 2016
+        },
+        {
+          name: "John Doe",
+          image: "https://dummyimage.com/81x81",
+          subjects: ["Chemistry", "Biology"],
+          university: "MIT",
+          year: 2015
+        },
+        {
+          name: "Jane Smith",
+          image: "https://dummyimage.com/81x81",
+          subjects: ["History", "Geography"],
+          university: "Harvard",
+          year: 2018
+        }, {
+            name: "Jan Smith",
+            image: "https://dummyimage.com/81x81",
+            subjects: ["History", "Geography"],
+            university: "Harvard",
+            year: 2018
+          }
+      ];
+    
     return (
         <div className="font-[Poppins] h-screen  overflow-x-hidden">
             <Navbar />
-            <MentorCard/>
+            <MentorCard mentors={mentors} />
         </div>
     );
 };
