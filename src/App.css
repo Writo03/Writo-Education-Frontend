@@ -87,6 +87,15 @@ body {
   cursor: pointer;
 }
 
+.about-button {
+  background-color: #488B80;
+  color: white;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
 .hero-text button:hover {
   background-color: #218838;
 }
