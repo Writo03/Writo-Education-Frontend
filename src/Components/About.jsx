@@ -61,7 +61,7 @@ const About = () => {
                 <IoCheckmarkCircleOutline style={{ fontSize: '30px',color:"#07744E" }} className="mr-1 item2" /> Conduct a problem solving seminar every week.
             </p>
           </div>
-          <button class="flex mr-auto text-white bg-[#488B80] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded item3 font-semibold">Try our doubt clearing session</button>
+          <button className="flex mr-auto text-white bg-[#488B80] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded item3 font-semibold">Try our doubt clearing session</button>
         </div>
       </div>
     </section>
