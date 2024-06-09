@@ -2,13 +2,12 @@ import React from 'react';
 import topImage from '../assets/image1.png'; 
 import bottomImage from '../assets/image2.png'; 
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
+
 const About = () => {
   return (
     <section className="text-gray-600 body-font">
-
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden relative">
-
           <div className="relative w-full md:w-1/2 flex flex-col gap-4">
             <div className="relative">
               <img
@@ -17,7 +16,7 @@ const About = () => {
                 className="w-full h-auto rounded-lg shadow-md sm:w-3/4 md:w-2/3 lg:w-full"
               />
             </div>
-            <div className="relative mt-6">
+            <div className="relative mt-6 hidden sm:block">
               <img
                 src={bottomImage}
                 alt="Bottom Image"
@@ -31,34 +30,34 @@ const About = () => {
             <div className="text-xl item3 text-black font-extrabold">
               Learn and clear your doubts
             </div>
-            <a className="mt-2 text-black item2 text-medium" style={{display: 'block', marginBottom:'1px' }}>
-                Writo believe in the transformative power of education.
+            <a className="mt-2 text-black item2 text-medium" style={{ display: 'block', marginBottom: '1px' }}>
+              Writo believe in the transformative power of education.
             </a>
-            <a className="mt-2 text-black item2 text-medium" style={{display: 'block'}}>
-                Our mission is to empower learners to achieve their academic and professional 
+            <a className="mt-2 text-black item2 text-medium" style={{ display: 'block' }}>
+              Our mission is to empower learners to achieve their academic and professional 
             </a>
-            <a className="mt-2 text-black item2 text-medium" style={{display: 'block'}}>
-            goals through innovative, engaging, and accessible online education.
+            <a className="mt-2 text-black item2 text-medium" style={{ display: 'block' }}>
+              goals through innovative, engaging, and accessible online education.
             </a>
           </div>
           <div className="flex flex-col mb-5 lg:items-start items-center">
             <p className="text-black font-bold flex items-center">
-                <IoCheckmarkCircleOutline style={{ fontSize: '30px',color:"#07744E" }} className="mr-2 item2" /> IIT JEE and NEET preparations.
-            </p>
-         </div>
-          <div className="flex flex-col mb-5 lg:items-start items-center">
-          <p className="text-black font-bold flex items-center">
-                <IoCheckmarkCircleOutline style={{ fontSize: '30px',color:"#07744E" }} className="mr-1 item2" />  Online classes from 6th standard to 12 th standard.
+              <IoCheckmarkCircleOutline style={{ fontSize: '30px', color: "#07744E" }} className="mr-2 item2" /> IIT JEE and NEET preparations.
             </p>
           </div>
           <div className="flex flex-col mb-5 lg:items-start items-center">
-          <p className="text-black font-bold flex items-center">
-                <IoCheckmarkCircleOutline style={{ fontSize: '30px',color:"#07744E" }} className="mr-1 item2" />  Doubt clearing session 
+            <p className="text-black font-bold flex items-center">
+              <IoCheckmarkCircleOutline style={{ fontSize: '30px', color: "#07744E" }} className="mr-1 item2" /> Online classes from 6th standard to 12th standard.
             </p>
           </div>
           <div className="flex flex-col mb-5 lg:items-start items-center">
-          <p className="text-black font-bold flex items-center">
-                <IoCheckmarkCircleOutline style={{ fontSize: '30px',color:"#07744E" }} className="mr-1 item2" /> Conduct a problem solving seminar every week.
+            <p className="text-black font-bold flex items-center">
+              <IoCheckmarkCircleOutline style={{ fontSize: '30px', color: "#07744E" }} className="mr-1 item2" /> Doubt clearing session 
+            </p>
+          </div>
+          <div className="flex flex-col mb-5 lg:items-start items-center">
+            <p className="text-black font-bold flex items-center">
+              <IoCheckmarkCircleOutline style={{ fontSize: '30px', color: "#07744E" }} className="mr-1 item2" /> Conduct a problem solving seminar every week.
             </p>
           </div>
           <button className="flex mr-auto text-white bg-[#488B80] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded item3 font-semibold">Try our doubt clearing session</button>

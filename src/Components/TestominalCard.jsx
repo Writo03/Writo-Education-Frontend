@@ -82,13 +82,13 @@ const TestimonialCard = ({ testimonials }) => {
       ))}
     </div>
     <div className="flex justify-center items-center mt-4">
-      <button onClick={handlePrev} className="mr-4 text-2xl hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-l">
+      <button onClick={handlePrev} className="mr-4 text-2xl text-gray-800 hover:text-[#54C8B4] font-semibold py-2 px-4 rounded-l">
         <FaArrowLeft />
       </button>
       {[...Array(3)].map((_, index) => (
         <FaCircle key={index} className={`text-xs ${index === activeDot ? 'text-[#54C8B4] mr-4' : 'text-[#D9D9D9]'} mx-2 cursor-pointer`} onClick={() => setStartIndex(index * 3)} />
       ))}
-      <button onClick={handleNext} className="ml-4 text-2xl hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-r">
+      <button onClick={handleNext} className="ml-4 text-2xl hover:text-[#54C8B4] text-gray-800 font-semibold py-2 px-4 rounded-r">
         <FaArrowRight />
       </button>
     </div>

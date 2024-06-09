@@ -9,6 +9,7 @@ import TestimonialCard from './Components/TestominalCard';
 import image from './assets/image copy.png';
 import image1 from './assets/image3.png';
 import Contactus from './Components/Contactus';
+import Test from './Components/Test';
 const App = () => {
     const mentors = [
         {
@@ -74,6 +75,7 @@ const App = () => {
         </div>
         <About />
           <MentorCard mentors={mentors} />
+          <Test />
           <TestimonialCard testimonials={testimonialsData} />
           <Contactus />
         </div>

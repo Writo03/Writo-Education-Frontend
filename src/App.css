@@ -162,3 +162,8 @@ body {
     font-size: 0.875em;
   }
 }
+@media (max-width: 768px) {
+  .text-white {
+    background-size: contain;
+  }
+}
