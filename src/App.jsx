@@ -2,6 +2,9 @@ import React from 'react';
 import Navbar from './Components/Navbar';
 import './App.css';
 import MentorCard from './Components/MentorCard';
+import HeroSection from './Components/HeroSection';
+import NavScrollExample from './Components/NavScrollExample';
+import About from './Components/About';
 
 const App = () => {
     const mentors = [
@@ -35,9 +38,13 @@ const App = () => {
       ];
     
     return (
-        <div className="font-[Poppins] h-screen  overflow-x-hidden">
+        <div>
+          <div className="font-[Poppins] h-screen overflow-h bg1">
             <Navbar />
-            <MentorCard mentors={mentors} />
+            <HeroSection/>
+        </div>
+        <About />
+          {/* <MentorCard mentors={mentors} /> */}
         </div>
     );
 };

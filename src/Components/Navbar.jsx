@@ -12,14 +12,14 @@ const Navbar = () => {
     };
 
     return (
-        <header className="bg-white mt-1">
+        <header className="">
             <nav className="flex justify-between items-center w-full max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="flex items-center gap-2">
                     <img className="w-16 cursor-pointer" src={img} alt="Writo Education Logo" />
                     <span className="font-semibold hidden md:block text-xl item1">Writo Education</span>
                 </div>
                 <div
-                    className={`nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 ${menuOpen ? 'top-[9%]' : 'top-[-100%]'} md:w-auto w-full flex items-center px-5`}
+                    className={`nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 ${menuOpen ? 'top-[9%]' : 'top-[-100%]'} md:w-auto w-full flex items-center px-5`}
                 >
                     <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
                         <li>
@@ -29,28 +29,8 @@ const Navbar = () => {
                             className="relative dropdown flex items-center gap-1"
                             onClick={() => setDropdownOpen(!dropdownOpen)}
                         >
-                            <a className="nav-item text-xl cursor-pointer flex items-center ">Foundation <IoIosArrowDown /></a>
-                            {dropdownOpen && (
-                                <ul 
-                                    className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-lg w-48 dropdown-menu"
-                                >
-                                    <li className="px-4 py-2 hover:bg-gray-200">
-                                        <a href="#">Why writo</a>
-                                    </li>
-                                    <li className="px-4 py-2 hover:bg-gray-200">
-                                        <a href="#">Courses</a>
-                                    </li>
-                                    <li className="px-4 py-2 hover:bg-gray-200">
-                                        <a href="#">Doubt classes</a>
-                                    </li>
-                                    <li className="px-4 py-2 hover:bg-gray-200">
-                                        <a href="#">Features</a>
-                                    </li>
-                                    <li className="px-4 py-2 hover:bg-gray-200">
-                                        <a href="#">Plans</a>
-                                    </li>
-                                </ul>
-                            )}
+                            <a className="nav-item text-xl cursor-pointer flex items-center ">Foundation</a>
+                            
                         </li>
                         <li>
                             <a className="nav-item text-xl" href="#">Mentorship</a>
