@@ -10,6 +10,9 @@ import image from './assets/image copy.png';
 import image1 from './assets/image3.png';
 import Contactus from './Components/Contactus';
 import Test from './Components/Test';
+import Demo from './Components/Demo';
+import Query from './Components/Query';
+import Doubt from './Components/Doubt';
 const App = () => {
     const mentors = [
         {
@@ -74,9 +77,13 @@ const App = () => {
             <HeroSection/>
         </div>
         <About />
-          <MentorCard mentors={mentors} />
+          {/* <MentorCard mentors={mentors} /> */}
+          <Doubt />
           <Test />
+         
           <TestimonialCard testimonials={testimonialsData} />
+          <Demo />
+          <Query  />
           <Contactus />
         </div>
     );

@@ -42,7 +42,7 @@ const TestimonialCard = ({ testimonials }) => {
     <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto">
     <div className="flex justify-center items-center ">
-      <p className='text-center text-[#ED7E0A] text-2xl item2'>- - - -   Our love  - - - </p>
+      <p className='text-center text-[#ED7E0A] text-2xl item5'>- - - -   Our love  - - - </p>
     </div>
     <div className="flex justify-center items-center mb-4 mt-6 ">
       <p className='text-center text-[#488B80] text-4xl mt-2 item1'>Testimonials</p>
