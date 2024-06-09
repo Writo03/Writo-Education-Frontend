@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 .html{
   scroll-behavior: smooth;
 
@@ -23,6 +24,9 @@ body {
 }
 .item3{
   font-family: 'Ibarra Real Nova';
+}
+.item4{
+  font-family: 'inter';
 }
 body {
   font-family: Arial, sans-serif;
