@@ -14,6 +14,9 @@ import Demo from './Components/Demo';
 import Query from './Components/Query';
 import Doubt from './Components/Doubt';
 import Courses from './Components/Courses';
+import ExpertGuidance from './Components/ExpertGuidance';
+import Courses1 from './Components/Courses1';
+import Courses2 from './Components/Courses2';
 const App = () => {
     const mentors = [
         {
@@ -73,7 +76,7 @@ const App = () => {
       
     return (
         <div>
-          <div className="font-[Poppins]  overflow-h  bg-[rgb(243,243,243)]">
+          <div className="font-[Poppins]  overflow-h  bg-[#EAF3F3]">
             <Navbar />
         </div>
         <div className='bg1 overflow-h'>
@@ -81,7 +84,10 @@ const App = () => {
         </div>
         <Courses />
         <About />
+        <Courses1 />
+        <Courses2 />
           {/* <MentorCard mentors={mentors} /> */}
+          <ExpertGuidance/>
           <Doubt />
           <Test />
          
