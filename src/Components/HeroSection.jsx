@@ -25,29 +25,30 @@ const HeroSection = () => {
         </div>
       </section>
 
-     
-      <section className="stats-box w-11/12 md:w-1/2 mx-auto rounded-lg mt-44 p-4 border border-gray-300 shadow-lg bg-[rgba(26,183,157,0.74)]">
-  <div className="flex flex-wrap justify-around text-center space-y-2 md:space-y-0 md:space-x-0 divide-x divide-gray-300">
-    <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
-      <h3 className="text-lg md:text-xl font-bold">12000+</h3>
-      <p className="text-gray-700 text-sm md:text-base">Students</p>
-    </div>
-    <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
-      <h3 className="text-lg md:text-xl font-bold">30+</h3>
-      <p className="text-gray-700 text-sm md:text-base">Classes</p>
-    </div>
-    <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
-      <h3 className="text-lg md:text-xl font-bold">100+</h3>
-      <p className="text-gray-700 text-sm md:text-base">Mentors</p>
-    </div>
-    <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
-      <h3 className="text-lg md:text-xl font-bold">50+</h3>
-      <p className="text-gray-700 text-sm md:text-base">Subjects</p>
-    </div>
-  </div>
-</section>
+      {/* Add some space below the hero section */}
+      <div className="my-20"></div>
 
-
+      <section className="stats-box w-11/12 md:w-1/2 mx-auto rounded-lg  p-4 border border-gray-300 shadow-lg bg-[rgba(26,183,157,0.74)]">
+        
+        <div className="flex flex-wrap justify-around text-center space-y-2 md:space-y-0 md:space-x-0 divide-x divide-gray-300">
+          <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
+            <h3 className="text-lg md:text-xl font-bold">12000+</h3>
+            <p className="text-gray-700 text-sm md:text-base">Students</p>
+          </div>
+          <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
+            <h3 className="text-lg md:text-xl font-bold">30+</h3>
+            <p className="text-gray-700 text-sm md:text-base">Classes</p>
+          </div>
+          <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
+            <h3 className="text-lg md:text-xl font-bold">100+</h3>
+            <p className="text-gray-700 text-sm md:text-base">Mentors</p>
+          </div>
+          <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
+            <h3 className="text-lg md:text-xl font-bold">50+</h3>
+            <p className="text-gray-700 text-sm md:text-base">Subjects</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -103,7 +103,7 @@ const Contactus = () => {
       {/* Footer Section */}
       <div className="flex flex-col">
         {/* Subscribe with Email Section */}
-        <div className="w-full bg-teal-700 pt-4 md:pl-20">
+        <div className="w-full bg-[#178774] pt-4 md:pl-20">
           <div className="flex items-center w-full mb-4">
             <div className="flex flex-col sm:flex-row items-center w-full sm:w-1/3 md:bg-white p-2 mb-2 rounded-full">
               <input
@@ -124,9 +124,9 @@ const Contactus = () => {
 
         {/* Middle Footer Section that contain all matter and links and about part */}
         <div>
-          <div className="w-full bg-teal-700 text-white px-4 -mt-1">
-            <div className="w-full bg-teal-700 text-white px-8">
-              <div className="w-full bg-teal-700 text-white px-6 py-2">
+          <div className="w-full bg-[#178774] text-white px-4 -mt-1">
+            <div className="w-full bg-[#178774] text-white px-8">
+              <div className="w-full bg-[#178774] text-white px-6 py-2">
                 <div className="flex flex-col lg:flex-row w-full justify-between space-y-6 lg:space-y-0 lg:space-x-6">
                   <div className="w-full lg:w-1/3 mr-4">
                     <div className="font-serif">
@@ -226,7 +226,7 @@ const Contactus = () => {
           </div>
 
           {/* Last Part -> Copy rights Part */}
-          <div className="bg-teal-900 w-full p-2 text-white mt-">
+          <div className="bg-[#006756] w-full p-2 text-white mt-">
             <div className="flex flex-row ml-4 space-x-4">
               <LiaCopyrightSolid className="text-white font-bold h-6 w-6" />
               <Link to={"/"}>

@@ -13,6 +13,7 @@ import Test from './Components/Test';
 import Demo from './Components/Demo';
 import Query from './Components/Query';
 import Doubt from './Components/Doubt';
+import Courses from './Components/Courses';
 const App = () => {
     const mentors = [
         {
@@ -72,10 +73,13 @@ const App = () => {
       
     return (
         <div>
-          <div className="font-[Poppins] h-screen overflow-h bg1">
+          <div className="font-[Poppins]  overflow-h  bg-[rgb(243,243,243)]">
             <Navbar />
-            <HeroSection/>
         </div>
+        <div className='bg1 overflow-h'>
+        <HeroSection/>
+        </div>
+        <Courses />
         <About />
           {/* <MentorCard mentors={mentors} /> */}
           <Doubt />
