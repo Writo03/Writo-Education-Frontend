@@ -1,101 +1,21 @@
 import React from 'react';
-import Navbar from './Components/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Choose from './Choose';
+import Privacy from './Components/Privacy';
 import './App.css';
-import MentorCard from './Components/MentorCard';
-import HeroSection from './Components/HeroSection';
-import NavScrollExample from './Components/NavScrollExample';
-import About from './Components/About';
-import TestimonialCard from './Components/TestominalCard';
-import image from './assets/image copy.png';
-import image1 from './assets/image3.png';
-import Contactus from './Components/Contactus';
-import Test from './Components/Test';
-import Demo from './Components/Demo';
-import Query from './Components/Query';
-import Doubt from './Components/Doubt';
-import Courses from './Components/Courses';
-import ExpertGuidance from './Components/ExpertGuidance';
-import Courses1 from './Components/Courses1';
-import Courses2 from './Components/Courses2';
+import TermandConditions from './Components/TermandConditions';
+import Faq from './Components/Faq';
 const App = () => {
-    const mentors = [
-        {
-          name: "Rashmi Poonea",
-          image: image1,
-          subjects: ["Maths", "Physics"],
-          university: "IIT Madras",
-          year: 2016
-        },
-        {
-          name: "John Doe",
-          image: image1,
-          subjects: ["Chemistry", "Biology"],
-          university: "MIT",
-          year: 2015
-        },
-        {
-          name: "Jane Smith",
-          image: image1,
-          subjects: ["History", "Geography"],
-          university: "Harvard",
-          year: 2018
-        }, {
-            name: "Jan Smith",
-            image: image1,
-            subjects: ["History", "Geography"],
-            university: "Harvard",
-            year: 2018
-          }
-      ];
-      const testimonialsData = [
-        {
-          name: "Henry Letham",
-          text: "Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-          image: image,
-          stars: 4 
-        },
-        {
-          name: "Holden Caulfield",
-          text: "Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-          image: image,
-          stars: 3
-        },
-        {
-          name: "Alper Kamu",
-          text: "Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-          image: image,
-          stars: 5
-        },
-        {
-          name: "Henry Letham",
-          text: "Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-          image: image,
-          stars: 2
-        }
-      ];
-      
     return (
-        <div>
-          <div className="font-[Poppins]  overflow-h  bg-[#EAF3F3]">
-            <Navbar />
-        </div>
-        <div className='bg1 overflow-h'>
-        <HeroSection/>
-        </div>
-        <Courses />
-        <About />
-        <Courses1 />
-        <Courses2 />
-          {/* <MentorCard mentors={mentors} /> */}
-          <ExpertGuidance/>
-          <Doubt />
-          <Test />
-         
-          <TestimonialCard testimonials={testimonialsData} />
-          <Demo />
-          <Query  />
-          <Contactus />
-        </div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/why_writo' element={<Choose />} />
+          <Route path='/privacy' element={<Privacy />} />
+          <Route path='/terms' element={<TermandConditions />} />
+          <Route path='/faq' element={<Faq />} />
+        </Routes>
     );
 };
 

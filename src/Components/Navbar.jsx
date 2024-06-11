@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import img from '../assets/image.png';
 import { IoIosArrowDown } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
         <header className="">
             <nav className="flex justify-between items-center w-full max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="flex items-center gap-2">
-                    <img className="w-16 cursor-pointer" src={img} alt="Writo Education Logo" />
+                    <Link to="/"><img className="w-16 cursor-pointer" src={img} alt="Writo Education Logo" /></Link>
                     <span className="font-semibold hidden md:block text-xl item1">Writo Education</span>
                 </div>
                 <div

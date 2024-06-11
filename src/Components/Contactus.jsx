@@ -147,29 +147,29 @@ const Contactus = () => {
                       <h3 className="text-lg font-semibold">Quick Links</h3>
                       <ul className="text-lg space-y-2 mt-4">
                         <li>
-                          <a href="#" className="hover:underline">
+                          <Link to={'/why_writo'} className="hover:underline">
                             Why choose us
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#" className="hover:underline">
+                          <Link to={'/'} className="hover:underline">
                             Contact us
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#" className="hover:underline">
+                          <Link to={'/terms'} className="hover:underline">
                             Terms and conditions
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#" className="hover:underline">
+                          <Link to={'/privacy'} className="hover:underline">
                             Privacy policy
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#" className="hover:underline">
+                          <Link to={'/faq'} className="hover:underline">
                             FAQs and Help
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
