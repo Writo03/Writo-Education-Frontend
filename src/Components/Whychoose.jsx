@@ -48,7 +48,7 @@ const Whychoose = () => {
             </div>
            
         </div>
-        <Lower_footer />
+        <Lower_footer className='mt-2'/>
        </div>
     )
 }
