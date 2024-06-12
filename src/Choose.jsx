@@ -8,7 +8,6 @@ const Choose = () => {
     <div>
       <Navbar />
       <Whychoose></Whychoose>
-      <Contactus></Contactus>
     </div>
   )
 }

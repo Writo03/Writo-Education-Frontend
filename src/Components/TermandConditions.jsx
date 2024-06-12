@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Lower_footer from './Lower_footer'
 const TermandConditions = () => {
   return (
     <div>
@@ -55,6 +56,7 @@ const TermandConditions = () => {
                 <p className="text-gray-700 my-4">Address: [Insert Company Address]</p>
             </div>
         </div>
+        <Lower_footer   />
     </div>
   )
 }
