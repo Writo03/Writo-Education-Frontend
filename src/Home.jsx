@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Navbar from './Components/Navbar';
 
 import MentorCard from './Components/MentorCard';
@@ -17,7 +17,9 @@ import Courses from './Components/Courses';
 import ExpertGuidance from './Components/ExpertGuidance';
 import Courses1 from './Components/Courses1';
 import Courses2 from './Components/Courses2';
+import Navbar2 from './Components/Navbar2';
 const Home = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
     const testimonialsData = [
         {
           name: "Henry Letham",
@@ -49,9 +51,10 @@ const Home = () => {
        <div>
           <div className="font-[Poppins]  overflow-h  bg-[#EAF3F3]">
             <Navbar />
+            <Navbar2 setDropdownOpen={setDropdownOpen}/>
         </div>
         <div className='bg1 overflow-h'>
-        <HeroSection/>
+        <HeroSection dropdownOpen={dropdownOpen}/>
         </div>
         <Courses />
         <About />

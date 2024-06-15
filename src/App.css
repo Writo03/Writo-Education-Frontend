@@ -8,6 +8,15 @@
   scroll-behavior: smooth;
 
 }
+/* Services.css */
+.services-component {
+ /* Semi-transparent background */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 30; /* Ensure this is higher than the HeroSection */
+}
+
 
 .nav-item:hover {
   color: #1BB896;

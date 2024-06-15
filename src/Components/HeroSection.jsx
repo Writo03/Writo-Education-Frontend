@@ -1,9 +1,10 @@
 import React from 'react';
 import HeroImage from '../assets/hero-image.png';
+import './HeroSection.css'; // Import CSS file for HeroSection styles
 
 const HeroSection = () => {
   return (
-    <div>
+    <div className="relative z-10 hero-section bg1"> {/* Ensure z-index is lower than Services */}
       <section className="hero">
         <div className="hero-text item1">
           <h1><span>Thrive with our tailored mentorship</span></h1>
@@ -32,19 +33,19 @@ const HeroSection = () => {
         
         <div className="flex flex-wrap justify-around text-center space-y-2 md:space-y-0 md:space-x-0 divide-x divide-gray-300">
           <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
-            <h3 className="text-lg md:text-xl font-bold">12000+</h3>
+            <h3 className="text-lg md:text-xl font-bold">12000+/</h3>
             <p className="text-gray-700 text-sm md:text-base">Students</p>
           </div>
           <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
-            <h3 className="text-lg md:text-xl font-bold">30+</h3>
+            <h3 className="text-lg md:text-xl font-bold">30+/</h3>
             <p className="text-gray-700 text-sm md:text-base">Classes</p>
           </div>
           <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
-            <h3 className="text-lg md:text-xl font-bold">100+</h3>
+            <h3 className="text-lg md:text-xl font-bold">100+/</h3>
             <p className="text-gray-700 text-sm md:text-base">Mentors</p>
           </div>
           <div className="mb-2 w-1/2 md:w-auto px-2 md:px-4 flex-1">
-            <h3 className="text-lg md:text-xl font-bold">50+</h3>
+            <h3 className="text-lg md:text-xl font-bold">50+/</h3>
             <p className="text-gray-700 text-sm md:text-base">Subjects</p>
           </div>
         </div>
