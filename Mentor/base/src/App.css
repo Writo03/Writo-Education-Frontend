@@ -11,6 +11,10 @@
 .custom-width{
   width: 520px;
 }
+.bg1{
+  background: rgb(217,168,255);
+background: linear-gradient(187deg, rgba(217,168,255,0.850577731092437) 5%, rgba(254,253,255,1) 100%);
+}
 @media (max-width: 520px) {
   .custom-width {
     width: 340px; /* Adjust as needed */
