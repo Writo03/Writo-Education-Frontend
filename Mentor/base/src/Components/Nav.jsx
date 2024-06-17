@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-
+import img from '../assets/logo.png'
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -10,7 +10,7 @@ const Nav = () => {
   return (
     <header className="bg-white flex flex-wrap items-center top-0">
     <div className="flex-1 flex items-center justify-start">
-      <a href="#" className="text-xl mr-5">Company</a>
+      <img src={img} alt="" className='w-10 ml-4'/>
       <div className="relative ml-4">
         <input 
           type="text" 
