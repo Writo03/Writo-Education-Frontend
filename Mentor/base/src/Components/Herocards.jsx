@@ -218,7 +218,7 @@ const Herocards = () => {
 
       {/* Pagination controls */}
       {totalPages > 1 && (
-        <div className="w-full flex justify-center mt-4">
+        <div className="w-full flex justify-center mt-4 mb-7">
           <button
             className={`mx-2 px-3 py-1 rounded-md ${
               currentPage === 1 ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600 text-white'
