@@ -1,90 +1,86 @@
-import React,{useState} from 'react'
-import img from '../assets/logo.png'
+import React, { useState } from 'react';
+import img from '../assets/logo.png';
+import { IoIosSearch } from 'react-icons/io'; // Import IoIosSearch icon
+import profilePic from '../assets/profile.png'; // Replace with your profile picture import
+
 const Nav = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-    };
-  
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <header className="bg-white flex flex-wrap items-center top-0">
-    <div className="flex-1 flex items-center justify-start">
-      <img src={img} alt="" className='w-10 ml-4'/>
-      <div className="relative ml-4">
-        <input 
-          type="text" 
-          placeholder="Search..." 
-          className="pl-8 pr-4 py-2 border rounded-full custom-width"
-        />
-        <svg 
-          className="w-4 h-4 text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2" 
-          xmlns="http://www.w3.org/2000/svg" 
-          fill="none" 
-          viewBox="0 0 24 24" 
-          stroke="currentColor"
-        >
-          <path 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth="2" 
-            d="M21 21l-4.35-4.35m2.65-4.65a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" 
-          />
-        </svg>
-      </div>
-    </div>
-  
-    {/* Menu toggle button for mobile */}
-    <button
-      className="block md:hidden cursor-pointer"
-      onClick={toggleMenu}
-    >
-      <svg className="fill-current text-gray-900"
-        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-        <title>menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-      </svg>
-    </button>
-  
-    {/* Close button for mobile menu */}
-    {isMenuOpen && (
-      <button
-        className="md:hidden absolute top-0 right-0 m-4"
-        onClick={toggleMenu}
-      >
-        <svg className="fill-current text-gray-900"
-          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59L5 6.41l5.59 5.59-5.59 5.59L6.41 19l5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path>
-        </svg>
-      </button>
-    )}
-  
-    {/* Mobile menu */}
-    <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} w-full`} id="menu">
-      <nav className="ml-auto text-center">
-        <ul className="text-base text-gray-700 pt-4">
-          <li><a className="py-3 block" href="#">About Us</a></li>
-          <li><a className="py-3 block" href="#">Treatments</a></li>
-          <li><a className="py-3 block" href="#">Blog</a></li>
-          <li><a className="py-3 block mb-2" href="#">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-  
-    {/* Desktop menu */}
-    <div className="hidden md:flex md:items-center md:w-auto w-full" id="menu">
-      <nav className="ml-auto">
-        <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-          <li><a className="md:p-4 py-3 px-0 block" href="#">About Us</a></li>
-          <li><a className="md:p-4 py-3 px-0 block" href="#">Treatments</a></li>
-          <li><a className="md:p-4 py-3 px-0 block" href="#">Blog</a></li>
-          <li><a className="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="#">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  
-  )
-}
+    <div>
+      {/* Navbar */}
+      <nav className="p-4">
+        <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
+          <div className="flex items-center sm:mr-2">
+            <img src={img} className="w-10" alt="Logo" />
 
-export default Nav
+            {/* Search bar */}
+            <div className="relative ml-0 lg:ml-4 sm:ml-2">
+              <input
+                type="text"
+                placeholder="Search or Start a conversation"
+                className="border border-gray-300 rounded-3xl px-4 py-2 focus:outline-none w-64 lg:w-96 lg:w-600"
+              />
+              <button className="absolute right-0 top-0 mt-2 mr-4">
+                <IoIosSearch className="h-6 w-6 text-gray-600" /> {/* IoIosSearch icon */}
+              </button>
+            </div>
+          </div>
+
+          {/* Hamburger menu for small screens */}
+          <div className="lg:hidden">
+            <button onClick={toggleMenu} className="text-black focus:outline-none">
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          {/* Navigation links */}
+          <div className={`lg:flex flex-col lg:flex-row ${isOpen ? 'block' : 'hidden'} lg:space-x-4 lg:mt-0 mt-4 flex flex-col items-center text-xl`}>
+            <a href="/" className="text-black px-4 py-2 hover:text-orange-600 item1 font-meduim">Community</a>
+            <a href="#Projects" className="text-black px-4 py-2 hover:text-orange-600 item1 font-meduim">Blogs</a>
+            <a href="/" className="text-black px-4 py-2 hover:text-orange-600 item1 font-meduim">Mentors</a>
+            <a href="/" className="text-black px-4 py-2 hover:text-orange-600 item1 font-meduim">Programs</a>
+            
+            {/* Profile picture and down arrow */}
+            <div className="flex items-center">
+              <img src={profilePic} className="w-8 h-8 rounded-full ml-4" alt="Profile" />
+              <svg
+                className="h-4 w-4 ml-1 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
+};
+
+export default Nav;
