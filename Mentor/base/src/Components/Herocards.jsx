@@ -161,7 +161,7 @@ const Herocards = () => {
   };
 
   return (
-    <div className="flex flex-col mt-4">
+    <div className="flex flex-col mt-4 item1">
       {/* Filter buttons */}
       <div className="mb-8 mt-4 flex flex-wrap justify-start ml-6">
         <button
@@ -194,7 +194,7 @@ const Herocards = () => {
       </div>
 
       {/* Team members grid */}
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center item1">
         {currentMembers.map((member, index) => (
           <div key={index} className="p-4 lg:w-1/3 md:w-1/3 w-full">
             <div className="h-full flex flex-col items-center">
@@ -207,7 +207,7 @@ const Herocards = () => {
                 />
               </div>
               <div className="w-full ml-1 text-left px-16">
-                <h2 className="title-font font-medium text-lg ml-2 text-gray-900">{member.name}</h2>
+                <h2 className="title-font font-bold item1 text-lg ml-2 text-gray-900">{member.name}</h2>
                 <h3 className={`text-[#0082AB] mb-3 ${index === 0 ? 'md:text-left' : 'md:text-left'}`}>{member.role}</h3>
                 {/* Social icons can be added here */}
               </div>
