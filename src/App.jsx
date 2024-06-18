@@ -6,6 +6,7 @@ import Privacy from './Components/Privacy';
 import './App.css';
 import TermandConditions from './Components/TermandConditions';
 import Faq from './Components/Faq';
+import Community from './Components/Community';
 const App = () => {
     return (
         <Routes>
@@ -15,6 +16,7 @@ const App = () => {
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/terms' element={<TermandConditions />} />
           <Route path='/faq' element={<Faq />} />
+          <Route path='/commuity' element={<Community/>}/>
         </Routes>
     );
 };
