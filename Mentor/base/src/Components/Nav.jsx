@@ -54,7 +54,7 @@ const Nav = () => {
           {/* Navigation links */}
           <div className={`lg:flex flex-col lg:flex-row ${isOpen ? 'block' : 'hidden'} lg:space-x-4 lg:mt-0 mt-4 flex flex-col items-center text-xl`}>
             <a href="/" className="text-black px-4 py-2 hover:text-orange-600 item1 font-meduim">Community</a>
-            <a href="#Projects" className="text-black px-4 py-2 hover:text-orange-600 item1 font-meduim">Blogs</a>
+            <a href="/blogs" className="text-black px-4 py-2 hover:text-orange-600 item1 font-meduim">Blogs</a>
             <a href="/" className="text-black px-4 py-2 hover:text-orange-600 item1 font-meduim">Mentors</a>
             <a href="/" className="text-black px-4 py-2 hover:text-orange-600 item1 font-meduim">Programs</a>
             
