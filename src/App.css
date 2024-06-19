@@ -16,6 +16,12 @@
   border-radius: 8px;
   z-index: 30; /* Ensure this is higher than the HeroSection */
 }
+.colour-item {
+  background-image: linear-gradient(#e66465, #9198e5);
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: transparent;
+}
 
 
 .nav-item:hover {

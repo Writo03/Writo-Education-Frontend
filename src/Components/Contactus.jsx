@@ -240,7 +240,7 @@ const Contactus = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>{/* End of Last Part */}
     </div>
   );
 };
