@@ -34,18 +34,11 @@ const Mentor_nav = () => {
         >
           <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
             <li>
-              <a className="nav-item text-xl" href="#">
+              <a className="nav-item text-xl" href="/">
                 Writo
               </a>
             </li>
-            <li
-              className="relative dropdown flex items-center gap-1"
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-            >
-              <a className="nav-item text-xl cursor-pointer flex items-center ">
-                Foundation
-              </a>
-            </li>
+            
             <li>
               <a className="nav-item text-xl" href="#">
                 Mentorship
@@ -99,7 +92,7 @@ const Mentor_nav = () => {
             <div className="hidden md:flex md:items-center">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a
-                  href="#home"
+                  href="/mentor/home"
                   className="text-white hover:bg-green-700 px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Home
