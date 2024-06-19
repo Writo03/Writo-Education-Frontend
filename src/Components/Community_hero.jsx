@@ -4,8 +4,8 @@ import img from '../assets/vector.png'
 
 const Community_hero = () => {
   return (
-    <div className="hero-section bg-[#DFF2E5]"> {/* Ensure z-index is lower than Services */}
-      <section className="hero">
+    <div className=" bg-white ">
+      <section className="hero bg-[#DFF2E5]">
         <div className="hero-text items-center text-center item1">
           <h1>Writo Student Community for 6th - 10th students</h1>
           <img src={img} alt="" className='ml-3 mb-2'/>
@@ -28,6 +28,7 @@ const Community_hero = () => {
           </div>
         </div>
       </section>
+      
     </div>
   )
 }
