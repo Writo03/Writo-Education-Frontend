@@ -80,11 +80,15 @@ const Member = () => {
               <div className="h-full flex flex-col items-center text-center">
                 <div className="relative w-full">
                   <img alt="team" className="flex-shrink-0 rounded-lg w-full h-66 object-cover object-center" src={member.imgSrc} />
-                  {isPrevArrowVisible && index === 0 && (
-                    <button className="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:w-10 sm:h-10 p-2 sm:p-0" onClick={prevMembers}><FaChevronLeft className="w-full h-full" /></button>
+                  {index === 0 && (
+                    <button className="absolute top-1/2  left-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:hidden md:flex w-10 h-10 p-2 bg-[#EDE6E0] rounded-full" onClick={prevMembers}>
+                      <FaChevronLeft className="w-full h-full" />
+                    </button>
                   )}
-                  {isNextArrowVisible && index === cardsPerView - 1 && (
-                    <button className="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:w-10 sm:h-10 p-2 sm:p-0" onClick={nextMembers}><FaChevronRight className="w-full h-full" /></button>
+                  {index === cardsPerView - 1 && (
+                    <button className="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:hidden md:flex w-10 h-10 p-2 bg-[#EDE6E0] rounded-full" onClick={nextMembers}>
+                      <FaChevronRight className="w-full h-full" />
+                    </button>
                   )}
                 </div>
                 <div className="w-full bg-[#F5F5F5]">
@@ -99,11 +103,15 @@ const Member = () => {
               <div className="h-full flex flex-col items-center text-center">
                 <div className="relative w-full">
                   <img alt="team" className="flex-shrink-0 rounded-lg w-full h-66 object-cover object-center" src={member.imgSrc} />
-                  {isPrevArrowVisible && index === 0 && (
-                    <button className="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:w-10 sm:h-10 p-2 sm:p-0" onClick={prevMembers}><FaChevronLeft className="w-full h-full" /></button>
+                  {index === 0 && (
+                    <button className="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:hidden md:flex w-10 h-10 p-2 bg-gray-200 rounded-full" onClick={prevMembers}>
+                      <FaChevronLeft className="w-full h-full" />
+                    </button>
                   )}
-                  {isNextArrowVisible && index === cardsPerView - 1 && (
-                    <button className="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:w-10 sm:h-10 p-2 sm:p-0" onClick={nextMembers}><FaChevronRight className="w-full h-full" /></button>
+                  {index === (currentStartIndex + cardsPerView) % membersData.length - 1 && (
+                    <button className="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:hidden md:flex w-10 h-10 p-2 bg-gray-200 rounded-full" onClick={nextMembers}>
+                      <FaChevronRight className="w-full h-full" />
+                    </button>
                   )}
                 </div>
                 <div className="w-full bg-[#F5F5F5]">
