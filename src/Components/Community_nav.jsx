@@ -2,7 +2,7 @@ import React from 'react'
 
 const Community_nav = () => {
   return (
-    <nav className="mt-4 mb-2 relative z-10">
+    <nav className="mt-4  relative z-10">
     <div className="container mx-auto flex justify-between items-center nav-bar-container">
       <div className="flex space-x-4 text-xl">
         <a href="#" className="text-black hover:text-[#1BB896] item1">Community</a>
