@@ -1,57 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Community_nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <nav className="mt-4  relative z-10">
-    <div className="container mx-auto flex justify-between items-center nav-bar-container">
-      <div className="flex space-x-4 text-xl">
-        <a href="#" className="text-black hover:text-[#1BB896] item1">Community</a>
-        
-        <div className="relative">
-          <button 
-            className="text-black item2 hover:text-[#1BB896] flex items-center"
-           
-          >
-            <span className="mr-1">About</span>
+    <nav className=" w-full">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 md:px-12">
+        {/* Main navigation links */}
+        <a href="#" className="text-[#1AB780] font-semibold md:hidden">
+          Community
+        </a>
+        <div className="hidden md:flex items-center space-x-10">
+          <a href="#" className="text-[#1AB780] text-2xl font-semibold item1">
+            Community
+          </a>
+          <a href="#" className="text-gray-900 font-semibold">
+            About
+          </a>
+          <a href="#" className="text-gray-900">
+            FAQ
+          </a>
+          <a href="#" className="text-gray-900">
+            Community Guidelines
+          </a>
+        </div>
+        {/* Buttons section */}
+        <div className="flex items-center space-x-10">
+          <button className="hidden md:block px-16 py-1 border border-gray-400 font-semibold rounded-lg hover:border-black">
+            Search class
+          </button>
+          <button className="hidden md:block px-4 py-2 bg-[#488B80] text-white rounded">
+            View plans
+          </button>
+          <button className="md:hidden block text-gray-900" onClick={toggleMenu}>
+            {/* Hamburger menu icon or label */}
+            Menu
           </button>
         </div>
-
-        <div className="relative">
-          <button 
-            className="text-black item2 hover:text-[#1BB896] flex items-center"
-            
-          >
-            <span className="mr-1">FAQ</span>
-            
+      </div>
+      {/* Responsive menu */}
+      <div className={`${menuOpen ? 'block' : 'hidden'} md:hidden`}>
+        <div className="flex flex-col items-center space-y-4 py-4">
+          <a href="#" className="text-gray-900">
+            About
+          </a>
+          <a href="#" className="text-gray-900">
+            FAQ
+          </a>
+          <a href="#" className="text-gray-900">
+            Community Guidelines
+          </a>
+          <button className="px-16 py-1 border border-gray-400 font-semibold rounded-lg hover:border-black">
+            Search class
           </button>
-
+          <button className="px-4 py-2 bg-[#488B80] text-white rounded">
+            View plans
+          </button>
         </div>
-        <a href="#" className="text-black hover:text-[#1BB896] ">Community Guidelines</a>
       </div>
+    </nav>
+  );
+};
 
-      <div className="flex space-x-4">
-        <button 
-          className="text-black px-10 py-3 text-lg mr-10 rounded font-semibold item3 hover:bg-[#488B80] hover:text-white w-60"
-          style={{
-            border: '1px solid #C6C6C6', 
-          }}
-        >
-          Search class
-        </button>
-
-        <button 
-          className="bg-[#488B80] text-white px-4 py-2 rounded-lg hover:border-[#C6C6C6] hover:bg-transparent hover:text-[#488B80] ml-8"
-          style={{
-            border: '1px solid #C6C6C6', 
-          }}
-        >
-          View Plans
-        </button>
-      </div>
-    </div>
-
-  </nav>
-  )
-}
-
-export default Community_nav
+export default Community_nav;

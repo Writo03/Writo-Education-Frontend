@@ -31,9 +31,9 @@ const Connect = () => {
           </ul>
         </div>
 
-        <div className="image-container">
-          <img className="w-60" src={img1} alt="child1" />
-          <img src={img2} alt="child2" className='w-40 overlay-img' />
+        <div className="image-container items-center justify-center ml-40">
+          <img className="w-60 sm:w-30" src={img1} alt="child1" />
+          <img src={img2} alt="child2" className='w-40 overlay-img sm:w-18' />
         </div>
       </div>
     </div>

@@ -11,9 +11,9 @@ const Community = () => {
   return (
     <div>
       <div className=' bg-[#E6F1F1]'>
-        <Navbar />
-        <Community_nav />
-        <Community_hero />
+        <Navbar className='z-10'/>
+        <Community_nav className='z-1'/>
+        <Community_hero className='z-1'/>
        
       </div>
       <div className='bg-white'>

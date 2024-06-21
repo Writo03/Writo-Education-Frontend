@@ -60,18 +60,16 @@ const Member = () => {
   };
 
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="text-2xl font-medium title-font mb-1 text-[#ED7E0A] item5">------Access-----</h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed item1 text-2xl text-[#488B80]">Members only area</p>
-        </div>
-        <div className="relative flex flex-wrap -mx-4">
+    <section className="bg-white ">
+      <div className="container px-6 py-8 mx-auto">
+        <h2 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Our Team</h2>
+
+        <div className="relative flex flex-wrap -mx-4 mt-8">
           {getDisplayedMembers().map((member, index) => (
-            <div key={member.id} className="relative px-4 lg:w-1/4 md:w-1/2 w-full sm:mt-3">
+            <div key={member.id} className="relative px-4 lg:w-1/4 md:w-1/2 sm:w-full sm:max-w-xs w-full sm:mt-2 mt-10">
               <div className="h-full flex flex-col items-center text-center">
                 <div className="relative w-full">
-                  <img alt="team" className="flex-shrink-0 rounded-lg w-full h-66 object-cover object-center" src={member.imgSrc} />
+                  <img alt="team" className="flex-shrink-0 rounded-lg w-full h-66  lg:h-66 sm:h-40 sm:w-full object-cover object-center" src={member.imgSrc} />
                   {index === 0 && (
                     <button className="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 w-10 h-10 p-2 bg-[#EDE6E0] rounded-full hidden lg:flex" onClick={prevMembers}>
                       <FaChevronLeft className="w-full h-full" />
