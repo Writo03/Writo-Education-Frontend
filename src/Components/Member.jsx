@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import img1 from '../assets/member1.png';
 import img2 from '../assets/member2.png';
 import img3 from '../assets/member3.png';
@@ -40,32 +40,24 @@ const membersData = [
 
 const Member = () => {
   const [currentStartIndex, setCurrentStartIndex] = useState(0);
-  const [isTouch, setIsTouch] = useState(false);
   const cardsPerView = 4; // Number of cards to display per view
 
-  useEffect(() => {
-    const handleTouchStart = () => setIsTouch(true);
-    const handleTouchEnd = () => setIsTouch(false);
-
-    window.addEventListener('touchstart', handleTouchStart);
-    window.addEventListener('touchend', handleTouchEnd);
-
-    return () => {
-      window.removeEventListener('touchstart', handleTouchStart);
-      window.removeEventListener('touchend', handleTouchEnd);
-    };
-  }, []);
-
   const nextMembers = () => {
-    setCurrentStartIndex(current => (current + 1) % membersData.length);
+    setCurrentStartIndex(current => (current + cardsPerView) % membersData.length);
   };
 
   const prevMembers = () => {
-    setCurrentStartIndex(current => (current - 1 + membersData.length) % membersData.length);
+    setCurrentStartIndex(current => (current - cardsPerView + membersData.length) % membersData.length);
   };
 
-  const isPrevArrowVisible = currentStartIndex > 0;
-  const isNextArrowVisible = currentStartIndex + cardsPerView < membersData.length;
+  const getDisplayedMembers = () => {
+    const endIndex = currentStartIndex + cardsPerView;
+    if (endIndex <= membersData.length) {
+      return membersData.slice(currentStartIndex, endIndex);
+    } else {
+      return membersData.slice(currentStartIndex).concat(membersData.slice(0, endIndex % membersData.length));
+    }
+  };
 
   return (
     <section className="text-gray-600 body-font">
@@ -75,18 +67,18 @@ const Member = () => {
           <p className="lg:w-2/3 mx-auto leading-relaxed item1 text-2xl text-[#488B80]">Members only area</p>
         </div>
         <div className="relative flex flex-wrap -mx-4">
-          {membersData.slice(currentStartIndex, currentStartIndex + cardsPerView).map((member, index) => (
+          {getDisplayedMembers().map((member, index) => (
             <div key={member.id} className="relative px-4 lg:w-1/4 md:w-1/2 w-full sm:mt-3">
               <div className="h-full flex flex-col items-center text-center">
                 <div className="relative w-full">
                   <img alt="team" className="flex-shrink-0 rounded-lg w-full h-66 object-cover object-center" src={member.imgSrc} />
                   {index === 0 && (
-                    <button className="absolute top-1/2  left-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:hidden md:flex w-10 h-10 p-2 bg-[#EDE6E0] rounded-full" onClick={prevMembers}>
+                    <button className="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 w-10 h-10 p-2 bg-[#EDE6E0] rounded-full hidden lg:flex" onClick={prevMembers}>
                       <FaChevronLeft className="w-full h-full" />
                     </button>
                   )}
                   {index === cardsPerView - 1 && (
-                    <button className="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:hidden md:flex w-10 h-10 p-2 bg-[#EDE6E0] rounded-full" onClick={nextMembers}>
+                    <button className="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 w-10 h-10 p-2 bg-[#EDE6E0] rounded-full hidden lg:flex" onClick={nextMembers}>
                       <FaChevronRight className="w-full h-full" />
                     </button>
                   )}
@@ -98,29 +90,13 @@ const Member = () => {
               </div>
             </div>
           ))}
-          {currentStartIndex + cardsPerView > membersData.length && membersData.slice(0, (currentStartIndex + cardsPerView) % membersData.length).map((member, index) => (
-            <div key={member.id} className="relative px-4 lg:w-1/4 md:w-1/2 w-full">
-              <div className="h-full flex flex-col items-center text-center">
-                <div className="relative w-full">
-                  <img alt="team" className="flex-shrink-0 rounded-lg w-full h-66 object-cover object-center" src={member.imgSrc} />
-                  {index === 0 && (
-                    <button className="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:hidden md:flex w-10 h-10 p-2 bg-gray-200 rounded-full" onClick={prevMembers}>
-                      <FaChevronLeft className="w-full h-full" />
-                    </button>
-                  )}
-                  {index === (currentStartIndex + cardsPerView) % membersData.length - 1 && (
-                    <button className="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:hidden md:flex w-10 h-10 p-2 bg-gray-200 rounded-full" onClick={nextMembers}>
-                      <FaChevronRight className="w-full h-full" />
-                    </button>
-                  )}
-                </div>
-                <div className="w-full bg-[#F5F5F5]">
-                  <h2 className="title-font font-medium text-2xl text-[#026C39] text-start justify-start item1 mt-1 ml-1">{member.title}</h2>
-                  <h3 className="text-black mb-2 text-lg justify-start text-start item2 ml-1">{member.description}</h3>
-                </div>
-              </div>
-            </div>
-          ))}
+          {/* Conditional rendering for the arrows on small screens */}
+          <button className="absolute left-0 top-1/2 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:flex lg:hidden w-10 h-10 p-2 bg-[#EDE6E0] rounded-full" onClick={prevMembers}>
+            <FaChevronLeft className="w-full h-full" />
+          </button>
+          <button className="absolute right-0 top-1/2 transform -translate-y-1/2 text-[#026C39] hover:text-gray-900 sm:flex lg:hidden w-10 h-10 p-2 bg-[#EDE6E0] rounded-full" onClick={nextMembers}>
+            <FaChevronRight className="w-full h-full" />
+          </button>
         </div>
       </div>
     </section>

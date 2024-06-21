@@ -1,5 +1,5 @@
 import React from 'react';
-import course1Image from '../assets/course1.png'; // Import your images
+import course1Image from '../assets/course1.png'; 
 import { FaArrowRight } from "react-icons/fa";
 
 const Services = () => {
