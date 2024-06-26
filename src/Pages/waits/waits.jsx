@@ -11,7 +11,7 @@ import { CiSearch } from "react-icons/ci";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from "react";
 import Herosection from "./Hero3"
-import Contactus from "../../Components/Contactus";;
+import Contactus from "../../Components/Contactus";
 import {Link} from "react-router-dom"
 
 function Waits() {
