@@ -11,9 +11,19 @@ import Menotor_home1 from './Components/Mentor_home1';
 import Services1 from './Components/Services1';
 import ChatwithMentor from './Components/ChatwithMentor';
 import Community_neet from './Components/Community_neet';
+import About_Hero from './Components_2/About_Hero';
+import NavScrollExample from './Components_2/NavScrollExample';
+import About6to10 from './Pages/About6to10';
+
+import AboutJee from './Pages/AboutJee';
+import AboutNeet from './Pages/AboutNeet';
+import Doubt_courses from './Pages/Doubt_courses';
+import DoubtSection from './Pages/DoubtSection';
+
+
 import Blogs from '../Mentor/base/src/Components/Blogs';
 import VideoPage from "./Pages/videopage/videopage";
-import Waits from "./Pages/waits/waits";
+// import Waits from "./Pages/waits/waits";
 import JeePrice from "./Pages/jee price/jee_price";
 import NeetPrice from "./Pages/neet price/neet_price";
 import Class6befpay from "./Pages/class6-beforepay/class6_beforepay";
@@ -41,6 +51,8 @@ import AboutJeeCommunity from "./Pages/about-jee-community/about_jee_community";
 {/*All india test series */}
 import NeetAllIndiaTestseries from "./Pages/NeetAllIndiaTestSeries/NeetAllIndiaTestseries";
 import JeeAllIndiaTestSeries from "./Pages/JeeAllIndiaTestSeries/JeeAllIndiaTestSeries";
+
+
 const App = () => {
     return (
         <Routes>
@@ -55,6 +67,14 @@ const App = () => {
           <Route path='/community' element={<Community/>}/>
           <Route path='/community/neet'   element={<Community_neet/>}/>
           <Route path="/mentor/questions" element={<ChatwithMentor/>}/>
+
+          <Route path="/abouthero" element={<About_Hero/>}/>
+          <Route path="/about6to10" element={<About6to10/>}/>
+          <Route path="/aboutjee" element={<AboutJee/>}/>
+          <Route path="/aboutneet" element={<AboutNeet/>}/>
+          <Route path="/doubtcourses" element={<Doubt_courses/>}/>
+          <Route path="/doubtsection" element={<DoubtSection/>}/>
+         
           <Route path="/blogs" element={<Blogs/>}/>
           <Route path="/all" element={<AllCoursesPage />} />
           <Route path="/class-6" element={<Class6 />} />
@@ -79,14 +99,15 @@ const App = () => {
           <Route path="/jee-courses" element={<JEE />} />
           
           <Route path="/class-6/physics/video" element={<VideoPage />} />
-          <Route path="/waits" element={< Waits/>} />
+          {/* <Route path="/waits" element={< Waits/>} /> */}
           <Route path="/neet-price" element={< NeetPrice/>} />
           {/* <Route path="/mains+advance" element={< JEEMainsAndAdvance/>} />*/}
           <Route path="/jee-price" element={< JeePrice/>} />
           <Route path="/about-jee-community" element={< AboutJeeCommunity/>} />
           <Route path="/neet-all-india-test-series" element={< NeetAllIndiaTestseries/>} />
           <Route path="/jee-all-india-test-series" element={< JeeAllIndiaTestSeries/>} />
-
+     
+          
         </Routes>
     );
 };

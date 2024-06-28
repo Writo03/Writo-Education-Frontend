@@ -8,6 +8,9 @@
   scroll-behavior: smooth;
 
 }
+a{
+  text-decoration: none;
+}
 /* Services.css */
 .services-component {
  /* Semi-transparent background */
@@ -143,6 +146,24 @@ body {
 }
 .item-5{
   color: linear-gradient(to right, #DE3939 0, #BF3F52 20%, #0961E6 76%);;
+}
+
+
+.gradientheading{
+  font-size: clamp(3vh, 3.5vw, 3.5vh); 
+  font-weight: 650;
+  background: #CF3E6A;
+  background: linear-gradient(to right, #CF3E6A 10%, #0E90CF 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  .highlights{
+    font-size: 25px;
+    color: #ed7e0a;
+    font-family: "Sriracha", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 

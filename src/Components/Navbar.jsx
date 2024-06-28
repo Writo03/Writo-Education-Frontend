@@ -18,11 +18,11 @@ const Navbar = () => {
                     <span className="font-semibold hidden md:block text-xl item1">Writo Education</span>
                 </div>
                 <div
-                    className={`nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 ${menuOpen ? 'top-[9%]' : 'top-[-100%]'} md:w-auto w-full flex items-center px-5 bg-white md:bg-transparent`}
+                    className={`nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 ${menuOpen ? 'top-[9%]' : 'top-[-100%]'} md:w-auto w-full flex items-center px-5`}
                 >
                     <ul className="flex md:flex-row flex-col md:items-center items-center md:gap-[4vw] gap-8 w-full">
                         <li>
-                            <a className="nav-item text-xl" href="#">Writo</a>
+                            <Link className="nav-item text-xl" to="/">Writo</Link>
                         </li>
                         <li>
                             <a className="nav-item text-xl" href="/mentor/home">Mentorship</a>

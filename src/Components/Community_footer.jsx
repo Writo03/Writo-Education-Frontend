@@ -65,7 +65,7 @@ const Community_footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to={'/te rms'} className="hover:underline">
+                      <Link to={'/terms'} className="hover:underline">
                         Terms and conditions
                       </Link>
                     </li>
