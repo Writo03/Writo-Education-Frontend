@@ -4,6 +4,7 @@ import NavScrollExample from '../Components_2/NavScrollExample'
 import Contactus from '../Components_2/Contactus'
 import Journey from '../Components_2/Journey'
 import Reviews2 from '../Components_2/Reviews2'
+import Navvv from '../Components/Navv'
 // import Mentors from '../Components_2/Mentors'
 
 
@@ -12,7 +13,8 @@ import Reviews2 from '../Components_2/Reviews2'
 export default function DoubtSection() {
   return (
     <div style={{maxWidth:'1600px'}}>
-        <NavScrollExample/>
+        {/* <NavScrollExample/> */}
+        <Navvv/>
        <Hero2/>
 
    <h2 className="highlights my-5 text-center " >...... Student Journey ......</h2>

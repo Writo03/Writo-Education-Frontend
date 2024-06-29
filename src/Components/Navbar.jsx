@@ -1,55 +1,34 @@
-import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React from 'react';
 import img from '../assets/image.png';
-import { Link } from 'react-router-dom';
-
+import { IoMenu } from "react-icons/io5";
 const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+  return (
+    <header className="text-gray-600 body-font">
+      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a className="flex title-font font-medium items-center text-gray-900 md:mb-0">
+          <img src={img} alt="Logo" className="w-10 h-10" />
+          <span className="ml-3 text-2xl font-bold item1">WritoTech</span>
+        </a>
+        <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center space-x-10">
+          <a className="hover:text-green-600 item2 text-2xl text-black">Writo</a>
+          <a className="hover:text-green-600 item2 text-2xl text-black">Mentorship</a>
+          <a className="hover:text-green-600 item2 text-2xl text-black">Community</a>
+          <a className="hover:text-green-600 item2 text-2xl text-black">Carrers</a>
+          <a className="hover:text-green-600 item2 text-2xl text-black">Blogs</a>
+        </nav>
+        <div className="ml-auto">
+        <button className="inline-flex items-center bg-[#1AB780]  border-0 py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+           Sign up
+            
+          </button>
+          <button className="inline-flex items-center border border-[#1AB780] py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+  Login
+</button>
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
-    return (
-        <header className="">
-            <nav className="flex justify-between items-center w-full max-w-screen-xl mx-auto px-4 md:px-8">
-                <div className="flex items-center gap-2">
-                    <Link to="/"><img className="w-16 cursor-pointer" src={img} alt="Writo Education Logo" /></Link>
-                    <span className="font-semibold hidden md:block text-xl item1">Writo Education</span>
-                </div>
-                <div
-                    className={`nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 ${menuOpen ? 'top-[9%]' : 'top-[-100%]'} md:w-auto w-full flex items-center px-5`}
-                >
-                    <ul className="flex md:flex-row flex-col md:items-center items-center md:gap-[4vw] gap-8 w-full list-none"> {/* Added list-none class */}
-                        <li>
-                            <Link className="nav-item text-xl" to="/">Writo</Link>
-                        </li>
-                        <li>
-                            <a className="nav-item text-xl" href="/mentor/home">Mentorship</a>
-                        </li>
-                        <li>
-                            <a className="nav-item text-xl" href="/community">Community</a>
-                        </li>
-                        <li>
-                            <a className="nav-item text-xl" href="#">Careers</a>
-                        </li>
-                        <li>
-                            <a className="nav-item text-xl" href="/blogs">Blogs</a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="flex items-center gap-2 md:gap-6">
-                    <button className="border border-[#04362B] border-double rounded-lg text-white bg-[#04362B] px-3 md:px-5 py-1 md:py-2 hover:bg-white hover:text-[#04362B]">Log in</button>
-                    <button className="border border-[#04362B] border-double rounded-lg text-[#04362B] px-3 md:px-5 py-1 md:py-2 hover:bg-[#04362B] hover:text-white">Sign in</button>
-                    {menuOpen ? (
-                        <FaTimes onClick={toggleMenu} className="text-2xl md:text-3xl cursor-pointer md:hidden" />
-                    ) : (
-                        <FaBars onClick={toggleMenu} className="text-2xl md:text-3xl cursor-pointer md:hidden" />
-                    )}
-                </div>
-            </nav>
-        </header>
-    );
+        </div>
+      </div>
+    </header>
+  );
 };
 
 export default Navbar;
