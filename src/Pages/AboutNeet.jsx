@@ -1,5 +1,4 @@
 import React from 'react'
-import NavScrollExample from '../Components_2/NavScrollExample'
 import CommunityAim from '../Components_2/CommunityAim'
 import Whyjoin from '../Components_2/Whyjoin'
 import Whocanjoin from '../Components_2/Whocanjoin'

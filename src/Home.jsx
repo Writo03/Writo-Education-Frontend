@@ -3,7 +3,6 @@ import Navbar from './Components/Navbar';
 
 import MentorCard from './Components/MentorCard';
 import HeroSection from './Components/HeroSection';
-import NavScrollExample from './Components/NavScrollExample';
 import About from './Components/About';
 import TestimonialCard from './Components/TestominalCard';
 import image from './assets/image copy.png';

@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero2 from '../Components_2/Hero2'
-import NavScrollExample from '../Components_2/NavScrollExample'
 import Contactus from '../Components_2/Contactus'
 import Journey from '../Components_2/Journey'
 import Reviews2 from '../Components_2/Reviews2'

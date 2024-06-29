@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero3 from '../Components_2/Hero3'
-import NavScrollExample from '../Components_2/NavScrollExample'
 import ConnectCoaches from '../Components_2/ConnectCoaches'
 import Contactus from '../Components_2/Contactus'
 import Navvv from '../Components/Navv'
