@@ -1,6 +1,7 @@
 import React from 'react';
 import img from '../assets/image.png';
 import { IoMenu } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <header className="text-gray-600 body-font">
@@ -10,11 +11,11 @@ const Navbar = () => {
           <span className="ml-3 text-2xl font-bold item1">WritoTech</span>
         </a>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center space-x-10">
-          <a to='/' className="hover:text-green-600 item2 text-2xl text-black">Writo</a>
-          <a to='/mentorship' className="hover:text-green-600 item2 text-2xl text-black">Mentorship</a>
-          <a to='/community' className="hover:text-green-600 item2 text-2xl text-black">Community</a>
-          <a to='/careers' className="hover:text-green-600 item2 text-2xl text-black">Careers</a>
-          <a to='/blogs' className="hover:text-green-600 item2 text-2xl text-black">Blogs</a>
+          <Link to='/' className="hover:text-green-600 item2 text-2xl text-black">Writo</Link>
+          <Link to='/mentor/home' className="hover:text-green-600 item2 text-2xl text-black">Mentorship</Link>
+          <Link to='/community' className="hover:text-green-600 item2 text-2xl text-black">Community</Link>
+          <Link to='/careers' className="hover:text-green-600 item2 text-2xl text-black">Careers</Link>
+          <Link to='/blogs' className="hover:text-green-600 item2 text-2xl text-black">Blogs</Link>
         </nav>
         <div className="ml-auto">
         <button className="inline-flex items-center bg-[#1AB780]  border-0 py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
