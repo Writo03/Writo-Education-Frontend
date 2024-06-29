@@ -41,7 +41,7 @@ const NavBar2 = () => {
           Writo
         </a>
         <div className="hidden md:flex items-center space-x-10">
-          <a href="#" className="text-[#1AB780] font-semibold">
+          <a href="#" className="text-[#1AB780] font-semibold text-2xl item1">
             Writo
           </a>
           <div className="relative">
@@ -49,7 +49,7 @@ const NavBar2 = () => {
               className="text-black item2 hover:text-gray-400 flex items-center"
               onClick={handleComponent1Click}
             >
-              <span className="mr-1">Component 1</span>
+              <span className="mr-1 font-medium text-2xl item2">Services</span>
             </button>
           </div>
           <div className="relative">
@@ -57,8 +57,8 @@ const NavBar2 = () => {
               className="text-black item2 hover:text-gray-400 flex items-center"
               onClick={handleComponent2Click}
             >
-              <span className="mr-1">Component 2</span>
-              <IoIosArrowDropdownCircle className="text-lg" />
+              <span className="mr-1 ont-medium text-2xl item2">Events</span>
+              
             </button>
           </div>
         </div>
