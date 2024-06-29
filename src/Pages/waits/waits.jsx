@@ -23,16 +23,16 @@ function Waits() {
   };
   return (
     <>
-    <div className="flex flex-col items-center justify-center bg-[#D8F3EE]  space-y-12 mb-8">
+    <div className="flex flex-col items-center justify-center bg-[#D8F3EE]   mb-8">
       {/* Navbar */}
 
-      <nav className="bg-[#a5cac5] w-full">
+      {/* <nav className="bg-[#a5cac5] w-full space-x-12">
       <div className="container mx-auto flex justify-around items-center p-4">
         <div className="flex items-center">
           <img src={Writo} alt="Logo" className="h-12 w-12" />
           <span className="ml-2 text-lg font-bold text-black">Writo Education</span>
         </div>
-        <div className="hidden md:flex items-center space-x-14">
+        <div className="hidden md:flex items-center ">
           <div className="relative">
             <input
               type="text"
@@ -73,7 +73,7 @@ function Waits() {
         </div>
       )}
     </nav>
-    
+     */}
     {/*Header */}
     <Herosection />
     

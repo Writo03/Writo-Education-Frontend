@@ -3,10 +3,10 @@ import vector from "../../assets/Vector 515.png"
 
 const Herosection = () => {
   return (
-    <div className="relative z-10 hero-section bg1">
+    <div className="relative z-10 hero-section bg1 w-full">
       <section className="hero relative">
         <div className="hero-text item1">
-          <h1><span>Empower your future, excel in your exams.</span></h1>
+          <h1>Empower your future, excel in your exams.</h1>
           <div className='mt-1 mb-3 ml-8'>
             <img src={vector} alt='vector img' />
           </div>

@@ -212,3 +212,159 @@ body {
     background-size: contain;
   }
 }
+/* CSS */
+.hero-section {
+  background-color: #D8F3EE;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 46px;
+  color: #1BB896;
+  margin-bottom: 20px;
+  font-family: 'Fondamento';
+}
+
+.hero-text p {
+  font-family: 'PT Sans';
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.hero-text button {
+  background-color: #488B80;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #218838;
+}
+
+.hero-image {
+  max-width: 40%;
+  text-align: center;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.square {
+  width: 300px;
+  height: 300px;
+  transform: rotate(32deg);
+}
+
+.bg-square {
+  top: 30px;
+}
+
+.hero-img {
+  width: 471px;
+  top: 60px;
+  left: -50px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .hero-text button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .square, .bg-square {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-img {
+    width: 300px;
+    top: 40px;
+    left: -25px;
+  }
+
+  .rectangle-section {
+    width: 80%;
+    max-width: 300px;
+    bottom: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .square, .bg-square {
+    margin-top: 15px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-img {
+    width: 200px;
+    top: 20px;
+    left: -10px;
+    margin-bottom: 20px;
+  }
+
+  .rectangle-section {
+    width: 30%;
+    
+    font-size: small;
+    bottom: -10px;
+  }
+  .image-wrapper{
+    margin-bottom: 80px;
+  }
+  .rectangle-section p{
+    font-size: large;
+  }
+}
