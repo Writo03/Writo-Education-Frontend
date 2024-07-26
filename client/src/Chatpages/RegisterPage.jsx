@@ -50,7 +50,7 @@
 //     e.preventDefault()
 //     e.stopPropagation()
 
-//     const URL = `${process.env.REACT_APP_BACKEND_URL}/api/student_register`
+//     const URL = `http://localhost:8080/api/student_register`
 
 //     try {
 //         const response = await axios.post(URL,data)
@@ -237,8 +237,8 @@
 //     e.stopPropagation();
 
 //     const URL = isMentor
-//       ? `${process.env.REACT_APP_BACKEND_URL}/api/mentor_register`
-//       : `${process.env.REACT_APP_BACKEND_URL}/api/student_register`;
+//       ? `http://localhost:8080/api/mentor_register`
+//       : `http://localhost:8080/api/student_register`;
 
 //     try {
 //       const response = await axios.post(URL, data);
@@ -483,7 +483,7 @@ const RegisterPage = () => {
 			order_id: data.id,
 			handler: async (response) => {
 				try {
-					const verifyUrl = "https://writo-education-frontend.onrender.com/api/payment/verify";
+					const verifyUrl = `http://localhost:8080/api/payment/verify`;
           console.log(verifyUrl)
 					const result = await axios.post(verifyUrl, response);
           navigate('/email');
@@ -505,13 +505,13 @@ const RegisterPage = () => {
     e.stopPropagation();
 
     const URL = isMentor
-      ? `${process.env.REACT_APP_BACKEND_URL}/api/mentor_register`
-      : `${process.env.REACT_APP_BACKEND_URL}/api/student_register`;
+      ? `http://localhost:8080/api/mentor_register`
+      : `http://localhost:8080/api/student_register`;
 
     try {
 
       if(!isMentor){
-        const orderUrl = "https://writo-education-frontend.onrender.com/api/payment/orders";
+        const orderUrl = `http://localhost:8080/api/payment/orders`;
         const { data } = await axios.post(orderUrl, { amount: price });
         console.log(data);
         initPayment(data.data);

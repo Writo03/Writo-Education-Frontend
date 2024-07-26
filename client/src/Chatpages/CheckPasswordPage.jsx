@@ -35,40 +35,40 @@ const CheckPasswordPage = () => {
     })
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-  
-    const URL = `${process.env.REACT_APP_BACKEND_URL}/api/password`;
-  
+  const handleSubmit = async(e)=>{
+    e.preventDefault()
+    e.stopPropagation()
+
+    const URL = `http://localhost:8080/api/password`
+
     try {
-      const response = await axios.post(URL, {
-        userId: location?.state?._id,
-        password: data.password,
-      }, { withCredentials: true });
-  
-      console.log('Response Data:', response.data); // Debugging log
-  
-      if (response.data.success) {
-        // Store token and user data in localStorage and Redux
-        localStorage.setItem('token', response.data.token);
-        dispatch(setToken(response.data.token));
-        dispatch(setUser(response.data.user)); // Assuming setUser is used to store user details
-        
-        // Clear form data
-        setData({ password: "" });
-  
-        // Redirect to the chat home page
-        navigate('/chat-home');
-      } else {
-        toast.error(response.data.message);
-      }
+        const response = await axios({
+          method :'post',
+          url : URL,
+          data : {
+            userId : location?.state?._id,
+            password : data.password
+          },
+          withCredentials : true
+        })
+
+        toast.success(response.data.message)
+
+        if(response.data.success){
+            dispatch(setToken(response?.data?.token))
+            localStorage.setItem('token',response?.data?.token)
+
+
+            setData({
+              password : "",
+            })
+            navigate('/chat-home')
+        }
     } catch (error) {
-      console.error('Login Error:', error); // Debugging log
-      toast.error(error?.response?.data?.message || 'An error occurred');
+        toast.error(error?.response?.data?.message)
     }
-  };
-  
+  }
+
 
   return (
     <div className='mt-5'>

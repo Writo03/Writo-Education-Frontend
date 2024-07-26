@@ -16,7 +16,7 @@ const Chathome = () => {
   console.log('user',user)
   const fetchUserDetails = async()=>{
     try {
-        const URL = `${process.env.REACT_APP_BACKEND_URL}/api/user-details`
+        const URL = `http://localhost:8080/api/user-details`
         const response = await axios({
           url : URL,
           withCredentials : true
