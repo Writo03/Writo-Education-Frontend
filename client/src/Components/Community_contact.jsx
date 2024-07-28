@@ -24,7 +24,7 @@ const Community_contact = () => {
             </div>
             <div class="flex-grow">
                 <p class="leading-relaxed text-base">Your curious? Learn more about us and how the AI Student Community functions!</p>
-                <button class="flex  mt-2 text-white bg-[#488B80] border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">Know more</button>
+                <button class="flex  mt-2 text-white bg-[#488B80] border-0 py-2 px-4 focus:outline-none  hover:bg-green-700 rounded text-lg">Know more</button>
             </div>
             </div>
             <div class="mt-auto py-3 px-4 bg-[#F5F9FE] text-white rounded-b-lg">
@@ -43,7 +43,7 @@ const Community_contact = () => {
             </div>
             <div class="flex-grow">
                 <p class="leading-relaxed text-base">Guidelines to be a part of the Community to ensure an amazing experience !</p>
-                <button class="flex  mt-2 text-white bg-[#488B80] border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">Know more</button>
+                <button class="flex  mt-2 text-white bg-[#488B80] border-0 py-2 px-4 focus:outline-none  hover:bg-green-700 rounded text-lg">Know more</button>
             </div>
             </div>
             <div class="mt-auto py-3 px-4 bg-[#F5F9FE] text-white rounded-b-lg">
@@ -62,7 +62,7 @@ const Community_contact = () => {
             </div>
             <div class="flex-grow">
                 <p class="leading-relaxed text-base">This is where you will find answers to all the Whats and Whys you have right now.</p>
-                <button class="flex  mt-2 text-white bg-[#488B80] border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">Know more</button>
+                <button class="flex  mt-2 text-white bg-[#488B80] border-0 py-2 px-4 focus:outline-none  hover:bg-green-700 rounded text-lg">Know more</button>
             </div>
             </div>
             <div class="mt-auto py-3 px-4 bg-[#F5F9FE] text-white rounded-b-lg">
