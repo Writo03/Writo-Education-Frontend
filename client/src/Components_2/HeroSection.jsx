@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div>
       <section className="hero">
         <div className="hero-text item1">
-          <h1><span>Thrive with our tailored mentorship</span></h1>
+          <h1 className='text-green'><span>Thrive with our tailored mentorship</span></h1>
           <p className='text-3xl'>Unlock your potential with our interactive online classes, where learning knows no boundaries.</p>
           <button>Book your individual classes now</button>
         </div>

@@ -26,9 +26,9 @@ const Test = () => {
             <p className="mb-4">
               Achieve your academic goals and secure top ranks!
             </p>
-            <button className="bg-[#488B80] text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
+            <a href="/jee-test-series"><button className="bg-[#488B80] text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
               Join Today
-            </button>
+            </button></a>
           </div>
         </div>
       </section>

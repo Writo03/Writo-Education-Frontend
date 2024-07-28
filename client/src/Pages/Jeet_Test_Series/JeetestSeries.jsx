@@ -11,6 +11,7 @@ import Writo from "../../assets/Clip path group.png";
 import Hero3 from './Hero3';
 import Testimonials from './Testimonials';
 import Cart from './Cart';
+import Navbar from '../../Components/Navbar';
 
 const answerKeys = [
   { id: 1, text: 'Download NEET mock test answer key and solutions - 1', link: '#' },
@@ -59,34 +60,7 @@ const JeeTestSeries = () => {
  
   return (
     <>
-      {/* Nav bar */}
-      <nav className="bg-[#a5cac5] w-full">
-        <div className="container mx-auto flex justify-between items-center py-4 px-12">
-          <div className="flex items-center">
-            <img src={Writo} alt="Logo" className="h-12 w-12" />
-            <span className="ml-2 text-lg font-bold text-black">Writo Education</span>
-          </div>
-          <div className="hidden md:flex font-medium items-center space-x-14">
-            <a href="#" className="text-black">Community</a>
-            <a href="#" className="text-black">Mentors</a>
-            <a href="#" className="text-black">Programs</a>
-            <button className="bg-[#5C8D8D] text-white px-4 py-2 rounded-lg">Join now</button>
-          </div>
-          <div className="md:hidden">
-            <button onClick={toggleMenu}>
-              {isOpen ? <FaTimes className="text-black h-6 w-6" /> : <FaBars className="text-black h-6 w-6" />}
-            </button>
-          </div>
-        </div>
-        {isOpen && (
-          <div className="md:hidden bg-[#E2F5F2] p-4">
-            <a href="#" className="block text-black px-4 py-2">Community</a>
-            <a href="#" className="block text-black px-4 py-2">Mentors</a>
-            <a href="#" className="block text-black px-4 py-2">Programs</a>
-            <button className="w-full bg-[#5C8D8D] text-white px-4 py-2 rounded-lg mt-2">Join now</button>
-          </div>
-        )}
-      </nav>
+      <Navbar/>
 
       {/* Hero section */}
       <Hero3 />
