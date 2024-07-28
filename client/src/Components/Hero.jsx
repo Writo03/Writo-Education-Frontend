@@ -32,14 +32,14 @@ const Hero = () => {
           <Link to="./book_mentor">
           <a
             href="#book-trial"
-            className="bg-green-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-green-700 transition duration-300"
+            className="bg-[#41c396]0 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-green-700 transition duration-300"
           >
             Book your free trial
           </a>
           </Link>
           <a
             href="#find-mentor"
-            className="bg-white text-green-600 px-6 py-3 rounded-md text-lg font-medium hover:bg-green-100 transition duration-300"
+            className="bg-white text-[#41c396] px-6 py-3 rounded-md text-lg font-medium hover:bg-green-100 transition duration-300"
           >
             Find your Mentor
           </a>
