@@ -60,7 +60,7 @@ const Member = () => {
   };
 
   return (
-    <section className="bg-white ">
+    <section className="bg-white flex flex-col justify-center items-center ">
       <div className="container px-6 py-8 mx-auto">
         <h2 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Our Team</h2>
 
