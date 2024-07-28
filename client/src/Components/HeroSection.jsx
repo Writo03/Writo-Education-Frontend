@@ -3,8 +3,8 @@ import HeroImage from '../assets/hero-image.png';
 
 const HeroSection = () => {
   return (
-    <div className="relative z-10 hero-section bg1"> {/* Ensure z-index is lower than Services */}
-      <section className="hero">
+    <div className="relative z-10 hero-section custom-gradient "> {/* Ensure z-index is lower than Services */}
+      <section className="hero ">
         <div className="hero-text item1">
           <h1 className='text-green-900'><span>Thrive with our tailored mentorship</span></h1>
           <p className='text-3xl'>Unlock your potential with our interactive online classes, where learning knows no boundaries.</p>

@@ -2,7 +2,7 @@ import React from 'react'
 import heroimage from './heroimage.png'
 import curvedline from './Vector 514.png'
 import './Hero3.css'
-import Heroimage3 from './Heroimage3.png'
+import Heroimage3 from './Heroimage_3.png'
 
 export default function Hero3() {
   return (

@@ -72,6 +72,7 @@ body {
   color: green;
   margin-bottom: 20px;
   font-family: 'Fondamento';
+  /* font-family: "Solitreo", cursive; */
   font-size: 46px;
 }
 
@@ -98,7 +99,7 @@ body {
 }
 
 .hero-text button {
-  background-color: #488B80;
+  background-color: #000000;
   color: white;
   padding: 15px 30px;
   border: none;
