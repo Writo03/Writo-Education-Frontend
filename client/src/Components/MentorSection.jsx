@@ -37,28 +37,8 @@ const MentorSection = () => {
   return (
     <div className="container mx-auto py-12 bg-gray-100">
       <h2 className="text-3xl font-bold text-center mb-8">Find Your Mentor</h2>
-      {/* Filter buttons */}
-      <div className="md:flex md:flex-row  flex flex-col items-center gap-3 justify-center space-x-4 mb-8 ">
-        {/* All mentors button */}
-        <button
-          onClick={() => setSelectedSubject('')}
-          className={`text-white font-semibold bg-blue-400 rounded-md p-2 ${selectedSubject === '' && 'underline'}`}
-        >
-          All Mentors
-        </button>
-        {/* Subject filter buttons */}
-        {mentorsByCategory.map(category => (
-          category.subjects.map(subject => (
-            <button
-              key={subject}
-              onClick={() => handleSubjectSelect(subject)}
-              className={`text-white font-semibold bg-blue-400 p-2 rounded-md ${selectedSubject === subject && 'underline'}`}
-            >
-              {subject}
-            </button>
-          ))
-        ))}
-      </div>
+      {/* Filter buttons here are removed */}
+
       {/* Mentor cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 m-6">
         {/* Render mentors based on selected subject */}

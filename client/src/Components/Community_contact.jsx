@@ -2,6 +2,7 @@ import React from 'react'
 import { FaFile } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 import { AiOutlineMessage } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const Community_contact = () => {
   return (
@@ -27,7 +28,7 @@ const Community_contact = () => {
             </div>
             </div>
             <div class="mt-auto py-3 px-4 bg-[#F5F9FE] text-white rounded-b-lg">
-                    <p class="text-lg colour-item text-center items-center">About</p>
+            <Link to='/about'><p class="text-lg colour-item text-center items-center">About</p></Link>
             </div>
         </div>
       </div>
@@ -46,7 +47,7 @@ const Community_contact = () => {
             </div>
             </div>
             <div class="mt-auto py-3 px-4 bg-[#F5F9FE] text-white rounded-b-lg">
-                    <p class="text-lg colour-item text-center items-center">Community Guidelines</p>
+            <Link to='/community'><p class="text-lg colour-item text-center items-center">Community Guidelines</p></Link>
             </div>
         </div>
       </div>
@@ -65,7 +66,7 @@ const Community_contact = () => {
             </div>
             </div>
             <div class="mt-auto py-3 px-4 bg-[#F5F9FE] text-white rounded-b-lg">
-                    <p class="text-lg colour-item text-center items-center">FAQ</p>
+                    <Link to='/faq'><p class="text-lg colour-item text-center items-center">FAQ</p></Link>
             </div>
         </div>
       </div>
