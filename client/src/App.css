@@ -9,13 +9,7 @@
 
 }
 /* Services.css */
-.services-component {
- /* Semi-transparent background */
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  z-index: 30; /* Ensure this is higher than the HeroSection */
-}
+
 .colour-item {
   background-image: linear-gradient(#e66465, #9198e5);
   -webkit-background-clip: text; 
@@ -162,59 +156,6 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .hero-text {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-
-  .hero-text p {
-    font-size: 1em;
-    margin-bottom: 20px;
-  }
-
-  .hero-text button {
-    font-size: 0.875em;
-    padding: 10px 20px;
-  }
-
-  .hero-image {
-    display: none;
-  }
-
-  .stats div h3 {
-    font-size: 1.25em;
-  }
-
-  .stats div p {
-    font-size: 0.875em;
-  }
-}
-@media (max-width: 768px) {
-  .text-white {
-    background-size: contain;
-  }
-}
-
-
-
-
-
-
 
 
 .scrollbar::-webkit-scrollbar{

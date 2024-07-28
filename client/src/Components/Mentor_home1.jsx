@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Mentor_nav from './Mentor_nav'
 import Hero from './Hero'
 import Cards_section from './Card_section'
 import Promotion from './Promotions'

@@ -18,3 +18,8 @@
     z-index: 1; /* Base z-index */
   }
   
+
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  

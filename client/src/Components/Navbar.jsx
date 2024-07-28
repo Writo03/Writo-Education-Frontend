@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { IoMenu } from "react-icons/io5";
+import { SlArrowRight } from "react-icons/sl";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../assets/image.png';
 import axios from 'axios';
@@ -76,15 +77,49 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <nav className={`md:flex md:items-center ${isOpen ? 'block' : 'hidden md:block'}`}>
-            <Link to='/' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Writo</Link>
-            <Link to='/mentorship' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Mentorship</Link>
-            <Link to='/community' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Community</Link>
-            <Link to='/careers' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Careers</Link>
-            <Link to='/blogs' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Blogs</Link>
+          <nav className={`md:flex md:items-center ${isOpen ? 'block' : 'hidden md:block'} w-full md:w-auto`}>
+            <div className="flex flex-col md:flex-row md:ml-auto w-full md:w-auto">
+              <Link to='/' className="flex items-center justify-between py-2 px-4 text-2xl text-black hover:text-green-600 border-b md:border-0">
+                Writo
+                <SlArrowRight className="md:hidden ml-2 text-sm" />
+              </Link>
+              <Link to='/mentorship' className="flex items-center justify-between py-2 px-4 text-2xl text-black hover:text-green-600 border-b md:border-0">
+                Mentorship
+                <SlArrowRight className="md:hidden ml-2 text-sm" />
+              </Link>
+              <Link to='/community' className="flex items-center justify-between py-2 px-4 text-2xl text-black hover:text-green-600 border-b md:border-0">
+                Community
+                <SlArrowRight className="md:hidden ml-2 text-sm" />
+              </Link>
+              <Link to='/careers' className="flex items-center justify-between py-2 px-4 text-2xl text-black hover:text-green-600 border-b md:border-0">
+                Careers
+                <SlArrowRight className="md:hidden ml-2 text-sm" />
+              </Link>
+              <Link to='/blogs' className="flex items-center justify-between py-2 px-4 text-2xl text-black hover:text-green-600 border-b md:border-0">
+                Blogs
+                <SlArrowRight className="md:hidden ml-2 text-sm" />
+              </Link>
+            </div>
+            
+            {/* Buttons */}
+            {
+              !auth &&
+              <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} w-full mt-4`}>
+                <div className="flex justify-between">
+                  <button onClick={handleSignin} className="bg-[#1AB780] border-0 py-3 px-6 mr-2 focus:outline-none hover:bg-gray-200 rounded text-base w-1/2">Sign up</button>
+                  <button onClick={handleLogin} className="border border-[#1AB780] py-3 px-6 ml-2 focus:outline-none hover:bg-gray-200 rounded text-base w-1/2">Login</button>
+                </div>
+              </div>
+            }
+            {
+              auth &&
+              <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} w-full mt-4`}>
+                <button className="bg-[#1AB780] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base border-t w-full" onClick={() => setShowLogoutModal(true)}>Logout</button>
+              </div>
+            }
           </nav>
 
-          {/* Buttons */}
+          {/* Buttons for desktop view */}
           {
             !auth &&
             <div className="hidden md:flex items-center">

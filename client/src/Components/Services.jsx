@@ -2,7 +2,11 @@ import React from 'react';
 import course1Image from '../assets/course1.png'; 
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
+import img1 from '../assets/ser1.png'
+import img2 from '../assets/ser2.png'
+import img3 from '../assets/ser3.png'
+import img4 from '../assets/ser4.png'
+import img5 from '../assets/ser5.png'
 const Services = () => {
   return (
     
@@ -24,7 +28,7 @@ const Services = () => {
           </Link>
           <Link to='/mentorship' >
           <div className="bg-white border border-gray-200 rounded-lg p-6 flex">
-            <img src={course1Image} alt="Course 2" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
+            <img src={img1} alt="Course 2" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
             <div className="flex flex-col">
               <h3 className="text-xl font-semibold mb-2">Mentorship Program</h3>
               <p className="text-gray-700 mb-4">Discover a personalized mentorship program designed to guide you towards your goals with expert support.</p>
@@ -36,7 +40,7 @@ const Services = () => {
           </Link>
           <Link to='/doubtsection' >
           <div className="bg-white border border-gray-200 rounded-lg p-6 flex">
-            <img src={course1Image} alt="Course 3" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
+            <img src={img2} alt="Course 3" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
             <div className="flex flex-col">
               <h3 className="text-xl font-semibold mb-2">Doubt session</h3>
               <p className="text-gray-700 mb-4">Now you can solve all your doubts, even sitting at home with our expert mentors.</p>
@@ -48,7 +52,7 @@ const Services = () => {
           </Link>
         
           <div className="bg-white border border-gray-200 rounded-lg p-6 flex">
-            <img src={course1Image} alt="Course 4" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
+            <img src={img3} alt="Course 4" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
             <div className="flex flex-col">
               <h3 className="text-xl font-semibold mb-2">Career counselling</h3>
               <p className="text-gray-700 mb-4">Book a free trial session to see how the mentor can help you.</p>
@@ -59,7 +63,7 @@ const Services = () => {
           </div>
           <Link to='/about6to10' >
           <div className="bg-white border border-gray-200 rounded-lg p-6 flex">
-            <img src={course1Image} alt="Course 5" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
+            <img src={img4} alt="Course 5" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
             <div className="flex flex-col">
               <h3 className="text-xl font-semibold mb-2">Foundational Courses from 6th to 10th</h3>
               <p className="text-gray-700 mb-4">We are there for you to cover all syllabus from 6th standard to 12th standard.</p>

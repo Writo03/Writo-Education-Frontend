@@ -67,7 +67,6 @@ const Home = () => {
          
           <TestimonialCard testimonials={testimonialsData} />
           <Demo />
-          <Query  />
           <Contactus />
         </div>
   )

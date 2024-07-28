@@ -145,32 +145,32 @@ const Contactus = () => {
                   <div className="w-full lg:w-2/3 flex flex-col lg:flex-row justify-between space-y-6 lg:space-y-0 lg:space-x-8">
                     <div className="w-full lg:w-1/3">
                       <h3 className="text-lg font-semibold">Quick Links</h3>
-                      <ul className="text-lg space-y-2 mt-4">
-                        <li>
-                          <Link to={'/why_writo'} className="hover:underline">
+                      <ul className="text-lg space-y-2 mt-4 style={{ color: 'teal' }">
+                        <p>
+                          <Link to={"/why_writo"} className="hover:underline">
                             Why choose us
                           </Link>
-                        </li>
-                        <li>
-                          <Link to={'/'} className="hover:underline">
+                        </p>
+                        <p>
+                          <Link to={"/"} className="hover:underline">
                             Contact us
                           </Link>
-                        </li>
-                        <li>
-                          <Link to={'/terms'} className="hover:underline">
+                        </p>
+                        <p>
+                          <Link to={"/terms"} className="hover:underline">
                             Terms and conditions
                           </Link>
-                        </li>
-                        <li>
-                          <Link to={'/privacy'} className="hover:underline">
+                        </p>
+                        <p>
+                          <Link to={"/privacy"} className="hover:underline">
                             Privacy policy
                           </Link>
-                        </li>
-                        <li>
-                          <Link to={'/faq'} className="hover:underline">
+                        </p>
+                        <p>
+                          <Link to={"/faq"} className="hover:underline">
                             FAQs and Help
                           </Link>
-                        </li>
+                        </p>
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/3">

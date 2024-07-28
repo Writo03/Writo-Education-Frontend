@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const Doubt = () => {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 bg-white">
-      <h2 className="text-xl text-orange-600 font-bold mb-2 item5">
+      <h2 className="text-2xl text-[#ED7E0A] mb-2 item5">
        - - - -   Having doubts -- - - -
       </h2>
-      <h1 className="text-2xl font-semibold text-green-700 mb-6 item1">
+      <h1 className="text-2xl coursetitle text-green-700 mb-6 item2">
         Clear your doubts
       </h1>
       <div className="flex flex-col lg:flex-row items-center w-full lg:w-4/5">
