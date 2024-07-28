@@ -55,6 +55,7 @@ background: linear-gradient(to right, #CF3E6A 10%, #0E90CF 95%);
 
 
 .para{
+    line-height:40px;
     font-size: clamp(2.7vh, 3.5vw, 3vh); /* min size, preferred size, max size */
 }
 
