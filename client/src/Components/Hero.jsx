@@ -32,7 +32,7 @@ const Hero = () => {
           <Link to="./book_mentor">
           <a
             href="#book-trial"
-            className="bg-[#41c396]0 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-green-700 transition duration-300"
+            className="bg-[#41c396] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-green-700 transition duration-300"
           >
             Book your free trial
           </a>
