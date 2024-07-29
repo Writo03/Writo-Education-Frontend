@@ -90,6 +90,22 @@ body {
   bottom: -5px;
   left: 0;
 }
+.custom-bullets ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-bullets li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.custom-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #488B80; /* Change bullet color here */
+}
 
 .hero-text p {
   font-family: 'PT Sans';
