@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Navbar from '../../Navbar'
 import Herosection from './Herosection'
 import KeyFeatures from './KeyFeatures'
@@ -6,6 +6,10 @@ import TestimonialCard from  '../../TestominalCard'
 import image from '../../../assets/image copy.png';
 import Contactus from '../../Contactus'
 const Jee_neet = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const testimonialsData = [
     {
       name: "Henry Letham",

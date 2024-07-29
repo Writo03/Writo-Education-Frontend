@@ -1,9 +1,13 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { FaChalkboardTeacher, FaRegLightbulb, FaComments, FaClipboardList, FaUserGraduate } from 'react-icons/fa';
 import Lower_footer from './Lower_footer';
 import Contactus from './Contactus';
 
 const Whychoose = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
     return (
        <div>
          <div className='flex flex-col items-center p-6 bg-gray-100'>

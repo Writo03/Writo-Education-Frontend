@@ -204,16 +204,16 @@ const Contactus = () => {
                         </div>
 
                         <div className="flex flex-row space-x-2 mt-2">
-                          <a href="www.instagram.com" className="hover:underline">
+                          <a href="https://www.instagram.com/writoeducation" className="hover:underline">
                             <FaInstagram className="text-white w-6 h-6" />
                           </a>
-                          <a href="#" className="hover:underline">
+                          <a href="https://www.facebook.com/people/Writo-Education-Pvt-Ltd/61558449281363/?sk=about" className="hover:underline">
                             <FaFacebook className="text-white h-6 w-6" />
                           </a>
-                          <a href="#" className="hover:underline">
+                          <a href="https://www.linkedin.com/company/writo-learning-solutions/" className="hover:underline">
                             <FaLinkedin className="w-6 h-6 text-white" />
                           </a>
-                          <a href="#" className="hover:underline">
+                          <a href="https://x.com/writoeducation" className="hover:underline">
                             <FaTwitter className="w-6 h-6 text-white" />
                           </a>
                         </div>
