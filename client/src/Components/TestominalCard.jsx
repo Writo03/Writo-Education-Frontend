@@ -48,7 +48,7 @@ const TestimonialCard = ({ testimonials }) => {
           <p className='text-center text-[#ED7E0A] text-2xl item5'>- - - -   Our love  - - - </p>
         </div>
         <div className="flex justify-center items-center mb-4 mt-6">
-          <p className='text-center text-[#488B80] text-4xl mt-2 item2'>Testimonials</p>
+          <p className='text-center text-[#488B80] text-4xl mt-2 item1'>Testimonials</p>
         </div>
         <div className="flex justify-center items-center mt-20">
           <button className="mr-4 text-2xl bg-[#54C8B4] text-white hover:bg-white item2 hover:text-[#54C8B4] py-2 px-4 rounded-tl-2xl rounded-br-2xl">

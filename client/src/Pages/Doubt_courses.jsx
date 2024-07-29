@@ -5,6 +5,7 @@ import ConnectCoaches from '../Components_2/ConnectCoaches'
 import Contactus from '../Components_2/Contactus'
 import Navvv from '../Components_2/Navvv'
 import GetMore from '../Components_2/GetMore'
+import Navbar from '../Components/Navbar'
 
 export default function Doubt_courses() {
 
@@ -14,7 +15,7 @@ export default function Doubt_courses() {
 
   return (
     <div>
-          <Navvv/>
+          <Navbar/>
           <Hero3/>
           <h2 className="highlights my-5 text-center " >...... Get Connect to your Coaches ......</h2>
           <ConnectCoaches/>

@@ -8,7 +8,7 @@ import MessagePage from "../Chatcomponents/MessagePage";
 import AuthLayouts from "../layout";
 import Forgotpassword from "../Chatpages/Forgotpassword";
 import Mentor_home1 from "../Components/Mentor_home1";
-
+import Jee_neet from '../Components/classes/jee-neet/Jee_neet';
 
 
 import Choose from '../Choose';
@@ -90,6 +90,10 @@ const router = createBrowserRouter([
         {
             path: "community",
             element: <Community />
+        },
+        {
+            path:"jee-neet",
+            element : <Jee_neet/>
         },
         {
             path: "chatwithmentors",

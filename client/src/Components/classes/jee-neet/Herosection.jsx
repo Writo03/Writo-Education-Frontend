@@ -1,22 +1,22 @@
 import React from 'react'
-import HeroImage from '../assets/com.png'
-import img from '../assets/vector.png'
-
-
-const Community_hero = () => {
+import img from '../../../assets/vector.png'
+import HeroImage from '../../../assets/course.png'
+const Herosection = () => {
   return (
     <div className=" bg-white ">
       <section className="hero bg1">
         <div className="hero-text items-center text-center item1">
-          <h1>Writo Student Community for 6th - 10th students</h1>
+          <h1>Your pathway to JEE/NEET Excellence!</h1>
           <img src={img} alt="" className='ml-3 mb-2'/>
-          <p className='text-4xl text-start'>
-            Student communities are groups of like-minded individuals brought together by a shared interest, academic field, career goal, or hobby.
+          <p className='text-4xl  items-center text-center'>
+          Discover a new level of confidence in JEE/NEET exams with our expert-led sessions.
           </p>
           <div className='flex justify-start'>
-            <a href="/about6to10"><button className='mt-2 px-6 py-3 item2 font-semibold bg-green-500 text-white rounded-full'>
-            Know more
+            <a href="/about6to10">
+            <button className='mt-2 px-6 py-3 item2 font-semibold bg-[#488B80] text-white rounded-full'>
+            Buy now on 30000
             </button></a>
+            
           </div>
         </div>
         
@@ -34,4 +34,4 @@ const Community_hero = () => {
   )
 }
 
-export default Community_hero
+export default Herosection

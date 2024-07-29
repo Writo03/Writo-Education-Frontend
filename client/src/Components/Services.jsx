@@ -14,7 +14,7 @@ const Services = () => {
       <div className="bg-[#FAFAFA] rounded-lg shadow-lg p-6 w-full max-w-screen-lg">
         <h2 className="text-3xl mb-8 mt-6">Services</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
-        <Link to='/class-11' >
+        <Link to='/jee-neet' >
           <div className="bg-white border border-gray-200 rounded-lg p-6 flex">
             <img src={course1Image} alt="Course 1" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
             <div className="flex flex-col">

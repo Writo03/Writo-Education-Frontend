@@ -59,6 +59,7 @@ import Forgotpassword from "./Chatpages/Forgotpassword";
 import Chathome from './Chatpages/Chathome';
 import ProtectedRoutes from './ProtectedRoutes';
 import ResultsComponent from './Components/ResultsComponent';
+import Jee_neet from './Components/classes/jee-neet/Jee_neet';
 
 
 function App() {
@@ -105,7 +106,7 @@ function App() {
 
       <Route path="/neet-courses" element={<NEET />} />
       <Route path="/jee-courses" element={<JEE />} />
-      
+      <Route path='/jee-neet' element={<Jee_neet/>} />
       <Route path="/class-6/physics/video" element={<VideoPage />} />
       <Route path="/waits" element={< Waits/>} />
       <Route path="/neet-price" element={< NeetPrice/>} />
