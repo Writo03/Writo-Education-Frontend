@@ -11,6 +11,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import Contactus from "../../Components/Contactus";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import Navbar from "../../Components/Navbar";
 
 function NeetPrice() {
 
@@ -78,53 +79,7 @@ function NeetPrice() {
   return (
     <>
     {/* Nav bar */}
-    <nav className="bg-[#EFF4F4] w-full">
-      <div className="container mx-auto flex justify-around items-center p-4">
-        <div className="flex items-center">
-          <img src={Writo} alt="Logo" className="h-12 w-12" />
-          <span className="ml-2 text-lg font-bold text-black">Writo Education</span>
-        </div>
-        <div className="hidden md:flex items-center space-x-14">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search or Start a conversation"
-              className="px-4 py-2 w-80 bg-[#EFF4F4] rounded-full border border-gray-300"
-            />
-            <span className="absolute inset-y-0 right-4 flex items-center text-gray-500">
-              <CiSearch className="w-5 h-5" />
-            </span>
-          </div>
-          <a href="#" className="text-black font-medium">Community</a>
-          <a href="#" className="text-black font-medium">Mentors</a>
-          <a href="#" className="text-black font-medium">Programs</a>
-          <button className="bg-[#5C8D8D] text-white px-4 py-2 rounded-lg">Join now</button>
-        </div>
-        <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            {isOpen ? <FaTimes className="text-black h-6 w-6" /> : <FaBars className="text-black h-6 w-6" />}
-          </button>
-        </div>
-      </div>
-      {isOpen && (
-        <div className="md:hidden bg-[#E2F5F2] p-4">
-          <div className="relative mb-4">
-            <input
-              type="text"
-              placeholder="Search or Start a conversation"
-              className="px-4 py-2 w-full bg-white rounded-full border border-gray-300"
-            />
-            <span className="absolute inset-y-0 right-4 flex items-center text-gray-500">
-              <CiSearch className="w-5 h-5" />
-            </span>
-          </div>
-          <a href="#" className="block text-black px-4 py-2">Community</a>
-          <a href="#" className="block text-black px-4 py-2">Mentors</a>
-          <a href="#" className="block text-black px-4 py-2">Programs</a>
-          <button className="w-full bg-[#5C8D8D] text-white px-4 py-2 rounded-lg mt-2">Join now</button>
-        </div>
-      )}
-    </nav>
+    <Navbar />
       <div className="p-4 lg:p-8 bg-gray-50 min-h-screen">
         <h1 className="text-2xl font-bold text-[#488B80] mb-4">
           NEET Test Series

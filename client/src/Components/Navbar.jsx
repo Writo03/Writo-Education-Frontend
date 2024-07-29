@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { IoMenu } from "react-icons/io5";
 import { SlArrowRight } from "react-icons/sl";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import img from '../assets/image.png';
+import img from '../assets/writo-main.png';
 import axios from 'axios';
 
 const Navbar = () => {
@@ -67,9 +67,9 @@ const Navbar = () => {
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center justify-between w-full md:w-auto">
-            <Link to='/' className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-              <img src={img} alt="Logo" className="w-10 h-10" />
-              <span className="ml-3 text-2xl font-bold">WritoTech</span>
+            <Link to='/' className="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0">
+              <img src={img} alt="Logo" className="w-20 h-15" />
+              
             </Link>
             <button className="md:hidden flex items-center bg-[#1AB780] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base ml-auto" onClick={toggleMenu}>
               <IoMenu className="text-white text-3xl" />

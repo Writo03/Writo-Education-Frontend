@@ -1,17 +1,16 @@
 import React,{useState} from 'react'
 import Navbar from './Components/Navbar';
 
-import MentorCard from './Components/MentorCard';
 import HeroSection from './Components/HeroSection';
-import NavScrollExample from './Components/NavScrollExample';
+
 import About from './Components/About';
 import TestimonialCard from './Components/TestominalCard';
 import image from './assets/image copy.png';
-import image1 from './assets/image3.png';
+
 import Contactus from './Components/Contactus';
 import Test from './Components/Test';
 import Demo from './Components/Demo';
-import Query from './Components/Query';
+
 import Doubt from './Components/Doubt';
 import Courses from './Components/Courses';
 import ExpertGuidance from './Components/ExpertGuidance';
@@ -49,10 +48,9 @@ const Home = () => {
   return (
 
        <div>
-          <div className="font-[Poppins]  overflow-h  bg-[#EAF3F3]">
+        
             <Navbar />
-            <Navbar2 setDropdownOpen={setDropdownOpen}/>
-        </div>
+            <Navbar2 />
         <div className='bg1 overflow-h'>
         <HeroSection dropdownOpen={dropdownOpen}/>
         </div>

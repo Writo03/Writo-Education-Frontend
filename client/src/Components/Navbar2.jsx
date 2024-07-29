@@ -21,7 +21,7 @@ const NavBar2 = () => {
 
   return (
     <nav className="w-full overflow-x-hidden">
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 md:px-12">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-4  md:px-12">
         <div className="flex items-center space-x-4 md:space-x-10">
           <button
             className="text-black font-medium text-base md:text-2xl hover:text-gray-400"

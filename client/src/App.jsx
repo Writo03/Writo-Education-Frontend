@@ -15,7 +15,7 @@ import Services1 from './Components/Services1';
 import ChatwithMentor from './Components/ChatwithMentor';
 import Community_neet from './Components/Community_neet';
 import About_Hero from './Components_2/About_Hero';
-import NavScrollExample from './Components_2/NavScrollExample';
+
 import About6to10 from './Pages/About6to10';
 import AboutJee from './Pages/AboutJee';
 import AboutNeet from './Pages/AboutNeet';

@@ -6,7 +6,7 @@ import img from '../assets/vector.png'
 const Community_hero = () => {
   return (
     <div className=" bg-white ">
-      <section className="hero custom-gradient" >
+      <section className="hero bg-[#DFF2E5]">
         <div className="hero-text items-center text-center item1">
           <h1>Writo Student Community for 6th - 10th students</h1>
           <img src={img} alt="" className='ml-3 mb-2'/>
