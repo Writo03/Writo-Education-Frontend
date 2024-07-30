@@ -10,7 +10,6 @@ const paymentRoutes = require('./routes/payment')
 const session = require('express-session')
 
 // const app = express()
-const cors = require('cors');
 const allowedOrigins = [
     'https://writo-education-frontend-git-main-writos-projects.vercel.app',
     'https://writo-education-frontend.vercel.app'
