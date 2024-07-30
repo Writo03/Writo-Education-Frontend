@@ -14,33 +14,22 @@ const Chathome = () => {
 
   const fetchUserDetails = async () => {
     try {
-      const URL = `https://chat-app-main-2-copy.onrender.com/api/user-details`;
-      const response = await axios({
-        url: URL,
-        withCredentials: true
-      });
+        const URL = `https://chat-app-main-2-copy.onrender.com/api/user-details`;
+        const response = await axios.get(URL, { withCredentials: true });
 
-      console.log("Backend Response:", response.data);
+        if (response.data.logout) {
+            dispatch(logout());
+            navigate("/email");
+        } else {
+            dispatch(setUser(response.data.data));
+        }
 
-      if (response.data.data.logout) {
-        dispatch(logout());
-        navigate("/email");
-      } else {
-        dispatch(setUser(response.data.data));
-      }
-
-      console.log("Current user details", response);
+        console.log("Current user details", response);
     } catch (error) {
-      console.error("Error fetching user details:", error);
-      if (error.response) {
-        console.error("Error Response:", error.response.data);
-      } else if (error.request) {
-        console.error("Error Request:", error.request);
-      } else {
-        console.error("General Error:", error.message);
-      }
+        console.error("Error fetching user details:", error);
     }
-  };
+};
+
 
   useEffect(() => {
     fetchUserDetails();
