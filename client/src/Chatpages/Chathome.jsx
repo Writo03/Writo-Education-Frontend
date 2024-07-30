@@ -20,14 +20,13 @@ const Chathome = () => {
         withCredentials: true
       });
 
-      console.log("Backend Response:", response.data); // Log the response data
-
-      // Assuming response.data is the actual user data
-      dispatch(setUser(response.data.data));
+      console.log("Backend Response:", response.data);
 
       if (response.data.data.logout) {
         dispatch(logout());
         navigate("/email");
+      } else {
+        dispatch(setUser(response.data.data));
       }
 
       console.log("Current user details", response);
