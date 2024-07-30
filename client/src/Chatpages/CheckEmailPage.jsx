@@ -27,8 +27,8 @@ const CheckEmailPage = () => {
     e.preventDefault()
     e.stopPropagation()
 
-    const URL = `http://localhost:8080/api/email`
-    console.log(process.env.REACT_APP_BACKEND_URL)
+    const URL = `https://chat-app-main-2-copy.onrender.com/api/email`
+
 
     try {
         const response = await axios.post(URL,data)
