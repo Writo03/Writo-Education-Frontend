@@ -14,22 +14,27 @@ const Chathome = () => {
 
   const fetchUserDetails = async () => {
     try {
-        const URL = `https://writo-education-frontend.onrender.com/api/user-details`;
-        const response = await axios.get(URL, { withCredentials: true });
-
-        if (response.data.logout) {
-            dispatch(logout());
-            navigate("/email");
-        } else {
-            dispatch(setUser(response.data.data));
+      const URL = `https://writo-education-frontend.onrender.com/api/user-details`;
+      const response = await axios.get(URL, { 
+        withCredentials: true,
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`
         }
-
-        console.log("Current user details", response);
+      });
+  
+      if (response.data.logout) {
+        dispatch(logout());
+        navigate("/email");
+      } else {
+        dispatch(setUser(response.data.data));
+      }
+  
+      console.log("Current user details", response);
     } catch (error) {
-        console.error("Error fetching user details:", error);
+      console.error("Error fetching user details:", error);
     }
-};
-
+  };
+  
 
   useEffect(() => {
     fetchUserDetails();

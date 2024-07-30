@@ -2,6 +2,11 @@ const jwt = require('jsonwebtoken');
 const UserModel = require('../models/UserModel');
 
 const getUserDetailsFromToken = async (token) => {
+    const token = localStorage.getItem('token');
+if (!token) {
+  console.error("No token found");
+}
+
     if (!token) {
         return {
             message: "session out",
