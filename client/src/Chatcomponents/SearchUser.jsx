@@ -25,7 +25,7 @@ const SearchUser = ({ onClose }) => {
         const URL = `https://writo-education-frontend.onrender.com/api/search-user`;
         try {
             setLoading(true);
-            const response = await axios.post(URL, {
+            const response = await axios.post('https://writo-education-frontend.onrender.com', {
                 search: "",
                 userId: userId,
                 userType: userType
