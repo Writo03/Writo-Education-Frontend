@@ -10,22 +10,11 @@ const paymentRoutes = require('./routes/payment')
 const session = require('express-session')
 
 // const app = express()
-const allowedOrigins = [
-    'https://writo-education-frontend-git-main-writos-projects.vercel.app',
-    'https://writo-education-frontend.vercel.app'
-];
-
 app.use(cors({
-    origin: function (origin, callback) {
-        if (allowedOrigins.includes(origin) || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true
-}));
+    origin : ["http://localhost:3000","https://writo-education-frontend.vercel.app/","https://writo-education-frontend-git-main-writos-projects.vercel.app/"],
+    methods:["GET","POST","PUT","DELETE"],
+    credentials : true
+}))
 app.use(express.json())
 app.use(cookiesParser())
 
