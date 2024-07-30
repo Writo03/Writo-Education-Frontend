@@ -483,7 +483,7 @@ const RegisterPage = () => {
 			order_id: data.id,
 			handler: async (response) => {
 				try {
-					const verifyUrl = `https://chat-app-main-2-copy.onrender.com/api/payment/verify`;
+					const verifyUrl = `https://writo-education-frontend.onrender.com/api/payment/verify`;
           console.log(verifyUrl)
 					const result = await axios.post(verifyUrl, response);
           navigate('/email');
@@ -505,13 +505,13 @@ const RegisterPage = () => {
     e.stopPropagation();
 
     const URL = isMentor
-      ? `https://chat-app-main-2-copy.onrender.com/api/mentor_register`
-      : `https://chat-app-main-2-copy.onrender.com/api/student_register`;
+      ? `https://writo-education-frontend.onrender.com/api/mentor_register`
+      : `https://writo-education-frontend.onrender.com/api/student_register`;
 
     try {
 
       if(!isMentor){
-        const orderUrl = `https://chat-app-main-2-copy.onrender.com/api/payment/orders`;
+        const orderUrl = `https://writo-education-frontend.onrender.com/api/payment/orders`;
         const { data } = await axios.post(orderUrl, { amount: price });
         console.log(data);
         initPayment(data.data);

@@ -27,7 +27,7 @@ const CheckEmailPage = () => {
     e.preventDefault()
     e.stopPropagation()
 
-    const URL = `https://chat-app-main-2-copy.onrender.com/api/email`
+    const URL = `https://writo-education-frontend.onrender.com/api/email`
 
 
     try {
