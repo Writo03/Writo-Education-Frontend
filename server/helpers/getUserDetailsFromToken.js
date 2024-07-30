@@ -4,7 +4,6 @@ const UserModel = require('../models/UserModel');
 const getUserDetailsFromToken = async (token) => {
     
     if (!token) {
-        console.error("No token found");
         return {
             message: "session out",
             logout: true,
