@@ -11,7 +11,7 @@ const session = require('express-session')
 
 // const app = express()
 app.use(cors({
-    origin : process.env.FRONTEND_URL,
+    origin : "https://writo-education-frontend-git-main-writos-projects.vercel.app",
     methods:["GET","POST","PUT","DELETE"],
     credentials : true
 }))

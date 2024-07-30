@@ -42,7 +42,7 @@ const CheckPasswordPage = () => {
     const URL = `https://chat-app-main-2-copy.onrender.com/api/password`
 
     try {
-        const response = await axios(URL,{
+        const response = await axios({
           method :'post',
           url : URL,
           data : {
