@@ -17,7 +17,7 @@ const Navbar = () => {
 
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get(`http://localhost:8080/id`)
+    axios.get(`https://writo-education-frontend.onrender.com/id`)
       .then(result => {
         if (result.data.valid) {
           setAuth(true);
@@ -31,7 +31,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     console.log('result');
-    axios.get(`http://localhost:8080/remove-id`)
+    axios.get(`https://writo-education-frontend.onrender.com/remove-id`)
       .then(result => {
         console.log(result);
         window.location.reload();
