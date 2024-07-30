@@ -14,7 +14,7 @@ const Chathome = () => {
 
   const fetchUserDetails = async () => {
     try {
-        const URL = `https://chat-app-main-2-copy.onrender.com/api/user-details`;
+        const URL = `https://writo-education-frontend.onrender.com/api/user-details`;
         const response = await axios.get(URL, { withCredentials: true });
 
         if (response.data.logout) {
@@ -36,7 +36,7 @@ const Chathome = () => {
   }, []);
 
   useEffect(() => {
-    const socketConnection = io('https://chat-app-main-2-copy.onrender.com', {
+    const socketConnection = io('https://writo-education-frontend.onrender.com', {
       auth: {
         token: localStorage.getItem('token')
       },
