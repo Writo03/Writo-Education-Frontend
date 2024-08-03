@@ -505,7 +505,7 @@ const RegisterPage = () => {
     e.stopPropagation();
 
     const URL = isMentor
-      ? `https://writo-education-frontend.onrender.com/api/mentor_register`
+      ? `/api/mentor_register`
       : `https://writo-education-frontend.onrender.com/api/student_register`;
 
     try {
