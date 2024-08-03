@@ -18,7 +18,7 @@ const session = require('express-session')
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://writo-education-frontend.onrender.com/id"
+    "https://writo-education-frontend.onrender.com"
   );
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.header("Access-Control-Allow-Headers", "Content-Type");
