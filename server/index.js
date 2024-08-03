@@ -13,7 +13,7 @@ const session = require('express-session')
 app.use(cors({
     origin :"*",
     methods:["GET","POST","PUT","DELETE"],
-    credentials : true
+    credentials : false
 }))
 app.use(express.json())
 app.use(cookiesParser())
