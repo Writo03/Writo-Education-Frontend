@@ -39,7 +39,7 @@ const CheckPasswordPage = () => {
     e.preventDefault()
     e.stopPropagation()
 
-    const URL = `https://chat-app-main-2-copy.onrender.com/api/password`
+    const URL = `https://writo-education-frontend.onrender.com/api/password`
 
     try {
         const response = await axios({
