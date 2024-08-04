@@ -3,6 +3,7 @@ import { IoMenu } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../assets/image.png';
 import axios from 'axios';
+import { API_HOST } from '../api/url';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
 
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get(`https://writo-education-frontend.onrender.com/id`)
+    axios.get(`${API_HOST}/id`)
       .then(result => {
         if (result.data.valid) {
           setAuth(true);
@@ -30,7 +31,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     console.log('result');
-    axios.get(`https://writo-education-frontend.onrender.com/remove-id`)
+    axios.get(`${API_HOST}/remove-id`)
       .then(result => {
         console.log(result);
         window.location.reload();

@@ -4,6 +4,7 @@ import { SlArrowRight } from "react-icons/sl";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../assets/writo-main.png';
 import axios from 'axios';
+import { API_HOST } from '../api/url';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ const Navbar = () => {
 
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get(`https://writo-education-frontend.onrender.com/id`)
+    axios.get(`${API_HOST}/id`)
       .then(result => {
         if (result.data.valid) {
           setAuth(true);
@@ -31,7 +32,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     console.log('result');
-    axios.get(`https://writo-education-frontend.onrender.com/remove-id`)
+    axios.get(`${API_HOST}/remove-id`)
       .then(result => {
         console.log(result);
         window.location.reload();
@@ -69,7 +70,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between w-full md:w-auto">
             <Link to='/' className="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0">
               <img src={img} alt="Logo" className="w-20 h-15" />
-              
+
             </Link>
             <button className="md:hidden flex items-center bg-[#1AB780] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base ml-auto" onClick={toggleMenu}>
               <IoMenu className="text-white text-3xl" />
@@ -100,7 +101,7 @@ const Navbar = () => {
                 <SlArrowRight className="md:hidden ml-2 text-sm" />
               </Link>
             </div>
-            
+
             {/* Buttons */}
             {
               !auth &&

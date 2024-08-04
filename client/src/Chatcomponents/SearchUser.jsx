@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import axios from 'axios';
 import { IoClose } from "react-icons/io5";
 import { useSelector } from 'react-redux';
+import { API_HOST } from '../api/url';
 
 const SearchUser = ({ onClose }) => {
     const [searchUser, setSearchUser] = useState([]);
@@ -22,10 +23,10 @@ const SearchUser = ({ onClose }) => {
     // const userType = "mentor"
 
     const fetchInitialData = async () => {
-        const URL = `https://writo-education-frontend.onrender.com/api/search-user`;
+        const URL = `${API_HOST}/api/search-user`;
         try {
             setLoading(true);
-            const response = await axios.post('https://writo-education-frontend.onrender.com', {
+            const response = await axios.post(URL, {
                 search: "",
                 userId: userId,
                 userType: userType
@@ -45,7 +46,7 @@ const SearchUser = ({ onClose }) => {
             return;
         }
 
-        const URL = `https://writo-education-frontend.onrender.com/api/search-user`;
+        const URL = `${API_HOST}/api/search-user`;
         try {
             setLoading(true);
             const response = await axios.post(URL, {

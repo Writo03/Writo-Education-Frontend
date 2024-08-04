@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import Fail from "../../assets/fail.png";
 import Cup from "../../assets/cup.png";
 import Writo from "../../assets/Clip path group.png";
@@ -12,6 +12,7 @@ import Contactus from "../../Components/Contactus";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
+import { API_HOST } from "../../api/url";
 
 function NeetPrice() {
 
@@ -37,49 +38,49 @@ function NeetPrice() {
 
   const navigate = useNavigate();
 
-  const [price,Setprice]=useState(99)
+  const [price, Setprice] = useState(99)
 
   const initPayment = (data) => {
-		const options = {
-			key: "rzp_test_id6mUicmvlvjzB",
-			amount: data.amount,
-			currency: data.currency,
-			name: 'NEET Test Series',
-			description: "Test Transaction",
-			order_id: data.id,
-			handler: async (response) => {
-				try {
-					const verifyUrl = `http://localhost:8080/api/payment/verify`;
-					const result = await axios.post(verifyUrl, response);
+    const options = {
+      key: "rzp_test_id6mUicmvlvjzB",
+      amount: data.amount,
+      currency: data.currency,
+      name: 'NEET Test Series',
+      description: "Test Transaction",
+      order_id: data.id,
+      handler: async (response) => {
+        try {
+          const verifyUrl = `${API_HOST}/api/payment/verify`;
+          const result = await axios.post(verifyUrl, response);
           navigate('/neet-all-india-test-series')
-					console.log(result);
-				} catch (error) {
-					console.log(error);
-				}
-			},
-			theme: {
-				color: "#3399cc",
-			},
-		};
-		const rzp1 = new window.Razorpay(options);
-		rzp1.open();
-	};
+          console.log(result);
+        } catch (error) {
+          console.log(error);
+        }
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+    const rzp1 = new window.Razorpay(options);
+    rzp1.open();
+  };
 
-	const handlePayment = async () => {
-		try {
-			const orderUrl = `http://localhost:8080/api/payment/orders`;
-			const { data } = await axios.post(orderUrl, { amount: price });
-			console.log(data);
-			initPayment(data.data);
-		} catch (error) {
-			console.log(error);
-		}
-	};
+  const handlePayment = async () => {
+    try {
+      const orderUrl = `${API_HOST}/api/payment/orders`;
+      const { data } = await axios.post(orderUrl, { amount: price });
+      console.log(data);
+      initPayment(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
-    {/* Nav bar */}
-    <Navbar />
+      {/* Nav bar */}
+      <Navbar />
       <div className="p-4 lg:p-8 bg-gray-50 min-h-screen">
         <h1 className="text-2xl font-bold text-[#488B80] mb-4">
           NEET Test Series

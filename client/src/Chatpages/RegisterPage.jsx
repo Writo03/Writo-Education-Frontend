@@ -50,7 +50,7 @@
 //     e.preventDefault()
 //     e.stopPropagation()
 
-//     const URL = `http://localhost:8080/api/student_register`
+//     const URL = ` https://writo-education-frontend.onrender.com/api/student_register`
 
 //     try {
 //         const response = await axios.post(URL,data)
@@ -140,11 +140,11 @@
 //                           </button>
 //                         )
 //                       }
-                      
+
 //                   </div>
-                
+
 //                 </label>
-                
+
 //                 <input
 //                   type='file'
 //                   id='profile_pic'
@@ -237,8 +237,8 @@
 //     e.stopPropagation();
 
 //     const URL = isMentor
-//       ? `http://localhost:8080/api/mentor_register`
-//       : `http://localhost:8080/api/student_register`;
+//       ? ` https://writo-education-frontend.onrender.com/api/mentor_register`
+//       : ` https://writo-education-frontend.onrender.com/api/student_register`;
 
 //     try {
 //       const response = await axios.post(URL, data);
@@ -365,7 +365,7 @@
 //                 <option value="MATHS">Mathematics</option>
 //                 <option value="PHYSICS">Physics</option>
 //                 <option value="CHEMISTRY">Chemistry</option>
-      
+
 //               </select>
 //             </div>
 //           ) : (
@@ -412,6 +412,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import uploadFile from '../helpers/uploadFile';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { API_HOST } from '../api/url';
 
 const RegisterPage = () => {
   const [data, setData] = useState({
@@ -424,8 +425,8 @@ const RegisterPage = () => {
   });
   const [uploadPhoto, setUploadPhoto] = useState(null);
   const [isMentor, setIsMentor] = useState(false);
-  const [price,setPrice]= useState(5999)
-  const [course,setCourse]=useState('')
+  const [price, setPrice] = useState(5999)
+  const [course, setCourse] = useState('')
   const navigate = useNavigate();
   const fileInputRef = useRef(null); // Create a ref for the file input
 
@@ -435,7 +436,7 @@ const RegisterPage = () => {
       ...prev,
       [name]: value,
     }));
-    if(name==='student_course'){
+    if (name === 'student_course') {
       setCourse(value)
     }
   };
@@ -474,47 +475,48 @@ const RegisterPage = () => {
   };
 
   const initPayment = (data) => {
-		const options = {
-			key: "rzp_test_id6mUicmvlvjzB",
-			amount: data.amount,
-			currency: data.currency,
-			name: course,
-			description: "Test Transaction",
-			order_id: data.id,
-			handler: async (response) => {
-				try {
-					const verifyUrl = `https://writo-education-frontend.onrender.com/api/payment/verify`;
+    const options = {
+      key: "rzp_test_id6mUicmvlvjzB",
+      amount: data.amount,
+      currency: data.currency,
+      name: course,
+      description: "Test Transaction",
+      order_id: data.id,
+      handler: async (response) => {
+        try {
+          const verifyUrl = `${API_HOST}/api/payment/verify`;
           console.log(verifyUrl)
-					const result = await axios.post(verifyUrl, response);
+          const result = await axios.post(verifyUrl, response);
           navigate('/email');
-					console.log(result);
-				} catch (error) {
-					console.log(error);
-				}
-			},
-			theme: {
-				color: "#3399cc",
-			},
-		};
-		const rzp1 = new window.Razorpay(options);
-		rzp1.open();
-	};
+          console.log(result);
+        } catch (error) {
+          console.log(error);
+        }
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+    const rzp1 = new window.Razorpay(options);
+    // rzp1.open();
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     e.stopPropagation();
 
     const URL = isMentor
-      ? `/api/mentor_register`
-      : `https://writo-education-frontend.onrender.com/api/student_register`;
+      ? `${API_HOST}/api/mentor_register`
+      : `${API_HOST}/api/student_register`;
 
     try {
 
-      if(!isMentor){
-        const orderUrl = `https://writo-education-frontend.onrender.com/api/payment/orders`;
+      if (!isMentor) {
+        const orderUrl = `${API_HOST}/api/payment/orders`;
         const { data } = await axios.post(orderUrl, { amount: price });
-        console.log(data);
-        initPayment(data.data);
+        console.log('student data', data);
+        navigate('/email');
+        // initPayment(data.data);
       }
       const response = await axios.post(URL, data);
       console.log("response", response);
@@ -531,8 +533,8 @@ const RegisterPage = () => {
       //     mentor_subject: "",
       //   });
       // }
-        if(isMentor)
-          navigate('/email');
+      if (isMentor)
+        navigate('/email');
     } catch (error) {
       toast.error(error?.response?.data?.message);
     }
