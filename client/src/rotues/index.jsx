@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import RegisterPage from "../Chatpages/RegisterPage";
+import RegisterPage from "../Chatpages/Register";
 import CheckEmailPage from "../Chatpages/CheckEmailPage";
 import CheckPasswordPage from "../Chatpages/CheckPasswordPage";
 import Chathome from "../Chatpages/Chathome";
@@ -48,6 +48,10 @@ import JeeAllIndiaTestSeries from "../Pages/JeeAllIndiaTestSeries/JeeAllIndiaTes
 
 // import Chathome from "../Chatpages/Chathome";
 import ResultsComponent from '../Components/ResultsComponent';
+import Login from "../Chatpages/Login";
+import Test_Series from "../Components/quiz/Test_Series";
+import Test from "../Components/quiz/Test";
+import LeaderBoard from "../Components/quiz/LeaderBoard";
 
 
 const router = createBrowserRouter([
@@ -201,7 +205,7 @@ const router = createBrowserRouter([
         },
         {
             path : 'email',
-            element : <AuthLayouts><CheckEmailPage/></AuthLayouts>
+            element : <AuthLayouts><Login/></AuthLayouts>
         },
         {
             path : 'password',
@@ -210,6 +214,18 @@ const router = createBrowserRouter([
         {
             path : 'forgot-password',
             element : <AuthLayouts><Forgotpassword/></AuthLayouts>
+        },
+        {
+            path : 'test_series',
+            element : <AuthLayouts><Test_Series/></AuthLayouts>
+        },
+        {
+            path:'test/:id',
+            element:<AuthLayouts><Test/></AuthLayouts>
+        },
+        {
+            path:'/leaderboard/:id',
+            element:<AuthLayouts><LeaderBoard/></AuthLayouts>
         },
         {
             path : "chat-home",

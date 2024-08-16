@@ -24,3 +24,24 @@ code {
 .custom-gradient {
   background: linear-gradient(131deg, #1ab79d96, #ffdf6f96);
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px auto; /* Add some margin for better positioning */
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left; /* Align text to the left */
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

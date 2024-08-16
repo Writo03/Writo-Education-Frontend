@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { IoMenu } from "react-icons/io5";
-import { SlArrowRight } from "react-icons/sl";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import img from '../assets/writo-main.png';
-import axios from 'axios';
-import { API_HOST } from '../api/url';
+import img from '../assets/image.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,28 +13,31 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  axios.defaults.withCredentials = true;
+  // Check for the token in localStorage on component mount
   useEffect(() => {
-    axios.get(`${API_HOST}/id`)
-      .then(result => {
-        if (result.data.valid) {
-          setAuth(true);
-          console.log(result.data);
-        }
-      })
-      .catch(err => console.log(err));
-  }, []);
+    console.log('hello')
+    const checkAuth = () => {
+      const token = localStorage.getItem('token');
+      console.log('Token found:', token);  // Debugging log
+      if (token) {
+        setAuth(true);
+        console.log('User is authenticated');
+      } else {
+        setAuth(false);
+        console.log('User is not authenticated');
+      }
+    };
+
+    checkAuth(); // Run the check on mount
+  }, []); // Empty dependency array ensures this runs only on mount
 
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const handleLogout = () => {
-    console.log('result');
-    axios.get(`${API_HOST}/remove-id`)
-      .then(result => {
-        console.log(result);
-        window.location.reload();
-      })
-      .catch(err => console.log(err));
+    localStorage.removeItem('token');
+    setAuth(false);
+    console.log('User logged out');
+    navigate('/')
   };
 
   const handleCloseModal = () => {
@@ -45,7 +45,7 @@ const Navbar = () => {
   };
 
   const handleSignin = () => {
-    console.log(location.pathname);
+    console.log('Navigating to Register');
     navigate('/register', {
       state: {
         previousUrl: location.pathname,
@@ -54,7 +54,7 @@ const Navbar = () => {
   };
 
   const handleLogin = () => {
-    console.log(location.pathname);
+    console.log('Navigating to Login');
     navigate('/email', {
       state: {
         previousUrl: location.pathname,
@@ -62,15 +62,22 @@ const Navbar = () => {
     });
   };
 
+  const handleTestSeries=()=>{
+    if(auth) navigate('/test_series')
+    else{
+      navigate('/register')
+    }
+  }
+
   return (
     <>
       <header className="text-gray-600 body-font">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center justify-between w-full md:w-auto">
-            <Link to='/' className="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0">
-              <img src={img} alt="Logo" className="w-20 h-15" />
-
+            <Link to='/' className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+              <img src={img} alt="Logo" className="w-10 h-10" />
+              <span className="ml-3 text-2xl font-bold">WritoTech</span>
             </Link>
             <button className="md:hidden flex items-center bg-[#1AB780] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base ml-auto" onClick={toggleMenu}>
               <IoMenu className="text-white text-3xl" />
@@ -78,49 +85,15 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <nav className={`md:flex md:items-center ${isOpen ? 'block' : 'hidden md:block'} w-full md:w-auto`}>
-            <div className="flex flex-col md:flex-row md:ml-auto w-full md:w-auto">
-              <Link to='/' className="flex items-center justify-between py-2 px-4 text-2xl text-black hover:text-green-600 border-b md:border-0">
-                Writo
-                <SlArrowRight className="md:hidden ml-2 text-sm" />
-              </Link>
-              <Link to='/mentorship' className="flex items-center justify-between py-2 px-4 text-2xl text-black hover:text-green-600 border-b md:border-0">
-                Mentorship
-                <SlArrowRight className="md:hidden ml-2 text-sm" />
-              </Link>
-              <Link to='/community' className="flex items-center justify-between py-2 px-4 text-2xl text-black hover:text-green-600 border-b md:border-0">
-                Community
-                <SlArrowRight className="md:hidden ml-2 text-sm" />
-              </Link>
-              <Link to='/careers' className="flex items-center justify-between py-2 px-4 text-2xl text-black hover:text-green-600 border-b md:border-0">
-                Careers
-                <SlArrowRight className="md:hidden ml-2 text-sm" />
-              </Link>
-              <Link to='/blogs' className="flex items-center justify-between py-2 px-4 text-2xl text-black hover:text-green-600 border-b md:border-0">
-                Blogs
-                <SlArrowRight className="md:hidden ml-2 text-sm" />
-              </Link>
-            </div>
-
-            {/* Buttons */}
-            {
-              !auth &&
-              <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} w-full mt-4`}>
-                <div className="flex justify-between">
-                  <button onClick={handleSignin} className="bg-[#1AB780] border-0 py-3 px-6 mr-2 focus:outline-none hover:bg-gray-200 rounded text-base w-1/2">Sign up</button>
-                  <button onClick={handleLogin} className="border border-[#1AB780] py-3 px-6 ml-2 focus:outline-none hover:bg-gray-200 rounded text-base w-1/2">Login</button>
-                </div>
-              </div>
-            }
-            {
-              auth &&
-              <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} w-full mt-4`}>
-                <button className="bg-[#1AB780] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base border-t w-full" onClick={() => setShowLogoutModal(true)}>Logout</button>
-              </div>
-            }
+          <nav className={`md:flex md:items-center ${isOpen ? 'block' : 'hidden md:block'}`}>
+            <button onClick={handleTestSeries} className="block py-2 px-4 text-2xl text-black hover:text-green-600">Test Series</button>
+            <Link to='/mentorship' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Mentorship</Link>
+            <Link to='/community' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Community</Link>
+            <Link to='/careers' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Careers</Link>
+            <Link to='/blogs' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Blogs</Link>
           </nav>
 
-          {/* Buttons for desktop view */}
+          {/* Buttons */}
           {
             !auth &&
             <div className="hidden md:flex items-center">

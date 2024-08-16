@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { IoMenu } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../assets/image.png';
-import axios from 'axios';
-import { API_HOST } from '../api/url';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,29 +12,33 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  console.log('hello')
 
-  axios.defaults.withCredentials = true;
+  // Check for the token in localStorage on component mount
   useEffect(() => {
-    axios.get(`${API_HOST}/id`)
-      .then(result => {
-        if (result.data.valid) {
-          setAuth(true);
-          console.log(result.data);
-        }
-      })
-      .catch(err => console.log(err));
-  }, []);
+    console.log('hello')
+    const checkAuth = () => {
+      const token = localStorage.getItem('token');
+      console.log('Token found:', token);  // Debugging log
+      if (token) {
+        setAuth(true);
+        console.log('User is authenticated');
+      } else {
+        setAuth(false);
+        console.log('User is not authenticated');
+      }
+    };
+
+    checkAuth(); // Run the check on mount
+  }, []); // Empty dependency array ensures this runs only on mount
 
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const handleLogout = () => {
-    console.log('result');
-    axios.get(`${API_HOST}/remove-id`)
-      .then(result => {
-        console.log(result);
-        window.location.reload();
-      })
-      .catch(err => console.log(err));
+    localStorage.removeItem('token');
+    setAuth(false);
+    console.log('User logged out');
+    window.location.reload(); // Refresh the page
   };
 
   const handleCloseModal = () => {
@@ -44,7 +46,7 @@ const Navbar = () => {
   };
 
   const handleSignin = () => {
-    console.log(location.pathname);
+    console.log('Navigating to Register');
     navigate('/register', {
       state: {
         previousUrl: location.pathname,
@@ -53,7 +55,7 @@ const Navbar = () => {
   };
 
   const handleLogin = () => {
-    console.log(location.pathname);
+    console.log('Navigating to Login');
     navigate('/email', {
       state: {
         previousUrl: location.pathname,

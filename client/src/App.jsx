@@ -49,7 +49,7 @@ import AboutJeeCommunity from "./Pages/about-jee-community/about_jee_community";
 import NeetAllIndiaTestseries from "./Pages/NeetAllIndiaTestSeries/NeetAllIndiaTestseries";
 import JeeAllIndiaTestSeries from "./Pages/JeeAllIndiaTestSeries/JeeAllIndiaTestSeries";
 
-import RegisterPage from "./Chatpages/RegisterPage";
+import RegisterPage from "./Chatpages/Register";
 import CheckEmailPage from "./Chatpages/CheckEmailPage";
 import CheckPasswordPage from "./Chatpages/CheckPasswordPage";
 // import Chathome from "../Chatpages/Chathome";
@@ -60,6 +60,10 @@ import Chathome from './Chatpages/Chathome';
 import ProtectedRoutes from './ProtectedRoutes';
 import ResultsComponent from './Components/ResultsComponent';
 import Jee_neet from './Components/classes/jee-neet/Jee_neet';
+import Login from './Chatpages/Login';
+import Test_Series from './Components/quiz/Test_Series';
+import Test from './Components/quiz/Test';
+import LeaderBoard from './Components/quiz/LeaderBoard';
 
 
 function App() {
@@ -114,10 +118,13 @@ function App() {
       <Route path="/jee-price" element={< JeePrice/>} />
       <Route path="/neet-all-india-test-series" element={< NeetAllIndiaTestseries/>} />
       <Route path="/jee-all-india-test-series" element={< JeeAllIndiaTestSeries/>} />
+      <Route path='/test_series' element={<Test_Series/>}/>
+      <Route path='/test/:id' element={<Test/>}/>
+      <Route path='/leaderboard/:id' element={<LeaderBoard/>}/>
 
 
       <Route path="/register" element={<AuthLayouts><RegisterPage /></AuthLayouts>} />
-        <Route path="/email" element={<AuthLayouts><CheckEmailPage /></AuthLayouts>} />
+        <Route path="/email" element={<AuthLayouts><Login/></AuthLayouts>} />
         <Route path="/password" element={<AuthLayouts><CheckPasswordPage /></AuthLayouts>} />
         <Route path="/forgot-password" element={<AuthLayouts><Forgotpassword /></AuthLayouts>} />
   
