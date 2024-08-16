@@ -12,7 +12,7 @@ const session = require('express-session')
 
 // const app = express()
 app.use(cors({
-    origin :"http://localhost:3000",
+    origin :"https://writo-education-frontend.vercel.app/",
     methods:["GET","POST","PUT","DELETE"],
     credentials : true
 }))
