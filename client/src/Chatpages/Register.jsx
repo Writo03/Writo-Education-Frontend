@@ -15,7 +15,7 @@ function Register() {
         password
       });
       console.log(response.data);
-      navigate('/');
+      navigate('/email');
     } catch (error) {
       console.error(error.response.data);
     }
