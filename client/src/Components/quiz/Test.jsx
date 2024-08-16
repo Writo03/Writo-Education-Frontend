@@ -24,7 +24,7 @@ const Test = () => {
     const navigate=useNavigate()
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/quiz/get-quiz/${id}`)
+        axios.get(`https://writo-education-frontend.onrender.com/api/quiz/get-quiz/${id}`)
             .then(response => {
                 const quizData = response.data
                 setData(quizData)
@@ -96,14 +96,14 @@ const Test = () => {
     const handleSubmit = async () => {
         try {
             const token = localStorage.getItem('token');
-            const userResponse = await axios.get('http://localhost:8080/api/me', {
+            const userResponse = await axios.get('https://writo-education-frontend.onrender.com/api/me', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
             });
             const userId = userResponse.data.id;
 
-            const resultResponse = await axios.post(`http://localhost:8080/api/quiz/submit-quiz/${userId}`, result);
+            const resultResponse = await axios.post(`https://writo-education-frontend.onrender.com/api/quiz/submit-quiz/${userId}`, result);
             console.log('Submit Response:', resultResponse.data);
             alert('Quiz submitted successfully!');
             navigate('/')

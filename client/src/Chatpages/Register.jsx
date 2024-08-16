@@ -10,7 +10,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/api/register', {
+      const response = await axios.post('https://writo-education-frontend.onrender.com/api/register', {
         username,
         password
       });

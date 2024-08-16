@@ -17,7 +17,7 @@ const LeaderBoard = () => {
         const fetchData = async () => {
             try {
                 const token = localStorage.getItem('token')
-                const userResponse = await axios.get('http://localhost:8080/api/me', {
+                const userResponse = await axios.get('https://writo-education-frontend.onrender.com/api/me', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -25,13 +25,13 @@ const LeaderBoard = () => {
                 const userId = userResponse.data.id
 
                 // Check if the user has taken the test
-                const checkTest = await axios.get(`http://localhost:8080/api/quiz/check-quiz/${userId}/${id}`)
+                const checkTest = await axios.get(`https://writo-education-frontend.onrender.com/api/quiz/check-quiz/${userId}/${id}`)
 
                 if (checkTest.data.taken) {
                     setTaken(true)
 
                     // Fetch results for the test
-                    const resultResponse = await axios.get(`http://localhost:8080/api/quiz/test-results/${userId}/${id}`)
+                    const resultResponse = await axios.get(`https://writo-education-frontend.onrender.comapi/quiz/test-results/${userId}/${id}`)
 
                     setResults(resultResponse.data.results)
                     setTestName(resultResponse.data.testName) // Assuming you have a testName in the result
