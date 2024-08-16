@@ -27,7 +27,7 @@ const LeaderBoard = () => {
                 const userId = userResponse.data.id
 
                 // Check if the user has taken the test
-                const checkTest = await axios.get(`https://writo-education-frontend.onrender.com/quiz/check-quiz/${userId}/${id}`)
+                const checkTest = await axios.get(`https://writo-education-frontend.onrender.com/api/quiz/check-quiz/${userId}/${id}`)
 
                 if (checkTest.data.taken) {
                     setTaken(true)
