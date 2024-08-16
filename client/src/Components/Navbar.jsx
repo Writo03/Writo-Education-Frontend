@@ -91,6 +91,17 @@ const Navbar = () => {
             <Link to='/community' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Community</Link>
             <Link to='/careers' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Careers</Link>
             <Link to='/blogs' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Blogs</Link>
+            {!auth && (
+              <div className="md:hidden flex flex-col mt-4">
+                <button onClick={handleSignin} className="bg-[#1AB780] border-0 py-3 px-6 mb-2 focus:outline-none hover:bg-gray-200 rounded text-base">Sign up</button>
+                <button onClick={handleLogin} className="border border-[#1AB780] py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base">Login</button>
+              </div>
+            )}
+            {auth && (
+              <div className="md:hidden flex flex-col mt-4">
+                <button className="bg-[#1AB780] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base" onClick={() => setShowLogoutModal(true)}>Logout</button>
+              </div>
+            )}
           </nav>
 
           {/* Buttons */}
