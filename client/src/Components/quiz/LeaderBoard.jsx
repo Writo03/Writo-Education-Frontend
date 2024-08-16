@@ -33,7 +33,7 @@ const LeaderBoard = () => {
                     setTaken(true)
 
                     // Fetch results for the test
-                    const resultResponse = await axios.get(`https://writo-education-frontend.onrender.com/quiz/test-results/${userId}/${id}`)
+                    const resultResponse = await axios.get(`https://writo-education-frontend.onrender.com/api/quiz/test-results/${userId}/${id}`)
                     setResults(resultResponse.data.results)
                     setTestName(resultResponse.data.testName)
                     setTimeTaken(resultResponse.data.timeTaken)
