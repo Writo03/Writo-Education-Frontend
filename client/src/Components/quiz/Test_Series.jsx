@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import img1 from '../../assets/quiz.png'  // Importing the image
 
 const Test_Series = () => {
     let i = 1
@@ -28,14 +29,14 @@ const Test_Series = () => {
                         {data.map(test => (
                             <div key={test._id} className="rounded overflow-hidden shadow-lg">
                                 <div className="relative">
-                                    <div className="bg-gray-200 w-full h-40 flex items-center justify-center">
-                                        <h2 className="text-xl font-bold">{test.test_name}</h2>
-                                    </div>
-                                    <div className="absolute top-0 right-0 bg-indigo-600 text-white px-4 py-2 rounded-full mt-3 mr-3">
+                                    {/* Adding the quiz image */}
+                                    <img src={img1} alt="Quiz" className="w-full h-40 object-cover" />
+                                    <div className="absolute top-0 right-0 bg-[#178774] text-white px-4 py-2 rounded-full mt-3 mr-3">
                                         {i++}
                                     </div>
                                 </div>
                                 <div className="px-6 py-4">
+                                    <h2 className="text-xl font-bold mb-2">{test.test_name}</h2>
                                     <p className="text-gray-500 text-sm mb-2">
                                         Number of Questions: {test.questions.length}
                                     </p>
@@ -44,10 +45,10 @@ const Test_Series = () => {
                                     </p>
                                     <div className="flex justify-between">
                                         <Link to={`/test/${test._id}`}>
-                                            <button className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-500">Start Test</button>
+                                            <button className="bg-[#178774] text-white px-4 py-2 rounded hover:bg-indigo-500">Start Test</button>
                                         </Link>
                                         <Link to={`/leaderboard/${test._id}`}>
-                                            <button className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-500">Stats</button>
+                                        <button className="bg-white text-black border border-[#178774] px-4 py-2 rounded hover:bg-gray-500">Stats</button>
                                         </Link>
                                     </div>
                                 </div>

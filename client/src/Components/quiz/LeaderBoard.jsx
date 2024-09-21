@@ -15,6 +15,23 @@ const LeaderBoard = () => {
     const [highestScore, setHighestScore] = useState(null)
     const [taken, setTaken] = useState(false)
 
+    // Define getOptionClass before it is used
+    const getOptionClass = (option, correctOption, selectedOption) => {
+        let baseClass = 'p-2 rounded';
+        let outlineClass = '';
+        
+        if (option === selectedOption) {
+            outlineClass = 'border-2 border-blue-500'; // Extra outline for chosen option
+        }
+        if (option === correctOption) {
+            return `${baseClass} ${outlineClass} bg-green-200 text-green-800`;
+        }
+        if (option === selectedOption) {
+            return `${baseClass} ${outlineClass} bg-red-200 text-red-800`;
+        }
+        return `${baseClass} ${outlineClass} bg-gray-100 text-gray-800`;
+    }
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -57,22 +74,6 @@ const LeaderBoard = () => {
 
         fetchData()
     }, [id])
-
-    const getOptionClass = (option, correctOption, selectedOption) => {
-        let baseClass = 'p-2 rounded';
-        let outlineClass = '';
-        
-        if (option === selectedOption) {
-            outlineClass = 'border-2 border-blue-500'; // Extra outline for chosen option
-        }
-        if (option === correctOption) {
-            return `${baseClass} ${outlineClass} bg-green-200 text-green-800`;
-        }
-        if (option === selectedOption) {
-            return `${baseClass} ${outlineClass} bg-red-200 text-red-800`;
-        }
-        return `${baseClass} ${outlineClass} bg-gray-100 text-gray-800`;
-    }
 
     return (
         <>
