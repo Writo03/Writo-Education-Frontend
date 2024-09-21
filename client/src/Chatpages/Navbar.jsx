@@ -80,7 +80,7 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <nav className={`md:flex md:items-center ${isOpen ? 'block' : 'hidden md:block'}`}>
-            <Link to='/' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Writo</Link>
+            <Link to='/test_series' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Testseries</Link>
             <Link to='/mentorship' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Mentorship</Link>
             <Link to='/community' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Community</Link>
             <Link to='/careers' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Careers</Link>
