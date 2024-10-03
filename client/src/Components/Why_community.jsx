@@ -13,7 +13,7 @@ const Why_community = () => {
         <p className='text-center text-[#488B80] text-2xl item1'>Why Join Writo student community?</p>
       </div>
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container px-5 md:py-24 mx-auto">
           <div className="flex flex-col">
             {/* Optional: Additional content here */}
           </div>

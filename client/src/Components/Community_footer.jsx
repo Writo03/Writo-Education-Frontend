@@ -12,7 +12,7 @@ const Community_footer = () => {
   return (
    < div className="flex flex-col mt-5">
     <div className="w-full bg-[#178774] pt-4 md:pl-20">
-      <div className="flex items-center w-full mb-4">
+      <div className="flex items-center w-full mb-2 md:mb-4">
         <div className="flex flex-col sm:flex-row items-center w-full sm:w-1/3 md:bg-white p-2 mb-2 rounded-full">
           <input
             className="w-80 bg-white px-4 py-2 mb-2 sm:mb-0 rounded-full text-gray-700 leading-tight focus:outline-none focus:border-teal-500"
@@ -32,9 +32,9 @@ const Community_footer = () => {
 
     {/* Middle Footer Section that contain all matter and links and about part */}
     <div>
-      <div className="w-full bg-[#178774] text-white px-4 -mt-1">
-        <div className="w-full bg-[#178774] text-white px-8">
-          <div className="w-full bg-[#178774] text-white px-6 py-2">
+      <div className="w-full bg-[#178774] text-white px-4 py-2 -mt-1">
+        <div className="w-full bg-[#178774] text-white md:px-8">
+          <div className="w-full bg-[#178774] text-white  md:px-6 py-2">
             <div className="flex flex-col lg:flex-row w-full justify-between space-y-6 lg:space-y-0 lg:space-x-6">
               <div className="w-full lg:w-1/3 mr-4">
                 <div className="font-serif">
@@ -50,10 +50,11 @@ const Community_footer = () => {
                 </div>
               </div>
 
-              <div className="w-full lg:w-2/3 flex flex-col lg:flex-row justify-between space-y-6 lg:space-y-0 lg:space-x-8">
-                <div className="w-full lg:w-1/3">
+              <div className="w-full lg:w-2/3 grid lg:grid-cols-3 grid-cols-2 gap-2">
+                
+                <div className="w-full ">
                   <h3 className="text-lg font-semibold">Quick Links</h3>
-                  <ul className="text-lg space-y-2 mt-4 style={{ color: 'teal' }">
+                  <ul className="text-base  flex flex-col gap-1 md:gap-2 mt-4 style={{ color: 'teal' }">
                         <p>
                           <Link to={"/why_writo"} className="hover:underline">
                             Why choose us
@@ -81,9 +82,9 @@ const Community_footer = () => {
                         </p>
                       </ul>
                 </div>
-                <div className="w-full lg:w-1/3">
+                <div className="w-full ">
                   <h3 className="text-lg font-semibold">Business Hours</h3>
-                  <p className="text-lg leading-relaxed mt-4">
+                  <p className="text-base flex flex-col gap-1 md:gap-2 leading-relaxed mt-4">
                     Mon - Fri
                     <br />
                     9.00 am to 07.00 pm
@@ -95,9 +96,10 @@ const Community_footer = () => {
                     Sunday also available
                   </p>
                 </div>
-                <div className="w-full lg:w-1/3">
+                <div className="w-full col-span-2 lg:col-span-1 mt-2 md:mt-0 flex flex-col items-center ">
+                  <div className="">
                   <h3 className="text-lg font-semibold">Contact Info</h3>
-                  <p className="text-lg leading-relaxed mt-4">
+                  <p className="text-base  flex flex-col gap-1  md:gap-2   leading-relaxed mt-2 md:mt-4">
                     <div className="flex flex-row">
                       <FaLocationDot className="h-4 w-4 mt-2 mr-1" />
                       Rewa, India
@@ -125,7 +127,9 @@ const Community_footer = () => {
                         <FaTwitter className="w-6 h-6 text-white" />
                       </a>
                     </div>
+                    
                   </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -134,8 +138,8 @@ const Community_footer = () => {
       </div>
 
       {/* Last Part -> Copy rights Part */}
-      <div className="bg-[#006756] w-full p-2 text-white mt-">
-        <div className="flex flex-row ml-4 space-x-4">
+      <div className="bg-[#006756] w-full  p-2 text-white ">
+        <div className="flex flex-row items-center justify-center ml-4 space-x-4">
           <LiaCopyrightSolid className="text-white font-bold h-6 w-6" />
           <Link to={"/"}>
             <p className="text-white font-semibold">Writo Education</p>
