@@ -71,7 +71,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="text-gray-600 body-font">
+      <header className="text-gray-600 body-font relative w-full">
         <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row md:items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center justify-between w-full md:w-auto">
@@ -95,11 +95,15 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <nav
-            className={`md:flex md:items-center flex-row ${
+            className={`md:flex md:items-center flex-col md:flex-row absolute md:static top-16 md:top-auto right-0 md:right-auto bg-[#f5f5f5] z-20 transition-all duration-300 ease-in-out w-1/2  md:w-auto h-screen md:h-auto overflow-y-auto md:overflow-visible pr-4 md:pr-0 pl-1 md:pl-0 ${
               isOpen
-                ? "flex justify-start items-end flex-col md:flex-row"
-                : "hidden md:block"
-            }`}
+                ? "translate-x-0"
+                : "translate-x-full md:translate-x-0"
+            }`}/*{`md:flex md:items-center flex-row absolute md:static z-20 top-16 right-0 bg-[#f5f5f5] transition-all duration-100 ease-in ${
+              isOpen
+                ? "flex justify-start items-end flex-col md:flex-row right-0"
+                : "right-[-100%] md:right-0"
+            }`}*/
           >
             <button
               onClick={handleTestSeries}
