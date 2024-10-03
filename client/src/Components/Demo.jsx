@@ -4,7 +4,7 @@ const Demo = () => {
   return (
     <div className="flex items-center justify-center py-8 mt-3">
       <div
-        className="w-4/5 p-6 rounded-lg shadow-md"
+        className="w-full p-6 rounded-lg shadow-md mx-8"
         style={{ backgroundColor: 'rgba(234, 243, 254, 0.45)' }}
       >
         <h2 className="text-2xl font-semibold item-5 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 text-center">

@@ -42,9 +42,9 @@ const Contactus = () => {
         className="bg-[#F5FCFA] bg-cover bg-center px-6 py-6 rounded-md shadow-md text-lg font-medium"
         style={{
           backgroundImage: `url(${image})`,
-          backgroundSize: '28%', // Adjust the background size here
-          backgroundRepeat: 'no-repeat', // Ensure no repeat for background
-          backgroundPosition: 'left', // Center the background image
+          backgroundSize: "28%", // Adjust the background size here
+          backgroundRepeat: "no-repeat", // Ensure no repeat for background
+          backgroundPosition: "left", // Center the background image
         }}
       >
         <h1 className="text-3xl font-bold text-center">Contact Us</h1>
@@ -85,14 +85,15 @@ const Contactus = () => {
             name="message"
             placeholder="Message"
             className="w-full p-2 border-b border-gray-300 bg-transparent focus:outline-none focus:border-teal-500"
+            rows={1}
             value={formData.message}
             onChange={handleChange}
             required
           ></textarea>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center justify-center space-x-2">
             <button
               type="submit"
-              className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200"
+              className="bg-teal-500 text-white py-2 px-8 rounded hover:bg-teal-600 transition duration-200"
             >
               Send
             </button>
@@ -204,16 +205,28 @@ const Contactus = () => {
                         </div>
 
                         <div className="flex flex-row space-x-2 mt-2">
-                          <a href="https://www.instagram.com/writoeducation" className="hover:underline">
+                          <a
+                            href="https://www.instagram.com/writoeducation"
+                            className="hover:underline"
+                          >
                             <FaInstagram className="text-white w-6 h-6" />
                           </a>
-                          <a href="https://www.facebook.com/people/Writo-Education-Pvt-Ltd/61558449281363/?sk=about" className="hover:underline">
+                          <a
+                            href="https://www.facebook.com/people/Writo-Education-Pvt-Ltd/61558449281363/?sk=about"
+                            className="hover:underline"
+                          >
                             <FaFacebook className="text-white h-6 w-6" />
                           </a>
-                          <a href="https://www.linkedin.com/company/writo-learning-solutions/" className="hover:underline">
+                          <a
+                            href="https://www.linkedin.com/company/writo-learning-solutions/"
+                            className="hover:underline"
+                          >
                             <FaLinkedin className="w-6 h-6 text-white" />
                           </a>
-                          <a href="https://x.com/writoeducation" className="hover:underline">
+                          <a
+                            href="https://x.com/writoeducation"
+                            className="hover:underline"
+                          >
                             <FaTwitter className="w-6 h-6 text-white" />
                           </a>
                         </div>
@@ -240,7 +253,7 @@ const Contactus = () => {
             </div>
           </div>
         </div>
-      </div>{/* End of Last Part */}
+      </div>
     </div>
   );
 };

@@ -6,14 +6,17 @@ import "./NavBar2.css";
 const NavBar2 = () => {
   const [showServices, setShowServices] = useState(false);
   const [showEvents, setShowEvents] = useState(false);
+  const [selected, setSelected] = useState("");
 
   const handleServicesClick = () => {
+    setSelected((prev) => (prev === "services" ? "" : "services"));
     setShowServices((prevState) => !prevState);
     setShowEvents(false); // Hide Events component when Services component is clicked
     console.log("Clicked Services");
   };
 
   const handleEventsClick = () => {
+    setSelected((prev) => (prev === "events" ? "" : "events"));
     setShowEvents((prevState) => !prevState);
     setShowServices(false); // Hide Services component when Events component is clicked
     console.log("Clicked Events");
@@ -21,16 +24,20 @@ const NavBar2 = () => {
 
   return (
     <nav className="w-full overflow-x-hidden">
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-4  md:px-12">
-        <div className="flex items-center space-x-4 md:space-x-10">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 md:px-12">
+        <div className="flex items-center space-x-2 md:space-x-6">
           <button
-            className="text-black font-medium text-base md:text-2xl hover:text-gray-400"
+            className={`${
+              selected === "services" && "bg-green-200"
+            } text-black font-medium text-base md:text-2xl sm:mr-2 hover:bg-green-200 rounded-md px-2`}
             onClick={handleServicesClick}
           >
             Services
           </button>
           <button
-            className="text-black font-medium text-base md:text-2xl sm:mr-2 hover:text-gray-400"
+            className={`${
+              selected === "events" && "bg-green-200"
+            } text-black font-medium text-base md:text-2xl sm:mr-2 hover:bg-green-200 rounded-md px-2`}
             onClick={handleEventsClick}
           >
             Events
@@ -48,7 +55,7 @@ const NavBar2 = () => {
 
       {/* Conditional rendering of Services component */}
       {showServices && <Services className="services-component" />}
-      
+
       {/* Conditional rendering of Events component */}
       {showEvents && <Events className="events-component" />}
     </nav>
