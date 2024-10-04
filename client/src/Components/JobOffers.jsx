@@ -25,49 +25,49 @@ const JobCard = ({ title, location, description, features }) => (
 const JobOffers = () => {
   const initialJobData = [
     {
-      title: "Web Developer",
+      title: "Junior Web Developer",
       location: "Bangalore",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+        "Join our fast-growing team to build and maintain dynamic websites. Work with HTML, CSS, and JavaScript.",
+      features: ["HTML & CSS", "JavaScript", "ReactJS", "API Integration"],
     },
     {
-      title: "Web Developer",
-      location: "Bangalore",
+      title: "UI/UX Designer",
+      location: "Remote",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+        "Design intuitive and engaging user interfaces for mobile and web applications.",
+      features: ["Figma", "Adobe XD", "User Research", "Prototyping"],
     },
     {
-      title: "Web Developer",
-      location: "Bangalore",
+      title: "Content Writer",
+      location: "Mumbai",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+        "Craft compelling content for blogs, websites, and marketing campaigns.",
+      features: ["SEO Writing", "Copywriting", "Research", "Editing"],
     },
   ];
 
   const moreJobData = [
     {
-      title: "Senior Web Developer",
-      location: "Mumbai",
+      title: "Full Stack Developer",
+      location: "Delhi",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+        "Develop full-scale web applications with backend integration.",
+      features: ["Node.js", "ReactJS", "MongoDB", "Express"],
     },
     {
-      title: "Frontend Developer",
-      location: "Pune",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
-    },
-    {
-      title: "Backend Developer",
+      title: "Backend Engineer",
       location: "Chennai",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+        "Develop robust server-side logic for scalable web applications.",
+      features: ["Node.js", "Express.js", "Database Management", "API Design"],
+    },
+    {
+      title: "Digital Marketing Specialist",
+      location: "Pune",
+      description:
+        "Manage digital marketing campaigns across multiple platforms.",
+      features: ["SEO", "Google Ads", "Social Media Marketing", "Analytics"],
     },
   ];
 

@@ -47,7 +47,7 @@ import NeetAllIndiaTestseries from "../Pages/NeetAllIndiaTestSeries/NeetAllIndia
 import JeeAllIndiaTestSeries from "../Pages/JeeAllIndiaTestSeries/JeeAllIndiaTestSeries";
 
 // import Chathome from "../Chatpages/Chathome";
-import ResultsComponent from '../Components/ResultsComponent';
+import CarrersPage from '../Components/CarrersPage';
 import Login from "../Chatpages/Login";
 import Test_Series from "../Components/quiz/Test_Series";
 import Test from "../Components/quiz/Test";
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
         },
         {
             path: "careers",
-            element: <ResultsComponent />
+            element: <CarrersPage />
         },
         {
             path: "mentorservices",
