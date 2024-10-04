@@ -14,7 +14,7 @@ const Community_neet = () => {
   return (
     <>
     <div className=' bg-[#E6F1F1]'>
-      <Navbar/>
+    
       <Community_nav/>
       <Community_neet_hero/>
     </div>
@@ -24,7 +24,6 @@ const Community_neet = () => {
       <Neet_members/>
       {/* <Neet_conatct/> */}
       <Community_contact />
-      <Community_footer/>
     </div>
     </>
 

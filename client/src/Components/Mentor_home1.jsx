@@ -21,7 +21,6 @@ const Mentor_home1 = () => {
       <GetStarted/>
       <MentorSection/>
       <Faq1/>
-      <Community_footer/>
     </div>
   )
 }

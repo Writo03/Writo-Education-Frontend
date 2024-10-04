@@ -77,22 +77,25 @@ function App() {
         <Route path="/mentorservices" element={<Services1/>}></Route>
         <Route path='/careers' element={<CarrersPage/>} />
         <Route path="/chatwithmentors" element={<ChatwithMentor/>}/>
+        <Route path='/mentorship' element={<Menotor_home1 />} />
+        <Route path='/communityneet' element={<Community_neet/>}/>
 
       </Route>
 
 
         {/*  */}
         
-        <Route path='/mentorship' element={<Menotor_home1 />} />
         <Route path='/why_writo' element={<Choose />} />
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/terms' element={<TermandConditions />} />
         <Route path='/faq' element={<Faq />} />
-       
-        <Route path='/communityneet' element={<Community_neet/>}/>
         <Route path="/about6to10" element={<About6to10/>}/>
         <Route path="/aboutjee" element={<AboutJee/>}/>
         <Route path="/aboutneet" element={<AboutNeet/>}/>
+
+
+
+
         <Route path="/doubtcourses" element={<Doubt_courses/>}/>
         <Route path="/doubtsection" element={<DoubtSection/>}/>
         <Route path="/blogs" element={<Blogs/>}/>
