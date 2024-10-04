@@ -4,9 +4,9 @@ import Contactus from "./Contactus";
 import Navbar from "./Navbar";
 
 const Card = ({ title, description }) => (
-  <div className="bg-white rounded-lg shadow-2xl p-6 m-4 flex-1">
+  <div className="bg-white rounded-lg shadow-2xl p-6 md:m-4 mb-4 flex-1">
     <h3 className="font-bold text-lg mb-2">{title}</h3>
-    <p className="text-gray-600 w-2/3">{description}</p>
+    <p className="text-gray-600 w-full md:w-2/3">{description}</p>
   </div>
 );
 
@@ -49,28 +49,28 @@ const ResultsComponent = () => {
       
         <div className="flex flex-col lg:flex-row justify-center items-center w-full">
           <div className="flex-1 w-full">
-            <div className="grid grid-cols-2 gap-4 lg:gap-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-24">
               <div className="text-center">
-                <p className="text-4xl font-bold text-[#184948]">54</p>
-                <p className="text-gray-600">
+                <p className="text-xl md:text-4xl  font-bold text-[#184948]">54</p>
+                <p className="text-gray-600 text-sm md:text-base">
                   printing and typesetting industry. Lorem Ipsum has been
                 </p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold text-[#184948]">₹10,547</p>
-                <p className="text-gray-600">
+                <p className="text-xl md:text-4xl font-bold text-[#184948] ">₹10,547</p>
+                <p className="text-gray-600 text-sm md:text-base">
                   printing and typesetting industry. Lorem Ipsum has been
                 </p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold text-[#184948]">852</p>
-                <p className="text-gray-600">
+                <p className="text-xl md:text-4xl font-bold text-[#184948] ">852</p>
+                <p className="text-gray-600 text-sm md:text-base">
                   printing and typesetting industry. Lorem Ipsum has been
                 </p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold text-[#184948]">452</p>
-                <p className="text-gray-600">
+                <p className="text-xl md:text-4xl font-bold text-[#184948] ">452</p>
+                <p className="text-gray-600 text-sm md:text-base">
                   printing and typesetting industry. Lorem Ipsum has been
                 </p>
               </div>
