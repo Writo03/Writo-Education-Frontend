@@ -39,7 +39,7 @@ function JeePrice() {
   return (
     <>
      {/* Nav bar */}
-     <nav className="bg-[#EFF4F4] w-full">
+     {/* <nav className="bg-[#EFF4F4] w-full">
      <div className="container mx-auto flex justify-around items-center p-4">
        <div className="flex items-center">
          <img src={Writo} alt="Logo" className="h-12 w-12" />
@@ -85,7 +85,7 @@ function JeePrice() {
          <button className="w-full bg-[#5C8D8D] text-white px-4 py-2 rounded-lg mt-2">Join now</button>
        </div>
      )}
-   </nav>
+   </nav> */}
       <div className="p-4 lg:p-8 bg-gray-50 min-h-screen">
         <h1 className="text-2xl font-bold text-[#488B80] mb-4">
           JEE Online Test Series(Mains +Advance)
@@ -93,7 +93,7 @@ function JeePrice() {
         <div className="flex flex-col lg:flex-row gap-x-8">
           {/* Left part */}
           <div className="flex flex-col w-full lg:w-3/5">
-            <div className="flex flex-col lg:flex-row mt-4 gap-x-10 gap-y-4">
+            <div className="flex flex-row mt-4 gap-x-10 gap-y-4">
               <div className="flex flex-col gap-y-3">
                 <p className="text-black text-lg font-semibold">Language</p>
                 <p className="text-lg font-medium">English</p>
@@ -158,7 +158,7 @@ function JeePrice() {
           </div>
 
           {/* Right part */}
-          <div className="flex flex-col justify-center items-center w-full lg:w-2/5 mt-6 lg:mt-0">
+          <div className="flex flex-col justify-center items-center md:items-start lg:items-center w-full lg:w-2/5 mt-6 lg:mt-0">
             <div className="bg-white shadow-lg rounded-lg p-6 max-w-sm w-full">
               <div className="flex flex-row justify-between">
                 <h2 className="text-xl font-semibold mb-4">Annual Fee</h2>
@@ -230,7 +230,7 @@ function JeePrice() {
             About the program
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="text-xl font-semibold text-[#E67E22]">
                   All India Ranks
@@ -256,7 +256,7 @@ function JeePrice() {
                 <img src={Cup} alt="All India Ranks" className="w-32 h-32" />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex justify-between items-center">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="text-xl font-semibold text-[#E67E22]">
                   Test Analysis
@@ -284,7 +284,7 @@ function JeePrice() {
                 />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="text-xl font-semibold text-[#E67E22]">
                   Flexible Test Series
@@ -312,7 +312,7 @@ function JeePrice() {
                 />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="text-xl font-semibold text-[#E67E22]">
                   Practice on the Go
