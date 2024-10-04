@@ -16,7 +16,7 @@ const Community = () => {
   return (
    <>
     <div className=' bg-[#E6F1F1]'> 
-      <Navbar className='z-10'/>
+      
       <Community_nav className='z-1'/>
       <Community_hero className='z-1'/>
     </div>
@@ -25,7 +25,7 @@ const Community = () => {
       <Connect/>
       <Member/>
       <Community_contact/>
-      <Community_footer/>
+      
     </div>
    </>
   )

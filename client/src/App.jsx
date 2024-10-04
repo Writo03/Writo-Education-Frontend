@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
@@ -64,78 +64,87 @@ import Login from './Chatpages/Login';
 import Test_Series from './Components/quiz/Test_Series';
 import Test from './Components/quiz/Test';
 import LeaderBoard from './Components/quiz/LeaderBoard';
+import Layout from './layout/Layout';
 
 
 function App() {
   return (
-    <Routes>
-      {/* <Route path='/' element={<Home />} /> */}
-      <Route path='/' element={<Home />} />
-      <Route path='/mentorship' element={<Menotor_home1 />} />
-      <Route path='/careers' element={<ResultsComponent/>} />
-      <Route path="/mentorservices" element={<Services1/>}></Route>
-      <Route path='/why_writo' element={<Choose />} />
-      <Route path='/privacy' element={<Privacy />} />
-      <Route path='/terms' element={<TermandConditions />} />
-      <Route path='/faq' element={<Faq />} />
-      <Route path='/community' element={<Community/>}/>
-      <Route path="/chatwithmentors" element={<ChatwithMentor/>}/>
-      <Route path='/communityneet' element={<Community_neet/>}/>
-      <Route path="/about6to10" element={<About6to10/>}/>
-      <Route path="/aboutjee" element={<AboutJee/>}/>
-      <Route path="/aboutneet" element={<AboutNeet/>}/>
-      <Route path="/doubtcourses" element={<Doubt_courses/>}/>
-      <Route path="/doubtsection" element={<DoubtSection/>}/>
-      <Route path="/blogs" element={<Blogs/>}/>
+      <Routes>
 
-      <Route path="/all" element={<AllCoursesPage />} />
-   
-      {/*<Route path="/class-6/maths" element={<Maths />} />*/}
-      <Route path="/class-6beforepay" element={<Class6befpay />} />
-      <Route path="/class-7beforepay" element={<Class7befpay />} />
-      <Route path="/class-8beforepay" element={<Class8befpay />} />
-      <Route path="/class-9beforepay" element={<Class9befpay />} />
-      <Route path="/class-10beforepay" element={<Class10befpay />} />
-      {/*neet and jee test series */}
-      <Route path="/jee-test-series" element={<JeeTestSeries />} />
-      <Route path="/neet-test-series" element={<NeetTestSeries />} />
-      {/*<Route path="/class-6/chemistry" element={<Chemistry />} />*/}
-      {/* <Route path="/class-6" element={<Class6 />} />
-      <Route path="/class-7" element={<Class7 />} />
-      <Route path="/class-8" element={<Class8 />} />
-      <Route path="/class-9" element={<Class9 />} />
-      <Route path="/class-10" element={<Class10 />} />*/}
-      <Route path="/class-11" element={<Class11 />} />
-      <Route path="/class-12" element={<Class12 />} /> 
+      <Route path='/' element={<Layout />} >
+        <Route path='' element={<Home />} />
+        <Route path='/community' element={<Community/>}/>
 
-      <Route path="/neet-courses" element={<NEET />} />
-      <Route path="/jee-courses" element={<JEE />} />
-      <Route path='/jee-neet' element={<Jee_neet/>} />
-      <Route path="/class-6/physics/video" element={<VideoPage />} />
-      <Route path="/waits" element={< Waits/>} />
-      <Route path="/neet-price" element={< NeetPrice/>} />
-      {/* <Route path="/mains+advance" element={< JEEMainsAndAdvance/>} />*/}
-      <Route path="/jee-price" element={< JeePrice/>} />
-      <Route path="/neet-all-india-test-series" element={< NeetAllIndiaTestseries/>} />
-      <Route path="/jee-all-india-test-series" element={< JeeAllIndiaTestSeries/>} />
-      <Route path='/test_series' element={<Test_Series/>}/>
-      <Route path='/test/:id' element={<Test/>}/>
-      <Route path='/leaderboard/:id' element={<LeaderBoard/>}/>
+      </Route>
 
 
-      <Route path="/register" element={<AuthLayouts><RegisterPage /></AuthLayouts>} />
-        <Route path="/email" element={<AuthLayouts><Login/></AuthLayouts>} />
-        <Route path="/password" element={<AuthLayouts><CheckPasswordPage /></AuthLayouts>} />
-        <Route path="/forgot-password" element={<AuthLayouts><Forgotpassword /></AuthLayouts>} />
+        {/*  */}
+        
+        <Route path='/mentorship' element={<Menotor_home1 />} />
+        <Route path='/careers' element={<ResultsComponent/>} />
+        <Route path="/mentorservices" element={<Services1/>}></Route>
+        <Route path='/why_writo' element={<Choose />} />
+        <Route path='/privacy' element={<Privacy />} />
+        <Route path='/terms' element={<TermandConditions />} />
+        <Route path='/faq' element={<Faq />} />
+        <Route path="/chatwithmentors" element={<ChatwithMentor/>}/>
+        <Route path='/communityneet' element={<Community_neet/>}/>
+        <Route path="/about6to10" element={<About6to10/>}/>
+        <Route path="/aboutjee" element={<AboutJee/>}/>
+        <Route path="/aboutneet" element={<AboutNeet/>}/>
+        <Route path="/doubtcourses" element={<Doubt_courses/>}/>
+        <Route path="/doubtsection" element={<DoubtSection/>}/>
+        <Route path="/blogs" element={<Blogs/>}/>
+
+        <Route path="/all" element={<AllCoursesPage />} />
+    
+        {/*<Route path="/class-6/maths" element={<Maths />} />*/}
+        <Route path="/class-6beforepay" element={<Class6befpay />} />
+        <Route path="/class-7beforepay" element={<Class7befpay />} />
+        <Route path="/class-8beforepay" element={<Class8befpay />} />
+        <Route path="/class-9beforepay" element={<Class9befpay />} />
+        <Route path="/class-10beforepay" element={<Class10befpay />} />
+        {/*neet and jee test series */}
+        <Route path="/jee-test-series" element={<JeeTestSeries />} />
+        <Route path="/neet-test-series" element={<NeetTestSeries />} />
+        {/*<Route path="/class-6/chemistry" element={<Chemistry />} />*/}
+        {/* <Route path="/class-6" element={<Class6 />} />
+        <Route path="/class-7" element={<Class7 />} />
+        <Route path="/class-8" element={<Class8 />} />
+        <Route path="/class-9" element={<Class9 />} />
+        <Route path="/class-10" element={<Class10 />} />*/}
+        <Route path="/class-11" element={<Class11 />} />
+        <Route path="/class-12" element={<Class12 />} /> 
+
+        <Route path="/neet-courses" element={<NEET />} />
+        <Route path="/jee-courses" element={<JEE />} />
+        <Route path='/jee-neet' element={<Jee_neet/>} />
+        <Route path="/class-6/physics/video" element={<VideoPage />} />
+        <Route path="/waits" element={< Waits/>} />
+        <Route path="/neet-price" element={< NeetPrice/>} />
+        {/* <Route path="/mains+advance" element={< JEEMainsAndAdvance/>} />*/}
+        <Route path="/jee-price" element={< JeePrice/>} />
+        <Route path="/neet-all-india-test-series" element={< NeetAllIndiaTestseries/>} />
+        <Route path="/jee-all-india-test-series" element={< JeeAllIndiaTestSeries/>} />
+        <Route path='/test_series' element={<Test_Series/>}/>
+        <Route path='/test/:id' element={<Test/>}/>
+        <Route path='/leaderboard/:id' element={<LeaderBoard/>}/>
+
+
+        <Route path="/register" element={<AuthLayouts><RegisterPage /></AuthLayouts>} />
+          <Route path="/email" element={<AuthLayouts><Login/></AuthLayouts>} />
+          <Route path="/password" element={<AuthLayouts><CheckPasswordPage /></AuthLayouts>} />
+          <Route path="/forgot-password" element={<AuthLayouts><Forgotpassword /></AuthLayouts>} />
+    
+          <Route element={<ProtectedRoutes />}>
+          <Route path="/chat-home" element={<Chathome />}>
+            <Route path="/chat-home/:userId" element={<MessagePage />} />
+          </Route>
+          </Route>
+
+
+      </Routes>
   
-        <Route element={<ProtectedRoutes />}>
-        <Route path="/chat-home" element={<Chathome />}>
-          <Route path="/chat-home/:userId" element={<MessagePage />} />
-        </Route>
-        </Route>
-
-
-    </Routes>
   );
 }
 

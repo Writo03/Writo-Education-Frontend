@@ -47,7 +47,7 @@ const Home = () => {
   ];
   return (
     <div>
-      <Navbar />
+      
       <Navbar2 />
       <div className="bg1 overflow-h">
         <HeroSection dropdownOpen={dropdownOpen} />
