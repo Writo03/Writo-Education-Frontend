@@ -71,53 +71,123 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="text-gray-600 body-font">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+      <header className={`text-gray-600 body-font relative w-full`}>
+        <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row md:items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center justify-between w-full md:w-auto">
-            <Link to='/' className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-              <img src={img} alt="Logo" className="w-10 h-10" />
-              <span className="ml-3 text-2xl font-bold">WritoTech</span>
+            <Link to="/" className="font-medium text-gray-900 flex items-center justify-center">
+              <img
+                src={img}
+                alt="Logo"
+                className="lg:w-10 lg:h-10 h-6 w-6 md:h-8 md:w-8"
+              />
+              <span className="ml-3 text-xl lg:text-2xl font-bold md:hidden lg:block">
+                WritoTech
+              </span>
             </Link>
-            <button className="md:hidden flex items-center bg-[#1AB780] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base ml-auto" onClick={toggleMenu}>
-              <IoMenu className="text-white text-3xl" />
+            <button
+              className={`md:hidden h-8 ${isOpen ? 'bg-gray-200' : 'bg-[#1AB780]'} border-0 py-1 px-4 focus:outline-none rounded text-base transition-all ease-in duration-100`}
+              onClick={toggleMenu}
+            >
+              <IoMenu className="text-white text-xl" />
             </button>
           </div>
 
           {/* Navigation Links */}
-          <nav className={`md:flex md:items-center ${isOpen ? 'block' : 'hidden md:block'}`}>
-            <button onClick={handleTestSeries} className="block py-2 px-4 text-2xl text-black hover:text-green-600">Test Series</button>
-            <Link to='/mentorship' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Mentorship</Link>
-            <Link to='/community' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Community</Link>
-            <Link to='/careers' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Careers</Link>
-            <Link to='/blogs' className="block py-2 px-4 text-2xl text-black hover:text-green-600">Blogs</Link>
+          <div className='md:flex md:items-center md:w-auto w-full'>
+          <nav
+            className={`md:flex md:items-center flex-col md:flex-row fixed md:static top-16 md:top-auto right-0 md:right-auto bg-[#f5f5f5] z-20 transition-all duration-300 ease-in-out w-2/3 md:w-auto h-screen md:h-auto overflow-y-auto md:overflow-visible pr-4 md:pr-0 pl-1 md:pl-0 ${
+              isOpen
+                ? "translate-x-0"
+                : "translate-x-full md:translate-x-0"
+            }`}
+          >
+            <button
+              onClick={handleTestSeries}
+              className="block text-start py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+            >
+              Test Series
+            </button>
+            <Link
+              to="/mentorship"
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+            >
+              Mentorship
+            </Link>
+            <Link
+              to="/community"
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+            >
+              Community
+            </Link>
+            <Link
+              to="/careers"
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+            >
+              Careers
+            </Link>
+            <Link
+              to="/blogs"
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+            >
+              Blogs
+            </Link>
             {!auth && (
               <div className="md:hidden flex flex-col mt-4">
-                <button onClick={handleSignin} className="bg-[#1AB780] border-0 py-3 px-6 mb-2 focus:outline-none hover:bg-gray-200 rounded text-base">Sign up</button>
-                <button onClick={handleLogin} className="border border-[#1AB780] py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base">Login</button>
+                <button
+                  onClick={handleSignin}
+                  className="bg-[#1AB780] border-0 py-3 px-6 mb-2 focus:outline-none hover:bg-gray-200 rounded text-base"
+                >
+                  Sign up
+                </button>
+                <button
+                  onClick={handleLogin}
+                  className="border border-[#1AB780] py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base"
+                >
+                  Login
+                </button>
               </div>
             )}
             {auth && (
               <div className="md:hidden flex flex-col mt-4">
-                <button className="bg-[#1AB780] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base" onClick={() => setShowLogoutModal(true)}>Logout</button>
+                <button
+                  className="bg-[#1AB780] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base"
+                  onClick={() => setShowLogoutModal(true)}
+                >
+                  Logout
+                </button>
               </div>
             )}
           </nav>
+          </div>
 
           {/* Buttons */}
-          {
-            !auth &&
+          {!auth && (
             <div className="hidden md:flex items-center">
-              <button onClick={handleSignin} className="bg-[#1AB780] border-0 py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base">Sign up</button>
-              <button onClick={handleLogin} className="border border-[#1AB780] py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base">Login</button>
+              <button
+                onClick={handleSignin}
+                className="bg-[#1AB780] border-0 py-2 lg:py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base"
+              >
+                Sign up
+              </button>
+              <button
+                onClick={handleLogin}
+                className="border border-[#1AB780] py-2 lg:py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base"
+              >
+                Login
+              </button>
             </div>
-          }
-          {
-            auth &&
+          )}
+          {auth && (
             <div className="hidden md:flex items-center">
-              <button className="bg-[#1AB780] border-0 py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base" onClick={() => setShowLogoutModal(true)}>Logout</button>
+              <button
+                className="bg-[#1AB780] border-0 py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base"
+                onClick={() => setShowLogoutModal(true)}
+              >
+                Logout
+              </button>
             </div>
-          }
+          )}
         </div>
       </header>
 
