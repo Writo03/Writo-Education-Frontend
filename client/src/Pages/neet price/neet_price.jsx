@@ -222,7 +222,7 @@ function NeetPrice() {
             About the program
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="md:text-xl font-semibold text-[#E67E22]">
                   All India Ranks
@@ -248,7 +248,7 @@ function NeetPrice() {
                 <img src={Cup} alt="All India Ranks" className="w-32 h-32" />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="md:text-xl font-semibold text-[#E67E22]">
                   Test Analysis
@@ -276,7 +276,7 @@ function NeetPrice() {
                 />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="md:text-xl font-semibold text-[#E67E22]">
                   Flexible Test Series
@@ -304,7 +304,7 @@ function NeetPrice() {
                 />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="md:text-xl font-semibold text-[#E67E22]">
                   Practice on the Go

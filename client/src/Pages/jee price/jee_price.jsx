@@ -10,7 +10,7 @@ import { CiSearch } from "react-icons/ci";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
 import Contactus from "../../Components/Contactus";
 import {Link} from "react-router-dom"
-
+import Navbar from "../../Components/Navbar";
 
 function JeePrice() {
 
@@ -86,6 +86,7 @@ function JeePrice() {
        </div>
      )}
    </nav> */}
+   <Navbar />
       <div className="p-4 lg:p-8 bg-gray-50 min-h-screen">
         <h1 className="text-2xl font-bold text-[#488B80] mb-4">
           JEE Online Test Series(Mains +Advance)
@@ -230,7 +231,7 @@ function JeePrice() {
             About the program
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="text-xl font-semibold text-[#E67E22]">
                   All India Ranks
@@ -256,7 +257,7 @@ function JeePrice() {
                 <img src={Cup} alt="All India Ranks" className="w-32 h-32" />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="text-xl font-semibold text-[#E67E22]">
                   Test Analysis
@@ -284,7 +285,7 @@ function JeePrice() {
                 />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="text-xl font-semibold text-[#E67E22]">
                   Flexible Test Series
@@ -312,7 +313,7 @@ function JeePrice() {
                 />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center flex-col md:flex-row">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
                 <h3 className="text-xl font-semibold text-[#E67E22]">
                   Practice on the Go

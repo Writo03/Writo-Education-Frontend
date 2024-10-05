@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { IoMenu } from "react-icons/io5";
+import { IoMenu, IoClose } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/image.png';
 
@@ -9,9 +9,6 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   // Check for the token in localStorage on component mount
   useEffect(() => {
@@ -87,7 +84,7 @@ const Navbar = () => {
             </Link>
             <button
               className={`md:hidden h-8 ${isOpen ? 'bg-gray-200' : 'bg-[#1AB780]'} border-0 py-1 px-4 focus:outline-none rounded text-base transition-all ease-in duration-100`}
-              onClick={toggleMenu}
+              onClick={() => setIsOpen(true)}
             >
               <IoMenu className="text-white text-xl" />
             </button>
@@ -95,13 +92,17 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className='md:flex md:items-center md:w-auto w-full'>
+            
           <nav
-            className={`md:flex md:items-center flex-col md:flex-row fixed md:static top-16 md:top-auto right-0 md:right-auto bg-[#f5f5f5] z-20 transition-all duration-300 ease-in-out w-2/3 md:w-auto h-screen md:h-auto overflow-y-auto md:overflow-visible pr-4 md:pr-0 pl-1 md:pl-0 ${
+            className={`md:flex md:items-center flex-col md:flex-row fixed md:static md:top-auto right-0 top-0 md:right-auto bg-[#f5f5f5] z-20 transition-all duration-300 ease-in-out w-2/3 md:w-auto h-screen md:h-auto overflow-y-auto md:overflow-visible pr-4 md:pr-0 pl-1 md:pl-0 ${
               isOpen
                 ? "translate-x-0"
                 : "translate-x-full md:translate-x-0"
             }`}
           >
+            <div className='md:hidden'>
+            <IoClose onClick={() => setIsOpen(false)} className='text-2xl text-black mt-2 h-6 w-6 ml-1'/>
+            </div>
             <button
               onClick={handleTestSeries}
               className="block text-start py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
