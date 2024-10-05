@@ -51,7 +51,7 @@ const ChatwithMentor = () => {
        
     
     <Mentor_nav/>
-    <div className="bg-white text-black  lg:py-12">
+    <div className="bg-white text-black  py-3 lg:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mt-8 mb-8">Chat with a Mentor</h2>
         

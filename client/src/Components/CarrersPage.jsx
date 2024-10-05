@@ -51,33 +51,30 @@ const CarrersPage = () => {
           <div className="flex-1 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-24">
               <div className="text-center">
-                <p className="text-xl md:text-4xl  font-bold text-[#184948]">54</p>
+                <p className="text-xl md:text-4xl  font-bold text-[#184948]">65+</p>
                 <p className="text-gray-600 text-sm md:text-base">
-                  printing and typesetting industry. Lorem Ipsum has been
+                  Members in Our team
                 </p>
               </div>
               <div className="text-center">
-                <p className="text-xl md:text-4xl font-bold text-[#184948] ">₹10,547</p>
+                <p className="text-xl md:text-4xl font-bold text-[#184948] ">20+</p>
                 <p className="text-gray-600 text-sm md:text-base">
-                  printing and typesetting industry. Lorem Ipsum has been
+                 Faculty trainee in Our team
                 </p>
               </div>
               <div className="text-center">
-                <p className="text-xl md:text-4xl font-bold text-[#184948] ">852</p>
+                <p className="text-xl md:text-4xl font-bold text-[#184948] ">40+</p>
                 <p className="text-gray-600 text-sm md:text-base">
-                  printing and typesetting industry. Lorem Ipsum has been
+                Members in Our Teachinical team
                 </p>
               </div>
               <div className="text-center">
-                <p className="text-xl md:text-4xl font-bold text-[#184948] ">452</p>
+                <p className="text-xl md:text-4xl font-bold text-[#184948] ">10000+</p>
                 <p className="text-gray-600 text-sm md:text-base">
-                  printing and typesetting industry. Lorem Ipsum has been
+                  Students in Our Community
                 </p>
               </div>
             </div>
-            <button className="px-4 py-2 border border-[#184948] text-[#184948] rounded hover:bg-[#184948] hover:text-white transition mt-10 w-full ">
-              Learn more
-            </button>
           </div>
           <div className="flex-1 w-full mt-8 lg:mt-0 flex justify-center lg:justify-end">
             <img

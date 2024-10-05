@@ -6,7 +6,7 @@ import "./NavBar2.css";
 const NavBar2 = () => {
   const [showServices, setShowServices] = useState(false);
   const [showEvents, setShowEvents] = useState(false);
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState(""); 
 
   const handleServicesClick = () => {
     setSelected((prev) => (prev === "services" ? "" : "services"));

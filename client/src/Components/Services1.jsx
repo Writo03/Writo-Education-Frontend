@@ -9,7 +9,7 @@ const Services1 = () => {
     <div>
       
       <Mentor_nav/>
-      <div className="bg-white text-white lg:py-12">
+      <div className="bg-white text-white py-3 lg:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl mt-8  text-black font-bold text-center mb-8">Our Services</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

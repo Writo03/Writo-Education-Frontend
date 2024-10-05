@@ -39,10 +39,10 @@ const Community_footer = () => {
               <div className="w-full lg:w-1/3 mr-4">
                 <div className="font-serif">
                   <h2 className="font-bold text-xl lg:text-2xl">
-                    Write Education
+                    Writo Education
                   </h2>
                   <p className="text-sm lg:text-base leading-relaxed mt-4">
-                    At Write Education, we’re passionate about empowering
+                    At Writo Education, we’re passionate about empowering
                     JEE/NEET aspirants to reach their full potential. Our
                     team is committed to providing you with the best
                     learning experience possible.
@@ -110,7 +110,7 @@ const Community_footer = () => {
                     </div>
                     <div className="flex flex-row">
                       <IoMdMail className="h-4 w-4 mt-2 mr-1" />
-                      support@write.tech
+                      support@writo.tech
                     </div>
 
                     <div className="hidden lg:flex flex-row space-x-2 mt-2">
