@@ -10,7 +10,7 @@ import { IoMdMail } from "react-icons/io";
 import { LiaCopyrightSolid } from "react-icons/lia";
 const Community_footer = () => {
   return (
-   < div className="flex flex-col mt-5">
+   < div className="flex flex-col">
     <div className="w-full bg-[#178774] pt-4 md:pl-20">
       <div className="flex items-center w-full mb-2 md:mb-4">
         <div className="flex flex-col sm:flex-row items-center w-full sm:w-1/3 md:bg-white p-2 mb-2 rounded-full">

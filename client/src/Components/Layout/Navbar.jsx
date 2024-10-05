@@ -71,7 +71,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`text-gray-600 body-font relative w-full`}>
+      <header className={`text-gray-600 body-font relative w-full border-b-2`}>
         <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row md:items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center justify-between w-full md:w-auto">

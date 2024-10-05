@@ -58,7 +58,7 @@ import AuthLayouts from "./layout";
 import Forgotpassword from "./Chatpages/Forgotpassword";
 import Chathome from './Chatpages/Chathome';
 import ProtectedRoutes from './ProtectedRoutes';
-import ResultsComponent from './Components/ResultsComponent';
+import CarrersPage from './Components/CarrersPage';
 import Jee_neet from './Components/classes/jee-neet/Jee_neet';
 import Login from './Chatpages/Login';
 import Test_Series from './Components/quiz/Test_Series';
@@ -74,24 +74,28 @@ function App() {
       <Route path='/' element={<Layout />} >
         <Route path='' element={<Home />} />
         <Route path='/community' element={<Community/>}/>
+        <Route path="/mentorservices" element={<Services1/>}></Route>
+        <Route path='/careers' element={<CarrersPage/>} />
+        <Route path="/chatwithmentors" element={<ChatwithMentor/>}/>
+        <Route path='/mentorship' element={<Menotor_home1 />} />
+        <Route path='/communityneet' element={<Community_neet/>}/>
 
       </Route>
 
 
         {/*  */}
         
-        <Route path='/mentorship' element={<Menotor_home1 />} />
-        <Route path='/careers' element={<ResultsComponent/>} />
-        <Route path="/mentorservices" element={<Services1/>}></Route>
         <Route path='/why_writo' element={<Choose />} />
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/terms' element={<TermandConditions />} />
         <Route path='/faq' element={<Faq />} />
-        <Route path="/chatwithmentors" element={<ChatwithMentor/>}/>
-        <Route path='/communityneet' element={<Community_neet/>}/>
         <Route path="/about6to10" element={<About6to10/>}/>
         <Route path="/aboutjee" element={<AboutJee/>}/>
         <Route path="/aboutneet" element={<AboutNeet/>}/>
+
+
+
+
         <Route path="/doubtcourses" element={<Doubt_courses/>}/>
         <Route path="/doubtsection" element={<DoubtSection/>}/>
         <Route path="/blogs" element={<Blogs/>}/>
