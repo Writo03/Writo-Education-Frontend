@@ -11,7 +11,7 @@ const { app, server } = require('./socket/index')
 const session = require('express-session')
 
 // const app = express()
-const allowedOrigins = ['http://localhost:3000', 'https://writo-education-frontend.onrender.com'];
+const allowedOrigins = ['http://localhost:3000', 'https://writo-education-frontend.onrender.com',"https://writo-education-frontend.onrender.com/api/login"];
 app.use(cors({
   origin: allowedOrigins,
   credentials: true, 
