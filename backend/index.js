@@ -11,14 +11,13 @@ const { app, server } = require('./socket/index')
 const session = require('express-session')
 
 // const app = express()
-
-const corsOptions = {
-  origin: ['https://writo-education-frontend.vercel.app',"http://localhost:3000"],
-  methods: ['GET', 'POST'],
+const allowedOrigins = ['http://localhost:3000', 'https://writo-education-frontend.onrender.com'];
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true, 
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-};
-
-app.use(cors(corsOptions));
+}));
 
 app.use(express.json())
 app.use(cookiesParser())
