@@ -6,7 +6,7 @@ import './CommunityAim.css'
 
 export default function CommunityAim() {
   return (
-    <div className='outeraim my-20'>
+    <div className='outeraim my-4 lg:my-16'>
        <h1 className='text-centered aimheading my-4 mx-2'>
             Writo Student Community Aims to
         </h1>

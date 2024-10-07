@@ -7,7 +7,7 @@ const Mentor_nav = () => {
    
   return (
     <>
-     <nav className="w-full overflow-x-hidden">
+     <nav className="w-full overflow-x-hidden bg-white">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 md:px-12">
         <div className="flex items-center space-x-2 md:space-x-6">
         <Link to="/mentorservices">

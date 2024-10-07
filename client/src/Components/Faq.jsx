@@ -59,11 +59,11 @@ const Faq = () => {
 
     return (
         <div>
-            <Navbar />
+            
             <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md mt-6">
-                <h1 className="text-center text-3xl font-bold mb-6 text-blue-600">FAQs and Help</h1>
+                <h1 className="text-center text-3xl font-bold mb-6 text-[#184948]">FAQs and Help</h1>
                 
-                <h2 className="text-xl font-semibold text-blue-500 mt-4">Frequently Asked Questions</h2>
+                <h2 className="text-xl font-semibold text-[#184948] mt-4">Frequently Asked Questions</h2>
                 <div className="mt-4">
                     {faqs.map((faq, index) => (
                         <div key={index} className="mb-4 border p-4 rounded">
@@ -78,7 +78,7 @@ const Faq = () => {
                     ))}
                 </div>
 
-                <h2 className="text-xl font-semibold text-blue-500 mt-8">Recently Asked Questions</h2>
+                <h2 className="text-xl font-semibold text-[#184948] mt-8">Recently Asked Questions</h2>
                 <div className="mt-4">
                     {recentQuestions.map((question, index) => (
                         <div key={index} className="mb-4 border p-4 rounded">
@@ -93,7 +93,7 @@ const Faq = () => {
                     ))}
                 </div>
             </div>
-            <Lower_footer />
+           
         </div>
     );
 };

@@ -114,7 +114,7 @@ function Class8_beforepay() {
           {/* Left Column */}
           <div className="  md:w-2/3 sm:w-full">
             <h1 className="text-3xl font-bold mb-3 ">
-              Online Coaching for class7
+              Online Coaching for class 8
             </h1>
             <h2 className="text-lg font-semibold mb-3 ">By Brice Wilson</h2>
             <div className="flex items-center mb-4 text-yellow-500 ">

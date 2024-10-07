@@ -11,7 +11,7 @@ import Mentor_home1 from "../Components/Mentor_home1";
 import Jee_neet from '../Components/classes/jee-neet/Jee_neet';
 
 
-import Choose from '../Choose';
+import Choose from '../Components/Choose';
 import Privacy from '../Components/Privacy';
 import TermandConditions from '../Components/TermandConditions';
 import Faq from '../Components/Faq';

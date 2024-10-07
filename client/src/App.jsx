@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
 import Home from './Home';
-import Choose from './Choose';
+import Choose from './Components/Choose';
 import Privacy from './Components/Privacy';
 import TermandConditions from './Components/TermandConditions';
 import Faq from './Components/Faq';
@@ -79,12 +79,6 @@ function App() {
         <Route path="/chatwithmentors" element={<ChatwithMentor/>}/>
         <Route path='/mentorship' element={<Menotor_home1 />} />
         <Route path='/communityneet' element={<Community_neet/>}/>
-
-      </Route>
-
-
-        {/*  */}
-        
         <Route path='/why_writo' element={<Choose />} />
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/terms' element={<TermandConditions />} />
@@ -92,6 +86,12 @@ function App() {
         <Route path="/about6to10" element={<About6to10/>}/>
         <Route path="/aboutjee" element={<AboutJee/>}/>
         <Route path="/aboutneet" element={<AboutNeet/>}/>
+
+      </Route>
+
+
+        {/*  */}
+        
 
 
 

@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Whocanjoin() {
   return (
-    <div className="my-20" style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+    <div className="my-4 lg:my-16" style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
 
-<h1 className='text-centered aimheading my-20 mx-2'>
+<h1 className='text-centered aimheading my-4 lg:my-16 mx-2'>
             Who can join community?
         </h1>
         
