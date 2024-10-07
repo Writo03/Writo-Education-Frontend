@@ -65,10 +65,12 @@ import Test_Series from './Components/quiz/Test_Series';
 import Test from './Components/quiz/Test';
 import LeaderBoard from './Components/quiz/LeaderBoard';
 import Layout from './layout/Layout';
-import JobDetail from './Pages/JobDetail';
-
+import JobDetail from './Pages/JobDetail.jsx';
+import ErrorBoundary from './ErrorBoundary.jsx';
 function App() {
   return (
+
+    <ErrorBoundary >
       <Routes>
 
       <Route path='/' element={<Layout />} >
@@ -86,7 +88,7 @@ function App() {
         <Route path="/about6to10" element={<About6to10/>}/>
         <Route path="/aboutjee" element={<AboutJee/>}/>
         <Route path="/aboutneet" element={<AboutNeet/>}/>
-        <Route path="/job/:id" element={<JobDetail/>} />
+        <Route path="/job/:id" element={<JobDetail />} />
         
       </Route>
 
@@ -146,7 +148,7 @@ function App() {
 
 
       </Routes>
-  
+      </ErrorBoundary>  
   );
 }
 

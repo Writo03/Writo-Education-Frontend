@@ -6,7 +6,7 @@ const JobCard = ({ id,title, location, description, features }) =>{
   const navigate = useNavigate()
   
   
-  
+  console.log(id)
   return (
     <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 m-4 flex flex-col justify-between flex-1 max-w-sm sm:w-full">
     <h3 className="font-bold text-lg mb-2">{title}</h3>

@@ -52,6 +52,7 @@ import Login from "../Chatpages/Login";
 import Test_Series from "../Components/quiz/Test_Series";
 import Test from "../Components/quiz/Test";
 import LeaderBoard from "../Components/quiz/LeaderBoard";
+import JobDetail from "../Pages/JobDetail";
 
 
 const router = createBrowserRouter([
@@ -226,6 +227,10 @@ const router = createBrowserRouter([
         {
             path:'/leaderboard/:id',
             element:<AuthLayouts><LeaderBoard/></AuthLayouts>
+        },
+        {
+            path:'/job/:id',
+            element:<JobDetail/>
         },
         {
             path : "chat-home",

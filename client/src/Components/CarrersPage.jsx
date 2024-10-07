@@ -1,6 +1,7 @@
 import img from "./ourresults.png";
 import JobOffer from "./JobOffers";
 import Contactus from "./Contactus";
+import JobDetail from "../Pages/JobDetail";
 
 
 const Card = ({ title, description }) => (
@@ -114,6 +115,7 @@ const CarrersPage = () => {
       <div className="w-full">
         <Contactus />
       </div>
+      <JobDetail />
     </>
   );
 };

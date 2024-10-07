@@ -2,16 +2,15 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 
 const JobDetail = () => {
-  const { id } = useParams(); // Get job ID from URL
-
+  const { id } = useParams() ; // Get job ID from URL
+  // const id="1";
   // Dummy job data
   const jobData = [
     {
       id: "1",
       title: "Faculty Trainee Program - Chemistry",
       location: "Bangalore",
-      description: "Train to become a world-class educator in Chemistry, teaching JEE/NEET aspirants.",
-      salary: "₹50,000 - ₹80,000 per month",
+      description: "Train to become a world-class educator in Chemistry, teaching JEE/NEET aspirants. This program prepares you with in-depth knowledge of advanced concepts, lesson planning, and modern teaching techniques, enabling you to mentor the next generation of competitive exam candidates.",      salary: "₹50,000 - ₹80,000 per month",
       experience: "0-2 years",
       type: "Full-Time",
       responsibilities: ["Deliver high-quality lectures", "Design assessments", "Mentoring students"],
@@ -48,14 +47,14 @@ const JobDetail = () => {
 
   return (
     <div className="container mx-auto p-6">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center  mb-6">
         <Link to="/careers" className="text-blue-500 hover:underline">
           ← Back to Careers
         </Link>
-        <h1 className="text-3xl font-bold">{job.title}</h1>
       </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <h1 className="text-3xl text-center item1 text-[#184948] font-bold">{job.title}</h1>
+        <div className="  p-4 bg-white rounded-lg shadow-lg lg:mx-28 my-6 lg:mb-0">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <div className="mb-6">
             <h2 className="text-xl font-semibold text-gray-700">Job Description</h2>
@@ -64,7 +63,7 @@ const JobDetail = () => {
 
           <div className="mb-6">
             <h2 className="text-xl font-semibold text-gray-700">Responsibilities</h2>
-            <ul className="list-disc list-inside text-gray-600">
+            <ul className=" list-inside text-gray-600">
               {job.responsibilities.map((resp, index) => (
                 <li key={index}>{resp}</li>
               ))}
@@ -73,7 +72,7 @@ const JobDetail = () => {
 
           <div className="mb-6">
             <h2 className="text-xl font-semibold text-gray-700">Requirements</h2>
-            <ul className="list-disc list-inside text-gray-600">
+            <ul className=" list-inside text-gray-600">
               {job.requirements.map((req, index) => (
                 <li key={index}>{req}</li>
               ))}
@@ -97,11 +96,13 @@ const JobDetail = () => {
               <span className="font-semibold">Job Type:</span> {job.type}
             </li>
           </ul>
+          </div>
+          </div> 
         </div>
-      </div>
+     
 
       <div className="flex justify-center mt-8">
-        <button className="px-6 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-600">
+        <button className="px-6 py-2 bg-[#2B8B8A] hover:bg-teal-600 text-white font-bold rounded hover:bg-blue-600">
           Apply Now
         </button>
       </div>
@@ -110,3 +111,4 @@ const JobDetail = () => {
 };
 
 export default JobDetail;
+ 
