@@ -1,12 +1,15 @@
-const QuizModel = require('../models/quiz')
+const express=require('express')
+const router = express.Router()
+const quizController = require('../controller/quizcontroller')
 
-const add_quiz = (req,res)=>{
-    const quiz = new QuizModel(req.body)
-    console.log(quiz)
-    quiz.save()
-    .then(result=>res.send('quiz added'))
-}
+router.post('/add-quiz',quizController.add_quiz)
 
-module.exports = {
-    add_quiz
-}
+router.get('/get-quizes',quizController.get_quizes)
+
+router.get('/get-quiz/:id',quizController.get_quiz)
+
+router.put('/update-quiz/:id',quizController.update_quiz)
+
+router.delete('/delete-quiz/:id',quizController.delete_quiz)
+
+module.exports = router

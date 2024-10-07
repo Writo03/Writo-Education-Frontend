@@ -11,7 +11,8 @@ const subSchema = mongoose.Schema({
 
 const quizSchema = mongoose.Schema({
     test_name:String,
-    questions:[subSchema]
+    questions:[subSchema],
+    duration: Number
 })
 
 module.exports = mongoose.model('quiz',quizSchema)
