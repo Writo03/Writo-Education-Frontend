@@ -1,7 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-
-const JobCard = ({ title, location, description, features }) => (
+import { useNavigate } from "react-router-dom";
+const JobCard = ({ id,title, location, description, features }) =>{ 
+  
+  const navigate = useNavigate()
+  
+  
+  
+  return (
     <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 m-4 flex flex-col justify-between flex-1 max-w-sm sm:w-full">
     <h3 className="font-bold text-lg mb-2">{title}</h3>
     <p className="text-gray-500">{location}</p>
@@ -15,35 +21,39 @@ const JobCard = ({ title, location, description, features }) => (
       ))}
     </div>
   
-    <button className="mt-6 px-4 py-2 bg-[#2B8B8A] w-full text-white rounded-lg shadow hover:bg-teal-600 transition">
+    <button className="mt-6 px-4 py-2 bg-[#2B8B8A] w-full text-white rounded-lg shadow hover:bg-teal-600 transition"
+    onClick={()=>{
+      navigate(`/job/${id}`)
+    }}>
       Apply Now
     </button>
   </div>
   
-);
+)};
 
 const JobOffers = () => {
   const initialJobData = [
     {
-      title: "Junior Web Developer",
+      id: "1",
+      title: "Faculty Trainee Program - Chemistry",
       location: "Bangalore",
       description:
-        "Join our fast-growing team to build and maintain dynamic websites. Work with HTML, CSS, and JavaScript.",
-      features: ["HTML & CSS", "JavaScript", "ReactJS", "API Integration"],
+        "Train to become a world-class educator in Chemistry, teaching JEE/NEET aspirants.",
+      features: ["Deliver high-quality lectures", "Design assessments", "Mentoring students"],
     },
     {
-      title: "UI/UX Designer",
-      location: "Remote",
-      description:
-        "Design intuitive and engaging user interfaces for mobile and web applications.",
-      features: ["Figma", "Adobe XD", "User Research", "Prototyping"],
+      id: "2",
+      title: "Faculty Trainee Program - Mathematics",
+      location: "Bangalore",
+      description: "Become a Math faculty trainee, focusing on preparing students for competitive exams.",
+      features: ["Prepare lessons", "Conduct interactive sessions", "Evaluate student progress"],
     },
     {
-      title: "Content Writer",
-      location: "Mumbai",
-      description:
-        "Craft compelling content for blogs, websites, and marketing campaigns.",
-      features: ["SEO Writing", "Copywriting", "Research", "Editing"],
+      id: "3",
+      title: "Faculty Trainee Program - Physics",
+      location: "Bangalore",
+      description: "Trainee for Physics faculty role, aimed at coaching JEE/NEET students.",
+      features:  ["Develop teaching plans", "Engage with students", "Assess learning outcomes"],
     },
   ];
 

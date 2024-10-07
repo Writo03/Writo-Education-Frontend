@@ -65,7 +65,7 @@ import Test_Series from './Components/quiz/Test_Series';
 import Test from './Components/quiz/Test';
 import LeaderBoard from './Components/quiz/LeaderBoard';
 import Layout from './layout/Layout';
-
+import JobDetail from './Pages/JobDetail';
 
 function App() {
   return (
@@ -86,15 +86,13 @@ function App() {
         <Route path="/about6to10" element={<About6to10/>}/>
         <Route path="/aboutjee" element={<AboutJee/>}/>
         <Route path="/aboutneet" element={<AboutNeet/>}/>
-
+        <Route path="/job/:id" element={<JobDetail/>} />
+        
       </Route>
 
 
         {/*  */}
         
-
-
-
 
         <Route path="/doubtcourses" element={<Doubt_courses/>}/>
         <Route path="/doubtsection" element={<DoubtSection/>}/>
