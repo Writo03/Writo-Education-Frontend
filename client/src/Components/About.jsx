@@ -15,7 +15,7 @@ const About = () => {
                 src={topImage}
                 alt="Top Image"
                 className="w-full h-auto rounded-lg shadow-md sm:w-3/4 md:w-2/3 lg:w-full"
-              />
+              /> hey
             </div>
             <div className="relative mt-6 hidden sm:block">
               <img
@@ -82,7 +82,7 @@ const About = () => {
             </div>
           </div>
           <Link to="/doubtsection" className="py-2 mt-4">
-            <button className="flex mr-auto text-white bg-[#488B80] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded item3 font-semibold">
+            <button className="flex mr-auto text-white bg-[#488B80] border-0 py-2 px-6 focus:outline-none rounded item3 font-semibold hover:bg-[#e5e7eb] hover:text-black">
               Try our doubt clearing session
             </button>
           </Link>

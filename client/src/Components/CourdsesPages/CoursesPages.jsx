@@ -52,28 +52,28 @@ function CoursesPages() {
       {/* Our Features Section */}
 
       <div className="flex flex-col items-center">
-        <h2 className="text-2xl font-bold mt-8">Our Features</h2>
-        <div className="relative mt-10 w-full max-w-md mx-auto">
-          <div className="relative w-80 h-72 mx-auto mt-10">
-            <div className="absolute inset-0 border-dashed border-4 border-black rounded-full"></div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 -top-10 flex flex-col items-center">
-              <img src={NEET} alt="Practice Tests" className="w-20 h-20" />
+        <h2 className="mt-8 text-2xl font-bold">Our Features</h2>
+        <div className="relative mx-auto mt-10 w-full max-w-md">
+          <div className="relative mx-auto mt-10 h-72 w-80">
+            <div className="absolute inset-0 rounded-full border-4 border-dashed border-black"></div>
+            <div className="absolute -top-10 left-1/2 flex -translate-x-1/2 transform flex-col items-center">
+              <img src={NEET} alt="Practice Tests" className="h-20 w-20" />
               <p className="mt-2 text-center">Practice Tests</p>
             </div>
-            <div className="absolute   left-1/2 transform translate-x-1/2 -bottom-10 flex flex-col items-center">
-              <img src={NEET} alt="Video Lectures" className="w-20 h-20" />
+            <div className="absolute -bottom-10 left-1/2 flex translate-x-1/2 transform flex-col items-center">
+              <img src={NEET} alt="Video Lectures" className="h-20 w-20" />
               <p className="mt-2 text-center">Video Lectures</p>
             </div>
-            <div className="absolute   right-2/4 transform -translate-x-1/2 -bottom-10 flex flex-col items-center">
-              <img src={NEET} alt="Video Lectures" className="w-20 h-20" />
+            <div className="absolute -bottom-10 right-2/4 flex -translate-x-1/2 transform flex-col items-center">
+              <img src={NEET} alt="Video Lectures" className="h-20 w-20" />
               <p className="mt-2 text-center">Video Lectures</p>
             </div>
-            <div className="absolute -left-10 top-1/3 transform -translate-y-1/3  tra flex flex-col items-center">
-              <img src={NEET} alt="Happy Customers" className="w-20 h-20" />
+            <div className="tra absolute -left-10 top-1/3 flex -translate-y-1/3 transform flex-col items-center">
+              <img src={NEET} alt="Happy Customers" className="h-20 w-20" />
               <p className="mt-2 text-center">Happy Customers</p>
             </div>
-            <div className="absolute -right-10 top-1/3 transform -translate-y-1/3 flex flex-col items-center">
-              <img src={NEET} alt="Happy Customers" className="w-20 h-20" />
+            <div className="absolute -right-10 top-1/3 flex -translate-y-1/3 transform flex-col items-center">
+              <img src={NEET} alt="Happy Customers" className="h-20 w-20" />
               <p className="mt-2 text-center">Happy Customers</p>
             </div>
           </div>
@@ -82,21 +82,21 @@ function CoursesPages() {
 
       {/* Classes Available Section */}
 
-      <div className="flex flex-col items-center mt-16">
-        <h2 className="text-2xl font-bold mt-8">Classes Available</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 px-4">
+      <div className="mt-16 flex flex-col items-center">
+        <h2 className="mt-8 text-2xl font-bold">Classes Available</h2>
+        <div className="mt-8 grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 lg:grid-cols-3">
           {classes.map((classItem, index) => (
             <div
               key={index}
-              className="border-2 border-[#488B80] rounded-lg shadow-md hover:shadow-lg transition-shadow w-80"
+              className="w-80 rounded-lg border-2 border-[#488B80] shadow-md transition-shadow hover:shadow-lg"
             >
               <Link to={`${classItem.destination}`}>
-                <h3 className="text-xl font-semibold text-white p-2 bg-[#488B80] rounded-b-lg mb-2 text-center">
+                <h3 className="mb-2 rounded-b-lg bg-[#488B80] p-2 text-center text-xl font-semibold text-white">
                   {classItem.title}
                 </h3>
               </Link>
               <p className="mb-1 p-2 text-center">{classItem.description}</p>
-              <p className="font-bold text-[#488B80] p-2 text-center">
+              <p className="p-2 text-center font-bold text-[#488B80]">
                 {classItem.students}
               </p>
             </div>
@@ -106,87 +106,157 @@ function CoursesPages() {
 
       {/*Subjects Covered Section */}
 
-     
-      <div className="flex flex-col items-center justify-center mt-16 bg-white">
-      <h1 className="text-2xl md:text-4xl font-bold mb-8">Subjects Covered</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4  gap-x-20">
-        <div className="flex flex-col items-center">
-          <img src={ScienceIcon} alt="Social" className=" w-32 md:h-32 rounded-lg mb-4 hover:scale-125" />
-          <p className="text-center text-lg md:text-xl">Social</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <img src={MathsIcon} alt="Maths" className=" w-32 md:h-32 rounded-lg mb-4 hover:scale-125" />
-          <p className="text-center text-lg md:text-xl">Maths</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <img src={ScienceIcon} alt="Science" className=" w-32 md:h-32 rounded-lg mb-4 hover:scale-125" />
-          <p className="text-center text-lg md:text-xl">Science</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <img src={MathsIcon} alt="Competitive" className=" w-32 md:h-32 rounded-lg mb-4 hover:scale-125" />
-          <p className="text-center text-lg md:text-xl">Competitive</p>
+      <div className="mt-16 flex flex-col items-center justify-center bg-white">
+        <h1 className="mb-8 text-2xl font-bold md:text-4xl">
+          Subjects Covered
+        </h1>
+        <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-4 md:gap-x-6 lg:gap-x-8">
+          {["Social", "Maths", "Science", "Competitive"].map((subject, idx) => (
+            <div
+              key={idx}
+              className="group flex w-full cursor-pointer flex-col items-center justify-center"
+            >
+              <div className="mb-4 w-full overflow-hidden rounded-md object-cover object-center">
+                <img
+                  src={idx % 2 === 0 ? ScienceIcon : MathsIcon}
+                  alt={subject}
+                  className="w-full rounded-lg object-cover object-center transition-all duration-500 group-hover:scale-105"
+                />
+              </div>
+              <p className="w-full bg-[#488b80] text-center text-lg text-white md:text-xl">
+                {subject}
+              </p>
+            </div>
+          ))}
+          {/* <div className="flex flex-col items-center bg-red-400">
+            <div className="overflow-hidden rounded-md object-cover object-center">
+              <img
+                src={ScienceIcon}
+                alt="Social"
+                className="w-42 md:h-32 rounded-lg mb-4 hover:scale-105 transition-all duration-500"
+              />
+            </div>
+            <p className="text-center text-lg md:text-xl">Social</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              src={MathsIcon}
+              alt="Maths"
+              className=" w-32 md:h-32 rounded-lg mb-4 hover:scale-125"
+            />
+            <p className="text-center text-lg md:text-xl">Maths</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              src={ScienceIcon}
+              alt="Science"
+              className=" w-32 md:h-32 rounded-lg mb-4 hover:scale-125"
+            />
+            <p className="text-center text-lg md:text-xl">Science</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              src={MathsIcon}
+              alt="Competitive"
+              className=" w-32 md:h-32 rounded-lg mb-4 hover:scale-125"
+            />
+            <p className="text-center text-lg md:text-xl">Competitive</p>
+          </div> */}
         </div>
       </div>
-    </div>
 
-    {/*lurning companion section */}
-    <div className="flex flex-col items-center justify-center mt-32 bg-white p-4 md:p-8 space-y-8">
-    <h1 className="text-black text-xl font-bold mb-8 text-center">
-      The Learning App is every student's favourite learning companion
-    </h1>
-    
-    {/* Comprehensive Curriculum Section */}
-    <div className="w-full md:w-3/4 flex flex-col md:flex-row items-center justify-center">
-      <div className="flex flex-col md:flex-row w-full md:w-11/12 gap-y-8 md:gap-x-16">
-        <img src={JEE} alt="Comprehensive Curriculum" className="w-full md:w-1/2 h-64 md:h-72 rounded-3xl border border-black" />
-        <div className="flex flex-col justify-center gap-y-4 md:gap-y-7">
-          <h2 className="text-xl md:text-2xl font-bold text-center md:text-left">Comprehensive curriculum</h2>
-          <p className="text-md md:text-sm w-full md:w-3/4 text-center md:text-left mx-auto md:mx-0">
-            The app should cover all the major subjects that students in grades 6-10 typically learn, such as math, English, science, social studies, and history.
-          </p>
+      {/*lurning companion section */}
+      <div className="mt-32 flex flex-col items-center justify-center space-y-8 bg-white p-4 md:p-8">
+        <h1 className="mb-8 text-center text-xl font-bold text-black">
+          The Learning App is every student's favourite learning companion
+        </h1>
+
+        {/* Comprehensive Curriculum Section */}
+        <div className="flex w-full flex-col items-center justify-center md:w-3/4 md:flex-row">
+          <div className="flex w-full flex-col gap-y-8 md:w-11/12 md:flex-row md:gap-x-16">
+            <img
+              src={JEE}
+              alt="Comprehensive Curriculum"
+              className="h-64 w-full rounded-3xl border border-black md:h-72 md:w-1/2"
+            />
+            <div className="flex flex-col justify-center gap-y-4 md:gap-y-7">
+              <h2 className="text-center text-xl font-bold md:text-left md:text-2xl">
+                Comprehensive curriculum
+              </h2>
+              <p className="text-md mx-auto w-full text-center md:mx-0 md:w-3/4 md:text-left md:text-sm">
+                The app should cover all the major subjects that students in
+                grades 6-10 typically learn, such as math, English, science,
+                social studies, and history.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Engaging Content Section */}
+        <div className="flex w-full flex-col items-center justify-center md:w-3/4 md:flex-row">
+          <div className="flex w-full flex-col gap-y-8 md:w-11/12 md:flex-row md:gap-x-16">
+            <div className="flex flex-col items-center justify-center gap-y-4 md:gap-y-7">
+              <h2 className="text-center text-xl font-bold md:mr-20 md:text-left md:text-2xl">
+                Engaging Content
+              </h2>
+              <p className="text-md mx-auto w-full text-center md:mx-0 md:w-3/4 md:text-left md:text-sm">
+                The app should use a variety of engaging content formats to keep
+                students interested, such as interactive lessons, videos,
+                simulations, games, and quizzes.
+              </p>
+            </div>
+            <img
+              src={NEET}
+              alt="Engaging Content"
+              className="h-64 w-full rounded-3xl border border-black md:h-72 md:w-1/2"
+            />
+          </div>
+        </div>
+
+        {/* Personalized Learning Section */}
+        <div className="flex w-full flex-col items-center justify-center md:w-3/4 md:flex-row">
+          <div className="flex w-full flex-col gap-y-8 md:w-11/12 md:flex-row md:gap-x-16">
+            <img
+              src={JEE}
+              alt="Personalized Learning"
+              className="h-64 w-full rounded-3xl border border-black md:h-72 md:w-1/2"
+            />
+            <div className="flex flex-col justify-center gap-y-4 md:gap-y-7">
+              <h2 className="text-center text-xl font-bold md:text-left md:text-2xl">
+                Personalized learning
+              </h2>
+              <p className="text-md mx-auto w-full text-center md:mx-0 md:w-3/4 md:text-left md:text-sm">
+                The app should allow students to learn at their own pace and
+                level by providing personalized learning paths. This could
+                include adaptive learning technology that adjusts the difficulty
+                of the content based on the student's performance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Performance Tracking Section */}
+        <div className="flex w-full flex-col items-center justify-center md:w-3/4 md:flex-row">
+          <div className="flex w-full flex-col gap-y-8 md:w-11/12 md:flex-row md:gap-x-16">
+            <div className="flex flex-col justify-center gap-y-4 md:items-center md:gap-y-7">
+              <h2 className="text-center text-xl font-bold md:mr-8 md:text-left md:text-2xl">
+                Performance tracking
+              </h2>
+              <p className="text-md mx-auto w-full text-center md:mx-0 md:w-3/4 md:text-left md:text-sm">
+                The app should track student progress and provide feedback to
+                help them identify areas where they need improvement. This could
+                include features such as progress reports, quizzes, and
+                diagnostic tests.
+              </p>
+            </div>
+            <img
+              src={NEET}
+              alt="Performance Tracking"
+              className="h-64 w-full rounded-3xl border border-black md:h-72 md:w-1/2"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    
-    {/* Engaging Content Section */}
-    <div className="w-full md:w-3/4 flex flex-col md:flex-row items-center justify-center">
-      <div className="flex flex-col md:flex-row w-full md:w-11/12 gap-y-8 md:gap-x-16">
-        <div className="flex flex-col justify-center items-center gap-y-4 md:gap-y-7">
-          <h2 className="text-xl md:text-2xl font-bold text-center md:text-left md:mr-20">Engaging Content</h2>
-          <p className="text-md md:text-sm w-full md:w-3/4 text-center md:text-left mx-auto md:mx-0">
-            The app should use a variety of engaging content formats to keep students interested, such as interactive lessons, videos, simulations, games, and quizzes.
-          </p>
-        </div>
-        <img src={NEET} alt="Engaging Content" className="w-full md:w-1/2 h-64 md:h-72 rounded-3xl border border-black" />
-      </div>
-    </div>
-    
-    {/* Personalized Learning Section */}
-    <div className="w-full md:w-3/4 flex flex-col md:flex-row items-center justify-center">
-      <div className="flex flex-col md:flex-row w-full md:w-11/12 gap-y-8 md:gap-x-16">
-        <img src={JEE} alt="Personalized Learning" className="w-full md:w-1/2 h-64 md:h-72 rounded-3xl border border-black" />
-        <div className="flex flex-col justify-center gap-y-4 md:gap-y-7">
-          <h2 className="text-xl md:text-2xl font-bold text-center md:text-left">Personalized learning</h2>
-          <p className="text-md md:text-sm w-full md:w-3/4 text-center md:text-left mx-auto md:mx-0">
-            The app should allow students to learn at their own pace and level by providing personalized learning paths. This could include adaptive learning technology that adjusts the difficulty of the content based on the student's performance.
-          </p>
-        </div>
-      </div>
-    </div>
-    
-    {/* Performance Tracking Section */}
-    <div className="w-full md:w-3/4 flex flex-col md:flex-row items-center justify-center">
-      <div className="flex flex-col md:flex-row w-full md:w-11/12 gap-y-8 md:gap-x-16">
-        <div className="flex flex-col justify-center md:items-center gap-y-4 md:gap-y-7">
-          <h2 className="text-xl md:text-2xl font-bold text-center md:mr-8 md:text-left">Performance tracking</h2>
-          <p className="text-md md:text-sm w-full md:w-3/4 text-center md:text-left mx-auto md:mx-0">
-            The app should track student progress and provide feedback to help them identify areas where they need improvement. This could include features such as progress reports, quizzes, and diagnostic tests.
-          </p>
-        </div>
-        <img src={NEET} alt="Performance Tracking" className="w-full md:w-1/2 h-64 md:h-72 rounded-3xl border border-black" />
-      </div>
-    </div>
-  </div>
     </>
   );
 }

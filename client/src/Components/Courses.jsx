@@ -1,16 +1,18 @@
-import React from 'react'
+import React from "react";
 
 const Courses = () => {
   return (
-     <div>
-    <div className="flex justify-center items-center mt-10">
-    <p className='text-center text-[#ED7E0A] text-2xl item5'>- - - -   What we offer  - - - </p>
-  </div>
-  <div className="flex justify-center items-center mt-5 mb-10">
-    <p className='text-center text-[#488B80] text-2xl item1'>Our courses</p>
-  </div>
-  </div>
-  )
-}
+    <div>
+      <div className="mt-10 flex items-center justify-center">
+        <p className="item5 text-center text-2xl text-[#ED7E0A]">
+          - - - - About Us - - -
+        </p>
+      </div>
+      <div className="mb-10 mt-5 flex items-center justify-center">
+        <p className="item1 text-center text-2xl text-[#488B80]">About Us</p>
+      </div>
+    </div>
+  );
+};
 
-export default Courses
+export default Courses;

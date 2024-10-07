@@ -85,14 +85,12 @@ function App() {
       <Route path="/aboutjee" element={<AboutJee/>}/>
       <Route path="/aboutneet" element={<AboutNeet/>}/>
       <Route path="/doubtcourses" element={<Doubt_courses/>}/>
-      <Route path="/doubtsection" element={<DoubtSection/>}/>
-      <Route path="/blogs" element={<Blogs/>}/>
-
-      <Route path="/all" element={<AllCoursesPage />} />
-   
+      <Route path="/doubtsection" element={<DoubtSection/>}/> {/* kaushik section start here */} {/* done */}
+      <Route path="/blogs" element={<Blogs/>}/> {/* done */}
+      <Route path="/all" element={<AllCoursesPage />} /> {/* done */}
       {/*<Route path="/class-6/maths" element={<Maths />} />*/}
-      <Route path="/class-6beforepay" element={<Class6befpay />} />
-      <Route path="/class-7beforepay" element={<Class7befpay />} />
+      <Route path="/class-6beforepay" element={<Class6befpay />} /> {/* done */}
+      <Route path="/class-7beforepay" element={<Class7befpay />} /> {/* working */}
       <Route path="/class-8beforepay" element={<Class8befpay />} />
       <Route path="/class-9beforepay" element={<Class9befpay />} />
       <Route path="/class-10beforepay" element={<Class10befpay />} />

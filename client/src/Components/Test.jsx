@@ -29,7 +29,7 @@ const Test = () => {
               Achieve your academic goals and secure top ranks!
             </p>
             <a href="/jee-test-series" className="mt-4">
-              <button className="bg-[#488B80] text-white font-semibold py-2 px-4 rounded hover:bg-green-600">
+              <button className="bg-[#488B80] text-white font-semibold py-2 px-4 rounded hover:bg-[#e5e7eb] hover:text-black">
                 Join Today
               </button>
             </a>

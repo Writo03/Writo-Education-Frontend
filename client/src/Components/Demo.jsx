@@ -14,7 +14,7 @@ const Demo = () => {
           Check out our 1-minute demo! We`ll capture and replay your visit immediately!
         </p>
         <div className="flex justify-center mt-6">
-          <button className="px-6 py-3 bg-[#488B80] text-white rounded-md hover:bg-green-700 focus:outline-none">
+          <button className="px-6 py-3 bg-[#488B80] text-white rounded-md hover:bg-[#e5e7eb] hover:text-black focus:outline-none">
             Try our Free Demo
           </button>
         </div>

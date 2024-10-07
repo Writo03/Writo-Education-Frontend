@@ -20,7 +20,7 @@ export default function ExpertGuidance() {
             achievements with our dedicated mentors.
           </p>
           <Link to="/mentorship" className="py-2 mt-4">
-            <button className="flex mr-auto text-white bg-[#488B80] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded item3 font-semibold ">
+            <button className="flex mr-auto text-white bg-[#488B80] border-0 py-2 px-6 focus:outline-none hover:bg-[#e5e7eb] hover:text-black rounded item3 font-semibold ">
               Try our mentorship program
             </button>
           </Link>

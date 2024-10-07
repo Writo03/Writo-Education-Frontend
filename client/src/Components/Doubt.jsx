@@ -24,7 +24,7 @@ const Doubt = () => {
             support tailored to your needs.
           </p>
           <Link to="/doubtcourses">
-            <button className="px-6 py-3 bg-[#488B80] item2 text-white font-semibold rounded-md hover:bg-green-700 focus:outline-none">
+            <button className="px-6 py-3 bg-[#488B80] item2 text-white font-semibold rounded-md hover:bg-[#e5e7eb] hover:text-black focus:outline-none">
               Try Doubt clearing session
             </button>
           </Link>

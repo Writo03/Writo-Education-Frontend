@@ -8,7 +8,7 @@ const Blogs = () => {
     <div>
       <Navbar/>
       
-      <Herosection_men/>
+      {/* <Herosection_men/> */} {/* An empty component */}
       <Herocards_men/>
     </div>
   )
