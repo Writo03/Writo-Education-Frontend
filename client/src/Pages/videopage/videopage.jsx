@@ -93,7 +93,7 @@ const VideoPage = () => {
             </button>
           </div>
           <div className="text-xl font-bold bg-gray-900 text-white mt-2">
-            Web Development: Executive Briefing
+            Physics Intro: Executive Briefing
           </div>
           <div className="bg-gray-900 text-white text-sm font-medium mt-2 ">
             by Brice Wilson
@@ -108,8 +108,8 @@ const VideoPage = () => {
                   onClick={() => toggleSection("webDevelopment")}
                 >
                   <span className="flex flex-col">
-                    <p>What Is Web Development?</p>
-                    <p>5mins</p>
+                    <p>Introduction to Physics?</p>
+                    <p>8mins</p>
                   </span>
                   <span>
                     <RiArrowDropDownLine />
@@ -122,13 +122,13 @@ const VideoPage = () => {
                 >
                   <ul className="pl-4 mt-2 space-y-2">
                     <li className="flex justify-between">
-                      <span>Web Development Overview 3m</span>
+                      <span>What is Physics? (3 mins)</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Web Application Architecture 2m</span>
+                      <span>Importance of Physics in Daily Life (3 mins)</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Progressive Web Apps 1m</span>
+                      <span> Basic Units and Measurements (2 mins)</span>
                     </li>
                   </ul>
                 </div>
@@ -139,8 +139,8 @@ const VideoPage = () => {
                   onClick={() => toggleSection("teamStructure")}
                 >
                   <span className="flex flex-col">
-                    <p>Team Structure</p>
-                    <p>6mins</p>
+                    <p> Force and Motion </p>
+                    <p>10mins</p>
                   </span>
                   <span>
                     <RiArrowDropDownLine />
@@ -153,13 +153,13 @@ const VideoPage = () => {
                 >
                   <ul className="pl-4 mt-2 space-y-2">
                     <li className="flex justify-between">
-                      <span>Web Development Overview 3m</span>
+                      <span>Types of Forces (4 mins)</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Web Application Architecture 2m</span>
+                      <span>Newton's Laws of Motion (4 mins)</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Progressive Web Apps 1m</span>
+                      <span>Speed, Velocity, and Acceleration (2 mins)</span>
                     </li>
                   </ul>
                 </div>
@@ -170,8 +170,8 @@ const VideoPage = () => {
                   onClick={() => toggleSection("clientSide")}
                 >
                   <span className="flex flex-col">
-                    <p>Client-side Development</p>
-                    <p>10mins</p>
+                    <p>Energy and Work</p>
+                    <p>9mins</p>
                   </span>
                   <span>
                     <RiArrowDropDownLine />
@@ -184,13 +184,13 @@ const VideoPage = () => {
                 >
                   <ul className="pl-4 mt-2 space-y-2">
                     <li className="flex justify-between">
-                      <span>Web Development Overview 3m</span>
+                      <span>Forms of Energy(4 mins)</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Web Application Architecture 2m</span>
+                      <span>Work and Energy Relationship (3 mins)</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Progressive Web Apps 1m</span>
+                      <span>Law of Conservation of Energy (3 mins)</span>
                     </li>
                   </ul>
                 </div>
@@ -201,8 +201,8 @@ const VideoPage = () => {
                   onClick={() => toggleSection("serverSide")}
                 >
                   <span className="flex flex-col">
-                    <p>Server-side Development</p>
-                    <p>15mins</p>
+                    <p>Light and Shadows</p>
+                    <p>8mins</p>
                   </span>
                   <span>
                     <RiArrowDropDownLine />
@@ -215,13 +215,13 @@ const VideoPage = () => {
                 >
                   <ul className="pl-4 mt-2 space-y-2">
                     <li className="flex justify-between">
-                      <span>Web Development Overview 3m</span>
+                      <span>Sources of Light (3 mins)</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Web Application Architecture 2m</span>
+                      <span>Formation of Shadows (3 mins)</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Progressive Web Apps 1m</span>
+                      <span>Reflection and Refraction of Light (2 mins)</span>
                     </li>
                   </ul>
                 </div>

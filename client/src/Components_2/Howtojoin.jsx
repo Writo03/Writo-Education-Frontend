@@ -6,9 +6,9 @@ export default function Howtojoin() {
     <>
 
 
-    <div className='outerhowtojoin my-20'>
+    <div className='outerhowtojoin my-4 lg:my-10'>
 
-    <h1 className='text-centered aimheading my-20 mx-2'>
+    <h1 className='text-centered aimheading my-4 lg:my-10 mx-2'>
             How to join community?
         </h1>
    

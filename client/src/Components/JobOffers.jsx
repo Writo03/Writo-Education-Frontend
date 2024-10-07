@@ -1,8 +1,14 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-
-const JobCard = ({ title, location, description, features }) => (
-    <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 m-4 flex-1 max-w-sm sm:w-full">
+import { useNavigate } from "react-router-dom";
+const JobCard = ({ id,title, location, description, features }) =>{ 
+  
+  const navigate = useNavigate()
+  
+  
+  console.log(id)
+  return (
+    <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 m-4 flex flex-col justify-between flex-1 max-w-sm sm:w-full">
     <h3 className="font-bold text-lg mb-2">{title}</h3>
     <p className="text-gray-500">{location}</p>
     <p className="text-gray-600 mt-2">{description}</p>
@@ -15,59 +21,63 @@ const JobCard = ({ title, location, description, features }) => (
       ))}
     </div>
   
-    <button className="mt-6 px-4 py-2 bg-[#2B8B8A] w-full text-white rounded-lg shadow hover:bg-teal-600 transition">
+    <button className="mt-6 px-4 py-2 bg-[#2B8B8A] w-full text-white rounded-lg shadow hover:bg-teal-600 transition"
+    onClick={()=>{
+      navigate(`/job/${id}`)
+    }}>
       Apply Now
     </button>
   </div>
   
-);
+)};
 
 const JobOffers = () => {
   const initialJobData = [
     {
-      title: "Web Developer",
+      id: "1",
+      title: "Faculty Trainee Program - Chemistry",
       location: "Bangalore",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+        "Train to become a world-class educator in Chemistry, teaching JEE/NEET aspirants.",
+      features: ["Deliver high-quality lectures", "Design assessments", "Mentoring students"],
     },
     {
-      title: "Web Developer",
+      id: "2",
+      title: "Faculty Trainee Program - Mathematics",
       location: "Bangalore",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+      description: "Become a Math faculty trainee, focusing on preparing students for competitive exams.",
+      features: ["Prepare lessons", "Conduct interactive sessions", "Evaluate student progress"],
     },
     {
-      title: "Web Developer",
+      id: "3",
+      title: "Faculty Trainee Program - Physics",
       location: "Bangalore",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+      description: "Trainee for Physics faculty role, aimed at coaching JEE/NEET students.",
+      features:  ["Develop teaching plans", "Engage with students", "Assess learning outcomes"],
     },
   ];
 
   const moreJobData = [
     {
-      title: "Senior Web Developer",
-      location: "Mumbai",
+      title: "Full Stack Developer",
+      location: "Delhi",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+        "Develop full-scale web applications with backend integration.",
+      features: ["Node.js", "ReactJS", "MongoDB", "Express"],
     },
     {
-      title: "Frontend Developer",
-      location: "Pune",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
-    },
-    {
-      title: "Backend Developer",
+      title: "Backend Engineer",
       location: "Chennai",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+        "Develop robust server-side logic for scalable web applications.",
+      features: ["Node.js", "Express.js", "Database Management", "API Design"],
+    },
+    {
+      title: "Digital Marketing Specialist",
+      location: "Pune",
+      description:
+        "Manage digital marketing campaigns across multiple platforms.",
+      features: ["SEO", "Google Ads", "Social Media Marketing", "Analytics"],
     },
   ];
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React,{useEffect} from 'react'
 import Navbar from './Navbar'
 import Community_nav from './Community_nav'
@@ -13,22 +14,37 @@ const Community = () => {
   }, []);
 
   return (
-    <div>
-      <div className=' bg-[#E6F1F1]'>
-        <Navbar className='z-10'/>
-        <Community_nav className='z-1'/>
-        <Community_hero className='z-1'/>
-       
-      </div>
-      <div className='bg-white'>
+   <>
+    <div className=' bg-[#E6F1F1]'> 
+      
+      <Community_nav className='z-1'/>
+      <Community_hero className='z-1'/>
+    </div>
+    <div className='bg-white'>
       <Why_community/>
       <Connect/>
       <Member/>
       <Community_contact/>
-      <Community_footer/>
-      </div>
+      
     </div>
+   </>
   )
 }
 
 export default Community
+
+{/* <div>
+<div className=' bg-[#E6F1F1]'> 
+  <Navbar className='z-10'/>
+  <Community_nav className='z-1'/>
+  <Community_hero className='z-1'/>
+ 
+</div>
+<div className='bg-white'>
+<Why_community/>
+<Connect/>
+<Member/>
+<Community_contact/>
+<Community_footer/>
+</div>
+</div> */}

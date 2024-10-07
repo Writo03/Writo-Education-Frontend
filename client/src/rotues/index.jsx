@@ -11,7 +11,7 @@ import Mentor_home1 from "../Components/Mentor_home1";
 import Jee_neet from '../Components/classes/jee-neet/Jee_neet';
 
 
-import Choose from '../Choose';
+import Choose from '../Components/Choose';
 import Privacy from '../Components/Privacy';
 import TermandConditions from '../Components/TermandConditions';
 import Faq from '../Components/Faq';
@@ -47,11 +47,12 @@ import NeetAllIndiaTestseries from "../Pages/NeetAllIndiaTestSeries/NeetAllIndia
 import JeeAllIndiaTestSeries from "../Pages/JeeAllIndiaTestSeries/JeeAllIndiaTestSeries";
 
 // import Chathome from "../Chatpages/Chathome";
-import ResultsComponent from '../Components/ResultsComponent';
+import CarrersPage from '../Components/CarrersPage';
 import Login from "../Chatpages/Login";
 import Test_Series from "../Components/quiz/Test_Series";
 import Test from "../Components/quiz/Test";
 import LeaderBoard from "../Components/quiz/LeaderBoard";
+import JobDetail from "../Pages/JobDetail";
 
 
 const router = createBrowserRouter([
@@ -69,7 +70,7 @@ const router = createBrowserRouter([
         },
         {
             path: "careers",
-            element: <ResultsComponent />
+            element: <CarrersPage />
         },
         {
             path: "mentorservices",
@@ -226,6 +227,10 @@ const router = createBrowserRouter([
         {
             path:'/leaderboard/:id',
             element:<AuthLayouts><LeaderBoard/></AuthLayouts>
+        },
+        {
+            path:'/job/:id',
+            element:<JobDetail/>
         },
         {
             path : "chat-home",

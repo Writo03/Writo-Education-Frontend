@@ -11,7 +11,7 @@ const Whychoose = () => {
     return (
        <div>
          <div className='flex flex-col items-center p-6 bg-gray-100'>
-            <h2 className='text-blue-600 text-3xl font-bold mb-6'>Why Choose Writo in Education Institutions?</h2>
+            <h2 className='text-[#184948] text-3xl font-bold mb-6'>Why Choose Writo in Education Institutions?</h2>
             <div className='w-full max-w-2xl'>
                 <ul className='list-none text-gray-800 text-lg space-y-6'>
                     <p className='flex items-start'>

@@ -19,7 +19,7 @@ const MentorSection = () => {
       mentors: [
         { id: 4, name: 'Emma Brown', subject: 'Entrepreneurship' },
         { id: 5, name: 'Michael Wilson', subject: 'Marketing' },
-        { id: 6, name: 'Sophia Lee', subject: 'Finance' },
+        { id: 6, name: 'Emma Watson', subject: 'Finance' },
         // Add more mentors as needed
       ]
     },

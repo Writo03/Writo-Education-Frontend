@@ -71,6 +71,7 @@ const Navbar = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <header className="body-font text-gray-600">
         <div className="container mx-auto md:gap-2 flex flex-col flex-wrap items-center justify-between p-5 lg:flex-row">
           {/* Logo and Title */}
@@ -87,63 +88,131 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               <IoMenu className="text-3xl text-white" />
+=======
+      <header className={`text-gray-600 body-font relative w-full`}>
+        <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row md:items-center justify-between">
+          {/* Logo and Title */}
+          <div className="flex items-center justify-between w-full md:w-auto">
+            <Link to="/" className="font-medium text-gray-900 flex items-center justify-center">
+              <img
+                src={img}
+                alt="Logo"
+                className="lg:w-10 lg:h-10 h-6 w-6 md:h-8 md:w-8"
+              />
+              <span className="ml-3 text-xl lg:text-2xl font-bold md:hidden lg:block">
+                WritoTech
+              </span>
+            </Link>
+            <button
+              className={`md:hidden h-8 ${isOpen ? 'bg-gray-200' : 'bg-[#1AB780]'} border-0 py-1 px-4 focus:outline-none rounded text-base transition-all ease-in duration-100`}
+              onClick={toggleMenu}
+            >
+              <IoMenu className="text-white text-xl" />
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
             </button>
           </div>
 
           {/* Navigation Links */}
+<<<<<<< HEAD
           <nav
             className={`md:flex md:items-center ${isOpen ? "block" : "hidden md:block"}`}
           >
             <button
               onClick={handleTestSeries}
               className="block px-4 py-2 text-2xl text-black hover:text-green-600"
+=======
+          <div className='md:flex md:items-center md:w-auto w-full'>
+          <nav
+            className={`md:flex md:items-center flex-col md:flex-row fixed md:static top-16 md:top-auto right-0 md:right-auto bg-[#f5f5f5] z-20 transition-all duration-300 ease-in-out w-2/3 md:w-auto h-screen md:h-auto overflow-y-auto md:overflow-visible pr-4 md:pr-0 pl-1 md:pl-0 ${
+              isOpen
+                ? "translate-x-0"
+                : "translate-x-full md:translate-x-0"
+            }`}
+          >
+            <button
+              onClick={handleTestSeries}
+              className="block text-start py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
             >
               Test Series
             </button>
             <Link
               to="/mentorship"
+<<<<<<< HEAD
               className="block px-4 py-2 text-2xl text-black hover:text-green-600"
+=======
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
             >
               Mentorship
             </Link>
             <Link
               to="/community"
+<<<<<<< HEAD
               className="block px-4 py-2 text-2xl text-black hover:text-green-600"
+=======
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
             >
               Community
             </Link>
             <Link
               to="/careers"
+<<<<<<< HEAD
               className="block px-4 py-2 text-2xl text-black hover:text-green-600"
+=======
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
             >
               Careers
             </Link>
             <Link
               to="/blogs"
+<<<<<<< HEAD
               className="block px-4 py-2 text-2xl text-black hover:text-green-600"
+=======
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
             >
               Blogs
             </Link>
             {!auth && (
+<<<<<<< HEAD
               <div className="mt-4 flex flex-col md:hidden">
                 <button
                   onClick={handleSignin}
                   className="mb-2 rounded border-0 bg-[#1AB780] px-6 py-3 text-base hover:bg-gray-200 focus:outline-none"
+=======
+              <div className="md:hidden flex flex-col mt-4">
+                <button
+                  onClick={handleSignin}
+                  className="bg-[#1AB780] border-0 py-3 px-6 mb-2 focus:outline-none hover:bg-gray-200 rounded text-base"
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
                 >
                   Sign up
                 </button>
                 <button
                   onClick={handleLogin}
+<<<<<<< HEAD
                   className="rounded border border-[#1AB780] px-6 py-3 text-base hover:bg-gray-200 focus:outline-none"
+=======
+                  className="border border-[#1AB780] py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base"
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
                 >
                   Login
                 </button>
               </div>
             )}
             {auth && (
+<<<<<<< HEAD
               <div className="mt-4 flex flex-col md:hidden">
                 <button
                   className="rounded border-0 bg-[#1AB780] px-6 py-3 text-base hover:bg-gray-200 focus:outline-none"
+=======
+              <div className="md:hidden flex flex-col mt-4">
+                <button
+                  className="bg-[#1AB780] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base"
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
                   onClick={() => setShowLogoutModal(true)}
                 >
                   Logout
@@ -151,28 +220,46 @@ const Navbar = () => {
               </div>
             )}
           </nav>
+          </div>
 
           {/* Buttons */}
           {!auth && (
+<<<<<<< HEAD
             <div className="hidden items-center md:flex">
               <button
                 onClick={handleSignin}
                 className="mr-3 rounded border-0 bg-[#1AB780] px-6 py-3 text-base hover:bg-gray-200 focus:outline-none"
+=======
+            <div className="hidden md:flex items-center">
+              <button
+                onClick={handleSignin}
+                className="bg-[#1AB780] border-0 py-2 lg:py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base"
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
               >
                 Sign up
               </button>
               <button
                 onClick={handleLogin}
+<<<<<<< HEAD
                 className="mr-3 rounded border border-[#1AB780] px-6 py-3 text-base hover:bg-gray-200 focus:outline-none"
+=======
+                className="border border-[#1AB780] py-2 lg:py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base"
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
               >
                 Login
               </button>
             </div>
           )}
           {auth && (
+<<<<<<< HEAD
             <div className="hidden items-center md:flex">
               <button
                 className="mr-3 rounded border-0 bg-[#1AB780] px-6 py-3 text-base hover:bg-gray-200 focus:outline-none"
+=======
+            <div className="hidden md:flex items-center">
+              <button
+                className="bg-[#1AB780] border-0 py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base"
+>>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
                 onClick={() => setShowLogoutModal(true)}
               >
                 Logout

@@ -8,7 +8,7 @@
 }
 
 .gradientheading{
-font-size: clamp(3vh, 3.5vw, 3.5vh); 
+/* font-size: clamp(3vh, 3.5vw, 3.5vh);  */
 font-weight: 650;
 background: #CF3E6A;
 background: linear-gradient(to right, #CF3E6A 10%, #0E90CF 95%);
@@ -23,7 +23,7 @@ background: linear-gradient(to right, #CF3E6A 10%, #0E90CF 95%);
     justify-content: space-between;
     gap:22px;
     align-items: center;
-    padding: 20px;
+    
 }
 
 .content{
@@ -65,7 +65,7 @@ background: linear-gradient(to right, #CF3E6A 10%, #0E90CF 95%);
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 20px;
+    
     }
     .content{
         width: 90%;

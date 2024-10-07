@@ -12,7 +12,7 @@ const Community_hero = () => {
           <img src={img} alt="" className='ml-3 mb-2'/>
           <p className='text-4xl text-start'>
             Student communities are groups of like-minded individuals brought together by a shared interest, academic field, career goal, or hobby.
-          </p>
+          </p> 
           <div className='flex justify-start'>
             <a href="/about6to10"><button className='mt-2 px-6 py-3 item2 font-semibold bg-green-500 text-white rounded-full'>
             Know more

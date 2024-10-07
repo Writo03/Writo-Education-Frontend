@@ -5,16 +5,16 @@ import CommunityAim from '../Components_2/CommunityAim'
 import Whyjoin from '../Components_2/Whyjoin'
 import Whocanjoin from '../Components_2/Whocanjoin'
 import Howtojoin from '../Components_2/Howtojoin'
-import Contactus from '../Components_2/Contactus'
+import Contactus from '../Components/Contactus'
 
 import Navbar from '../Components/Navbar'
 
 export default function About6to10() {
     return (
         <div style={{ maxWidth: '1600px' }}>
-            <Navbar/>
+            
             <About_Hero/>
-            <CommunityAim/>
+            <CommunityAim/> 
             <Whyjoin />
             <Whocanjoin />
             <Howtojoin />

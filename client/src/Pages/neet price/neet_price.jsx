@@ -87,7 +87,7 @@ function NeetPrice() {
         <div className="flex flex-col lg:flex-row gap-x-8">
           {/* Left part */}
           <div className="flex flex-col w-full lg:w-3/5">
-            <div className="flex flex-col lg:flex-row mt-4 gap-x-10 gap-y-4">
+            <div className="flex mt-4 gap-x-10 gap-y-4">
               <div className="flex flex-col gap-y-3">
                 <p className="text-black text-lg font-semibold">Language</p>
                 <p className="text-lg font-medium">English</p>
@@ -152,7 +152,7 @@ function NeetPrice() {
           </div>
 
           {/* Right part */}
-          <div className="flex flex-col justify-center items-center w-full lg:w-2/5 mt-6 lg:mt-0">
+          <div className="flex flex-col justify-center items-center md:items-start lg:items-center w-full lg:w-2/5 mt-6 lg:mt-0">
             <div className="bg-white shadow-lg rounded-lg p-6 max-w-sm w-full">
               <div className="flex flex-row justify-between">
                 <h2 className="text-xl font-semibold mb-4">Annual Fee</h2>
@@ -222,9 +222,9 @@ function NeetPrice() {
             About the program
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
-                <h3 className="text-xl font-semibold text-[#E67E22]">
+                <h3 className="md:text-xl font-semibold text-[#E67E22]">
                   All India Ranks
                 </h3>
 
@@ -248,9 +248,9 @@ function NeetPrice() {
                 <img src={Cup} alt="All India Ranks" className="w-32 h-32" />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex justify-between items-center">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
-                <h3 className="text-xl font-semibold text-[#E67E22]">
+                <h3 className="md:text-xl font-semibold text-[#E67E22]">
                   Test Analysis
                 </h3>
                 <div className="flex flex-col gap-x-2">
@@ -276,9 +276,9 @@ function NeetPrice() {
                 />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
-                <h3 className="text-xl font-semibold text-[#E67E22]">
+                <h3 className="md:text-xl font-semibold text-[#E67E22]">
                   Flexible Test Series
                 </h3>
                 <div className="flex flex-col gap-x-2">
@@ -304,9 +304,9 @@ function NeetPrice() {
                 />
               </div>
             </div>
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center">
+            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg flex items-center justify-between flex-col md:flex-row">
               <div className="ml-4">
-                <h3 className="text-xl font-semibold text-[#E67E22]">
+                <h3 className="md:text-xl font-semibold text-[#E67E22]">
                   Practice on the Go
                 </h3>
                 <div className="flex flex-col gap-x-2">
