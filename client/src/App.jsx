@@ -69,50 +69,8 @@ import JobDetail from './Pages/JobDetail.jsx';
 import ErrorBoundary from './ErrorBoundary.jsx';
 function App() {
   return (
-<<<<<<< HEAD
+    
     <Routes>
-      {/* <Route path='/' element={<Home />} /> */}
-      <Route path='/' element={<Home />} />
-      <Route path='/mentorship' element={<Menotor_home1 />} />
-      <Route path='/careers' element={<ResultsComponent/>} />
-      <Route path="/mentorservices" element={<Services1/>}></Route>
-      <Route path='/why_writo' element={<Choose />} />
-      <Route path='/privacy' element={<Privacy />} />
-      <Route path='/terms' element={<TermandConditions />} />
-      <Route path='/faq' element={<Faq />} />
-      <Route path='/community' element={<Community/>}/>
-      <Route path="/chatwithmentors" element={<ChatwithMentor/>}/>
-      <Route path='/communityneet' element={<Community_neet/>}/>
-      <Route path="/about6to10" element={<About6to10/>}/>
-      <Route path="/aboutjee" element={<AboutJee/>}/>
-      <Route path="/aboutneet" element={<AboutNeet/>}/>
-      <Route path="/doubtcourses" element={<Doubt_courses/>}/>
-      <Route path="/doubtsection" element={<DoubtSection/>}/> {/* kaushik section start here */} {/* done */}
-      <Route path="/blogs" element={<Blogs/>}/> {/* done */}
-      <Route path="/all" element={<AllCoursesPage />} /> {/* done */}
-      {/*<Route path="/class-6/maths" element={<Maths />} />*/}
-      <Route path="/class-6beforepay" element={<Class6befpay />} /> {/* done */}
-      <Route path="/class-7beforepay" element={<Class7befpay />} /> {/* working */}
-      <Route path="/class-8beforepay" element={<Class8befpay />} />
-      <Route path="/class-9beforepay" element={<Class9befpay />} />
-      <Route path="/class-10beforepay" element={<Class10befpay />} />
-      {/*neet and jee test series */}
-      <Route path="/jee-test-series" element={<JeeTestSeries />} />
-      <Route path="/neet-test-series" element={<NeetTestSeries />} />
-      {/*<Route path="/class-6/chemistry" element={<Chemistry />} />*/}
-      {/* <Route path="/class-6" element={<Class6 />} />
-      <Route path="/class-7" element={<Class7 />} />
-      <Route path="/class-8" element={<Class8 />} />
-      <Route path="/class-9" element={<Class9 />} />
-      <Route path="/class-10" element={<Class10 />} />*/}
-      <Route path="/class-11" element={<Class11 />} />
-      <Route path="/class-12" element={<Class12 />} /> 
-=======
-
-    <ErrorBoundary >
-      <Routes>
->>>>>>> 2169f5c660022e22e7d9f54468f4d43b3159950f
-
       <Route path='/' element={<Layout />} >
         <Route path='' element={<Home />} />
         <Route path='/community' element={<Community/>}/>
@@ -188,7 +146,7 @@ function App() {
 
 
       </Routes>
-      </ErrorBoundary>  
+   
   );
 }
 

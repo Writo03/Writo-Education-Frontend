@@ -59,6 +59,7 @@ const JobOffers = () => {
 
   const moreJobData = [
     {
+      id: "4",
       title: "Full Stack Developer",
       location: "Delhi",
       description:
@@ -66,6 +67,7 @@ const JobOffers = () => {
       features: ["Node.js", "ReactJS", "MongoDB", "Express"],
     },
     {
+      id: "5",
       title: "Backend Engineer",
       location: "Chennai",
       description:
@@ -73,6 +75,7 @@ const JobOffers = () => {
       features: ["Node.js", "Express.js", "Database Management", "API Design"],
     },
     {
+      id: "6",
       title: "Digital Marketing Specialist",
       location: "Pune",
       description:
