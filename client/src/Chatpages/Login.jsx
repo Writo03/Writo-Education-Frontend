@@ -15,13 +15,26 @@ function Login() {
         username,
         password,
       });
-      localStorage.setItem('token', response.data.token);
-      navigate('/');
+  
+      if (response && response.data) {
+        // Store the token if login is successful
+        localStorage.setItem('token', response.data.token);
+        // Redirect to home page
+        navigate('/');
+      } else {
+        console.error('Login failed: No data in response');
+      }
     } catch (error) {
-      console.error(error.response.data);
+      // Check if error response exists and log the specific error
+      if (error.response && error.response.data) {
+        console.error('Error response data:', error.response.data);
+      } else {
+        // Fallback in case there's no response (e.g., network error)
+        console.error('An unexpected error occurred:', error.message);
+      }
     }
   };
-
+  
   return (
     <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
       <div className="relative py-3 sm:max-w-xl sm:mx-auto">
