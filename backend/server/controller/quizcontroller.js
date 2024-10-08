@@ -1,15 +1,55 @@
-const express=require('express')
-const router = express.Router()
-const quizController = require('../controller/quizcontroller')
+const QuizModel = require('../models/quiz')
 
-router.post('/add-quiz',quizController.add_quiz)
+const add_quiz = (req,res)=>{
+    const quiz = new QuizModel(req.body)
+    console.log(quiz)
+    quiz.save()
+    .then(result=>res.send('quiz added'))
+}
 
-router.get('/get-quizes',quizController.get_quizes)
+const get_quizes = (req,res)=>{
+    QuizModel.find()
+    .then(result=>res.json(result))
+}
 
-router.get('/get-quiz/:id',quizController.get_quiz)
+const get_quiz =(req,res)=>{
+    const id = req.params.id
+    QuizModel.findById(id)
+    .then(result=>{
+        res.json(result)
+    })
+}
 
-router.put('/update-quiz/:id',quizController.update_quiz)
+const update_quiz = (req, res) => {
+    const id = req.params.id;
+    const updatedQuizData = req.body;
 
-router.delete('/delete-quiz/:id',quizController.delete_quiz)
+    QuizModel.findByIdAndUpdate(id, updatedQuizData, { new: true })
+        .then(result => {
+            if (!result) {
+                return res.status(404).send('Quiz not found');
+            }
+            res.json({ message: 'Quiz updated successfully', quiz: result });
+        })
+        .catch(error => res.status(500).send('Error updating quiz'));
+};
 
-module.exports = router
+const delete_quiz = (req, res) => {
+    const id = req.params.id;
+    QuizModel.findByIdAndDelete(id)
+        .then(result => {
+            if (!result) {
+                return res.status(404).send('Quiz not found');
+            }
+            res.json({ message: 'Quiz deleted successfully' });
+        })
+        .catch(error => res.status(500).send('Error deleting quiz'));
+};
+
+module.exports = {
+    add_quiz,
+    get_quizes,
+    get_quiz,
+    update_quiz,
+    delete_quiz
+}
