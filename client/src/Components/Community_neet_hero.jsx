@@ -6,7 +6,7 @@ const Community_neet_hero = () => {
     <div className=" bg-white ">
       <section className="hero bg-[#DFF2E5]">
         <div className="hero-text items-center text-center item 1">
-          <h1>Writo Student Community for 6th - 10th students</h1>
+          <h1>Writo Student Community for NEET students</h1>
           <img src={img} alt="" className='ml-3 mb-2'/>
           <p className='text-4xl text-start'>
             Student communities are groups of like-minded individuals brought together by a shared interest, academic field, career goal, or hobby.

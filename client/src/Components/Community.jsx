@@ -8,6 +8,7 @@ import Connect from './Connect'
 import Member from './Member'
 import Community_contact from './Community_contact'
 import Community_footer from './Community_footer'
+import CommunityCards from './CommunityCards'
 const Community = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,6 +22,7 @@ const Community = () => {
       <Community_hero className='z-1'/>
     </div>
     <div className='bg-white'>
+      <CommunityCards />
       <Why_community/>
       <Connect/>
       <Member/>
@@ -33,18 +35,3 @@ const Community = () => {
 
 export default Community
 
-{/* <div>
-<div className=' bg-[#E6F1F1]'> 
-  <Navbar className='z-10'/>
-  <Community_nav className='z-1'/>
-  <Community_hero className='z-1'/>
- 
-</div>
-<div className='bg-white'>
-<Why_community/>
-<Connect/>
-<Member/>
-<Community_contact/>
-<Community_footer/>
-</div>
-</div> */}

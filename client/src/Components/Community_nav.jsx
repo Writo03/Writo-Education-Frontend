@@ -13,11 +13,11 @@ const Community_nav = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 md:px-12">
         {/* Main navigation links */}
         <Link  to="/communityneet" className="text-[#1AB780] item1 font-semibold md:hidden">
-          Community NEET
+          Community
         </Link>
         <div className="hidden md:flex items-center space-x-10">
           <Link  to="/communityneet" className="text-[#1AB780] text-2xl font-semibold item1">
-            Community NEET
+            Community
           </Link>
           <Link to="/about6to10" className="text-gray-900 hover:bg-gray-200 font-semibold">
             About
