@@ -10,15 +10,22 @@ const cookiesParser = require('cookie-parser')
 const { app, server } = require('./socket/index')
 const session = require('express-session')
 
-const app = express()
-const allowedOrigins = ['http://localhost:3000', 'https://writo-education-frontend.onrender.com',"https://writo-education-frontend.onrender.com/api/login"];
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true, 
+const allowedOrigins = ['https://writo-education-frontend.vercel.app',"http://localhost:3000"];
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+  credentials: true,
+};
 
+app.use(cors(corsOptions));
 app.use(express.json())
 app.use(cookiesParser())
 
