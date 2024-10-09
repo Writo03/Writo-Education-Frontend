@@ -10,7 +10,7 @@ const cookiesParser = require('cookie-parser')
 const { app, server } = require('./socket/index')
 const session = require('express-session')
 
-const allowedOrigins = ['https://writo-education-frontend.vercel.app',"http://localhost:3000"];
+const allowedOrigins = ['https://writo-education-frontend.vercel.app',"http://localhost:3000","http://localhost:3000"];
 
 const corsOptions = {
   origin: (origin, callback) => {
