@@ -10,10 +10,11 @@ import { RxCountdownTimer } from "react-icons/rx"
 import { CiSearch } from "react-icons/ci"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { useState, useEffect } from "react"
-// import Herosection from "./Hero3"
 import Contactus from "../../Components/Contactus"
 import { Link } from "react-router-dom"
 import Navbar from "../../Components/Navbar"
+import curvedline from "../../assets/Vector 515.png"
+import waitsHeroImg from "../../assets/waits-hero-pic.png" 
 
 function Waits() {
   useEffect(() => {
@@ -31,7 +32,7 @@ function Waits() {
       <div className="flex flex-col items-center justify-center bg-[#D8F3EE]   mb-8">
         {/* Navbar */}
 
-        {/* <nav className="bg-[#a5cac5] w-full space-x-12">
+      {/* <nav className="bg-[#a5cac5] w-full space-x-12">
       <div className="container mx-auto flex justify-around items-center p-4">
         <div className="flex items-center">
           <img src={Writo} alt="Logo" className="h-12 w-12" />
@@ -80,7 +81,37 @@ function Waits() {
     </nav>
      */}
         {/*Header */}
-        {/* <Herosection /> */}
+   
+        <div className="flex justify-between lg:justify-evenly items-center flex-col md:flex-row gap-5 relative md:pb-10 pt-4 lg:w-4/5 mx-auto">
+          <div className="flex flex-col items-center lg:items-start justify-evenly gap-5 lg:gap-8">
+            <h1 className="text-xl lg:text-2xl text-[#0A7F56] font-bold">Writo All India Test Series (WAITS)</h1>
+            <div className="flex flex-col items-center justify-center w-11/12 ">
+              <h3 className="text-lg lg:text-xl font-bold text-center text-[#1BB896] lg:leading-9">Empower your future, excel in your exams.</h3>
+              <img src={curvedline} alt="curvedLine" className="w-36 lg:w-60 text-center"/>
+            </div>
+            <div className="flex items-center justify-center flex-col">
+              <h1 className="text-2xl lg:text-3xl font-bold text-[#0A7F56]">True-to-life exam simulation</h1>
+              <p className="text-[#488B80]">Practice our Test series</p>
+            </div>
+            <div className="lg:w-full lg:text-center">
+
+            <button className="bg-[#488B80] text-white px-6 lg:px-12 py-2 rounded-full ">Enroll now</button>
+            </div>
+          </div>
+          <div className="relative my-10">
+            <div className="border-[#474747] border-2 rotate-[130deg] h-44 w-44 lg:h-[260px] lg:w-[260px] absolute z-10 right-[7px] top-[-18px] lg:top-0 lg:right-7 rounded-2xl">
+            <div className="bg-[#FD980C] h-40 w-40 lg:h-[240px] lg:w-[240px] absolute z-10 lg:right-[9px] right-[6px] 
+            lg:top-[7px] top-[6px] rounded-2xl">
+            </div>
+            </div>
+              <div>
+                <img src={waitsHeroImg} alt="" className="h-48 w-48 lg:w-80 lg:h-80 relative z-30" />
+              </div>
+          </div>
+          <div className="h-20 w-11/12 lg:w-1/2 mx-auto absolute bg-[#1AB79D] -bottom-10 flex items-center justify-center text-white rounded-lg">
+          Hurry up! Offer on WAITS ends soon
+          </div>
+          </div>
 
         <div className="bg-white flex flex-col  justify-center items-center ">
           {/* Test section */}
@@ -107,7 +138,7 @@ function Waits() {
                 <h3 className="text-xl font-bold whitespace-nowrap text-[#488B80]">
                   NEET Exam
                 </h3>
-                <div className="text-[#488BB0]  font-medium">
+                <div className="text-[#0a4768]  font-medium">
                   <p>For 11 th</p>
                   <p>For 12 th and</p>
                   <p>For 12 th plus</p>
@@ -143,7 +174,7 @@ function Waits() {
                 <h3 className="text-xl font-bold whitespace-nowrap text-[#488B80]">
                   JEE(Main + Adv)
                 </h3>
-                <div className="text-[#488BB0]  font-medium">
+                <div className="text-[#0a4768]  font-medium">
                   <p>For 11 th</p>
                   <p>For 12 th and</p>
                   <p>For 12 th plus</p>
