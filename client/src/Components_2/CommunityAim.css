@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
+
 
 
 .outeraim{
@@ -11,10 +13,10 @@
     align-items: center;
 }
 
-.aimheading{
+.aimheading{ 
     font-size: 40px;
-    color: green;
-    font-family: "Solitreo", cursive;
+    color: #488B80;
+    font-family: 'Fondamento';
   font-weight: 400;
   font-style: normal;
   text-align: center;
@@ -37,9 +39,10 @@
 .aim{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 20px;
+    height: 100%;
     max-width: 350px;
 }
 
@@ -49,4 +52,10 @@
   font-size: 20px;
   line-height: 40px;
   font-weight: 500;
+
+}
+
+
+.image{
+    height: 100px;
 }

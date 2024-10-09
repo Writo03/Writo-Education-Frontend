@@ -54,6 +54,11 @@ import Test from "../Components/quiz/Test";
 import LeaderBoard from "../Components/quiz/LeaderBoard";
 import JobDetail from "../Pages/JobDetail";
 
+//community pages
+
+import NeetCommunityPage from "../Pages/Community-pages/NeetCommunityPage";
+import CommunityPage from "../Pages/Community-pages/6-10CommunityPage";
+import JeeCommunityPage from "../Pages/Community-pages/JeeCommunityPage";
 
 const router = createBrowserRouter([
 {
@@ -94,7 +99,7 @@ const router = createBrowserRouter([
         },
         {
             path: "community",
-            element: <Community />
+            element: <CommunityPage />
         },
         {
             path:"jee-neet",
@@ -106,18 +111,22 @@ const router = createBrowserRouter([
         },
         {
             path: "communityneet",
-            element: <Community_neet />
+            element: <NeetCommunityPage />
         },
         {
-            path: "about6to10",
+            path: "communityjee",
+            element: <JeeCommunityPage />
+        },
+        {
+            path: "community/about",
             element: <About6to10 />
         },
         {
-            path: "aboutjee",
+            path: "communityjee/about",
             element: <AboutJee />
         },
         {
-            path: "aboutneet",
+            path: "communityneet/about",
             element: <AboutNeet />
         },
         {

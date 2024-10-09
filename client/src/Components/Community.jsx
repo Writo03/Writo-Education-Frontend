@@ -19,12 +19,17 @@ const Community = () => {
     <div className=' bg-[#E6F1F1]'> 
       
       <Community_nav className='z-1'/>
-      <Community_hero className='z-1'/>
+      <Community_hero 
+      className='z-1'
+       heading1="Writo Student Community for NEET students"
+       heading2="Shaping Student's Future"
+       heading3="Dynamic resourceful for NEET Students "
+       link="/about6to10"/>
     </div>
     <div className='bg-white'>
       <CommunityCards />
       <Why_community/>
-      <Connect/>
+      <Connect course="NEET"/>
       <Member/>
       <Community_contact/>
       

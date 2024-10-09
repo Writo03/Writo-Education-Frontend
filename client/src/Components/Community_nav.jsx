@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Community_nav = () => {
+const Community_nav = (props) => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+console.log(props)
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <nav className=" w-full bg-white">
+    <nav className=" w-full bg-[#2b8b8915]">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 md:px-12">
         {/* Main navigation links */}
-        <Link  to="/communityneet" className="text-[#1AB780] item1 font-semibold md:hidden">
+        <Link  to="" className="text-[#1AB780] item1 font-semibold md:hidden">
           Community
         </Link>
         <div className="hidden md:flex items-center space-x-10">
-          <Link  to="/communityneet" className="text-[#1AB780] text-2xl font-semibold item1">
+          <Link  to="" className="text-[#1AB780] text-2xl font-semibold item1">
             Community
           </Link>
-          <Link to="/about6to10" className="text-gray-900 hover:bg-gray-200 font-semibold">
+          <Link to="about" className="text-gray-900 hover:bg-gray-200 ">
             About
           </Link>
           <Link to="/faq" className="text-gray-900 hover:bg-gray-200">

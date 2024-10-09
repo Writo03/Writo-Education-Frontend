@@ -13,15 +13,15 @@ export default function CommunityAim() {
       <div className="inneraim">
 
         <div className="aim">
-        <img src={aimimg1} className="aboutheroimage" alt="..." />
+        <img src={aimimg1} className="image" alt="..." />
         <p className='aim_para'>Provide a platform for students to come together for learning and sharing experiences</p>
         </div>
         <div className="aim">
-        <img src={aimimg2} className="aboutheroimage" alt="..." />
+        <img src={aimimg2} className="image" alt="..." />
         <p className='aim_para'>Leverage their Knowledge to create all subjects enabled social impact solutions</p>
         </div>
         <div className="aim">
-        <img src={aimimg3} className="aboutheroimage" alt="..." />
+        <img src={aimimg3} className="image" alt="..." />
         <p className='aim_para'>Spread all subjects awareness in an inclusive way</p>
         </div>
 

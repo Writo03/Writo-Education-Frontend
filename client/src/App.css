@@ -52,7 +52,7 @@ body {
 }
 
 .bg1 {
-  background: linear-gradient(131deg, #1ab79d96, #ffdf6f96);
+  background: linear-gradient(131deg, #1ab79d7f, #ffe0707a);
 }
 
 /* HeroSection.css */
@@ -69,7 +69,7 @@ body {
 
 .hero-text h1 {
   font-size: 2.5em;
-  color: green;
+  color: #1BB896;
   margin-bottom: 20px;
   font-family: 'Fondamento';
   /* font-family: "Solitreo", cursive; */
@@ -133,9 +133,9 @@ body {
   font-size: 1em;
   cursor: pointer;
 }
-.hero-text button:hover {
+/* .hero-text button:hover {
   background-color: #218838;
-}
+} */
 
 .hero-image {
   max-width: 40%;

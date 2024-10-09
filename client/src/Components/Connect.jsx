@@ -3,7 +3,7 @@ import img1 from '../assets/neet1.png';
 import img2 from '../assets/neet2.png';
 import './Connect.css'; // Import your CSS file for styling
 
-const Connect = () => {
+const Connect = (props) => {
   return (
     <div className="my-10 md:m-0 outerexpert bg-[#F6FAFF]">
       <div className="innerexpert p-0 md:p-5"> 
@@ -15,7 +15,7 @@ const Connect = () => {
             Join a vibrant community of Writo who share your passion and drive.
           </p>
           <p className='mb-4 leading-8'>
-            Connect with individuals who are as excited about NEET Exam as you are, fostering an environment of collaboration and mutual growth.
+            Connect with individuals who are as excited about {props.course} Exam as you are, fostering an environment of collaboration and mutual growth.
           </p>
           <ul className=' text-base md:text-xl mt-4 pl-3 md:pl-5'>
             <li className=' mt-6 sm:mt-2'>

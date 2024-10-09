@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const CommunityCards = () => {
   const cards = [
     { title: 'NEET Community', description: 'Join the NEET preparation community.', link: '/communityneet' },
-    { title: 'JEE Community', description: 'Join the JEE preparation community.', link: '/jee' },
-    { title: 'Class 6-12 Community', description: 'Connect with peers for Classes 6-12.', link: '/class-6-12' },
+    { title: 'JEE Community', description: 'Join the JEE preparation community.', link: '/communityjee' },
+    { title: 'Class 6-12 Community', description: 'Connect with peers for Classes 6-12.', link: '/about6to10' },
   ];
 
   return (

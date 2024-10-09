@@ -44,7 +44,7 @@ import Class9befpay from "./Pages/class9-beforepay/class9_beforepay";
 import Class10befpay from "./Pages/class10-beforepay/class10_beforepay";
 import NeetTestSeries from "./Pages/Neet_Test_Series/NeettestSeries";
 import JeeTestSeries from "./Pages/Jeet_Test_Series/JeetestSeries";
-import AboutJeeCommunity from "./Pages/about-jee-community/about_jee_community";
+import AboutJeeCommunity from "./Pages/about-jee-community/about_jee_community.jsx";
 // All india test series
 import NeetAllIndiaTestseries from "./Pages/NeetAllIndiaTestSeries/NeetAllIndiaTestseries";
 import JeeAllIndiaTestSeries from "./Pages/JeeAllIndiaTestSeries/JeeAllIndiaTestSeries";
@@ -67,25 +67,29 @@ import LeaderBoard from './Components/quiz/LeaderBoard';
 import Layout from './layout/Layout';
 import JobDetail from './Pages/JobDetail.jsx';
 import ErrorBoundary from './ErrorBoundary.jsx';
+import NeetCommunityPage from './Pages/Community-pages/NeetCommunityPage.jsx';
+import CommunityPage from './Pages/Community-pages/6-10CommunityPage.jsx';
+import JeeCommunityPage from './Pages/Community-pages/JeeCommunityPage.jsx';
 function App() {
   return (
     
     <Routes>
       <Route path='/' element={<Layout />} >
         <Route path='' element={<Home />} />
-        <Route path='/community' element={<Community/>}/>
+        <Route path='/community' element={<CommunityPage/>}/>
         <Route path="/mentorservices" element={<Services1/>}></Route>
         <Route path='/careers' element={<CarrersPage/>} />
         <Route path="/chatwithmentors" element={<ChatwithMentor/>}/>
         <Route path='/mentorship' element={<Menotor_home1 />} />
-        <Route path='/communityneet' element={<Community_neet/>}/>
+        <Route path='/communityneet' element={<NeetCommunityPage/>}/>
+        <Route path='/communityjee' element={<JeeCommunityPage/>}/>
         <Route path='/why_writo' element={<Choose />} />
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/terms' element={<TermandConditions />} />
         <Route path='/faq' element={<Faq />} />
-        <Route path="/about6to10" element={<About6to10/>}/>
-        <Route path="/aboutjee" element={<AboutJee/>}/>
-        <Route path="/aboutneet" element={<AboutNeet/>}/>
+        <Route path="/community/about" element={<About6to10/>}/>
+        <Route path="/communityjee/about" element={<AboutJee/>}/>
+        <Route path="/communityneet/about" element={<AboutNeet/>}/>
         <Route path="/job/:id" element={<JobDetail />} />
         
       </Route>

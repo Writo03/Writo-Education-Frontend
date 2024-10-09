@@ -3,13 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
 
 .outerabouthero{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(131deg, #1ab79d96, #ffdf6f96);
+    background: linear-gradient(131deg, #1ab79d61, #ffe06f50);
     padding:45px;
 }
 
@@ -29,8 +35,8 @@
 
 .aboutheading{
     font-size: 35px;
-    color: green;
-    font-family: "Solitreo", cursive;
+    color: #488B80;
+    font-family: 'Fondamento';
     font-weight: 400;
     font-style: normal;
 }
