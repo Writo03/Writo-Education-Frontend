@@ -15,7 +15,7 @@ const About = () => {
                 src={topImage}
                 alt="Top Image"
                 className="w-full h-auto rounded-lg shadow-md sm:w-3/4 md:w-2/3 lg:w-full"
-              /> hey
+              />
             </div>
             <div className="relative mt-6 hidden sm:block">
               <img
