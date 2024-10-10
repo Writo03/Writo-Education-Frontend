@@ -70,6 +70,7 @@ import ErrorBoundary from './ErrorBoundary.jsx';
 import NeetCommunityPage from './Pages/Community-pages/NeetCommunityPage.jsx';
 import CommunityPage from './Pages/Community-pages/6-10CommunityPage.jsx';
 import JeeCommunityPage from './Pages/Community-pages/JeeCommunityPage.jsx';
+import JobForm from './Pages/JobForm.jsx';
 function App() {
   return (
     
@@ -91,6 +92,7 @@ function App() {
         <Route path="/communityjee/about" element={<AboutJee/>}/>
         <Route path="/communityneet/about" element={<AboutNeet/>}/>
         <Route path="/job/:id" element={<JobDetail />} />
+        <Route path="/jobform" element={<JobForm />} />
         
       </Route>
 

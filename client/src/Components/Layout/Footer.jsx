@@ -41,6 +41,7 @@ const Community_footer = () => {
                   <h2 className="font-bold text-xl lg:text-2xl">
                     Writo Education
                   </h2>
+                  <h3 className='text-xs lg:text-sm'>Make Yourself Future Fit</h3>
                   <p className="text-sm lg:text-base leading-relaxed mt-4">
                     At Writo Education, we’re passionate about empowering
                     JEE/NEET aspirants to reach their full potential. Our

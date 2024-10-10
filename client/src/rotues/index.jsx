@@ -59,6 +59,7 @@ import JobDetail from "../Pages/JobDetail";
 import NeetCommunityPage from "../Pages/Community-pages/NeetCommunityPage";
 import CommunityPage from "../Pages/Community-pages/6-10CommunityPage";
 import JeeCommunityPage from "../Pages/Community-pages/JeeCommunityPage";
+import JobForm from "../Pages/JobForm";
 
 const router = createBrowserRouter([
 {
@@ -240,6 +241,10 @@ const router = createBrowserRouter([
         {
             path:'/job/:id',
             element:<JobDetail/>
+        },
+        {
+            path:'/jobform',
+            element:<JobForm />
         },
         {
             path : "chat-home",

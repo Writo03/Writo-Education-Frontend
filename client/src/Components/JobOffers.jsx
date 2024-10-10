@@ -35,23 +35,23 @@ const JobOffers = () => {
   const initialJobData = [
     {
       id: "1",
-      title: "Faculty Trainee Program - Chemistry",
-      location: "Bangalore",
+      title: "Writo Faculty Trainee Program (Chemistry) ",
+      location: "Remote",
       description:
         "Train to become a world-class educator in Chemistry, teaching JEE/NEET aspirants.",
       features: ["Deliver high-quality lectures", "Design assessments", "Mentoring students"],
     },
     {
       id: "2",
-      title: "Faculty Trainee Program - Mathematics",
-      location: "Bangalore",
+      title: "Writo Faculty Trainee Program (Mathematics)",
+      location: "Remote",
       description: "Become a Math faculty trainee, focusing on preparing students for competitive exams.",
       features: ["Prepare lessons", "Conduct interactive sessions", "Evaluate student progress"],
     },
     {
       id: "3",
-      title: "Faculty Trainee Program - Physics",
-      location: "Bangalore",
+      title: "Writo Faculty Trainee Program (Physics)",
+      location: "Remote",
       description: "Trainee for Physics faculty role, aimed at coaching JEE/NEET students.",
       features:  ["Develop teaching plans", "Engage with students", "Assess learning outcomes"],
     },
