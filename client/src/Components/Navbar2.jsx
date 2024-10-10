@@ -25,12 +25,12 @@ const NavBar2 = () => {
 
   return (
     <nav className="w-full overflow-x-hidden">
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-2 pr-4 md:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-2 py-4 pr-4 md:px-6 lg:px-8">
         <div className="flex items-center space-x-2 md:space-x-4">
           <button
             className={`${
               selected === "services" && "bg-[#488b80]"
-            } text-black font-medium text-base md:text-2xl sm:mr-2 hover:bg-[#488b80] rounded-md px-2`}
+            } rounded-md px-2 text-base font-medium text-black hover:bg-[#488b80] sm:mr-2 md:text-2xl`}
             onClick={handleServicesClick}
           >
             Services
@@ -38,18 +38,25 @@ const NavBar2 = () => {
           <button
             className={`${
               selected === "events" && "bg-[#488b80]"
-            } text-black font-medium text-base md:text-2xl sm:mr-2 hover:bg-[#488b80] rounded-md px-2`}
+            } rounded-md px-2 text-base font-medium text-black hover:bg-[#488b80] sm:mr-2 md:text-2xl`}
             onClick={handleEventsClick}
           >
             Events
           </button>
         </div>
-        <div className="flex items-center space-x-4 md:space-x-10 ml-2">
+        <div className="ml-2 flex items-center space-x-4 md:space-x-10">
           {/* <button className="px-4 py-1 border  border-gray-400  rounded-lg hover:border-black text-xs md:text-base">
             Search class
           </button> */}
-          <input type="text" name="search" value={search} onChange={(e) => setSearch(e.target.value)} className="px-4 py-1 border  border-gray-400  rounded-lg hover:border-black text-xs md:text-base w-20 md:w-1/4" placeholder="Search" />
-          <button className="px-2 py-1 bg-[#488B80] hover:bg-[#e5e7eb] hover:text-black text-white rounded text-xs md:text-base">
+          <input
+            type="text"
+            name="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-20 rounded-lg border border-[#488B80] px-4 py-1 text-xs hover:border-black md:w-1/4 md:text-base"
+            placeholder="Search"
+          />
+          <button className="rounded bg-[#488B80] px-2 py-1 text-xs text-white hover:bg-[#e5e7eb] hover:text-black md:text-base">
             View plans
           </button>
         </div>
