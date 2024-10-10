@@ -49,7 +49,7 @@ const Home = () => {
     <div>
       
       <Navbar2 />
-      <div className="bg1 overflow-h">
+      <div className="bg1 w-full overflow-hidden">
         <HeroSection dropdownOpen={dropdownOpen} />
       </div>
       <Courses />

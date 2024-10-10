@@ -6,7 +6,8 @@ import "./NavBar2.css";
 const NavBar2 = () => {
   const [showServices, setShowServices] = useState(false);
   const [showEvents, setShowEvents] = useState(false);
-  const [selected, setSelected] = useState(""); 
+  const [selected, setSelected] = useState("");
+  const [search, setSearch] = useState("");
 
   const handleServicesClick = () => {
     setSelected((prev) => (prev === "services" ? "" : "services"));
@@ -44,9 +45,10 @@ const NavBar2 = () => {
           </button>
         </div>
         <div className="flex items-center space-x-4 md:space-x-10 ml-2">
-          <button className="px-4 py-1 border  border-gray-400  rounded-lg hover:border-black text-xs md:text-base">
+          {/* <button className="px-4 py-1 border  border-gray-400  rounded-lg hover:border-black text-xs md:text-base">
             Search class
-          </button>
+          </button> */}
+          <input type="text" name="search" value={search} onChange={(e) => setSearch(e.target.value)} className="px-4 py-1 border  border-gray-400  rounded-lg hover:border-black text-xs md:text-base w-20 md:w-1/4" placeholder="Search" />
           <button className="px-2 py-1 bg-[#488B80] hover:bg-[#e5e7eb] hover:text-black text-white rounded text-xs md:text-base">
             View plans
           </button>
