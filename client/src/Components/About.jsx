@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <section className="text-gray-600 body-font flex justify-center items-center">
-      <div className="container px-5 py-24 mx-auto flex flex-wrap justify-center items-center">
+      <div className="container px-5 py-4 mx-auto flex flex-wrap justify-center items-center">
         <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden relative">
           <div className="relative w-full md:w-1/2 flex flex-col gap-4">
             <div className="relative">

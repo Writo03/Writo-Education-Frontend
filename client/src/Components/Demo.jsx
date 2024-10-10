@@ -2,7 +2,7 @@ import React from 'react';
 
 const Demo = () => {
   return (
-    <div className="flex items-center justify-center py-8 mt-3">
+    <div className="flex items-center justify-center py-4">
       <div
         className="w-full p-6 rounded-lg shadow-md mx-8"
         style={{ backgroundColor: 'rgba(234, 243, 254, 0.45)' }}
