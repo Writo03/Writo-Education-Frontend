@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { IoMenu, IoClose } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import img from '../../assets/image.png';
+import img from '../../assets/rito-removebg-preview.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,18 +72,15 @@ const Navbar = () => {
         <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row md:items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center justify-between w-full md:w-auto">
-            <Link to="/" className="font-medium text-gray-900 flex items-center justify-center">
+            <Link to="/" className="font-medium text-gray-900 flex items-center justify-center md:ml-6">
               <img
                 src={img}
                 alt="Logo"
-                className="lg:w-10 lg:h-10 h-6 w-6 md:h-8 md:w-8"
+                className="lg:w-[4vw] lg:h-[2vw] md:w-[6vw] md:h-[3vw] w-[10vw] h-[5vw]"
               />
-              <span className="ml-3 text-xl lg:text-2xl font-bold md:hidden lg:block">
-                WritoTech
-              </span>
             </Link>
             <button
-              className={`md:hidden h-8 ${isOpen ? 'bg-gray-200' : 'bg-[#1AB780]'} border-0 py-1 px-4 focus:outline-none rounded text-base transition-all ease-in duration-100`}
+              className={`md:hidden h-8 ${isOpen ? 'bg-gray-200' : 'bg-[#488B80]'} border-0 py-1 px-4 focus:outline-none rounded text-base transition-all ease-in duration-100`}
               onClick={() => setIsOpen(true)}
             >
               <IoMenu className="text-white text-xl" />
@@ -105,31 +102,31 @@ const Navbar = () => {
             </div>
             <button
               onClick={handleTestSeries}
-              className="block text-start py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+              className="block text-start py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-[#488B80"
             >
               Test Series
             </button>
             <Link
               to="/mentorship"
-              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-[#488B80]"
             >
               Mentorship
             </Link>
             <Link
               to="/community"
-              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-[#488B80]"
             >
               Community
             </Link>
             <Link
               to="/careers"
-              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-[#488B80]"
             >
               Careers
             </Link>
             <Link
               to="/blogs"
-              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-green-600"
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-[#488B80]"
             >
               Blogs
             </Link>
@@ -137,13 +134,13 @@ const Navbar = () => {
               <div className="md:hidden flex flex-col mt-4">
                 <button
                   onClick={handleSignin}
-                  className="bg-[#1AB780] border-0 py-3 px-6 mb-2 focus:outline-none hover:bg-gray-200 rounded text-base"
+                  className="bg-[#488B80] border-0 py-3 px-6 mb-2 focus:outline-none hover:bg-gray-200 rounded text-base hover:text-black text-white"
                 >
                   Sign up
                 </button>
                 <button
                   onClick={handleLogin}
-                  className="border border-[#1AB780] py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base"
+                  className="border border-[#488B80] py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base"
                 >
                   Login
                 </button>
@@ -152,7 +149,7 @@ const Navbar = () => {
             {auth && (
               <div className="md:hidden flex flex-col mt-4">
                 <button
-                  className="bg-[#1AB780] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base"
+                  className="bg-[#488B80] border-0 py-3 px-6 focus:outline-none hover:bg-gray-200 rounded text-base hover:text-black text-white"
                   onClick={() => setShowLogoutModal(true)}
                 >
                   Logout
@@ -167,13 +164,13 @@ const Navbar = () => {
             <div className="hidden md:flex items-center">
               <button
                 onClick={handleSignin}
-                className="bg-[#1AB780] border-0 py-2 lg:py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base"
+                className="bg-[#488B80] border-0 py-2 lg:py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base hover:text-black text-white"
               >
                 Sign up
               </button>
               <button
                 onClick={handleLogin}
-                className="border border-[#1AB780] py-2 lg:py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base"
+                className="border border-[#488B80] py-2 lg:py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base"
               >
                 Login
               </button>
@@ -182,7 +179,7 @@ const Navbar = () => {
           {auth && (
             <div className="hidden md:flex items-center">
               <button
-                className="bg-[#1AB780] border-0 py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base"
+                className="bg-[#488B80] border-0 py-3 px-6 mr-3 focus:outline-none hover:bg-gray-200 rounded text-base hover:text-black text-white"
                 onClick={() => setShowLogoutModal(true)}
               >
                 Logout
