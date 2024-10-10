@@ -11,6 +11,8 @@ import Writo from "../../assets/Clip path group.png";
 import Hero3 from './Hero3';
 import Testimonials from './Testimonials';
 import Cart from './Cart';
+import Navbar from '../../Components/Layout/Navbar';
+import TestLayoutCard from '../../Components/TestLayoutCard';
 
 const answerKeys = [
   { id: 1, text: 'Download NEET mock test answer key and solutions - 1', link: '#' },
@@ -60,7 +62,7 @@ const NeetTestSeries = () => {
   return (
     <>
       {/* Nav bar */}
-      <nav className="bg-[#a5cac5] w-full">
+      {/* <nav className="bg-[#a5cac5] w-full">
         <div className="container mx-auto flex justify-between items-center py-4 px-12">
           <div className="flex items-center">
             <img src={Writo} alt="Logo" className="h-12 w-12" />
@@ -86,22 +88,26 @@ const NeetTestSeries = () => {
             <button className="w-full bg-[#5C8D8D] text-white px-4 py-2 rounded-lg mt-2">Join now</button>
           </div>
         )}
-      </nav>
-
+      </nav> */}
+      <Navbar/>
       {/* Hero section */}
       <Hero3 />
-      <h1 className='text-center text-[#488B80]  text-2xl font-semibold mb-8 '>Waits All India Test Series for NEET UG</h1>
+      <h1 className='text-center text-[#488B80]  text-2xl font-semibold mb-8 mt-20 '>Waits All India Test Series for NEET UG</h1>
       <h1 className='text-center text-[#ED7E0A]  text-2xl font-semibold mb-8' >Select the right test for you</h1>
-      <h1 className='text-center text-[#ED7E0A]  text-2xl font-semibold mb-8' >Coming soon</h1>
+      <div className='flex gap-3 px-3 flex-wrap items-center justify-center'>
+        <TestLayoutCard/>
+        <TestLayoutCard/>
+        <TestLayoutCard/>
+      </div>
       {/* <Testimonials/> */}
       
 
       {/* Download section */}
-      {/* <div className="w-full mx-auto p-4">
-        <h1 className="text-center text-2xl text-[#488B80] font-semibold mb-8">NEET Test Answer key and solutions</h1>
-        <div className="flex flex-col md:flex-row p-4 md:p-10 justify-center gap-4">
+      <div className="w-full mx-auto p-4 mt-12">
+        <h1 className="text-center text-2xl text-[#488B80] font-semibold mb-8">JEE Test Answer key and solutions</h1>
+        <div className="flex flex-col md:flex-row p-4 md:p-10 justify-center gap-4 md:flex-wrap">
           {answerKeys.map((key) => (
-            <div key={key.id} className="border p-4 rounded shadow-lg w-full md:w-1/2 flex flex-col items-center">
+            <div key={key.id} className="border p-4 rounded shadow-lg w-full md:w-[40%] lg:w-[30%] flex flex-col items-center">
               <div className='flex flex-row gap-x-2'>
                 <FaFilePdf className='h-8 w-8 text-[#488B80]' />
                 <p className="mb-4 text-center font-medium text-lg">{key.text}</p>
@@ -116,10 +122,10 @@ const NeetTestSeries = () => {
       </div>
 
       <h1 className='text-center text-[#488B80]  text-2xl font-semibold mb-8 '>Subject wise All India Test series</h1>
-          <Cart/> */}
+          <Cart/>
 
       {/* Why WAITS section */}
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 mt-8">
         <h1 className="text-center text-2xl font-semibold mb-8">Why take WAITS?</h1>
         <div className="flex flex-col md:flex-row justify-center gap-12 p-4">
           {features.map((feature) => (

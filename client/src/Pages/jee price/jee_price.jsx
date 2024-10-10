@@ -163,7 +163,11 @@ function JeePrice() {
             <div className="bg-white shadow-lg rounded-lg p-6 max-w-sm w-full">
               <div className="flex flex-row justify-between">
                 <h2 className="text-xl font-semibold mb-4">Annual Fee</h2>
-                <p className="text-2xl font-bold mb-4">₹99</p>
+                <div className="flex items-center gap-1">
+
+                <p className="text-xl font-bold mb-4 line-through text-gray-700">₹99</p>
+                <p className="text-2xl font-bold mb-4">0</p>
+                </div>
               </div>
               <div className="border border-[#488B80] p-4 rounded-lg">
                 <div className="mb-4 ">
@@ -182,7 +186,7 @@ function JeePrice() {
                     </label>
                   </div>
                 </div>
-                <div className="mb-4 ">
+                {/* <div className="mb-4 ">
                   <label className="block font-medium mb-2">Select Batch</label>
                   <div className="flex flex-row gap-x-4">
                     <label className="inline-flex items-center mb-2">
@@ -206,7 +210,7 @@ function JeePrice() {
                       <span className="ml-2">August</span>
                     </label>
                   </div>
-                </div>
+                </div> */}
                 <p className="text-gray-500 text-sm mb-6">
                   Get this course plus top-rated picks in tech skills and other
                   popular topics.

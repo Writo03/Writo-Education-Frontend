@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import { useState,useEffect} from 'react';
-import { FaFilePdf, FaBars, FaTimes,  } from "react-icons/fa";
+import { useState, useEffect } from 'react';
+import { FaFilePdf, FaBars, FaTimes, } from "react-icons/fa";
 import { LuDownload } from "react-icons/lu";
 import Whywaits1 from "../../assets/whywaits1.png";
 import Whywaits2 from "../../assets/whywaits2.png";
@@ -47,33 +47,33 @@ const JeeTestSeries = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  
-  
+
+
   const [isOpen, setIsOpen] = useState(false);
 
 
 
-  
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
- 
+
   return (
     <>
-      <Navbar/>
+      <Navbar />
 
       {/* Hero section */}
       <Hero3 />
       <h1 className='text-center text-[#488B80]  text-2xl font-semibold mb-8 '>Waits All India Test Series for JEE Mains + Adv</h1>
       <h1 className='text-center text-[#ED7E0A]  text-2xl font-semibold mb-8' >Select the right test for you</h1>
       <div className='flex gap-3 px-3 flex-wrap items-center justify-center'>
-        <TestLayoutCard/>
-        <TestLayoutCard/>
-        <TestLayoutCard/>
+        <TestLayoutCard />
+        <TestLayoutCard />
+        <TestLayoutCard />
       </div>
       {/* <Testimonials/> */}
-      
+
 
       {/* Download section */}
       <div className="w-full mx-auto p-4 mt-12">
@@ -95,7 +95,7 @@ const JeeTestSeries = () => {
       </div>
 
       <h1 className='text-center text-[#488B80]  text-2xl font-semibold mb-8 mt-4'>Subject wise All India Test series</h1>
-          <Cart/>
+      <Cart />
 
       {/* Why WAITS section */}
       <div className="container mx-auto p-4 mt-8">
