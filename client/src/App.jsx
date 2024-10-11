@@ -78,11 +78,11 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout />} >
         <Route path='' element={<Home />} />
-        <Route path='/community' element={<CommunityPage/>}/>
         <Route path="/mentorservices" element={<Services1/>}></Route>
         <Route path='/careers' element={<CarrersPage/>} />
         <Route path="/chatwithmentors" element={<ChatwithMentor/>}/>
         <Route path='/mentorship' element={<Menotor_home1 />} />
+        <Route path='/community' element={<CommunityPage/>}/>
         <Route path='/communityneet' element={<NeetCommunityPage/>}/>
         <Route path='/communityjee' element={<JeeCommunityPage/>}/>
         <Route path='/why_writo' element={<Choose />} />
