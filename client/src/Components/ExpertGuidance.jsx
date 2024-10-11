@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function ExpertGuidance() {
   return (
-    <div className="outerexpert my-5">
+    <div className="outerexpert my-5 mt-8">
       <div className="innerexpert">
         <div className="imagee">
           <img className="imgg" src={img1} alt="missing image" />
