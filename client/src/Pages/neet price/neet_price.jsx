@@ -12,6 +12,7 @@ import Contactus from "../../Components/Contactus";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
+import { Link } from "react-router-dom";
 
 function NeetPrice() {
 
@@ -30,6 +31,7 @@ function NeetPrice() {
     setSelectedBatch(selectedBatch === batch ? null : batch);
   };
   const [isOpen, setIsOpen] = useState(false);
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -208,9 +210,11 @@ function NeetPrice() {
                   Get this course plus top-rated picks in tech skills and other
                   popular topics.
                 </p>
+                <Link to={"/neet-test-series"}>
                 <button onClick={handlePayment} className="w-full bg-[#488B80] text-white py-2 rounded-md">
                   Buy now
                 </button>
+                </Link>
               </div>
             </div>
             <div className="flex flex-row gap-x-4 rounded-lg p-6 max-w-sm w-full border border-[#488BB0] mt-8">

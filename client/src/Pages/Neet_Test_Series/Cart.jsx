@@ -1,6 +1,8 @@
-function Cart() {
-    return (
-      <div className="flex gap-3 px-3 flex-wrap items-center justify-center">
+import { Link } from "react-router-dom";
+
+function Cart({id = "66bcbf02c6fc8d227f01d422"}) {
+  return (
+    <div className="flex gap-3 px-3 flex-wrap items-center justify-center">
       {Array(3)
         .fill(0)
         .map((_, index) => (
@@ -35,33 +37,37 @@ function Cart() {
           //   </div>
           // </div>
           <div className="w-full md:w-[45%] lg:w-[30%] rounded-lg overflow-hidden shadow-lg bg-white p-6">
-          <h2 className="text-2xl font-bold text-[#07744E] mb-2">Physics</h2>
-          <p className="text-black mb-1">25 Questions Papers</p>
-          <p className="text-black mb-4">Reattempted also available</p>
-          
-          <div className="space-y-2 mb-6">
-            <div className="flex ">
-              <span className="font-semibold w-24">Questions</span>
-              <span>: 100</span>
+            <h2 className="text-2xl font-bold text-[#07744E] mb-2">Physics</h2>
+            <p className="text-black mb-1">25 Questions Papers</p>
+            <p className="text-black mb-4">Reattempted also available</p>
+
+            <div className="space-y-2 mb-6">
+              <div className="flex ">
+                <span className="font-semibold w-24">Questions</span>
+                <span>: 100</span>
+              </div>
+              <div className="flex ">
+                <span className="font-semibold w-24">Time</span>
+                <span>: 100 Minutes</span>
+              </div>
             </div>
-            <div className="flex ">
-              <span className="font-semibold w-24">Time</span>
-              <span>: 100 Minutes</span>
+
+            <div className="flex justify-between">
+              <Link to={`/test/${id}`}>
+                <button className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
+                  GoTo Test
+                </button>
+              </Link>
+              <Link to={"/jee-all-india-test-series"}>
+                <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded">
+                  View Details
+                </button>
+              </Link>
             </div>
           </div>
-          
-          <div className="flex justify-between">
-            <button className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
-              GoTo Test
-            </button>
-            <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded">
-              View Details
-            </button>
-          </div>
-        </div>
         ))}
     </div>
-      );
+  );
 }
 
 export default Cart;

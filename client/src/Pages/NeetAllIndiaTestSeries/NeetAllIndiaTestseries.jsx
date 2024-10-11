@@ -11,6 +11,7 @@ import Writo from "../../assets/Clip path group.png"
 import { CiSearch } from "react-icons/ci"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 const features = [
   {
@@ -144,9 +145,11 @@ function NeetAllIndiaTestseries() {
               <span className="text-sm">Full syllabus mock questions</span>
             </p>
           </div>
-          <button className="bg-[#488B80] mt-4 text-white py-2 px-4 rounded">
-            Take test
-          </button>
+          <Link to={"/test/66bcbf02c6fc8d227f01d422"}>
+            <button className="bg-[#488B80] mt-4 text-white py-2 px-4 rounded">
+              Take test
+            </button>
+          </Link>
         </div>
         <div className="flex items-center justify-center mt-6 md:mt-0 md:ml-6">
           <img

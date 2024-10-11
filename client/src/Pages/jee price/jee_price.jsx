@@ -215,7 +215,7 @@ function JeePrice() {
                   Get this course plus top-rated picks in tech skills and other
                   popular topics.
                 </p>
-                <Link to ='/jee-all-india-test-series'>
+                <Link to ='/jee-test-series'>
                 <button className="w-full bg-[#488B80] text-white py-2 rounded-md">
                   Buy now
                 </button>
