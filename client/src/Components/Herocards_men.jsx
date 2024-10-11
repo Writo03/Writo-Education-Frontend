@@ -189,34 +189,30 @@ const Herocards_men = () => {
         ))}
       </div>
 
+      <div className="mainImg">
+        <img src="" alt="" />
+      </div>
+
       {/* Team members grid */}
-      <div className="flex flex-wrap justify-center item1">
+      <div className="flex flex-wrap justify-center gap-10">
         {currentMembers.map((member, index) => (
-          <div key={index} className="p-4 lg:w-1/3 md:w-1/3 w-full">
-            <div className="h-full flex flex-col items-center">
-              <div className="mb-4">
+          <div key={index} className="">
                 <img
                   alt={member.name}
-                  className="rounded-lg object-cover object-center"
-                  style={{ width: "300px", height: "300px" }}
+                  className="w-80 h-72 object-contain rounded-lg"
                   src={member.imageUrl}
                 />
-              </div>
-              <div className="w-full ml-1 text-left px-16">
-                <h2 className="title-font font-bold item1 text-lg ml-2 text-gray-900">
+              <div className="flex flex-col items-start justify-start w-80">
+                <h2 className=" text-gray-900 line-clamp-1 font-bold text-xl md:text-2xl lg:text-3xl">
                   {member.name}
                 </h2>
                 <h3
-                  className={`text-[#0082AB] mb-3 ${
-                    index === 0 ? "md:text-left" : "md:text-left"
-                  }`}
+                  className={`text-[#0082AB] line-clamp-2`}
                 >
                   {member.role}
                 </h3>
-                {/* Social icons can be added here */}
               </div>
             </div>
-          </div>
         ))}
       </div>
 
