@@ -54,7 +54,9 @@ body {
 .bg1 {
   background: linear-gradient(131deg, #1ab79d7f, #ffe0707a);
 }
-
+.bg2 {
+  background: linear-gradient(131deg, #1ab79d3c, #ffe07031);
+}
 /* HeroSection.css */
  .hero {
   display: flex;

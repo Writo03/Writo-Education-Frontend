@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Community_nav = (props) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,6 +7,8 @@ console.log(props)
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const navigate = useNavigate()
 
   return (
     <nav className=" w-full bg-[#2b8b8915]">
@@ -19,13 +21,15 @@ console.log(props)
           <Link  to="" className="text-[#1AB780] text-2xl font-semibold item1">
             Community
           </Link>
-          <Link to="about" className="text-gray-900 hover:bg-gray-200 ">
+          <button  className="text-gray-900 hover:bg-gray-200 " onClick={()=>{
+            navigate("about")
+          }}>
             About
-          </Link>
+          </button>
           <Link to="/faq" className="text-gray-900 hover:bg-gray-200">
             FAQ
           </Link>
-          <Link to="/" className="text-gray-900 hover:bg-gray-200">
+          <Link to="/communityguidelines" className="text-gray-900 hover:bg-gray-200">
             Community Guidelines
           </Link>
         </div>

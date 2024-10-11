@@ -71,6 +71,7 @@ import NeetCommunityPage from './Pages/Community-pages/NeetCommunityPage.jsx';
 import CommunityPage from './Pages/Community-pages/6-10CommunityPage.jsx';
 import JeeCommunityPage from './Pages/Community-pages/JeeCommunityPage.jsx';
 import JobForm from './Pages/JobForm.jsx';
+import CommunityGuidelines from './Components/Communitygudielines.jsx';
 function App() {
   return (
     
@@ -88,6 +89,7 @@ function App() {
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/terms' element={<TermandConditions />} />
         <Route path='/faq' element={<Faq />} />
+        <Route path='/communityguidelines' element={<CommunityGuidelines />} />
         <Route path="/community/about" element={<About6to10/>}/>
         <Route path="/communityjee/about" element={<AboutJee/>}/>
         <Route path="/communityneet/about" element={<AboutNeet/>}/>

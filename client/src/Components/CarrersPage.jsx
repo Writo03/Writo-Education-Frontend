@@ -115,7 +115,7 @@ const CarrersPage = () => {
       <div className="w-full">
         <Contactus />
       </div>
-      <JobDetail />
+     
     </>
   );
 };

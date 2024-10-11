@@ -60,6 +60,7 @@ import NeetCommunityPage from "../Pages/Community-pages/NeetCommunityPage";
 import CommunityPage from "../Pages/Community-pages/6-10CommunityPage";
 import JeeCommunityPage from "../Pages/Community-pages/JeeCommunityPage";
 import JobForm from "../Pages/JobForm";
+import CommunityGuidelines from "../Components/Communitygudielines";
 
 const router = createBrowserRouter([
 {
@@ -97,6 +98,10 @@ const router = createBrowserRouter([
         {
             path: "faq",
             element: <Faq />
+        },
+        {
+            path: "communityguidelines",
+            element: <CommunityGuidelines />
         },
         {
             path: "community",

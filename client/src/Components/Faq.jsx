@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import Navbar from './Navbar';
 import { CiSquarePlus } from "react-icons/ci";
 import Lower_footer from './Lower_footer';
+import Community_nav from './Community_nav';
 
 const Faq = () => {
     useEffect(() => {
@@ -58,12 +59,14 @@ const Faq = () => {
     };
 
     return (
-        <div>
+        <>
+        <Community_nav />
+        <div className='bg2'>
             
-            <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md mt-6">
-                <h1 className="text-center text-3xl font-bold mb-6 text-[#184948]">FAQs and Help</h1>
+            <div className="max-w-4xl mx-auto p-6 ">
+                <h1 className="text-center text-3xl font-bold mb-6 text-[#488B80]">FAQs and Help</h1>
                 
-                <h2 className="text-xl font-semibold text-[#184948] mt-4">Frequently Asked Questions</h2>
+                <h2 className="text-xl font-semibold text-[#488B80] mt-4">Frequently Asked Questions</h2>
                 <div className="mt-4">
                     {faqs.map((faq, index) => (
                         <div key={index} className="mb-4 border p-4 rounded">
@@ -78,7 +81,7 @@ const Faq = () => {
                     ))}
                 </div>
 
-                <h2 className="text-xl font-semibold text-[#184948] mt-8">Recently Asked Questions</h2>
+                <h2 className="text-xl font-semibold text-[#488B80] mt-8">Recently Asked Questions</h2>
                 <div className="mt-4">
                     {recentQuestions.map((question, index) => (
                         <div key={index} className="mb-4 border p-4 rounded">
@@ -95,6 +98,7 @@ const Faq = () => {
             </div>
            
         </div>
+        </>
     );
 };
 
