@@ -1,18 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Bgimage from "../assets/image 18.png";
+import { cn } from "../lib/utils";
 
-function Bgcard({ children, className }) {
+function Bgcard({ children, className, inClassName}) {
   return (
     <div
-      className={`${className} group relative flex flex-row items-center justify-center overflow-hidden shadow-md md:rounded-lg`}
+      className={cn(
+        className,
+        `group relative flex flex-row items-center justify-center overflow-hidden shadow-md md:rounded-lg`,
+      )}
     >
       <img
         src={Bgimage}
         alt="background"
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
-      <div className="relative z-10 flex flex-grow flex-col gap-y-4 p-4">
+      <div
+        className={cn(
+          `relative z-10 flex flex-grow items-center justify-between flex-col gap-y-3 px-8 py-2`,inClassName
+        )}
+      >
         <div className="flex items-center justify-between gap-x-6">
           {children}
         </div>

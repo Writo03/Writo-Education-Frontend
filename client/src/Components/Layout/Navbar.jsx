@@ -76,7 +76,7 @@ const Navbar = () => {
               <img
                 src={img}
                 alt="Logo"
-                className="lg:w-[4vw] lg:h-[2vw] md:w-[6vw] md:h-[3vw] w-[10vw] h-[5vw]"
+                className="lg:w-[6vw] lg:h-[3vw] md:w-[8vw] md:h-[4vw] w-[12vw] h-[6vw]"
               />
             </Link>
             <button

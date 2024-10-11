@@ -16,7 +16,7 @@ export default function Courses1() {
         <div className="my-5 mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-8">
           {[6, 7, 8, 9, 10].map((item, idx) => (
             <Link key={idx} to={`/class-${item}beforepay`}>
-              <Bgcard className="bg-sky-200">
+              <Bgcard className={item === 10 ? "bg-red-200 lg:bg-sky-200" : "bg-sky-200"} inClassName={item === 10 && "px-[4.5rem] py-1 lg:px-8 lg:py-2 lg:gap-y-3"}>
                 <h3 className="whitespace-nowrap text-xl font-bold text-[#488B80]">
                   {item} Class
                 </h3>
