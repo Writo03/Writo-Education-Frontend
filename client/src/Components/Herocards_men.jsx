@@ -5,76 +5,89 @@ import card3 from "../assets/card3.png";
 import { BsBookmarkStarFill } from "react-icons/bs";
 import { SlUserFollowing } from "react-icons/sl";
 import { FaMagic, FaChevronLeft, FaAngleRight } from "react-icons/fa";
+import { useLocation, useNavigate } from "react-router-dom";
 
 // Sample data (array of objects representing team members)
 const teamMembers = [
   {
+    id: 1,
     name: "Jane Doe",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card1,
     type: "Featured",
   },
   {
+    id: 2,
     name: "John",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card2,
     type: "Followed",
   },
   {
+    id: 3,
     name: "John Smith",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card3,
     type: "Personalized",
   },
   {
+    id: 4,
     name: "Jane Doe",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card1,
     type: "Featured",
   },
   {
+    id: 5,
     name: "John",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card2,
     type: "Followed",
   },
   {
+    id: 6,
     name: "John Smith",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card3,
     type: "Personalized",
   },
   {
+    id: 7,
     name: "Jane Doe",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card1,
     type: "Featured",
   },
   {
+    id: 8,
     name: "John",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card2,
     type: "Followed",
   },
   {
+    id: 9,
     name: "John Smith",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card3,
     type: "Personalized",
   },
   {
+    id: 10,
     name: "Jane Doe",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card1,
     type: "Featured",
   },
   {
+    id: 11,
     name: "John",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card2,
     type: "Followed",
   },
   {
+    id: 12,
     name: "John Smith",
     role: "At a school in Godhra, students whose parents had paid money were reportedly asked to..",
     imageUrl: card3,
@@ -84,6 +97,8 @@ const teamMembers = [
 ];
 
 const Herocards_men = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const itemsPerPage = 9; // Number of team members per page (3x3 grid)
   const [currentPage, setCurrentPage] = useState(1);
   const [filterType, setFilterType] = useState("All"); // State for filter type
@@ -162,68 +177,80 @@ const Herocards_men = () => {
   };
 
   return (
-    <div className="flex flex-col mt-4 item1">
+    <div className="item1 mt-4 flex flex-col">
       {/* Filter buttons */}
-      <div className="mb-8 mt-4 flex flex-wrap justify-start items-center">
+      <div className="mx-4 mb-8 mt-4 flex items-center justify-start md:mx-8">
         {["Featured", "Followed", "Personalized"].map((filter, idx) => (
           <button
             key={idx}
-            className={`mx-2 px-3 py-1 rounded-xl border border-black-25 ${
+            className={`border-black-25 mx-2 rounded-xl border px-3 py-1 ${
               filterType === filter
-                ? "text-[#699BF7] bg-[#E4F6F9] hover:bg-blue-600"
-                : "text-gray-800 bg-transparent hover:bg-[#E4F6F9]"
+                ? "bg-[#488B80] text-white"
+                : "bg-transparent text-gray-800 hover:bg-[#E4F6F9]"
             }`}
             onClick={() => handleFilterChange(filter)}
           >
             {filter === "Featured" && (
-              <BsBookmarkStarFill className="inline-block mr-2 text-[#699BF7]" />
+              <BsBookmarkStarFill
+                className={`${filterType === filter ? "text-white" : "text-[#488B80]"} mr-2 inline-block`}
+              />
             )}
             {filter === "Followed" && (
-              <SlUserFollowing className="inline-block mr-2 text-[#699BF7]" />
+              <SlUserFollowing
+                className={`${filterType === filter ? "text-white" : "text-[#488B80]"} mr-2 inline-block`}
+              />
             )}
             {filter === "Personalized" && (
-              <FaMagic className="inline-block mr-2 text-[#699BF7]" />
+              <FaMagic
+                className={`${filterType === filter ? "text-white" : "text-[#488B80]"} mr-2 inline-block`}
+              />
             )}
             {filter}
           </button>
         ))}
       </div>
 
-      <div className="mainImg">
+      {/* <div className="mainImg">
         <img src="" alt="" />
-      </div>
+      </div> */}
 
       {/* Team members grid */}
       <div className="flex flex-wrap justify-center gap-10">
         {currentMembers.map((member, index) => (
-          <div key={index} className="">
-                <img
-                  alt={member.name}
-                  className="w-80 h-72 object-contain rounded-lg"
-                  src={member.imageUrl}
-                />
-              <div className="flex flex-col items-start justify-start w-80">
-                <h2 className=" text-gray-900 line-clamp-1 font-bold text-xl md:text-2xl lg:text-3xl">
-                  {member.name}
-                </h2>
-                <h3
-                  className={`text-[#0082AB] line-clamp-2`}
-                >
-                  {member.role}
-                </h3>
-              </div>
+          <div
+            key={index}
+            id={member.id}
+            onClick={() =>
+              navigate("/" + member.name + "/" + member.id, {
+                state: {
+                  previousUrl: location.pathname,
+                },
+              })
+            }
+          >
+            <img
+              alt={member.name}
+              className="h-72 w-80 rounded-lg object-contain"
+              src={member.imageUrl}
+            />
+            <div className="flex w-80 flex-col items-start justify-start">
+              <h2 className="line-clamp-1 text-xl font-bold text-gray-900 md:text-2xl lg:text-3xl">
+                {member.name}
+              </h2>
+              <h3 className={`line-clamp-2 text-[#488B80]`}>{member.role}</h3>
             </div>
+          </div>
         ))}
       </div>
 
       {/* Pagination controls */}
       {totalPages > 1 && (
-        <div className="w-full flex justify-center mt-4 mb-7">
+        <div className="mb-7 mt-4 flex w-full justify-center">
           <button
-            className={`mx-2 px-3 py-1 rounded-md ${
+            className={`mx-2 rounded-md px-3 py-1 ${
               currentPage === 1
-                ? "bg-gray-300 cursor-not-allowed"
-                : "bg-blue-500 hover:bg-blue-600 text-white"
+                ? "cursor-not-allowed bg-gray-300"
+                : "bg-[#488B80] text-white hover:bg-[#488B80]"
             }`}
             onClick={() => goToPage(currentPage - 1)}
             disabled={currentPage === 1}
@@ -235,10 +262,10 @@ const Herocards_men = () => {
           {generatePageNumbers().map((pageNumber, index) => (
             <button
               key={index}
-              className={`mx-2 px-3 py-1 rounded-md ${
+              className={`mx-2 rounded-md px-3 py-1 ${
                 pageNumber === currentPage
-                  ? "bg-blue-500 text-white"
-                  : "bg-transparent text-gray-800 hover:bg-blue-500 hover:text-white"
+                  ? "bg-[#488B80] text-white"
+                  : "bg-transparent text-gray-800 hover:bg-[#488B80] hover:text-white"
               }`}
               onClick={() => {
                 if (typeof pageNumber === "number") {
@@ -251,10 +278,10 @@ const Herocards_men = () => {
           ))}
 
           <button
-            className={`mx-2 px-3 py-1 rounded-md ${
+            className={`mx-2 rounded-md px-3 py-1 ${
               currentPage === totalPages
-                ? "bg-gray-300 cursor-not-allowed"
-                : "bg-blue-500 hover:bg-blue-600 text-white"
+                ? "cursor-not-allowed bg-gray-300"
+                : "bg-[#488B80] text-white hover:bg-[#488B80]"
             }`}
             onClick={() => goToPage(currentPage + 1)}
             disabled={currentPage === totalPages}
