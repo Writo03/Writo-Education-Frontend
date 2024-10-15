@@ -66,8 +66,8 @@ console.log(props)
       </div>
       {/* Responsive menu */}
       <div className={`${menuOpen ? 'block' : 'hidden'} md:hidden`}>
-        <div className="flex flex-col  space-y-4 p-4 border-y-2 ">
-        <button className="text-gray-900 hover:bg-gray-200" onClick={() => {
+        <div className="flex flex-col  justify-start space-y-4 p-4 border-y-2 ">
+        <button className="text-gray-900 flex justify-start " onClick={() => {
               if (basePath === "communityneet" || basePath === "communityjee" || basePath === "community") {
                   navigate(`/${basePath}/about`);
               }else{

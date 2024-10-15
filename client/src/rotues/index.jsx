@@ -61,6 +61,7 @@ import CommunityPage from "../Pages/Community-pages/6-10CommunityPage";
 import JeeCommunityPage from "../Pages/Community-pages/JeeCommunityPage";
 import JobForm from "../Pages/JobForm";
 import CommunityGuidelines from "../Components/Communitygudielines";
+import SGP from "../Pages/SGP";
 
 const router = createBrowserRouter([
 {
@@ -218,6 +219,10 @@ const router = createBrowserRouter([
         {
             path: "jee-all-india-test-series",
             element: <JeeAllIndiaTestSeries />
+        },
+        {
+            path: "sgp",
+            element: <SGP />
         },
         {
             path : 'email',

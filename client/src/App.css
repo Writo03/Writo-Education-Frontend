@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 .html{
   scroll-behavior: smooth;
 
@@ -42,7 +44,14 @@ body {
 }
 .item5{
   font-family: 'Gochi Hand';
-
+}
+.item6{
+  
+  font-family: 'Solitreo';
+}
+.item7{
+  font-family: 'Bungee Shade';
+  
 }
 body {
   font-family: Arial, sans-serif;
@@ -56,6 +65,9 @@ body {
 }
 .bg2 {
   background: linear-gradient(131deg, #1ab79d3c, #ffe07031);
+}
+.bg3{
+  background: linear-gradient(131deg, #1ab79d69, #ffe0704d);
 }
 /* HeroSection.css */
  .hero {

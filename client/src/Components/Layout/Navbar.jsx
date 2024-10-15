@@ -130,6 +130,12 @@ const Navbar = () => {
             >
               Blogs
             </Link>
+            <Link
+              to="/sgp"
+              className="block py-2 px-2 lg:px-2 text-lg lg:text-2xl text-black hover:text-[#488B80]"
+            >
+              SGP
+            </Link>
             {!auth && (
               <div className="md:hidden flex flex-col mt-4">
                 <button

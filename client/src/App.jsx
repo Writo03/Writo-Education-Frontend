@@ -72,6 +72,7 @@ import CommunityPage from './Pages/Community-pages/6-10CommunityPage.jsx';
 import JeeCommunityPage from './Pages/Community-pages/JeeCommunityPage.jsx';
 import JobForm from './Pages/JobForm.jsx';
 import CommunityGuidelines from './Components/Communitygudielines.jsx';
+import SGP from './Pages/SGP.jsx';
 function App() {
   return (
     
@@ -95,8 +96,8 @@ function App() {
         <Route path="/communityneet/about" element={<AboutNeet/>}/>
         <Route path="/job/:id" element={<JobDetail />} />
         <Route path="/jobform" element={<JobForm />} />
-        
-      </Route>
+        <Route path='/sgp' element={<SGP />} />
+       </Route>
 
 
         {/*  */}
