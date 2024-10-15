@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Bgimage from "../assets/image 18.png";
 import { cn } from "../lib/utils";
 
-function Bgcard({ children, className, inClassName}) {
+function Bgcard({ children, className, inClassName, to}) {
   return (
     <div
       className={cn(
@@ -25,7 +25,7 @@ function Bgcard({ children, className, inClassName}) {
           {children}
         </div>
         <Link
-          to="/neet-price"
+          to={to}
           className="relative mt-auto inline-block text-black"
         >
           <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
