@@ -61,7 +61,7 @@ const JeeTestSeries = () => {
 
   return (
     <>
-      <Navbar />
+
 
       {/* Hero section */}
       <Hero3 />

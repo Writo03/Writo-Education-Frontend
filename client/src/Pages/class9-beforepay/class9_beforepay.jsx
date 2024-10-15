@@ -105,7 +105,7 @@ function Class9_beforepay() {
   
   return (
     <>
-    <Navbar/>
+   
     <div className=" p-6 bg-white min-h-screen">
       <div className="w-full  p-4 bg-white rounded-lg shadow-lg mb-6 lg:mb-0  ">
         {/*Heading */}

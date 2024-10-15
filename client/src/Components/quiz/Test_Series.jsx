@@ -21,7 +21,7 @@ const Test_Series = () => {
 
   return (
     <>
-      <Navbar />
+     
       {load && <h1>Loading</h1>}
 
       {!load && (

@@ -1,13 +1,15 @@
 import React from 'react'
 import logo from '../assets/logo.png'
-import Navbar from '../Components/Navbar'
+import Navbar from '../Components/Layout/Navbar'
+import Community_footer from '../Components/Layout/Footer'
 
 const AuthLayouts = ({children}) => {
   return (
     <>
-        <Navbar/>
+      <Navbar />
 
         { children }
+        <Community_footer />
     </>
   )
 }

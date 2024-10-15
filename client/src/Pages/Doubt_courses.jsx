@@ -15,7 +15,7 @@ export default function Doubt_courses() {
 
   return (
     <div>
-          <Navbar/>
+          
           <Hero3/>
           <h2 className="highlights my-5 text-center " >...... Get Connect to your Coaches ......</h2>
           <ConnectCoaches/>

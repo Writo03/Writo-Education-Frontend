@@ -38,7 +38,7 @@ const Jee_neet = () => {
   ];
   return (
     <div>
-     <Navbar/>
+ 
      <Herosection/>
      <KeyFeatures/>
      <TestimonialCard testimonials={testimonialsData}/>

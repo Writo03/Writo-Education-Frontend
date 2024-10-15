@@ -86,7 +86,7 @@ function JeePrice() {
        </div>
      )}
    </nav> */}
-   <Navbar />
+
       <div className="p-4 lg:p-8 bg-gray-50 min-h-screen">
         <h1 className="text-2xl font-bold text-[#488B80] mb-4">
           JEE Online Test Series(Mains +Advance)

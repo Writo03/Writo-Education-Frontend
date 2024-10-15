@@ -89,7 +89,7 @@ const NeetTestSeries = () => {
           </div>
         )}
       </nav> */}
-      <Navbar/>
+  
       {/* Hero section */}
       <Hero3 />
       <h1 className='text-center text-[#488B80]  text-2xl font-semibold mb-8 mt-20 '>Waits All India Test Series for NEET UG</h1>

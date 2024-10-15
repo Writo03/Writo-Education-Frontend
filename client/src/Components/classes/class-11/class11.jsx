@@ -79,7 +79,7 @@ function Class11() {
    };
   return (
   <>
-  <Navbar/>
+
     <div className="bg-[#FFFFFF]">
     <header className=" p-8">
       <div className="container mx-auto">

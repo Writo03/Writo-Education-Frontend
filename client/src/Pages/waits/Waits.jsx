@@ -28,7 +28,7 @@ function Waits() {
   }
   return (
     <>
-      <Navbar />
+      
       <div className="flex flex-col items-center justify-center bg-[#D8F3EE]   mb-8">
         {/* Navbar */}
 

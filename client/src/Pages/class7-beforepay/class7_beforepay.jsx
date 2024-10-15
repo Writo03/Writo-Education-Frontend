@@ -103,7 +103,7 @@ function Class7_beforepay() {
 
   return (
     <>
-      <Navbar />
+      
       <div className="min-h-screen bg-white p-6">
         <div className="mb-6 w-full rounded-lg bg-white p-4 shadow-lg lg:mb-0">
           {/*Heading */}
