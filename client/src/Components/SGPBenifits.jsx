@@ -4,7 +4,7 @@ import { GiAchievement } from "react-icons/gi";
 const SGPBenifits = () => {
   return (
     <>
-    <div className="w-full flex flex-col gap-5 justify-center items-center p-3">
+    <div className="w-full hidden lg:flex flex-col gap-5 justify-center items-center p-3">
         <div className="w-[90%] flex flex-row gap-5 p-3 ">
             <div className="w-[25%] flex flex-row justify-center items-center p-1  bg-[#488b803d] rounded-2xl">
                 <Icon icon="lineicons:grow" width="55" height="55"style={{color:"#848484"}} />
