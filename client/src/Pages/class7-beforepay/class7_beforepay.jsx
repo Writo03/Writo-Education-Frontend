@@ -202,7 +202,7 @@ function Class7_beforepay() {
               </p>
               <Link to={"/payment-page"}>
                 <button className="mb-4 w-full rounded bg-[#488B80] px-4 py-2 text-white hover:bg-[#4eac9c]">
-                  Get Started
+                Coming Soon
                 </button>
               </Link>
               <p className="mb-6 text-center">
