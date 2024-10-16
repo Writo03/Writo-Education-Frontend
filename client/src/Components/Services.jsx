@@ -1,98 +1,161 @@
-import React from 'react';
-import course1Image from '../assets/course1.png'; 
+import React from "react";
+import course1Image from "../assets/course1.png";
 import { FaArrowRight } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import img1 from '../assets/ser1.png'
-import img2 from '../assets/ser2.png'
-import img3 from '../assets/ser3.png'
-import img4 from '../assets/ser4.png'
-import img5 from '../assets/ser5.png'
+import { Link } from "react-router-dom";
+import img1 from "../assets/ser1.png";
+import img2 from "../assets/ser2.png";
+import img3 from "../assets/ser3.png";
+import img4 from "../assets/ser4.png";
+import img5 from "../assets/ser5.png";
 const Services = () => {
   return (
-    
-    <div className="flex justify-center items-center z-1 services-component">
-      <div className="bg-[#FAFAFA] rounded-lg shadow-lg p-6 w-full max-w-screen-lg">
-        <h2 className="text-3xl mb-8 mt-6">Services</h2>
+    <div className="z-1 services-component flex items-center justify-center">
+      <div className="w-full max-w-screen-lg rounded-lg bg-[#FAFAFA] p-6 shadow-lg">
+        <h2 className="mb-8 mt-6 text-3xl">Services</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
-        <Link to='/jee-neet' >
-          <div className="bg-white border border-gray-200 rounded-lg p-6 flex">
-            <img src={course1Image} alt="Course 1" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
-            <div className="flex flex-col">
-              <h3 className="text-xl font-semibold mb-2">JEE and NEET Course</h3>
-              <p className="text-gray-700 mb-4">Mentors from Prestigious IIT/NIT background. One year access to expert mentors.</p>
-              <div className="self-end ml-auto">
-                <FaArrowRight />
+          <Link to="/jee-neet">
+            <div className="flex rounded-lg border border-gray-200 bg-white p-6">
+              <img
+                src={course1Image}
+                alt="Course 1"
+                className="mr-4 rounded-lg"
+                style={{ maxWidth: "120px", height: "auto" }}
+              />
+              <div className="flex flex-col">
+                <h3 className="mb-2 text-xl font-semibold">
+                  JEE and NEET Course
+                </h3>
+                <p className="mb-4 text-gray-700">
+                  Mentors from Prestigious IIT/NIT background. One year access
+                  to expert mentors.
+                </p>
+                <div className="ml-auto self-end">
+                  <FaArrowRight />
+                </div>
               </div>
             </div>
-          </div>
-          </Link>
-          <Link to='/mentorship' >
-          <div className="bg-white border border-gray-200 rounded-lg p-6 flex">
-            <img src={img1} alt="Course 2" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
-            <div className="flex flex-col">
-              <h3 className="text-xl font-semibold mb-2">Mentorship Program</h3>
-              <p className="text-gray-700 mb-4">Discover a personalized mentorship program designed to guide you towards your goals with expert support.</p>
-              <div className="self-end ml-auto">
-                <FaArrowRight />
-              </div>
-            </div>
-          </div>
-          </Link>
-          <Link to='/doubtsection' >
-          <div className="bg-white border border-gray-200 rounded-lg p-6 flex">
-            <img src={img2} alt="Course 3" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
-            <div className="flex flex-col">
-              <h3 className="text-xl font-semibold mb-2">Doubt session</h3>
-              <p className="text-gray-700 mb-4">Now you can solve all your doubts, even sitting at home with our expert mentors.</p>
-              <div className="self-end ml-auto">
-                <FaArrowRight />
-              </div>
-            </div>
-          </div>
-          </Link>
-        
-          <div className="bg-white border border-gray-200 rounded-lg p-6 flex">
-            <img src={img3} alt="Course 4" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
-            <div className="flex flex-col">
-              <h3 className="text-xl font-semibold mb-2">Career counselling</h3>
-              <p className="text-gray-700 mb-4">Book a free trial session to see how the mentor can help you.</p>
-              <div className="self-end ml-auto">
-                <FaArrowRight />
-              </div>
-            </div>
-          </div>
-          <Link to='/about6to10' >
-          <div className="bg-white border border-gray-200 rounded-lg p-6 flex">
-            <img src={img4} alt="Course 5" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
-            <div className="flex flex-col">
-              <h3 className="text-xl font-semibold mb-2">Foundational Courses from 6th to 10th</h3>
-              <p className="text-gray-700 mb-4">We are there for you to cover all syllabus from 6th standard to 12th standard.</p>
-              <div className="self-end ml-auto">
-                <FaArrowRight />
-              </div>
-            </div>
-          </div>
           </Link>
           
-          <Link to='/waits' >
-          <div className="bg-white border border-gray-200 rounded-lg p-6 flex">
-            <img src={course1Image} alt="Course 6" className="mr-4 rounded-lg" style={{ maxWidth: '120px', height: 'auto' }} />
-            <div className="flex flex-col">
-              <h3 className="text-xl font-semibold mb-2">All India Test series</h3>
-              <p className="text-gray-700 mb-4">To score more try our all India test series and improve yourselves.</p>
-              <div className="self-end ml-auto">
-                <FaArrowRight />
+          <Link to="/mentorship">
+            <div className="flex rounded-lg border border-gray-200 bg-white p-6">
+              <img
+                src={img1}
+                alt="Course 2"
+                className="mr-4 rounded-lg"
+                style={{ maxWidth: "120px", height: "auto" }}
+              />
+              <div className="flex flex-col">
+                <h3 className="mb-2 text-xl font-semibold">
+                  Mentorship Program
+                </h3>
+                <p className="mb-4 text-gray-700">
+                  Discover a personalized mentorship program designed to guide
+                  you towards your goals with expert support.
+                </p>
+                <div className="ml-auto self-end">
+                  <FaArrowRight />
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
+
+          <Link to="/doubtsection">
+            <div className="flex rounded-lg border border-gray-200 bg-white p-6">
+              <img
+                src={img2}
+                alt="Course 3"
+                className="mr-4 rounded-lg"
+                style={{ maxWidth: "120px", height: "auto" }}
+              />
+              <div className="flex flex-col">
+                <h3 className="mb-2 text-xl font-semibold">Doubt session</h3>
+                <p className="mb-4 text-gray-700">
+                  Now you can solve all your doubts, even sitting at home with
+                  our expert mentors.
+                </p>
+                <div className="ml-auto self-end">
+                  <FaArrowRight />
+                </div>
+              </div>
+            </div>
+          </Link>
+
+          <Link to="/careers">
+            <div className="flex rounded-lg border border-gray-200 bg-white p-6">
+              <img
+                src={img3}
+                alt="Course 4"
+                className="mr-4 rounded-lg"
+                style={{ maxWidth: "120px", height: "auto" }}
+              />
+              <div className="flex flex-col">
+                <h3 className="mb-2 text-xl font-semibold">
+                  Career counselling
+                </h3>
+                <p className="mb-4 text-gray-700">
+                  Book a free trial session to see how the mentor can help you.
+                </p>
+                <div className="ml-auto self-end">
+                  <FaArrowRight />
+                </div>
+              </div>
+            </div>
+          </Link>
+
+          <Link to="/community/about">
+            <div className="flex rounded-lg border border-gray-200 bg-white p-6">
+              <img
+                src={img4}
+                alt="Course 5"
+                className="mr-4 rounded-lg"
+                style={{ maxWidth: "120px", height: "auto" }}
+              />
+              <div className="flex flex-col">
+                <h3 className="mb-2 text-xl font-semibold">
+                  Foundational Courses from 6th to 10th
+                </h3>
+                <p className="mb-4 text-gray-700">
+                  We are there for you to cover all syllabus from 6th standard
+                  to 12th standard.
+                </p>
+                <div className="ml-auto self-end">
+                  <FaArrowRight />
+                </div>
+              </div>
+            </div>
+          </Link>
+
+          <Link to="/waits">
+            <div className="flex rounded-lg border border-gray-200 bg-white p-6">
+              <img
+                src={course1Image}
+                alt="Course 6"
+                className="mr-4 rounded-lg"
+                style={{ maxWidth: "120px", height: "auto" }}
+              />
+              <div className="flex flex-col">
+                <h3 className="mb-2 text-xl font-semibold">
+                  All India Test series
+                </h3>
+                <p className="mb-4 text-gray-700">
+                  To score more try our all India test series and improve
+                  yourselves.
+                </p>
+                <div className="ml-auto self-end">
+                  <FaArrowRight />
+                </div>
+              </div>
+            </div>
           </Link>
         </div>
-      
 
         <div className="mt-8 flex space-x-4">
-          <button className="bg-[#488B80] text-white py-2 px-4 rounded">Enroll Now</button>
-          <button className="border-2 border-[#488B80] py-2 px-4 rounded text-[#488B80] hover:bg-[#488B80] hover:text-white transition-colors duration-300">Book your Free Demo</button>
-
+          <button className="rounded bg-[#488B80] px-4 py-2 text-white">
+            Enroll Now
+          </button>
+          <button className="rounded border-2 border-[#488B80] px-4 py-2 text-[#488B80] transition-colors duration-300 hover:bg-[#488B80] hover:text-white">
+            Book your Free Demo
+          </button>
         </div>
       </div>
     </div>
