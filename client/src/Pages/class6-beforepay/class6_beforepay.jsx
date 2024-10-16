@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 //import { FaPlay } from "react-icons/fa6";
 import { LuIndianRupee } from "react-icons/lu";
-import { FaStar, FaBoxOpen, FaStarHalfAlt } from "react-icons/fa";
+import { FaBoxOpen, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { IoMdPlayCircle } from "react-icons/io";
 import { HiUserGroup } from "react-icons/hi";
 import { FaRegClock } from "react-icons/fa";
@@ -117,7 +117,6 @@ function Physics() {
   };
   return (
     <>
-     
       <div className="min-h-screen bg-white p-6">
         <div className="mb-6 w-full rounded-lg bg-white p-4 shadow-lg lg:mb-0">
           {/*Heading */}
@@ -143,7 +142,8 @@ function Physics() {
                 storytelling.
               </p>
 
-              <p className="mb-4 mt-16 flex items-center justify-center border border-[#488b80c9] opacity-50 sm:w-full md:ml-8 md:w-11/12"></p>
+              <p className="mb-4 mt-16 flex items-center justify-center border border-[#488b80c9] opacity-50 sm:w-full md:ml-8 md:w-11/12">
+              </p>
               <div className="my-8 flex flex-row gap-x-5 text-[#488B80] md:ml-8">
                 <FaBoxOpen className="h-6 w-6" />
                 <h3 className="font-mrdium text-xl">What You'll Get</h3>
@@ -156,7 +156,8 @@ function Physics() {
                   <p className="text-sm text-gray-600">Assignments</p>
                 </div>
                 <div className="h-18 md:h-22 flex items-center justify-center">
-                  <div className="h-full w-full border-t border-black opacity-50 md:w-auto md:border-l md:border-t-0"></div>
+                  <div className="h-full w-full border-t border-black opacity-50 md:w-auto md:border-l md:border-t-0">
+                  </div>
                 </div>
 
                 <div className="mb-4 flex flex-col items-center justify-center px-4 py-2 md:mb-0 md:mr-4">
@@ -164,7 +165,8 @@ function Physics() {
                   <p className="text-sm text-gray-600">Lectures</p>
                 </div>
                 <div className="h-18 md:h-22 flex items-center justify-center">
-                  <div className="h-full w-full border-t border-black opacity-50 md:w-auto md:border-l md:border-t-0"></div>
+                  <div className="h-full w-full border-t border-black opacity-50 md:w-auto md:border-l md:border-t-0">
+                  </div>
                 </div>
 
                 <div className="mb-4 flex flex-col items-center justify-center px-4 py-2 md:mb-0 md:mr-4">
@@ -172,7 +174,8 @@ function Physics() {
                   <p className="text-sm text-gray-600">MOCK TEST</p>
                 </div>
                 <div className="h-18 md:h-22 flex items-center justify-center">
-                  <div className="h-full w-full border-t border-black opacity-50 md:w-auto md:border-l md:border-t-0"></div>
+                  <div className="h-full w-full border-t border-black opacity-50 md:w-auto md:border-l md:border-t-0">
+                  </div>
                 </div>
 
                 <div className="mb-4 flex flex-col items-center justify-center px-4 py-2 md:mb-0 md:mr-4">
@@ -216,13 +219,14 @@ function Physics() {
               </p>
               <Link to={"/payment-page"}>
                 <button className="mb-4 w-full rounded bg-[#488B80] px-4 py-2 text-white hover:bg-[#4eac9c]">
-                  Get Started
+                  Coming Soon
                 </button>
               </Link>
               <p className="mb-6 text-center">
                 ₹ 749 per month after 10 day trial
               </p>
-              <p className="mb-4 flex items-center justify-center border border-[#488b80c9] opacity-50 sm:w-full md:ml-4 md:w-11/12"></p>
+              <p className="mb-4 flex items-center justify-center border border-[#488b80c9] opacity-50 sm:w-full md:ml-4 md:w-11/12">
+              </p>
               <div className="mb-6">
                 <h4 className="mb-2 text-lg font-medium md:ml-7">
                   Your 10 day Standard free trial includes
@@ -240,7 +244,8 @@ function Physics() {
                   </div>
                 </div>
               </div>
-              <p className="mb-4 flex items-center justify-center border border-[#488b80c9] opacity-50 sm:w-full md:ml-10 md:w-3/4"></p>
+              <p className="mb-4 flex items-center justify-center border border-[#488b80c9] opacity-50 sm:w-full md:ml-10 md:w-3/4">
+              </p>
               <div className="ml-8">
                 <div className="flex flex-row gap-x-4">
                   <HiUserGroup className="h-6 w-6 text-[#488B80]" />
@@ -257,7 +262,8 @@ function Physics() {
                   <strong>free for 30 days</strong>
                 </p>
               </div>
-              <p className="mb-4 mt-8 flex items-center justify-center border border-[#488b80c9] opacity-50 sm:w-full md:ml-10 md:w-3/4"></p>
+              <p className="mb-4 mt-8 flex items-center justify-center border border-[#488b80c9] opacity-50 sm:w-full md:ml-10 md:w-3/4">
+              </p>
 
               <div className="flex flex-col items-center justify-center">
                 <div>
@@ -269,7 +275,8 @@ function Physics() {
                   <div className="-skew-x-35 relative flex w-64 transform items-center justify-center bg-yellow-400 px-2 py-4 font-bold">
                     Coming Soon
                   </div>
-                  {/* <div className="flex flex-row gap-x-4 mt-4">
+                  {
+                    /* <div className="flex flex-row gap-x-4 mt-4">
                   <LuIndianRupee className="w-8 h-8" />
                   <div className="text-3xl text-black font-semibold">2999</div>
                   <div className="relative inline-block text-lg  text-black crossed">
@@ -277,10 +284,11 @@ function Physics() {
                     6999
                     <div className="relative bottom-[14px] border bg-black border-red-600  w-12 transform -rotate-[27deg]"></div>
                   </div>
-                </div> 
+                </div>
                   <button onClick={handlePayment} className="mt-6 bg-[#488B80] text-white py-2 px-4 rounded w-full hover:bg-[#4eac9c] mb-4">
                     Join today
-                  </button>*/}
+                  </button>*/
+                  }
                 </div>
               </div>
             </div>
@@ -316,7 +324,8 @@ function Physics() {
               technology, engineering, and everyday life.
             </div>
           </div>
-          <p className="mb-4 mt-10 flex items-center justify-center border border-[#488b80c9] opacity-50 sm:w-full md:ml-12 md:w-11/12"></p>
+          <p className="mb-4 mt-10 flex items-center justify-center border border-[#488b80c9] opacity-50 sm:w-full md:ml-12 md:w-11/12">
+          </p>
 
           <div className="flex w-full flex-col items-center justify-between gap-x-8 sm:p-2 md:px-6 lg:flex-row lg:items-start">
             <div className="w-full p-4 md:p-8">
@@ -339,7 +348,8 @@ function Physics() {
                       <p>{"(159)"}</p>
                     </div>
                   </div>
-                  <div className="mb-2 mt-1 w-full border border-[#488B80] border-opacity-50"></div>
+                  <div className="mb-2 mt-1 w-full border border-[#488B80] border-opacity-50">
+                  </div>
                   <div className="flex flex-row justify-between">
                     <p>Level</p>
                     <div className="flex flex-row gap-x-2">
@@ -347,12 +357,14 @@ function Physics() {
                       <IoTrendingUpSharp className="h-6 w-6" />
                     </div>
                   </div>
-                  <div className="mb-2 mt-1 w-full border border-[#488B80] border-opacity-50 sm:block md:hidden"></div>
+                  <div className="mb-2 mt-1 w-full border border-[#488B80] border-opacity-50 sm:block md:hidden">
+                  </div>
                 </div>
 
                 {/* Vertical Line */}
                 <div className="hidden h-24 items-center justify-center md:flex">
-                  <div className="h-full border-l border-[#488B80] opacity-50"></div>
+                  <div className="h-full border-l border-[#488B80] opacity-50">
+                  </div>
                 </div>
 
                 <div className="mt-4 flex w-full flex-col gap-y-4 md:mt-0 md:w-5/12">
@@ -363,7 +375,8 @@ function Physics() {
                       <MdDateRange className="h-6 w-6" />
                     </div>
                   </div>
-                  <div className="mb-2 mt-1 w-full border border-[#488B80] border-opacity-50"></div>
+                  <div className="mb-2 mt-1 w-full border border-[#488B80] border-opacity-50">
+                  </div>
                   <div className="flex flex-row justify-between">
                     <p>Duration</p>
                     <div className="flex flex-row gap-x-2">
