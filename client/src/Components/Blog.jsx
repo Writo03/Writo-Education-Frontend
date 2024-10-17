@@ -18,7 +18,6 @@ const BlogPost = () => {
   const { state } = useLocation();
   const { id, name, role, imageUrl } = state;
 
-  // Sample data - in real usage, these would be passed as props
   const post = {
     title: role,
     subtitle:
