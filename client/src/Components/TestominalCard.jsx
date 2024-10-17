@@ -50,7 +50,7 @@ export function TestimonialCardHelper({ testimonials }) {
   const [activeDot, setActiveDot] = useState(0);
   const [sliderInterval, setSliderInterval] = useState(null);
 
-  const visibleTestimonials = testimonials.slice(
+  const visibleTestimonials = testimonials?.slice(
     startIndex,
     startIndex + testimonialsPerPage,
   );
@@ -71,9 +71,9 @@ export function TestimonialCardHelper({ testimonials }) {
   const handleNext = () => {
     clearInterval(sliderInterval);
     setStartIndex((prevIndex) =>
-      prevIndex === testimonials.length - testimonialsPerPage
+      prevIndex === testimonials?.length - testimonialsPerPage
         ? 0
-        : Math.min(testimonials.length - testimonialsPerPage, prevIndex + 1),
+        : Math.min(testimonials?.length - testimonialsPerPage, prevIndex + 1),
     );
     setActiveDot((prevDot) =>
       prevDot === testimonialsPerPage - 1 ? 0 : prevDot + 1,
@@ -85,9 +85,9 @@ export function TestimonialCardHelper({ testimonials }) {
     clearInterval(sliderInterval);
     const interval = setInterval(() => {
       setStartIndex((prevIndex) =>
-        prevIndex === testimonials.length - testimonialsPerPage
+        prevIndex === testimonials?.length - testimonialsPerPage
           ? 0
-          : Math.min(testimonials.length - testimonialsPerPage, prevIndex + 1),
+          : Math.min(testimonials?.length - testimonialsPerPage, prevIndex + 1),
       );
       setActiveDot((prevDot) =>
         prevDot === testimonialsPerPage - 1 ? 0 : prevDot + 1,
@@ -104,7 +104,7 @@ export function TestimonialCardHelper({ testimonials }) {
   return (
     <>
       <div className="-m-4 mt-4 flex flex-wrap">
-        {visibleTestimonials.map((testimonial, index) => (
+        {visibleTestimonials?.map((testimonial, index) => (
           <div key={index} className="mb-6 p-4 lg:mb-0 lg:w-1/3">
             <div className="h-full text-center">
               <img

@@ -221,9 +221,13 @@ const Herocards_men = () => {
             key={index}
             id={member.id}
             onClick={() =>
-              navigate("/" + member.name + "/" + member.id, {
+              navigate("/blogs/" + member.id, {
                 state: {
                   previousUrl: location.pathname,
+                  id: member.id,
+                  name: member.name,
+                  role: member.role,
+                  imageUrl: member.imageUrl,
                 },
               })
             }
