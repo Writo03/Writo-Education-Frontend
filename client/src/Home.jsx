@@ -18,6 +18,7 @@ import ExpertGuidance from "./Components/ExpertGuidance";
 import Courses1 from "./Components/Courses1";
 import Courses2 from "./Components/Courses2";
 import Navbar2 from "./Components/Navbar2";
+
 const Home = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const stestimonialsData = [
