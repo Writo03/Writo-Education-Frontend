@@ -37,11 +37,11 @@ const SGP = () => {
             </div>
         </div>
         <div className="flex flex-col gap-10 justify-center items-center m-10">
-            <h1 className="text-[#488B80] item1 text-5xl text-center">SGP Highlights</h1>
+            <h1 className="text-[#488B80] item1 lg:text-5xl text-3xl text-center">SGP Highlights</h1>
             <Highlights />
         </div>
         <div className="flex flex-col gap-10 justify-center items-center m-10">
-            <h1 className="text-[#488B80] item1 text-5xl text-center">Benefits to the School</h1>
+            <h1 className="text-[#488B80] item1 lg:text-5xl text-3xl text-center">Benefits to the School</h1>
             <SGPBenifits />
         </div>
         <Contactus />
