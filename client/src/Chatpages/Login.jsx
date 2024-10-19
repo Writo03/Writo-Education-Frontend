@@ -10,7 +10,6 @@ function Login() {
   const [error, setError] = useState(null);
   const [validationErrors, setValidationErrors] = useState({}); // State for validation errors
   const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
 
   // Client-side validation
@@ -42,11 +41,10 @@ function Login() {
 
     try {
       const response = await axios.post('https://writo-education-frontend.onrender.com/api/login', { username, password });
-
       if (response?.data?.token) {
-        if (rememberMe) {
+       
           localStorage.setItem('token', response.data.token);
-        }
+       
         navigate('/');
       } else {
         setError('Login failed: Invalid response');
@@ -122,16 +120,7 @@ function Login() {
                   {validationErrors.password && <p className="text-red-500 text-sm">{validationErrors.password}</p>}
                 </div>
 
-                <div className="relative flex items-center space-x-2">
-                  <input
-                    type="checkbox"
-                    id="rememberMe"
-                    checked={rememberMe}
-                    onChange={() => setRememberMe(!rememberMe)}
-                    className="w-4 h-4 text-[#488B80]"
-                  />
-                  <label htmlFor="rememberMe" className="text-sm text-gray-600">Remember Me</label>
-                </div>
+               
 
                 {error && <p className="text-red-500 text-base">{error}</p>}
                 

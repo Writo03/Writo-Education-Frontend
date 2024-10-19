@@ -25,16 +25,25 @@ router.post('/mentor_register',registerMentor)
 router.post('/search-user',getMentorInSearch);
 //create user api
 router.post('/register', async (req, res) => {
-    const { username, password} = req.body;
-    try {
+  const { username, password, name, email, phone, classType, institution, school } = req.body;
+  try {
       const hashedPassword = await bcrypt.hash(password, 10);
-      const user = new User({ username, password: hashedPassword });
+      const user = new User({
+          username,
+          password: hashedPassword,
+          name,
+          email,
+          phone,
+          classType,
+          institution
+      });
       await user.save();
       res.status(201).json(user);
-    } catch (error) {
+  } catch (error) {
       res.status(400).json({ error: error.message });
-    }
-  });
+  }
+});
+
   
   router.post('/login', async (req, res) => {
     const { username, password } = req.body;
