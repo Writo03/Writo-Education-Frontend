@@ -35,6 +35,8 @@ const Navbar = () => {
     setAuth(false);
     console.log('User logged out');
     navigate('/')
+    setShowLogoutModal(false);
+
   };
 
   const handleCloseModal = () => {

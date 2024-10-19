@@ -38,6 +38,8 @@ const Navbar = () => {
     localStorage.removeItem('token');
     setAuth(false);
     console.log('User logged out');
+    setShowLogoutModal(false);
+
     window.location.reload(); // Refresh the page
   };
 
