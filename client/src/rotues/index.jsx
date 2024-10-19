@@ -63,12 +63,17 @@ import CommunityGuidelines from "../Components/Communitygudielines";
 import SGP from "../Pages/SGP";
 
 import Blog from "../Components/Blog";
+import Profile from "../Components/Profile";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      {
+        path: "profile",
+        element: <Profile />,
+      },
       {
         path: "mentorship",
         element: (

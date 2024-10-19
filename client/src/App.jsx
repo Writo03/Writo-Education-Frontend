@@ -74,6 +74,7 @@ import JobForm from "./Pages/JobForm.jsx";
 import CommunityGuidelines from "./Components/Communitygudielines.jsx";
 import SGP from "./Pages/SGP.jsx";
 import Blog from "./Components/Blog.jsx";
+import Profile from "./Components/Profile.jsx";
 
 function App() {
   return (
@@ -103,6 +104,8 @@ function App() {
 
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<Blog />} />
+
+        <Route path="/profile" element={<Profile />} /> {/* Working */}
 
         <Route path="/all" element={<AllCoursesPage />} />
         <Route path="/class-6beforepay" element={<Class6befpay />} />
