@@ -40,6 +40,7 @@ function Login() {
     setError(null);
 
     try {
+      // const response = await axios.post('http://localhost:8080/api/login', { email, password });
       const response = await axios.post('https://writo-education-frontend.onrender.com/api/login', { email, password });
       if (response?.data?.token) {
        

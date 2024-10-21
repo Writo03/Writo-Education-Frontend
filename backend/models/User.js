@@ -19,6 +19,18 @@ const test = mongoose.Schema({
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
+    phone: { type: String, required: true },
+    classType: { type: String, required: true }, // E.g., JEE or NEET
+    institution: { type: String, required: true },
+    email: {
+        type: String,
+        required: [true, "provide email"],
+        unique: true
+    }, 
+     name: {
+        type: String,
+        required: [true, "provide name"]
+    },
     tests:[test]
 });
 

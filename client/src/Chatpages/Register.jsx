@@ -200,8 +200,7 @@ function Register() {
     phone: '',
     classType: '',
     institution: '',
-    school: '',
-  });
+    });
 
   const [formErrors, setFormErrors] = useState({});
   const [error, setError] = useState('');
@@ -240,7 +239,9 @@ function Register() {
 
     setLoading(true);
     try {
+      console.log(formData)
       const response = await axios.post('https://writo-education-frontend.onrender.com/api/register', formData);
+      // const response = await axios.post('http://localhost:8080/api/register', formData);
       console.log(response.data);
       setFormData({
         username: '',
