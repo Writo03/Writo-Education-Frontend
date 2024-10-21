@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { ClipLoader } from 'react-spinners';
 
 function Login() {
-  const [username, setUsername] = useState('');
+  const [email, setemail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -15,10 +15,10 @@ function Login() {
   // Client-side validation
   const validateForm = () => {
     const errors = {};
-    if (!username) {
-      errors.username = "Username is required";
-    } else if (username.length < 3) {
-      errors.username = "Username must be at least 3 characters";
+    if (!email) {
+      errors.email = "email is required";
+    } else if (email.length < 3) {
+      errors.email = "email must be at least 3 characters";
     }
 
     if (!password) {
@@ -40,7 +40,7 @@ function Login() {
     setError(null);
 
     try {
-      const response = await axios.post('https://writo-education-frontend.onrender.com/api/login', { username, password });
+      const response = await axios.post('https://writo-education-frontend.onrender.com/api/login', { email, password });
       if (response?.data?.token) {
        
           localStorage.setItem('token', response.data.token);
@@ -76,22 +76,22 @@ function Login() {
               <form onSubmit={handleSubmit} className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                 <div className="relative">
                   <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setemail(e.target.value)}
                     className="peer placeholder-transparent h-10 w-full border-b-2 text-sm border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600"
-                    placeholder="Username"
+                    placeholder="email"
                     required
                   />
                   <label
-                    htmlFor="username"
+                    htmlFor="email"
                     className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                   >
-                    Username
+                    Email
                   </label>
-                  {validationErrors.username && <p className="text-red-500 text-sm">{validationErrors.username}</p>}
+                  {validationErrors.email && <p className="text-red-500 text-sm">{validationErrors.email}</p>}
                 </div>
                 <div className="relative">
                   <input

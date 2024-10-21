@@ -264,7 +264,7 @@ function Register() {
     <div className="min-h-screen bg-gray-100 py-10 flex justify-center items-center">
       {loading && (
         <div className="absolute inset-0 bg-gray-100 bg-opacity-80 flex justify-center items-center z-10">
-          <ClipLoader color="#36d7b7" size={100} />
+          <ClipLoader color="#36d7b7" size={50} />
         </div>
       )}
       <div className={`relative py-3 sm:max-w-xl sm:mx-auto ${loading ? 'opacity-50' : ''}`}>
