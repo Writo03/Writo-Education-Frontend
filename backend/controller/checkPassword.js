@@ -1,5 +1,5 @@
 const UserModel = require("../models/UserModel")
-const bcryptjs = require('bcryptjs')
+const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
 async function checkPassword(request,response){
@@ -9,7 +9,7 @@ async function checkPassword(request,response){
 
         const user = await UserModel.findById(userId)
 
-        const verifyPassword = await bcryptjs.compare(password,user.password)
+        const verifyPassword = await bcrypt.compare(password,user.password)
 
         if(!verifyPassword){
             return response.status(400).json({

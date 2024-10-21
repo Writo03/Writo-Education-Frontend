@@ -1,6 +1,6 @@
 const mentorModel = require("../models/mentor");
 const userModel = require("../models/UserModel");
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 // Assign a mentor to a user based on subjects
 const assignMentor = async (userId, subjects) => {
@@ -58,7 +58,7 @@ const addMentor = async (req, res) => {
             })
         }
 
-        const hashpassword = await bcryptjs.hash(password,10)
+        const hashpassword = await bcrypt.hash(password,10)
         const newMentor = new mentorModel({ name,email,password:hashpassword, subjects, usersAssigned: 0 });
         const mentor = await newMentor.save();
         res.json({ success: true, message: "Mentor added", mentor });
@@ -177,7 +177,7 @@ const mentorLogin = async(req,res)=>{
             })
         }
 
-        const verifyPassword = await bcryptjs.compare(password,checkEmail.password);
+        const verifyPassword = await bcrypt.compare(password,checkEmail.password);
         console.log(verifyPassword)
         if(verifyPassword){
             return res.status(200).json({

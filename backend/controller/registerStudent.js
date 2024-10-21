@@ -1,5 +1,5 @@
 const UserModel = require("../models/UserModel");
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 async function registerStudent(request, response) {
     try {
@@ -15,8 +15,8 @@ async function registerStudent(request, response) {
         }
 
         // Hash password
-        const salt = await bcryptjs.genSalt(10);
-        const hashpassword = await bcryptjs.hash(password, salt);
+        const salt = await bcrypt.genSalt(10);
+        const hashpassword = await bcrypt.hash(password, salt);
 
         const payload = {
             name,
