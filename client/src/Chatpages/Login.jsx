@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { ClipLoader } from 'react-spinners';
+import { useDispatch } from 'react-redux';
+import { userlogin } from '../redux/userSlice';
 
 function Login() {
   const [email, setemail] = useState('');
@@ -11,7 +13,7 @@ function Login() {
   const [validationErrors, setValidationErrors] = useState({}); // State for validation errors
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   // Client-side validation
   const validateForm = () => {
     const errors = {};
@@ -42,6 +44,11 @@ function Login() {
     try {
       // const response = await axios.post('http://localhost:8080/api/login', { email, password });
       const response = await axios.post('https://writo-education-frontend.onrender.com/api/login', { email, password });
+      console.log(response)
+      const payload={
+        user:response.data?.user
+      }
+      dispatch(userlogin(payload))
       if (response?.data?.token) {
        
           localStorage.setItem('token', response.data.token);

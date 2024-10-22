@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { IoMenu } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../assets/image.png';
+import { logout } from '../redux/userSlice';
+import { useDispatch } from 'react-redux';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [auth, setAuth] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-
+  const dispatch =useDispatch()
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -39,7 +41,7 @@ const Navbar = () => {
     setAuth(false);
     console.log('User logged out');
     setShowLogoutModal(false);
-
+    dispatch(logout())
     window.location.reload(); // Refresh the page
   };
 

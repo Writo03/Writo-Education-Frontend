@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  isAuthorized:false,
+  user:{},
   _id: "",
   name: "",
   email: "",
@@ -39,6 +41,13 @@ export const userSlice = createSlice({
       state.student = "";
       state.mentor = "";
     },
+    userlogin:(state,action)=>{
+      state.isAuthorized = true
+      state.user= action.payload.user
+    },
+    Userlogout:(state,action)=>{
+      Object.assign(state, initialState);
+    },
     setOnlineUser: (state, action) => {
       state.onlineUser = action.payload;
     },
@@ -49,7 +58,7 @@ export const userSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { setUser, setToken, logout, setOnlineUser, setSocketConnection } =
+export const {  setUser,setToken,logout,userlogin,Userlogout, setOnlineUser, setSocketConnection } =
   userSlice.actions;
 
 export default userSlice.reducer;
