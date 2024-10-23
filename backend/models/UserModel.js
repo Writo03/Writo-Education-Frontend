@@ -45,12 +45,11 @@ const userSchema = new mongoose.Schema({
         default: ""
     },
     username: { type: String, 
-        required: true,
         unique: true
      },
-    phone: { type: String, required: true },
-    classType: { type: String, required: true }, // E.g., JEE or NEET
-    institution: { type: String, required: true },
+    phone: { type: String },
+    classType: { type: String}, // E.g., JEE or NEET
+    institution: { type: String },
   
 }, {
     timestamps: true

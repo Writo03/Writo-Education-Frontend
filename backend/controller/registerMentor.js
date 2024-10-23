@@ -3,8 +3,8 @@ const bcrypt = require('bcrypt')
 
 async function registerMentor(request,response){
     try {
-        const { name, email , password, profile_pic, mentor_subject  } = request.body
-
+        const { name, email , password, mentor_subject  } = request.body
+        // console.log(request.body)
         const checkEmail = await UserModel.findOne({ email }) //{ name,email}  // null
 
         if(checkEmail){
@@ -21,7 +21,6 @@ async function registerMentor(request,response){
         const payload = {
             name,
             email,
-            profile_pic,
             password : hashpassword,
             mentor_subject  : mentor_subject ,
             mentor : true,

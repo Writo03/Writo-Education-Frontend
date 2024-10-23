@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import RegisterPage from "../Chatpages/Register";
+import RegisterMentorPage from '../Chatpages/Registermentor.jsx'
+
 import CheckEmailPage from "../Chatpages/CheckEmailPage";
 import CheckPasswordPage from "../Chatpages/CheckPasswordPage";
 import Chathome from "../Chatpages/Chathome";
@@ -87,6 +89,14 @@ const router = createBrowserRouter([
         element: (
           <AuthLayouts>
             <RegisterPage />
+          </AuthLayouts>
+        ),
+      },
+      {
+        path: "registermentor",
+        element: (
+          <AuthLayouts>
+            <RegisterMentorPage />
           </AuthLayouts>
         ),
       },

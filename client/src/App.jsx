@@ -50,6 +50,7 @@ import NeetAllIndiaTestseries from "./Pages/NeetAllIndiaTestSeries/NeetAllIndiaT
 import JeeAllIndiaTestSeries from "./Pages/JeeAllIndiaTestSeries/JeeAllIndiaTestSeries";
 
 import RegisterPage from "./Chatpages/Register";
+import RegisterMentorPage from './Chatpages/Registermentor.jsx'
 import CheckEmailPage from "./Chatpages/CheckEmailPage";
 import CheckPasswordPage from "./Chatpages/CheckPasswordPage";
 // import Chathome from "../Chatpages/Chathome";
@@ -163,6 +164,14 @@ function App() {
           </AuthLayouts>
         }
       />
+      <Route
+      path="/registermentor"
+      element={
+        <AuthLayouts>
+          <RegisterMentorPage />
+        </AuthLayouts>
+      }
+    />
       <Route
         path="/email"
         element={
