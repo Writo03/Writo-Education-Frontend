@@ -55,8 +55,8 @@ function Register() {
   
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:8080/api/register', formData);
-    // const response = await axios.post('https://writo-education-frontend.onrender.com/api/register', formData);
+      // const response = await axios.post('http://localhost:8080/api/register', formData);
+    const response = await axios.post('https://writo-education-frontend.onrender.com/api/register', formData);
       setFormData({
         username: '',
         password: '',

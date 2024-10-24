@@ -44,7 +44,7 @@ function Register() {
 
     setLoading(true);
     try {
-    //   const response = await axios.post('http://localhost:8080/api/mentor_register', formData);
+      // const response = await axios.post('http://localhost:8080/api/mentor_register', formData);
       const response = await axios.post('https://writo-education-frontend.onrender.com/api/mentor_register', formData);
       console.log(response.data);
       setFormData({
