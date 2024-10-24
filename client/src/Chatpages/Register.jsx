@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { ClipLoader } from 'react-spinners';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -49,13 +52,11 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
-
+  
     setLoading(true);
     try {
-      console.log(formData)
-      const response = await axios.post('https://writo-education-frontend.onrender.com/api/register', formData);
-      // const response = await axios.post('http://localhost:8080/api/register', formData);
-      console.log(response.data);
+      const response = await axios.post('http://localhost:8080/api/register', formData);
+    // const response = await axios.post('https://writo-education-frontend.onrender.com/api/register', formData);
       setFormData({
         username: '',
         password: '',
@@ -64,18 +65,21 @@ function Register() {
         phone: '',
         classType: '',
         institution: '',
-      }); // Reset form
+      });
       navigate('/email');
+      toast.success('Registration successful!');
     } catch (error) {
-      setError('Registration failed. Please try again.');
-      console.error(error.response?.data);
+      // setError('Registration failed. Please try again.');
+      toast.error(error.response?.data?.message || 'An error occurred');
     } finally {
       setLoading(false);
     }
   };
+  
 
   return (
     <div className="min-h-screen bg-gray-100 py-10 flex justify-center items-center">
+        <ToastContainer />
       {loading && (
         <div className="absolute inset-0 bg-gray-100 bg-opacity-80 flex justify-center items-center z-10">
           <ClipLoader color="#36d7b7" size={50} />

@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { ClipLoader } from 'react-spinners';
 import { useDispatch } from 'react-redux';
 import { userlogin } from '../redux/userSlice';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Login() {
   const [email, setemail] = useState('');
@@ -35,34 +38,34 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!validateForm()) return; // Stop submission if validation fails
-
+  
+    if (!validateForm()) return;
+  
     setLoading(true);
     setError(null);
-
+  
     try {
-      // const response = await axios.post('http://localhost:8080/api/login', { email, password });
-      const response = await axios.post('https://writo-education-frontend.onrender.com/api/login', { email, password });
-      console.log(response)
-      const payload={
-        user:response.data?.user
-      }
-      dispatch(userlogin(payload))
+      // const response = await axios.post('https://writo-education-frontend.onrender.com/api/login', { email, password });
+      const response = await axios.post('http://localhost:8080/api/login', { email, password });
+
+      const payload = { user: response.data?.user };
+      dispatch(userlogin(payload));
       if (response?.data?.token) {
-       
-          localStorage.setItem('token', response.data.token);
-       
+        localStorage.setItem('token', response.data.token);
         navigate('/');
+        toast.success("Login successful!");
       } else {
         setError('Login failed: Invalid response');
       }
     } catch (error) {
-      setError(error.response?.data?.message || 'An unexpected error occurred');
+      const message = error.response?.data?.message || 'An unexpected error occurred';
+      setError(message);
+      toast.error(message);
     } finally {
       setLoading(false);
     }
   };
+  
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -70,6 +73,8 @@ function Login() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center items-center sm:py-12 relative">
+        <ToastContainer />
+
       {loading && (
         <div className="absolute inset-0 bg-gray-100 bg-opacity-80 flex justify-center items-center z-10">
           <ClipLoader color="#36d7b7" size={50} />

@@ -12,7 +12,7 @@ const searchUser = require("../controller/searchUser");
 const registerStudent = require("../controller/registerStudent");
 const registerMentor = require("../controller/registerMentor");
 const getMentorInSearch = require("../controller/getMentorsInSearch");
-const User = require("../models/User");
+const User = require("../models/UserModel");
 
 const JWT_SECRET = "hellothisissecretkey";
 
@@ -24,27 +24,28 @@ router.post("/student_register", registerStudent);
 router.post("/mentor_register", registerMentor);
 // get mentor details of a student4
 router.post("/search-user", getMentorInSearch);
-//create user api
-router.post("/register", async (req, res) => {
-  const { username, password, name, email, phone, classType, institution } =
-    req.body;
-  try {
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({
-      username,
-      password: hashedPassword,
-      name,
-      email,
-      phone,
-      classType,
-      institution,
-    });
-    await user.save();
-    res.status(201).json(user);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
+router.post("/register", registerUser);
+//create user api 
+// router.post("/register", async (req, res) => {
+//   const { username, password, name, email, phone, classType, institution } =
+//     req.body;
+//   try {
+//     const hashedPassword = await bcrypt.hash(password, 10);
+//     const user = new User({
+//       username,
+//       password: hashedPassword,
+//       name,
+//       email,
+//       phone,
+//       classType,
+//       institution,
+//     });
+//     await user.save();
+//     res.status(201).json(user);
+//   } catch (error) {
+//     res.status(400).json({ error: error.message });
+//   }
+// });
 
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
@@ -52,22 +53,23 @@ router.post("/login", async (req, res) => {
     const user = await User.findOne({ email });
     if (!user) {
       console.error("User not found");
-      return res.status(400).json({ message: "Invalid email " });
+      return res.status(400).json({ message: "User not found" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      console.error("Password mismatch");
-      return res.status(400).json({ message: "Invalid password" });
+      console.error("Incorrect password");
+      return res.status(400).json({ message: "Incorrect password" });
     }
 
     const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "24h" });
-    res.json({ token,user });
+    res.json({ token, user });
   } catch (error) {
     console.error("Login error:", error.message);
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ message: "Server error. Please try again later." });
   }
 });
+
 
 const authMiddleware = (req, res, next) => {
   const token = req.header("Authorization")?.replace("Bearer ", ""); // Optional chaining for safety

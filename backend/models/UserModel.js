@@ -18,6 +18,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: ""
     },
+    isAdmin:{
+          type: Boolean,
+        default: false
+    },
     student: {
         type: Boolean,
         default: false
@@ -44,7 +48,8 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: ""
     },
-    username: { type: String, 
+    username: { 
+        type: String, 
         unique: true
      },
     phone: { type: String },
