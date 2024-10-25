@@ -13,7 +13,7 @@ const Community_footer = () => {
     <div className="flex flex-col">
       <div className="w-full bg-[#178774] pt-4 md:pl-20">
         <div className="mb-2 flex w-full items-center md:mb-4">
-          <div className="mb-2 flex w-full flex-col items-center justify-around rounded-full lg:bg-white p-2 sm:w-1/3 sm:flex-row">
+          <div className="mb-2 flex w-full flex-col items-center justify-around rounded-full p-2 sm:w-1/3 sm:flex-row lg:bg-white">
             <input
               className="mb-2 w-80 rounded-full bg-white px-4 py-2 leading-tight text-gray-700 focus:border-teal-500 focus:outline-none sm:mb-0"
               id="email"
@@ -102,7 +102,37 @@ const Community_footer = () => {
                     <div className="mt-6 lg:mt-0">
                       <h3 className="text-lg font-semibold">Contact Info</h3>
                       <p className="mt-2 flex flex-col gap-1 text-base leading-relaxed md:mt-4 md:gap-2">
-                        <div className="flex flex-row">
+                        {[
+                          { icon: FaLocationDot, text: "Rewa, India" },
+                          {
+                            icon: BsFillTelephoneFill,
+                            text: "+91 80594 58609",
+                            link: "tel:+918059458609",
+                          },
+                          {
+                            icon: IoMdMail,
+                            text: "support@writo.tech",
+                            link: "mailto:support@writo.tech",
+                          },
+                        ].map((item, idx) => (
+                          <div
+                            className="flex flex-row items-center space-x-2"
+                            key={idx}
+                          >
+                            <item.icon className="h-4 w-4" />
+                            {item.link ? (
+                              <a
+                                className="hover:text-[#50eddb]"
+                                href={item.link}
+                              >
+                                {item.text}
+                              </a>
+                            ) : (
+                              <span>{item.text}</span>
+                            )}
+                          </div>
+                        ))}
+                        {/* <div className="flex flex-row">
                           <FaLocationDot className="mr-1 mt-2 h-4 w-4" />
                           Rewa, India
                         </div>
@@ -113,7 +143,7 @@ const Community_footer = () => {
                         <div className="flex flex-row">
                           <IoMdMail className="mr-1 mt-2 h-4 w-4" />
                           support@writo.tech
-                        </div>
+                        </div> */}
 
                         <div className="mt-2 hidden flex-row space-x-2 lg:flex">
                           <a
