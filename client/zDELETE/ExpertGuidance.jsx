@@ -1,6 +1,6 @@
 import React from "react";
-import "./Expert.css";
-import img1 from "../assets/img.png";
+import "../src/Components/Expert.css";
+import img1 from "../src/assets/img.png";
 import { Link } from "react-router-dom";
 
 export default function ExpertGuidance() {

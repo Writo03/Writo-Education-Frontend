@@ -9,9 +9,9 @@ import pimage from "./assets/dp_img.png";
 
 import Contactus from "./Components/Contactus";
 
-import Doubt from "./Components/Doubt";
+import ExpertGuidance_And_Doubt from "./Components/ExpertGuidance_And_Doubt";
 import Courses from "./Components/Courses";
-import ExpertGuidance from "./Components/ExpertGuidance";
+// import ExpertGuidance from "./Components/ExpertGuidance";
 import Courses1 from "./Components/Courses1";
 import Courses2 from "./Components/Courses2";
 import Navbar2 from "./Components/Navbar2";
@@ -75,8 +75,8 @@ const Home = () => {
       <Courses1 />
       <Courses2 />
       {/* <MentorCard mentors={mentors} /> */} {/* Still in progress */}
-      <ExpertGuidance />
-      <Doubt />
+      {/* <ExpertGuidance /> */}
+      <ExpertGuidance_And_Doubt />
       <TestimonialCard
         stestimonials={stestimonialsData}
         ptestimonials={ptestimonialsData}
