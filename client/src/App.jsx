@@ -106,7 +106,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<Blog />} />
 
-        <Route path="/profile" element={<Profile />} /> {/* Working */}
+        <Route path="/profile" element={<Profile />} />
 
         <Route path="/all" element={<AllCoursesPage />} />
         <Route path="/class-6beforepay" element={<Class6befpay />} />

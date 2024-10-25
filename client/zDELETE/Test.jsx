@@ -1,4 +1,4 @@
-import image from "../assets/test.png";
+import image from "../src/assets/test.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Autoplay, Navigation } from "swiper/modules";

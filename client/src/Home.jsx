@@ -8,8 +8,6 @@ import simage from "./assets/image copy.png";
 import pimage from "./assets/dp_img.png";
 
 import Contactus from "./Components/Contactus";
-import Test from "./Components/Test";
-import Demo from "./Components/Demo";
 
 import Doubt from "./Components/Doubt";
 import Courses from "./Components/Courses";
@@ -79,13 +77,10 @@ const Home = () => {
       {/* <MentorCard mentors={mentors} /> */} {/* Still in progress */}
       <ExpertGuidance />
       <Doubt />
-      <Test />
       <TestimonialCard
         stestimonials={stestimonialsData}
         ptestimonials={ptestimonialsData}
       />
-      {/* kaushik work left - pagination is not working */}
-      <Demo />
       <Contactus />
     </div>
   );
