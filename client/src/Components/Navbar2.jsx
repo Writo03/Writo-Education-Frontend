@@ -30,16 +30,16 @@ const NavBar2 = () => {
         <div className="flex items-center space-x-2 md:space-x-4">
           <button
             className={`${
-              selected === "services" && "bg-[#488b80]"
-            } rounded-md px-2 text-base font-medium text-black hover:bg-[#488b80] sm:mr-2 md:text-2xl`}
+              selected === "services" ? "bg-[#e5e7eb] text-black" : "text-white"
+            } rounded-md bg-[#488B80] px-4 py-2 text-base font-medium hover:bg-[#e5e7eb] hover:text-black sm:mr-2 md:text-2xl`}
             onClick={handleServicesClick}
           >
             Services
           </button>
           <button
             className={`${
-              selected === "events" && "bg-[#488b80]"
-            } rounded-md px-2 text-base font-medium text-black hover:bg-[#488b80] sm:mr-2 md:text-2xl`}
+              selected === "events" ? "bg-[#e5e7eb] text-black" : "text-white"
+            } rounded-md bg-[#488B80] px-4 py-2 text-base font-medium hover:bg-[#e5e7eb] hover:text-black sm:mr-2 md:text-2xl`}
             onClick={handleEventsClick}
           >
             Events
@@ -60,7 +60,7 @@ const NavBar2 = () => {
               placeholder="Search"
             />
           </div>
-          <button className="rounded bg-[#488B80] px-2 py-1 text-xs text-white hover:bg-[#e5e7eb] hover:text-black md:text-base">
+          <button className="rounded bg-[#488B80] px-4 py-2 text-base text-white hover:bg-[#e5e7eb] hover:text-black md:text-2xl">
             View plans
           </button>
         </div>
