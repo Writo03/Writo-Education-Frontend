@@ -141,5 +141,5 @@ const InputField = ({ id, label, type = 'text', value, onChange, error }) => (
     {error && <span id={`${id}-error`} className="text-red-500 text-sm">{error}</span>}
   </div>
 );
-
+}
 export default Register;
