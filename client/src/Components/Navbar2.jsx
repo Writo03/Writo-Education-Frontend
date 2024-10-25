@@ -56,7 +56,7 @@ const NavBar2 = () => {
               name="search"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="h-full w-full rounded-lg border border-[#488B80] px-3 py-[0.4rem] pl-6 hover:border-black md:px-4 md:py-3"
+              className="h-full w-full rounded-lg border border-[#488B80] px-3 py-[0.4rem] pl-6 hover:border-black md:px-4 md:py-3 md:pl-8"
               placeholder="Search"
             />
           </div>
