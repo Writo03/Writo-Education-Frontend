@@ -31,7 +31,7 @@ const NavBar2 = () => {
           <button
             className={`${
               selected === "services" ? "bg-[#e5e7eb] text-black" : "text-white"
-            } rounded-md bg-[#488B80] px-4 py-2 text-base font-medium hover:bg-[#e5e7eb] hover:text-black sm:mr-2 md:text-2xl`}
+            } rounded-md bg-[#488B80] px-2 py-1 text-sm font-medium sm:mr-2 md:px-4 md:py-2 md:text-2xl lg:hover:bg-[#e5e7eb] lg:hover:text-black`}
             onClick={handleServicesClick}
           >
             Services
@@ -39,7 +39,7 @@ const NavBar2 = () => {
           <button
             className={`${
               selected === "events" ? "bg-[#e5e7eb] text-black" : "text-white"
-            } rounded-md bg-[#488B80] px-4 py-2 text-base font-medium hover:bg-[#e5e7eb] hover:text-black sm:mr-2 md:text-2xl`}
+            } rounded-md bg-[#488B80] px-2 py-1 text-sm font-medium sm:mr-2 md:px-4 md:py-2 md:text-2xl lg:hover:bg-[#e5e7eb] lg:hover:text-black`}
             onClick={handleEventsClick}
           >
             Events
@@ -56,11 +56,11 @@ const NavBar2 = () => {
               name="search"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="h-full w-full rounded-lg border border-[#488B80] px-4 py-3 pl-6 hover:border-black"
+              className="h-full w-full rounded-lg border border-[#488B80] px-3 py-[0.4rem] pl-6 hover:border-black md:px-4 md:py-3"
               placeholder="Search"
             />
           </div>
-          <button className="rounded bg-[#488B80] px-4 py-2 text-base text-white hover:bg-[#e5e7eb] hover:text-black md:text-2xl">
+          <button className="rounded bg-[#488B80] px-2 py-1 text-sm text-white md:px-4 md:py-2 md:text-2xl lg:hover:bg-[#e5e7eb] lg:hover:text-black">
             View plans
           </button>
         </div>
