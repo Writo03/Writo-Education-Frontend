@@ -10,7 +10,7 @@ import img5 from "../assets/ser5.png";
 const Services = () => {
   return (
     <div className="z-1 services-component flex items-center justify-center">
-      <div className="w-full max-w-screen-lg rounded-lg bg-[#FAFAFA] p-6 shadow-lg">
+      <div className="w-full max-w-screen-lg rounded-lg bg-[#FAFAFA] p-6 shadow-lg mb-6">
         <h2 className="mb-8 mt-6 text-3xl">Services</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
           <Link to="/jee-neet">
@@ -35,7 +35,7 @@ const Services = () => {
               </div>
             </div>
           </Link>
-          
+
           <Link to="/mentorship">
             <div className="flex rounded-lg border border-gray-200 bg-white p-6">
               <img
@@ -148,7 +148,7 @@ const Services = () => {
             </div>
           </Link>
         </div>
-
+        {/* 
         <div className="mt-8 flex space-x-4">
           <button className="rounded bg-[#488B80] px-4 py-2 text-white">
             Enroll Now
@@ -156,7 +156,7 @@ const Services = () => {
           <button className="rounded border-2 border-[#488B80] px-4 py-2 text-[#488B80] transition-colors duration-300 hover:bg-[#488B80] hover:text-white">
             Book your Free Demo
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
