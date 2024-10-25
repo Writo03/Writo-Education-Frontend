@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { ClipLoader } from 'react-spinners';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Register() {
   const [formData, setFormData] = useState({
     name: '',
@@ -44,30 +45,25 @@ function Register() {
 
     setLoading(true);
     try {
-      // const response = await axios.post('http://localhost:8080/api/mentor_register', formData);
-      const response = await axios.post('https://writo-education-frontend.onrender.com/api/mentor_register', formData);
-      console.log(response.data);
-      setFormData({
-        name: '',
-        email: '',
-        password: '',
-        mentor_subject: '',
-      }); // Reset form
-      navigate('/email');
+        const response = await axios.post('https://writo-education-frontend.onrender.com/api/mentor_register', formData);
+        setFormData({
+            name: '',
+            email: '',
+            password: '',
+            mentor_subject: '',
+        });
+        navigate('/email');
+        toast.success("Registration successful!");
     } catch (error) {
-      if (error.response?.data.message === "Already Mentor exits") {
-        setError("A mentor with this email already exists.");
-      } else {
-        setError('Registration failed. Please try again.');
-      }
-      console.error(error.response?.data);
+        const message = error.response?.data?.message || 'Registration failed. Please try again.';
+        setError(message);
+        toast.error(message);
     } finally {
-      setLoading(false);
+        setLoading(false);
     }
-  };
-
   return (
     <div className="min-h-screen bg-gray-100 py-10 flex justify-center items-center">
+      <ToastContainer />
       {loading && (
         <div className="absolute inset-0 bg-gray-100 bg-opacity-80 flex justify-center items-center z-10">
           <ClipLoader color="#36d7b7" size={50} />
