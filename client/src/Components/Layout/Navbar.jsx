@@ -105,7 +105,7 @@ const Navbar = () => {
               </div>
               <button
                 onClick={handleTestSeries}
-                className="hover:text-[#488B80 block px-2 py-2 text-start text-lg text-black lg:px-2 lg:text-2xl"
+                className="hover:text-[#488B80] block px-2 py-2 text-start text-lg text-black lg:px-2 lg:text-2xl"
               >
                 Test Series
               </button>
@@ -226,10 +226,10 @@ export const Dropdown = () => {
     <div className="relative">
       {/* Trigger */}
       <button
-        className="flex items-center space-x-2 rounded-md bg-[#E5E7EB] py-1 text-lg text-black hover:bg-[#488B80] hover:text-white focus:outline-none px-4 lg:text-2xl"
+        className="flex items-center space-x-2 rounded-md text-lg text-black hover:bg-[#488B80] hover:text-white focus:outline-none px-2 lg:text-2xl"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span>Menu</span>
+        <span>Our Programs</span>
         <svg
           className={`h-4 w-4 transform transition-transform ${
             isOpen ? "rotate-180" : ""
@@ -250,7 +250,7 @@ export const Dropdown = () => {
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute mt-2 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+        <div className="absolute right-2 mt-2 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
           <div className="py-1 px-2">
             {["Careers", "Blogs", "SGP"].map((item, idx) => (
               <Link
