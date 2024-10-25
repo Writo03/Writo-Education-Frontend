@@ -60,10 +60,7 @@ const Navbar = () => {
   };
 
   const handleTestSeries = () => {
-    if (auth) navigate("/test_series");
-    else {
-      navigate("/register");
-    }
+    navigate("/waits");
   };
 
   return (
