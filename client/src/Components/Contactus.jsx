@@ -8,8 +8,11 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import { LiaCopyrightSolid } from "react-icons/lia";
 import image from "../assets/image4.png";
+import axios from "axios"
 
 const Contactus = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [response, setResponse] = useState("")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,14 +28,33 @@ const Contactus = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.phoneNumber.length !== 10) {
       alert("Please enter exactly 10 digits for the phone number.");
       return;
     }
-    // Submit form logic here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true)
+    try {
+      const res = await axios.post("https://writo-education-frontend.onrender.com/api/contact/submit-request", {
+        name : formData.name,
+        email : formData.email,
+        phoneNo : formData.phoneNumber,
+        message : formData.message
+      })
+      setResponse(res.data.message)
+      setFormData({
+        name: "",
+        email: "",
+        phoneNumber: "",
+        message: "",
+      })
+    } catch (error) {
+      setResponse(error.response.data.message)
+    }finally {
+      setIsSubmitting(false)
+    }
+    
   };
 
   return (
@@ -92,13 +114,15 @@ const Contactus = () => {
           ></textarea>
           <div className="flex items-center justify-center space-x-2">
             <button
+            disabled={isSubmitting}
               type="submit"
-              className="rounded bg-teal-500 px-8 py-2 text-white transition duration-200 hover:bg-teal-600"
+              className="rounded bg-teal-500 px-8 py-2 text-white transition duration-200 hover:bg-teal-600 disabled:opacity-60"
             >
-              Send
+              {isSubmitting ? "Sending..." : "Send"}
             </button>
           </div>
         </form>
+      {response && <p className="text-center text-2xl font-bold text-[#54c8b4] mt-2">{response}</p>}
       </div>
     </div>
   );
