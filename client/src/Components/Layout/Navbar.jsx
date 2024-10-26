@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/rito-removebg-preview.png";
@@ -8,24 +8,6 @@ const Navbar = () => {
   const [auth, setAuth] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-
-  // Check for the token in localStorage on component mount
-  useEffect(() => {
-    console.log("hello");
-    const checkAuth = () => {
-      const token = localStorage.getItem("token");
-      console.log("Token found:", token); // Debugging log
-      if (token) {
-        setAuth(true);
-        console.log("User is authenticated");
-      } else {
-        setAuth(false);
-        console.log("User is not authenticated");
-      }
-    };
-
-    checkAuth(); // Run the check on mount
-  }, []); // Empty dependency array ensures this runs only on mount
 
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 

@@ -76,6 +76,7 @@ import CommunityGuidelines from "./Components/Communitygudielines.jsx";
 import SGP from "./Pages/SGP.jsx";
 import Blog from "./Components/Blog.jsx";
 import Profile from "./Components/Profile.jsx";
+import Protected from "./Components/ProtectedRoutes.jsx";
 
 function App() {
   return (
@@ -116,8 +117,8 @@ function App() {
         <Route path="/class-10beforepay" element={<Class10befpay />} />
 
         {/*neet and jee test series */}
-        <Route path="/jee-test-series" element={<JeeTestSeries />} />
-        <Route path="/neet-test-series" element={<NeetTestSeries />} />
+        <Route path="/jee-test-series" element={<Protected authentication><JeeTestSeries /></Protected>} />
+        <Route path="/neet-test-series" element={<Protected authentication><NeetTestSeries /></Protected>} />
 
         <Route path="/class-11" element={<Class11 />} />
         <Route path="/class-12" element={<Class12 />} />
@@ -127,19 +128,19 @@ function App() {
         <Route path="/jee-neet" element={<Jee_neet />} />
         <Route path="/class-6/physics/video" element={<VideoPage />} />
         <Route path="/waits" element={<Waits />} />
-        <Route path="/neet-price" element={<NeetPrice />} />
+        <Route path="/neet-price" element={<Protected authentication><NeetPrice /></Protected>} />
 
-        <Route path="/jee-price" element={<JeePrice />} />
+        <Route path="/jee-price" element={<Protected authentication><JeePrice /></Protected>} />
         <Route
           path="/neet-all-india-test-series"
-          element={<NeetAllIndiaTestseries />}
+          element={<Protected><NeetAllIndiaTestseries /></Protected>}
         />
         <Route
           path="/jee-all-india-test-series"
-          element={<JeeAllIndiaTestSeries />}
+          element={<Protected><JeeAllIndiaTestSeries /></Protected>}
         />
         <Route path="/test_series" element={<Test_Series />} />
-        <Route path="/test/:id" element={<Test />} />
+        <Route path="/test/:id" element={<Protected><Test /></Protected>} />
         <Route path="/leaderboard/:id" element={<LeaderBoard />} />
       </Route>
 

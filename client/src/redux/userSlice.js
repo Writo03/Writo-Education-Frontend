@@ -43,10 +43,11 @@ export const userSlice = createSlice({
     },
     userlogin:(state,action)=>{
       state.isAuthorized = true
-      state.user= action.payload.user
+      state.user= action.payload
     },
-    Userlogout:(state,action)=>{
-      Object.assign(state, initialState);
+    Userlogout:(state)=>{
+      state.isAuthorized = false
+      state.user = {}
     },
     setOnlineUser: (state, action) => {
       state.onlineUser = action.payload;
