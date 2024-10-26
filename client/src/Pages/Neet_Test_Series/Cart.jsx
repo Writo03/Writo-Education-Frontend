@@ -53,14 +53,9 @@ function Cart({id = "66bcbf02c6fc8d227f01d422"}) {
             </div>
 
             <div className="flex justify-between">
-              <Link to={`/test/${id}`}>
+              <Link to={`/jee-all-india-test-series`}>
                 <button className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
                   GoTo Test
-                </button>
-              </Link>
-              <Link to={"/jee-all-india-test-series"}>
-                <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded">
-                  View Details
                 </button>
               </Link>
             </div>

@@ -76,7 +76,7 @@ import CommunityGuidelines from "./Components/Communitygudielines.jsx";
 import SGP from "./Pages/SGP.jsx";
 import Blog from "./Components/Blog.jsx";
 import Profile from "./Components/Profile.jsx";
-import Protected from "./Components/ProtectedRoutes.jsx";
+import Protected from "./Components/Protected.jsx";
 
 function App() {
   return (
