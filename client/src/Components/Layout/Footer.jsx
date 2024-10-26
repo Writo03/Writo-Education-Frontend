@@ -1,10 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaInstagram } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedin, FaLocationDot } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaLocationDot,
+  FaYoutube,
+  FaInstagram,
+  FaFacebook,
+  FaTelegram,
+} from "react-icons/fa6";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import { LiaCopyrightSolid } from "react-icons/lia";
@@ -63,9 +67,9 @@ const Community_footer = () => {
                         </Link>
                       </p>
                       <p>
-                        <Link to={"/"} className="hover:underline">
+                        <a href="#navigation_for_contactus" className="hover:underline">
                           Contact us
-                        </Link>
+                        </a>
                       </p>
                       <p>
                         <Link to={"/terms"} className="hover:underline">
@@ -122,7 +126,7 @@ const Community_footer = () => {
                             <item.icon className="h-4 w-4" />
                             {item.link ? (
                               <a
-                                className="hover:text-[#50eddb]"
+                                className="duration-400 group transform rounded-lg font-bold text-white transition hover:-translate-y-1 focus:text-[#50eddb] md:hover:text-[#50eddb]"
                                 href={item.link}
                               >
                                 {item.text}
@@ -132,53 +136,73 @@ const Community_footer = () => {
                             )}
                           </div>
                         ))}
-                        {/* <div className="flex flex-row">
-                          <FaLocationDot className="mr-1 mt-2 h-4 w-4" />
-                          Rewa, India
-                        </div>
-                        <div className="flex flex-row">
-                          <BsFillTelephoneFill className="mr-1 mt-2 h-4 w-4" />
-                          +91 80594 58609
-                        </div>
-                        <div className="flex flex-row">
-                          <IoMdMail className="mr-1 mt-2 h-4 w-4" />
-                          support@writo.tech
-                        </div> */}
 
-                        <div className="mt-2 hidden flex-row space-x-2 lg:flex">
-                          <a
-                            href="www.instagram.com"
-                            className="hover:underline"
-                          >
-                            <FaInstagram className="h-6 w-6 text-white" />
-                          </a>
-                          <a href="#" className="hover:underline">
-                            <FaFacebook className="h-6 w-6 text-white" />
-                          </a>
-                          <a href="#" className="hover:underline">
-                            <FaLinkedin className="h-6 w-6 text-white" />
-                          </a>
-                          <a href="#" className="hover:underline">
-                            <FaTwitter className="h-6 w-6 text-white" />
-                          </a>
+                        <div className="mt-2 hidden flex-row space-x-4 lg:flex">
+                          {[
+                            {
+                              link: "https://www.linkedin.com/company/writo-learning-solutions/",
+                              icon: FaLinkedin,
+                            },
+                            {
+                              link: "https://youtube.com/@writoacademy?si=ySierizfl6kPGwGl",
+                              icon: FaYoutube,
+                            },
+                            {
+                              link: "https://www.instagram.com/writoeducation?igsh=dHI1N2Q1N3FhaXEz",
+                              icon: FaInstagram,
+                            },
+                            {
+                              link: "https://www.facebook.com/profile.php?id=61558449281363&mibextid=ZbWKwL",
+                              icon: FaFacebook,
+                            },
+                            {
+                              link: "https://t.me/writoacedamy",
+                              icon: FaTelegram,
+                            },
+                          ].map((item, idx) => (
+                            <a
+                              href={item.link}
+                              className="duration-400 group transform rounded-lg font-bold text-white transition hover:-translate-y-1"
+                            >
+                              <item.icon className="h-6 w-6 text-white group-hover:text-[#50eddb]" />
+                            </a>
+                          ))}
                         </div>
                       </p>
                     </div>
                   </div>
-                  <div className="mt-2 flex w-full flex-col justify-center md:mt-0 lg:hidden">
-                    <div className="mt-2 flex flex-row space-x-2">
-                      <a href="www.instagram.com" className="hover:underline">
-                        <FaInstagram className="h-6 w-6 text-white" />
-                      </a>
-                      <a href="#" className="hover:underline">
-                        <FaFacebook className="h-6 w-6 text-white" />
-                      </a>
-                      <a href="#" className="hover:underline">
-                        <FaLinkedin className="h-6 w-6 text-white" />
-                      </a>
-                      <a href="#" className="hover:underline">
-                        <FaTwitter className="h-6 w-6 text-white" />
-                      </a>
+                  <div className="mt-2 flex w-full flex-col justify-center md:mt-0 md:hidden">
+                    <div className="mt-2 grid grid-cols-3 items-center justify-center gap-x-2 gap-y-4">
+                      {[
+                        {
+                          link: "https://www.linkedin.com/company/writo-learning-solutions/",
+                          icon: FaLinkedin,
+                        },
+                        {
+                          link: "https://youtube.com/@writoacademy?si=ySierizfl6kPGwGl",
+                          icon: FaYoutube,
+                        },
+                        {
+                          link: "https://www.instagram.com/writoeducation?igsh=dHI1N2Q1N3FhaXEz",
+                          icon: FaInstagram,
+                        },
+                        {
+                          link: "https://www.facebook.com/profile.php?id=61558449281363&mibextid=ZbWKwL",
+                          icon: FaFacebook,
+                        },
+                        {
+                          link: "https://t.me/writoacedamy",
+                          icon: FaTelegram,
+                        },
+                      ].map((item, idx) => (
+                        <a
+                          key={idx}
+                          href={item.link}
+                          className="duration-400 group transform rounded-lg px-2 py-1 font-bold text-white transition hover:-translate-y-1"
+                        >
+                          <item.icon className="h-6 w-6 text-white group-focus:text-[#50eddb]" />
+                        </a>
+                      ))}
                     </div>
                   </div>
                 </div>
