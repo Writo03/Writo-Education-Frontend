@@ -2,8 +2,10 @@ import React from 'react'
 import Highlights from '../Components/SGPHighlights'
 import Contactus from '../Components/Contactus'
 import SGPBenifits from '../Components/SGPBenifits'
+import { useNavigate } from 'react-router-dom'
 
 const SGP = () => {
+    const navigate = useNavigate();
   return (
     <>
         <div className="bg2 w-full flex justify-center items-center gap-10 p-6 pb-11 flex-col ">
@@ -25,12 +27,14 @@ const SGP = () => {
                 <div className="lg:w-2/5 w-full">
                     <div className="">
                     <div className='flex justify-center items-center flex-row lg:flex-col gap-2 lg:mt-4 '>
-                        <button className='mt-2 px-10 py-2 font-sans item2 lg:text-2xl lg:min-w-56 hover:bg-[#ffff] hover:text-black bg-[#488B80]  text-white rounded-full'>
+                        <a href='https://forms.gle/npT9qy1tG16YP3MG7'><button onClick={()=>{
+                        }} className='mt-2 px-10 py-2 font-sans item2 lg:text-2xl lg:min-w-56 hover:bg-[#ffff] hover:text-black bg-[#488B80]  text-white rounded-full'>
                         Register Now!
-                        </button>
-                        <button className='mt-2 px-10 py-2 font-sans item2 lg:text-2xl lg:min-w-56  hover:bg-[#488B80] hover:text-white bg-[#ffff]  text-black rounded-full'>
+                        </button></a>
+                        <a href='https://wa.me/message/3DAXZ3YQRPJKH'><button onClick={()=>{
+                        }} className='mt-2 px-10 py-2 font-sans item2 lg:text-2xl lg:min-w-56  hover:bg-[#488B80] hover:text-white bg-[#ffff]  text-black rounded-full'>
                         Enquire...!!    
-                        </button>
+                        </button></a>
                     </div>
                     </div>
                 </div>

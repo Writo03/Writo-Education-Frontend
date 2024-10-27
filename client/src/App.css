@@ -37,7 +37,7 @@ body {
   font-family: 'PT Sans';
 }
 .item3{
-  font-family: 'Ibarra Real Nova';
+  font-family: 'Ibarra Real Nova'; 
 }
 .item4{
   font-family: 'inter';
@@ -59,6 +59,7 @@ body {
   padding: 0;
   background-color: #f5f5f5;
 }
+
 
 .bg1 {
   background: linear-gradient(131deg, #1ab79d7f, #ffe0707a);
@@ -166,9 +167,12 @@ body {
   margin-top: 10px;
   font-size: 1.1em;
 }
-.item-5{
-  color: linear-gradient(to right, #DE3939 0, #BF3F52 20%, #0961E6 76%);;
+.item-5 {
+  background: linear-gradient(to right, #DE3939 0%, #BF3F52 20%, #0961E6 76%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
+.facultycard{}
 
 
 .gradientheading{
@@ -182,8 +186,8 @@ body {
 
   .highlights{
     font-size: 25px;
-    color: #ed7e0a;
-    font-family: "Sriracha", cursive;
+    color: #ED7E0A;
+    font-family: 'Gochi Hand';
     font-weight: 400;
     font-style: normal;
 }

@@ -165,14 +165,7 @@ function App() {
           </AuthLayouts>
         }
       />
-      <Route
-      path="/registermentor"
-      element={
-        <AuthLayouts>
-          <RegisterMentorPage />
-        </AuthLayouts>
-      }
-    />
+    
       <Route
         path="/email"
         element={

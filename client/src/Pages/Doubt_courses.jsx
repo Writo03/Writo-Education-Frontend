@@ -6,6 +6,7 @@ import Contactus from '../Components_2/Contactus'
 import Navvv from '../Components_2/Navvv'
 import GetMore from '../Components_2/GetMore'
 import Navbar from '../Components/Navbar'
+import blue from  '../assets/blue.png'
 
 export default function Doubt_courses() {
 
@@ -15,11 +16,16 @@ export default function Doubt_courses() {
 
   return (
     <div>
-          
           <Hero3/>
-          <h2 className="highlights my-5 text-center " >...... Get Connect to your Coaches ......</h2>
+          <div className="flex flex-col items-center my-10">
+          <h2 className="lg:text-4xl text-3xl font-semibold text-[#ED7E0A]   text-center item2" >Get Connect to your Coaches </h2>
+          <img src={blue} alt="" className='w-[150px] ml-[250px]' />
+          </div>
           <ConnectCoaches/>
-          <h2 className="highlights my-5 text-center " >...... Get More With Writo ......</h2>
+          <div className="flex flex-col items-center my-10">
+          <h2 className="text-4xl font-semibold text-[#ED7E0A]   text-center item2" >Get More With Writo  </h2>
+          <img src={blue} alt="" className='w-[150px] ml-[250px]' />
+          </div>
           <GetMore/>
           <Contactus />
     </div>

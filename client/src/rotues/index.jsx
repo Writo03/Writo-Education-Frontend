@@ -93,14 +93,6 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "registermentor",
-        element: (
-          <AuthLayouts>
-            <RegisterMentorPage />
-          </AuthLayouts>
-        ),
-      },
-      {
         path: "careers",
         element: <CarrersPage />,
       },

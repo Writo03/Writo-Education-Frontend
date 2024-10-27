@@ -165,8 +165,8 @@ function Register() {
               </form>
               <div className="flex m-3 justify-center items-center gap-2 flex-col">
               <h6 className="text-xs">or</h6>
-              <Link to={"/registermentor"} >
-              <h6 className="text-base underline text-blue-600">Register as Mentor</h6>
+              <Link to={"/login"} >
+              <h6 className="text-base underline text-blue-600">Login</h6>
               </Link>
               </div>
             </div>
