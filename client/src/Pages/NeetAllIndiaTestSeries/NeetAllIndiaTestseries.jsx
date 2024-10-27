@@ -11,7 +11,8 @@ import Writo from "../../assets/Clip path group.png"
 import { CiSearch } from "react-icons/ci"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 const features = [
   {
@@ -37,9 +38,16 @@ const features = [
 ]
 
 function NeetAllIndiaTestseries() {
+  const navigate = useNavigate()
+
+  const user = useSelector((state)=> state.user.user)
+
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+    if(user?.student_services?.neetTestSeries === false){
+      navigate("/neet-price")
+    }
+  }, [user]);
 
   const [isOpen, setIsOpen] = useState(false)
 

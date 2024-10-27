@@ -55,6 +55,20 @@ const userSchema = new mongoose.Schema({
     phone: { type: String },
     classType: { type: String}, // E.g., JEE or NEET
     institution: { type: String },
+    student_services : {
+        neetTestSeries : {
+            type : Boolean,
+            default : false
+        },
+        jeeTestSeries : {
+            type : Boolean,
+            default : false
+        },
+        doubtClearing : {
+            type : Boolean,
+            default : false
+        }
+    }
   
 }, {
     timestamps: true

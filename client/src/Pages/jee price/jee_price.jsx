@@ -11,12 +11,19 @@ import { HiOutlineSpeakerphone } from "react-icons/hi";
 import Contactus from "../../Components/Contactus";
 import {Link} from "react-router-dom"
 import Navbar from "../../Components/Navbar";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function JeePrice() {
+  const navigate = useNavigate()
+  const user = useSelector((state)=> state.user.user)
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    if(user?.student_services?.jeeTestSeries){
+      navigate("/jee-all-india-test-series")
+    }
+  }, [user]);
 
 
   const [selectedLanguage, setSelectedLanguage] = useState(null);
@@ -165,8 +172,7 @@ function JeePrice() {
                 <h2 className="text-xl font-semibold mb-4">Annual Fee</h2>
                 <div className="flex items-center gap-1">
 
-                <p className="text-xl font-bold mb-4 line-through text-gray-700">₹99</p>
-                <p className="text-2xl font-bold mb-4">0</p>
+                <p className="text-xl font-bold mb-4 text-gray-700">₹99</p>
                 </div>
               </div>
               <div className="border border-[#488B80] p-4 rounded-lg">

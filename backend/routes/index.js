@@ -93,7 +93,7 @@ router.get("/me", authMiddleware, async (req, res) => {
     }
     res.status(200).json({ 
       user : {
-        id: user._id, name: user.name, email: user.email, avatar : user.profile_pic
+        id: user._id, name: user.name, email: user.email, avatar : user.profile_pic, student_services : user.student_services
       },
       message : "fetched user successfully"
      }); // Adjust fields as needed

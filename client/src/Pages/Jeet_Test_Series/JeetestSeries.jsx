@@ -13,6 +13,8 @@ import Testimonials from './Testimonials';
 import Cart from './Cart';
 import Navbar from '../../Components/Navbar';
 import TestLayoutCard from '../../Components/TestLayoutCard';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const answerKeys = [
   { id: 1, text: 'Download NEET mock test answer key and solutions - 1', link: '#' },
@@ -42,10 +44,16 @@ const features = [
 ];
 
 const JeeTestSeries = () => {
+  const navigate = useNavigate()
+
+  const user = useSelector((state)=> state.user.user)
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    if(user?.student_services?.jeeTestSeries === false){
+      navigate("/jee-price")
+    }
+  }, [user]);
 
 
 
