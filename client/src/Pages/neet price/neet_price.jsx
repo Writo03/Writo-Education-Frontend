@@ -13,12 +13,19 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function NeetPrice() {
 
+  const user = useSelector((state)=> state.user.user)
+  const navigate = useNavigate();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    if(user?.student_services?.neetTestSeries){
+      navigate("/neet-all-india-test-series")
+    }
+  }, [user]);
 
   const [selectedLanguage, setSelectedLanguage] = useState(null);
   const [selectedBatch, setSelectedBatch] = useState(null);
@@ -37,7 +44,6 @@ function NeetPrice() {
     setIsOpen(!isOpen);
   };
 
-  const navigate = useNavigate();
 
   const [price,Setprice]=useState(99)
 
@@ -160,8 +166,7 @@ function NeetPrice() {
                 <h2 className="text-xl font-semibold mb-4">Annual Fee</h2>
                 <div className="flex items-center gap-1">
 
-                <p className="text-xl font-bold mb-4 line-through text-gray-700">₹{price}</p>
-                <p className="text-2xl font-bold mb-4">0</p>
+                <p className="text-xl font-bold mb-4 text-gray-700">₹{price}</p>
                 </div>
               </div>
               <div className="border border-[#488B80] p-4 rounded-lg">

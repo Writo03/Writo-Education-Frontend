@@ -8,6 +8,7 @@ const router = require("./routes/index");
 const mentorRoutes = require("./routes/mentorRoutes");
 const paymentRoutes = require("./routes/payment");
 const quizRouter = require("./routes/quiz");
+const contactRouter = require("./routes/contact.routes.js")
 const cookiesParser = require("cookie-parser");
 const { app, server } = require("./socket/index");
 
@@ -74,6 +75,7 @@ app.use("/api", router);
 app.use("/api/mentors", mentorRoutes);
 app.use("/api/payment/", paymentRoutes);
 app.use("/api/quiz", quizRouter);
+app.use("/api/contact", contactRouter)
 
 connectDB().then(() => {
   server.listen(PORT, () => {
