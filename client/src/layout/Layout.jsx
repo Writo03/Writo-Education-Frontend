@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { userlogin } from "../redux/userSlice.js";
-import { FaCircle } from "react-icons/fa6";
+import { Loader } from "lucide-react";
 
 const Layout = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -32,7 +32,7 @@ const Layout = () => {
   if(isLoading){
     return (
       <div className="h-screen flex items-center justify-center">
-        <FaCircle className="animate-spin"/>
+        <Loader className="w-12 h-12 animate-spin"/>
       </div>
     )
   }
