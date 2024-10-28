@@ -3,12 +3,23 @@ import Services from "./Services";
 import Events from "./Events";
 import "./NavBar2.css";
 import { CiSearch } from "react-icons/ci";
+import ViewPlanModel from "./ViewPlanModel";
 
 const NavBar2 = () => {
   const [showServices, setShowServices] = useState(false);
   const [showEvents, setShowEvents] = useState(false);
   const [selected, setSelected] = useState("");
   const [search, setSearch] = useState("");
+   
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = (product = null) => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+ 
+  };
 
   const handleServicesClick = () => {
     setSelected((prev) => (prev === "services" ? "" : "services"));
@@ -25,6 +36,7 @@ const NavBar2 = () => {
   };
 
   return (
+    <>
     <nav className="w-full overflow-x-hidden">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-2 py-4 pr-4 md:px-6 lg:px-8">
         <div className="flex items-center space-x-2 md:space-x-4">
@@ -60,7 +72,8 @@ const NavBar2 = () => {
               placeholder="Search"
             />
           </div>
-          <button className="rounded bg-[#488B80] px-2 py-1 text-sm text-white md:px-4 md:py-2 md:text-2xl lg:hover:bg-[#e5e7eb] lg:hover:text-black">
+          <button 
+          onClick={openModal} className="rounded bg-[#488B80] px-2 py-1 text-sm text-white md:px-4 md:py-2 md:text-2xl lg:hover:bg-[#e5e7eb] lg:hover:text-black">
             View plans
           </button>
         </div>
@@ -72,6 +85,8 @@ const NavBar2 = () => {
       {/* Conditional rendering of Events component */}
       {showEvents && <Events className="events-component" />}
     </nav>
+          <ViewPlanModel isOpen={isModalOpen} onClose={closeModal} />
+          </>
   );
 };
 

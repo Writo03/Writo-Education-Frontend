@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/rito-removebg-preview.png";
+import ViewPlanModel from '../../Components/ViewPlanModel'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [auth, setAuth] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-
+  
   const [showLogoutModal, setShowLogoutModal] = useState(false);
-
+ 
   const handleLogout = () => {
     localStorage.removeItem("token");
     setAuth(false);
