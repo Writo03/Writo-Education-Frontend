@@ -67,7 +67,7 @@ const Home = () => {
   return (
     <div>
       <Navbar2 />
-      <div className="bg1 w-full overflow-hidden">
+      <div className="bg4 w-full overflow-hidden">
         <HeroSection dropdownOpen={dropdownOpen} />
       </div>
       <Courses />

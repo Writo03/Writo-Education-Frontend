@@ -5,7 +5,7 @@ const HeroSection = ({ className }) => {
   return (
     <div
       className={
-        className + "w-full hero-section custom-gradient relative z-10 h-full"
+        className + "w-full hero-section  relative z-10 h-full"
       }
     >
       {/* Ensure z-index is lower than Services */}

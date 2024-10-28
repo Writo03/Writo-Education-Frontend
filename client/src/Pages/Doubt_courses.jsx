@@ -19,12 +19,12 @@ export default function Doubt_courses() {
           <Hero3/>
           <div className="flex flex-col items-center my-10">
           <h2 className="lg:text-4xl text-3xl font-semibold text-[#ED7E0A]   text-center item2" >Get Connect to your Coaches </h2>
-          <img src={blue} alt="" className='w-[150px] ml-[250px]' />
+          <img src={blue} alt="" className='w-[150px] lg:ml-[250px]' />
           </div>
           <ConnectCoaches/>
           <div className="flex flex-col items-center my-10">
           <h2 className="text-4xl font-semibold text-[#ED7E0A]   text-center item2" >Get More With Writo  </h2>
-          <img src={blue} alt="" className='w-[150px] ml-[250px]' />
+          <img src={blue} alt="" className='w-[150px] lg:ml-[250px]' />
           </div>
           <GetMore/>
           <Contactus />

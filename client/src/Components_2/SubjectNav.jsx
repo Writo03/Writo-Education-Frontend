@@ -46,7 +46,7 @@ const SubjectNav = ({ onSubjectChange }) => {
         <ChevronLeft className="w-6 h-6" />
       </button> */}
 
-      <div className="flex items-center lg:gap-48 overflow-hidden">
+      <div className="flex items-center justify-center lg:gap-48 flex-wrap">
         {subjects.slice(scrollPosition, scrollPosition + itemsToShow).map(({ name, icon: Icon, color }) => (
           <button
             key={name}

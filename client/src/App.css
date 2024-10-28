@@ -70,6 +70,9 @@ body {
 .bg3{
   background: linear-gradient(131deg, #1ab79d69, #ffe0704d);
 }
+.bg4{
+  background: linear-gradient(131deg, #1ab79d43, #ffe0701f);
+}
 /* HeroSection.css */
  .hero {
   display: flex;
