@@ -67,7 +67,10 @@ const Community_footer = () => {
                         </Link>
                       </p>
                       <p>
-                        <a href="#navigation_for_contactus" className="hover:underline">
+                        <a
+                          href="#navigation_for_contactus"
+                          className="hover:underline"
+                        >
                           Contact us
                         </a>
                       </p>
@@ -161,6 +164,7 @@ const Community_footer = () => {
                             },
                           ].map((item, idx) => (
                             <a
+                              key={idx}
                               href={item.link}
                               className="duration-400 group transform rounded-lg font-bold text-white transition hover:-translate-y-1"
                             >
