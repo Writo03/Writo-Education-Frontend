@@ -145,6 +145,10 @@ const router = createBrowserRouter([
         element: <About6to10 />,
       },
       {
+        path: "/about6to10",
+        element: <About6to10 />,
+      },
+      {
         path: "communityjee/about",
         element: <AboutJee />,
       },

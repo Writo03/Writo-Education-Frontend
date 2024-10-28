@@ -24,7 +24,7 @@ const Data = [
     subHeading: "Are you struggling with doubts while preparing for JEE/NEET ?",
     description:
       "Look no further! Writo Education offers a unique live doubt session program designed to address all your queries in real-time. Our platform connects you with experienced faculties from renowned institutions like IITs and NITs, ensuring personalized guidance and support tailored to your needs.",
-    button: "Try Doubt clearing session",
+    button: "Try our doubt clearing session",
     buttonLink: "/doubtcourses",
     image: sampleImage,
     imgPos: "r",
@@ -72,7 +72,7 @@ const ExpertGuidance_And_Doubt = () => {
                 {item.description}
               </p>
               <Link to={item.buttonLink}>
-                <button className="item2 rounded-md bg-[#488B80] px-6 py-3 font-semibold text-white hover:bg-[#e5e7eb] hover:text-black focus:outline-none">
+                <button className="item2 rounded-md bg-[#488B80] px-6 py-3 font-semibold text-white hover:bg-[#e5e7eb] hover:text-black focus:outline-none capitalize">
                   {item.button}
                 </button>
               </Link>

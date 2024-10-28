@@ -96,6 +96,7 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/communityguidelines" element={<CommunityGuidelines />} />
         <Route path="/community/about" element={<About6to10 />} />
+        <Route path="/about6to10" element={<About6to10 />} />
         <Route path="/communityjee/about" element={<AboutJee />} />
         <Route path="/communityneet/about" element={<AboutNeet />} />
         <Route path="/job/:id" element={<JobDetail />} />
