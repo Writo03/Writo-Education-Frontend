@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/rito-removebg-preview.png";
@@ -84,7 +84,7 @@ const Navbar = () => {
               </div>
               <button
                 onClick={handleTestSeries}
-                className="hover:text-[#488B80] block px-2 py-2 text-start text-lg text-black lg:px-2 lg:text-2xl"
+                className="block px-2 py-2 text-start text-lg text-black hover:text-[#488B80] lg:px-2 lg:text-2xl"
               >
                 Test Series
               </button>
@@ -100,6 +100,12 @@ const Navbar = () => {
               >
                 Community
               </Link>
+              <Link
+                to="/sgp"
+                className="block px-2 py-2 text-lg text-black hover:text-[#488B80] lg:px-2 lg:text-2xl"
+              >
+                SGP
+              </Link>
               <Dropdown />
               {/* <Link
                 to="/careers"
@@ -112,12 +118,6 @@ const Navbar = () => {
                 className="block px-2 py-2 text-lg text-black hover:text-[#488B80] lg:px-2 lg:text-2xl"
               >
                 Blogs
-              </Link>
-              <Link
-                to="/sgp"
-                className="block px-2 py-2 text-lg text-black hover:text-[#488B80] lg:px-2 lg:text-2xl"
-              >
-                SGP
               </Link> */}
               {!auth && (
                 <div className="mt-4 flex flex-col md:hidden">
@@ -205,7 +205,7 @@ export const Dropdown = () => {
     <div className="relative">
       {/* Trigger */}
       <button
-        className="flex items-center space-x-2 rounded-md text-lg text-black hover:bg-[#488B80] hover:text-white focus:outline-none px-2 lg:text-2xl"
+        className="flex items-center space-x-2 rounded-md px-2 text-lg text-black hover:bg-[#488B80] hover:text-white focus:outline-none lg:text-2xl"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>Our Programs</span>
@@ -230,9 +230,10 @@ export const Dropdown = () => {
       {/* Dropdown Menu */}
       {isOpen && (
         <div className="absolute right-2 mt-2 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-          <div className="py-1 px-2">
-            {["Careers", "Blogs", "SGP"].map((item, idx) => (
+          <div className="px-2 py-1">
+            {["Careers", "Blogs"].map((item, idx) => (
               <Link
+                key={idx}
                 to={"/" + item.toLowerCase()}
                 className="block py-2 text-lg text-black hover:text-[#488B80] lg:px-2"
               >
