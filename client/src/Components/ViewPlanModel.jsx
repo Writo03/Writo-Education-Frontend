@@ -17,7 +17,7 @@ const ViewPlanModel = ({ isOpen, onClose }) => {
             <div className="fixed inset-0 flex items-center justify-center z-50 ">
                 <div className="absolute inset-0 bg-gray-600 opacity-50"></div>
 
-                <div className="z-1 services-component flex items-center justify-center relative  max-h-[90vh] mx-auto px-8 py-4 bg-white rounded-lg shadow-md z-10">
+                <div className="z-1 services-component flex items-center justify-center relative   mx-auto px-8 py-4 bg-white rounded-lg shadow-md z-10">
                     <div className="w-full max-w-screen-lg   p-6  mb-6">
                         <div className="flex flex-row  justify-between">
                         <h2 className="mb-8 mt-2 text-3xl">Our Plans</h2>
