@@ -13,12 +13,14 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import {userlogin} from "../../redux/userSlice.js"
 
 function NeetPrice() {
 
   const user = useSelector((state)=> state.user.user)
   const navigate = useNavigate();
+  const dispatch = useDispatch()
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -49,22 +51,33 @@ function NeetPrice() {
 
   const initPayment = (data) => {
 		const options = {
-			key: "rzp_test_id6mUicmvlvjzB",
+			key: "rzp_live_fHW5qsB2j9Cpib",
 			amount: data.amount,
 			currency: data.currency,
-			name: 'NEET Test Series',
-			description: "Test Transaction",
+			name: 'Writo Education',
+			description: "Neet Test Series Payment",
 			order_id: data.id,
 			handler: async (response) => {
 				try {
-					const verifyUrl = `http://localhost:8080/api/payment/verify`;
-					const result = await axios.post(verifyUrl, response);
-          navigate('/neet-all-india-test-series')
+					const verifyUrl = `https://writo-education-frontend.onrender.com/api/payment/verify`;
+					const result = await axios.post(verifyUrl, {
+            order_id : data.id,
+            userId : user._id,
+            razorpay_payment_id : response.razorpay_payment_id,
+            razorpay_order_id : response.razorpay_order_id,
+            razorpay_signature : response.razorpay_signature,
+            service : "neet"
+          });
+          dispatch(userlogin(result.data.user))
+          navigate('/neet-test-series')
 					console.log(result);
 				} catch (error) {
 					console.log(error);
 				}
 			},
+      prefill : { 
+        "contact": user.phoneNo 
+    },
 			theme: {
 				color: "#3399cc",
 			},
@@ -77,8 +90,7 @@ function NeetPrice() {
 		try {
 			const orderUrl = `http://localhost:8080/api/payment/orders`;
 			const { data } = await axios.post(orderUrl, { amount: price });
-			console.log(data);
-			initPayment(data.data);
+			initPayment(data.order);
 		} catch (error) {
 			console.log(error);
 		}
@@ -215,11 +227,9 @@ function NeetPrice() {
                   Get this course plus top-rated picks in tech skills and other
                   popular topics.
                 </p>
-                <Link to={"/neet-test-series"}>
                 <button onClick={handlePayment} className="w-full bg-[#488B80] text-white py-2 rounded-md">
                   Buy now
                 </button>
-                </Link>
               </div>
             </div>
             <div className="flex flex-row gap-x-4 rounded-lg p-6 max-w-sm w-full border border-[#488BB0] mt-8">

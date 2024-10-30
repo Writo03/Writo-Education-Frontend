@@ -52,7 +52,7 @@ const userSchema = new mongoose.Schema({
         type: String, 
         unique: true
      },
-    phone: { type: String },
+    phone: { type: Number },
     classType: { type: String}, // E.g., JEE or NEET
     institution: { type: String },
     student_services : {
