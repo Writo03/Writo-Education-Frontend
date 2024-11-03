@@ -43,7 +43,7 @@ export const userSlice = createSlice({
     },
     userlogin:(state,action)=>{
       state.isAuthorized = true
-      state.user= action.payload
+      state.user.user= action.payload
     },
     Userlogout:(state)=>{
       state.isAuthorized = false
