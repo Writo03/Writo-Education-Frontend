@@ -3,7 +3,7 @@ import React from 'react';
 
 const StudentReviewCards = () => {
   const testimonials = [
-    {
+    { 
       name: "Harsh Rawat",
       text: "Thank You Writo for helping me with amazing Tutors and community",
       img: "https://storage.googleapis.com/a1aa/image/4UDPbvrqDB5IH5M3NXzq2MEZezNJ0PQ7UI8U1INR5Apq6U1JA.jpg",
@@ -16,17 +16,17 @@ const StudentReviewCards = () => {
     {
       name: "Aman Shri",
       text: "Writo helped me get a 100% on my Maths Test",
-      img: "https://storage.googleapis.com/a1aa/image/8lH5JoXeW70JGiQXcfhMv5esTtXt5Tjdtewc5lsVw5QbVnqOB.jpg",
+      img: "https://st2.depositphotos.com/1240434/5795/i/450/depositphotos_57959497-stock-photo-beautiful-young-indian-student-holding.jpg",
     },
     {
       name: "Utkarsh Singh",
       text: "Was able to ask questions, seek explanation and engage with mentors",
-      img: "https://storage.googleapis.com/a1aa/image/exarSi36NWRpbCI9a859agEYMW7Pv4c0kBvNVpjomela1pqTA.jpg",
+      img: "https://www.shutterstock.com/image-photo/portrait-confident-young-boy-260nw-1700676295.jpg",
     },
     {
       name: "Shivani",
       text: "Live Doubt solving sessions are the best at Writo",
-      img: "https://storage.googleapis.com/a1aa/image/SU0F8qRePKVXIamrQJegefriV7YG2Zk7xVnnVRE8KbUkVnqOB.jpg",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDLLNn0775n0yKr52mVgUljCk5GF2X1pzqCA&s",
     },
   ];
 

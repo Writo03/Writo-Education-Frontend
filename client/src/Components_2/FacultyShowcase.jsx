@@ -25,26 +25,28 @@ const FacultyMember = ({ name, subjects, university, year, imageUrl }) => (
 const FacultyShowcase = () => {
   const facultyMembers = [
     {
-      name: "Suresh Iyer",
-      subjects: ["Maths", "Physics"],
+      name: "Kausal",
+      subjects: ["Maths"],
       university: "IIT Madras",
-      year: "2016",
-      imageUrl: "https://storage.googleapis.com/a1aa/image/6TlebIZFl4y2Ri24Adox2lFv62iyTabnInoV9cwNKdMjjd1JA.jpg"
+      year: "2012",
+      imageUrl: "https://1.bp.blogspot.com/-ZQWEy-Pztwg/X_Nc3rMUEXI/AAAAAAAA0a0/Siq3A-2RIV4XYAlHboVTaW12RYEtQdgngCNcBGAsYHQ/s361/MATHa.jpg"
     },
     {
-      name: "Suresh Iyer",
-      subjects: ["Maths", "Physics"],
-      university: "IIT Madras",
+      name: "Nivetha Singh",
+      subjects: ["Chemistry" ],
+      university: "IIT Delhi",
       year: "2016",
-      imageUrl: "https://storage.googleapis.com/a1aa/image/6TlebIZFl4y2Ri24Adox2lFv62iyTabnInoV9cwNKdMjjd1JA.jpg"
+      imageUrl: "https://th.bing.com/th/id/OIP.Mip0Tv90_Io2P4j1mGtNFgHaLH?w=114&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+
     },
     {
-      name: "Suresh Iyer",
-      subjects: ["Maths", "Physics"],
-      university: "IIT Madras",
-      year: "2016",
-      imageUrl: "https://storage.googleapis.com/a1aa/image/6TlebIZFl4y2Ri24Adox2lFv62iyTabnInoV9cwNKdMjjd1JA.jpg"
-    }
+      name: "Joginder ",
+      subjects: ["Physics"],
+      university: "NIT Warngal",
+      year: "2018",
+      imageUrl: "https://www.nextias.com/resources/images/b-k-reddy-sir-1723462662112.jpg"
+    },
+    
   ];
 
   return (

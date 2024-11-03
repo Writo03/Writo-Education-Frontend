@@ -29,8 +29,7 @@ const ViewPlanModel = ({ isOpen, onClose }) => {
                                     <img
                                         src={img2}
                                         alt="Course 3"
-                                        className="mr-4 rounded-lg"
-                                        style={{ maxWidth: "120px", height: "auto" }}
+                                        className="mr-4 max-w-[120px] rounded-lg"
                                     />
                                     <div className="flex flex-col">
                                         <h3 className="mb-2 text-xl font-semibold">Doubt session</h3>
