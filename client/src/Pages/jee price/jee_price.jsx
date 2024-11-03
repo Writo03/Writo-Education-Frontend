@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState,useEffect } from "react";
+import { useState,useEffect, useDebugValue } from "react";
 import Fail from "../../assets/fail.png";
 import Cup from "../../assets/cup.png";
 import PhoneandHand from "../../assets/phonewithhand.png";
@@ -12,11 +12,14 @@ import Contactus from "../../Components/Contactus";
 import {Link} from "react-router-dom"
 import Navbar from "../../Components/Navbar";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { userlogin } from "../../redux/userSlice";
+import axios from "axios";
 
 function JeePrice() {
   const navigate = useNavigate()
   const user = useSelector((state)=> state.user.user)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,6 +31,7 @@ function JeePrice() {
 
   const [selectedLanguage, setSelectedLanguage] = useState(null);
   const [selectedBatch, setSelectedBatch] = useState(null);
+  const [price] = useState(99)
 
   const handleLanguageChange = (language) => {
     setSelectedLanguage(selectedLanguage === language ? null : language);
@@ -42,58 +46,56 @@ function JeePrice() {
     setIsOpen(!isOpen);
   };
 
+  const initPayment = (data) => {
+		const options = {
+			key: "rzp_live_fHW5qsB2j9Cpib",
+			amount: data.amount,
+			currency: data.currency,
+			name: 'Writo Education',
+			description: "Jee Test Series Payment",
+			order_id: data.id,
+			handler: async (response) => {
+				try {
+					const verifyUrl = `https://writo-education-frontend.onrender.com/api/payment/verify`;
+					const result = await axios.post(verifyUrl, {
+            order_id : data.id,
+            userId : user._id,
+            razorpay_payment_id : response.razorpay_payment_id,
+            razorpay_order_id : response.razorpay_order_id,
+            razorpay_signature : response.razorpay_signature,
+            service : "jee"
+          });
+          dispatch(userlogin(result.data.user))
+          navigate('/jee-test-series')
+					console.log(result);
+				} catch (error) {
+					console.log(error);
+				}
+			},
+      prefill : { 
+        "contact": user.phoneNo 
+    },
+			theme: {
+				color: "#3399cc",
+			},
+		};
+		const rzp1 = new window.Razorpay(options);
+		rzp1.open();
+	};
+
+	const handlePayment = async () => {
+		try {
+			const orderUrl = `http://localhost:8080/api/payment/orders`;
+			const { data } = await axios.post(orderUrl, { amount: price });
+			initPayment(data.order);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 
   return (
     <>
-     {/* Nav bar */}
-     {/* <nav className="bg-[#EFF4F4] w-full">
-     <div className="container mx-auto flex justify-around items-center p-4">
-       <div className="flex items-center">
-         <img src={Writo} alt="Logo" className="h-12 w-12" />
-         <span className="ml-2 text-lg font-bold text-black">Writo Education</span>
-       </div>
-       <div className="hidden md:flex items-center space-x-14">
-         <div className="relative">
-           <input
-             type="text"
-             placeholder="Search or Start a conversation"
-             className="px-4 py-2 w-80 bg-[#EFF4F4] rounded-full border border-gray-300"
-           />
-           <span className="absolute inset-y-0 right-4 flex items-center text-gray-500">
-             <CiSearch className="w-5 h-5" />
-           </span>
-         </div>
-         <a href="#" className="text-black font-medium">Community</a>
-         <a href="#" className="text-black font-medium">Mentors</a>
-         <a href="#" className="text-black font-medium">Programs</a>
-         <button className="bg-[#5C8D8D] text-white px-4 py-2 rounded-lg">Join now</button>
-       </div>
-       <div className="md:hidden">
-         <button onClick={toggleMenu}>
-           {isOpen ? <FaTimes className="text-black h-6 w-6" /> : <FaBars className="text-black h-6 w-6" />}
-         </button>
-       </div>
-     </div>
-     {isOpen && (
-       <div className="md:hidden bg-[#E2F5F2] p-4">
-         <div className="relative mb-4">
-           <input
-             type="text"
-             placeholder="Search or Start a conversation"
-             className="px-4 py-2 w-full bg-white rounded-full border border-gray-300"
-           />
-           <span className="absolute inset-y-0 right-4 flex items-center text-gray-500">
-             <CiSearch className="w-5 h-5" />
-           </span>
-         </div>
-         <a href="#" className="block text-black px-4 py-2">Community</a>
-         <a href="#" className="block text-black px-4 py-2">Mentors</a>
-         <a href="#" className="block text-black px-4 py-2">Programs</a>
-         <button className="w-full bg-[#5C8D8D] text-white px-4 py-2 rounded-lg mt-2">Join now</button>
-       </div>
-     )}
-   </nav> */}
-
       <div className="p-4 lg:p-8 bg-gray-50 min-h-screen">
         <h1 className="text-2xl font-bold text-[#488B80] mb-4">
           JEE Online Test Series(Mains +Advance)
@@ -172,7 +174,7 @@ function JeePrice() {
                 <h2 className="text-xl font-semibold mb-4">Annual Fee</h2>
                 <div className="flex items-center gap-1">
 
-                <p className="text-xl font-bold mb-4 text-gray-700">₹99</p>
+                <p className="text-xl font-bold mb-4 text-gray-700">₹{price}</p>
                 </div>
               </div>
               <div className="border border-[#488B80] p-4 rounded-lg">
@@ -221,11 +223,9 @@ function JeePrice() {
                   Get this course plus top-rated picks in tech skills and other
                   popular topics.
                 </p>
-                <Link to ='/jee-test-series'>
-                <button className="w-full bg-[#488B80] text-white py-2 rounded-md">
+                <button onClick={handlePayment} className="w-full bg-[#488B80] text-white py-2 rounded-md">
                   Buy now
                 </button>
-                </Link>
               </div>
             </div>
             <div className="flex flex-row gap-x-4 rounded-lg p-6 max-w-sm w-full border border-[#488BB0] mt-8">
