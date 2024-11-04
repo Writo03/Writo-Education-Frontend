@@ -14,6 +14,7 @@ const { app, server } = require("./socket/index");
 
 const allowedOrigins = [
   "https://writo-education-frontend.vercel.app",
+  "https://www.writo.tech",
   "http://localhost:3000",
   "http://localhost:5173",
 ];
