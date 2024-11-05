@@ -7,13 +7,19 @@ import { useSelector } from 'react-redux';
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
 export default function Hero2() {
-  const user = useSelector((state)=>state.user.user.user)
-  console.log(user.email)
+  const user = useSelector((state)=>state.user?.user?.user)
+  const auth =useSelector((state) =>state.user.isAuthorized )
+  const navigate =useNavigate()
+  console.log(user)
   const handleClick =async ()=>{
+    if(!auth){
+      navigate('/email')
+    }
     try {
-      const email =user.email
+      const email =user?.email
       const response = await axios.post('https://writo-education-frontend.onrender.com/api/contact/register-doubtsection', { email });
       // const response = await axios.post('http://localhost:8080/api/contact/register-doubtsection', {email});
       if (response.data.success) {
