@@ -109,7 +109,7 @@ export function TestimonialCardHelper({ testimonials }) {
             <div className="h-full text-center">
               <img
                 alt="testimonial"
-                className="mb-8 inline-block h-20 w-20 rounded-full border-2 border-gray-200 bg-gray-100 object-cover object-center"
+                className="mb-8 inline-block h-20 w-20 rounded-full border-2 border-gray-200 bg-gray-100 object-cover object-top"
                 src={testimonial.image}
               />
               <h2 className="title-font item4 text-sm font-semibold tracking-wider text-gray-900">
