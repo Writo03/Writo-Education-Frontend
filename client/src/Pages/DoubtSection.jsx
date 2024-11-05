@@ -11,6 +11,8 @@ import Navvv from "../Components_2/Navvv";
 import StudentReviewCards from "../Components_2/Studentreviewcards";
 import FacultyShowcase from "../Components_2/FacultyShowcase";
 import SubjectNav from "../Components_2/SubjectNav";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 export default function DoubtSection() {
   useEffect(() => { 
@@ -59,6 +61,7 @@ export default function DoubtSection() {
       {/* <Reviews2 /> */}
       {/* <TestimonialCard testimonials={testimonialsData} /> */}
       <Contactus />
+      <ToastContainer />
     </div>
   );
 }
