@@ -13,7 +13,7 @@ export default function Hero2() {
   const user = useSelector((state)=>state.user?.user?.user)
   const auth =useSelector((state) =>state.user.isAuthorized )
   const navigate =useNavigate()
-  console.log(user)
+  // console.log(user)
   const handleClick =async ()=>{
     if(!auth){
       navigate('/email')
@@ -22,14 +22,20 @@ export default function Hero2() {
       const email =user?.email
       const response = await axios.post('https://writo-education-frontend.onrender.com/api/contact/register-doubtsection', { email });
       // const response = await axios.post('http://localhost:8080/api/contact/register-doubtsection', {email});
+      console.log(response)
       if (response.data.success) {
        console.log(response.data.success)
         toast.success("Demo Registered Sucessfully Our Team will contact you");
       } else {
-        toast.error("Error submitting request");
+        // toast.error("Error submitting request");
+              toast("Demo section Registered Already!!");
+
       }
     } catch (error) {
-      toast("Demo section Registered Already!!");
+      console.log(error.response.data.message)
+      // toast("Demo section Registered Already!!");
+              toast(error.response.data.message);
+
 
     }
   }

@@ -26,7 +26,7 @@ const registerDoubtsection = async (req, res) => {
       if (existingDoubt) {
         return res.status(400).json({
           success: false,
-          message: "A doubt section already exists for this user",
+          message: "A doubt section already registered by the user",
         });
       }
   
