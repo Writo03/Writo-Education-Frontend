@@ -81,6 +81,7 @@ const Home = () => {
 
   return (
     <div>
+      <Navbar2 />
       <div className="h-[20vh] w-full md:h-[30vh] lg:h-[40vh]">
         <HeroSlider
           items={Array.from({ length: 9 }).map(
@@ -88,7 +89,6 @@ const Home = () => {
           )}
         />
       </div>
-      <Navbar2 />
       <div className="bg4 w-full overflow-hidden">
         <HeroSection dropdownOpen={dropdownOpen} />
       </div>

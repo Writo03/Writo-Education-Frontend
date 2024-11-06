@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
+
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/rito-removebg-preview.png";
 import ViewPlanModel from '../../Components/ViewPlanModel'
@@ -177,6 +179,7 @@ const Navbar = () => {
               >
                 Logout
               </button>
+              <Link to={'/profile'}><CgProfile size={40} /></Link>
             </div>
           )}
         </div>
