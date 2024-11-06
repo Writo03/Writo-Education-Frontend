@@ -258,3 +258,10 @@ body {
 .scrollbar::-webkit-scrollbar-thumb{
   @apply bg-slate-200 rounded-full
 }
+
+/* .swiper-button-next{
+  color: #488B80;
+}
+.swiper-button-prev{
+  color: #488B80;
+} */

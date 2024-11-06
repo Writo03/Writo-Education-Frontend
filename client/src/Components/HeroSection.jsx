@@ -3,11 +3,7 @@ import HeroImage from "../assets/hero-image.png";
 
 const HeroSection = ({ className }) => {
   return (
-    <div
-      className={
-        className + "w-full hero-section  relative z-10 h-full"
-      }
-    >
+    <div className={className + "hero-section relative z-10 h-full w-full"}>
       {/* Ensure z-index is lower than Services */}
       <section className="hero">
         <div className="hero-text item1">
