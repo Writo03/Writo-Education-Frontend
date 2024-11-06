@@ -5,13 +5,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import isMobile from "../helpers/isMobile";
+
 function HeroSlider({ items }) {
   return (
     <Swiper
       style={{
         "--swiper-navigation-color": "#488B80",
         "--swiper-pagination-color": "#488B80",
-        "--swiper-pagination-bullet-size": "12px",
+        "--swiper-pagination-bullet-size": isMobile() ? "8px" : "12px",
       }}
       autoplay={true}
       pagination={{
@@ -27,7 +29,7 @@ function HeroSlider({ items }) {
           <img
             src={item}
             alt={`Slider ${idx}`}
-            className="h-full w-full object-cover object-center transition-all duration-700 ease-in-out group-hover:scale-[1.2]"
+            className="h-full w-full object-cover object-center transition-all duration-700 ease-in-out lg:group-hover:scale-[1.2]"
           />
         </SwiperSlide>
       ))}

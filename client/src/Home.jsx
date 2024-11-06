@@ -81,7 +81,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="h-[40vh] w-full">
+      <div className="h-[20vh] w-full md:h-[30vh] lg:h-[40vh]">
         <HeroSlider
           items={Array.from({ length: 9 }).map(
             (_, i) => `https://picsum.photos/1920/1080?random=${i}`,
