@@ -81,12 +81,8 @@ const Home = () => {
 
   return (
     <div>
-<<<<<<< HEAD
       <Navbar2 />
       <div className="h-[20vh] w-full md:h-[30vh] lg:h-[40vh]">
-=======
-      <div className="h-[25vh] w-full md:h-[32.5vh] lg:h-[40vh]">
->>>>>>> 1b949f62d629c24a38e9fac4717f759ed7309782
         <HeroSlider
           items={Array.from({ length: 9 }).map(
             (_, i) => `https://picsum.photos/1920/1080?random=${i}`,
