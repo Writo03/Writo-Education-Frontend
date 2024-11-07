@@ -4,6 +4,8 @@ const router = express.Router()
 
 router.get('/get-quizes',controller.get_quizes)
 
+router.route("/get-quizes-optimized/:type").get(controller.getQuizesOptimized)
+
 router.get('/get-quiz/:id',controller.get_quiz)
 
 router.post('/submit-quiz/:id',controller.submit_quiz)

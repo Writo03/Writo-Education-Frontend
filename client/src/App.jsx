@@ -133,11 +133,11 @@ function App() {
 
         <Route path="/jee-price" element={<Protected authentication><JeePrice /></Protected>} />
         <Route
-          path="/neet-all-india-test-series"
+          path="/neet-all-india-test-series/:testId"
           element={<Protected><NeetAllIndiaTestseries /></Protected>}
         />
         <Route
-          path="/jee-all-india-test-series"
+          path="/jee-all-india-test-series/:testId"
           element={<Protected><JeeAllIndiaTestSeries /></Protected>}
         />
         <Route path="/test_series" element={<Test_Series />} />

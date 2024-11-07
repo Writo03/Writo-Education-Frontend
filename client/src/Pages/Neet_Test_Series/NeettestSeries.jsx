@@ -15,6 +15,8 @@ import Navbar from '../../Components/Layout/Navbar';
 import TestLayoutCard from '../../Components/TestLayoutCard';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { Loader } from 'lucide-react';
 
 const answerKeys = [
   { id: 1, text: 'Download NEET mock test answer key and solutions - 1', link: '#' },
@@ -48,12 +50,67 @@ const NeetTestSeries = () => {
   const navigate = useNavigate()
 
   const user = useSelector((state)=> state.user.user)
+  const [allTest, setAllTest] = useState([]);
+  const [subjectTest, setSubjectTest] = useState([]);
+  const [isAllLoading, setIsAllLoading] = useState(false);
+  const [isSubjectLoading, setIsSubjectLoading] = useState(false);
+  const [allError, setAllError] = useState({
+    isError: false,
+    message: "",
+  });
+  const [subjectError, setSubjectError] = useState({
+    isError: false,
+    message: "",
+  });
+
+  const getAllTest = async () => {
+    setIsAllLoading(true);
+    try {
+      const res = await axios.get(
+        "https://writo-education-frontend.onrender.com/api/quiz/get-quizes-optimized/neet-all",
+      );
+      setAllError({
+        isError: false,
+        message: "",
+      });
+      setAllTest(res.data.quizes);
+    } catch (error) {
+      setAllError({
+        isError: true,
+        message: error.response.data.message,
+      });
+    } finally {
+      setIsAllLoading(false);
+    }
+  };
+  const getAllSubject = async () => {
+    setIsSubjectLoading(true);
+    try {
+      const res = await axios.get(
+        "https://writo-education-frontend.onrender.com/api/quiz/get-quizes-optimized/neet-subject",
+      );
+      setSubjectError({
+        isError: false,
+        message: "",
+      });
+      setSubjectTest(res.data.quizes);
+    } catch (error) {
+      setSubjectError({
+        isError: true,
+        message: error.response.data.message,
+      });
+    } finally {
+      setIsSubjectLoading(false);
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
     if(user?.student_services?.neetTestSeries === false){
       navigate("/neet-price")
     }
+    getAllTest();
+    getAllSubject();
   }, [user]);
 
   
@@ -70,43 +127,17 @@ const NeetTestSeries = () => {
  
   return (
     <>
-      {/* Nav bar */}
-      {/* <nav className="bg-[#a5cac5] w-full">
-        <div className="container mx-auto flex justify-between items-center py-4 px-12">
-          <div className="flex items-center">
-            <img src={Writo} alt="Logo" className="h-12 w-12" />
-            <span className="ml-2 text-lg font-bold text-black">Writo Education</span>
-          </div>
-          <div className="hidden md:flex font-medium items-center space-x-14">
-            <a href="#" className="text-black">Community</a>
-            <a href="#" className="text-black">Mentors</a>
-            <a href="#" className="text-black">Programs</a>
-            <button className="bg-[#5C8D8D] text-white px-4 py-2 rounded-lg">Join now</button>
-          </div>
-          <div className="md:hidden">
-            <button onClick={toggleMenu}>
-              {isOpen ? <FaTimes className="text-black h-6 w-6" /> : <FaBars className="text-black h-6 w-6" />}
-            </button>
-          </div>
-        </div>
-        {isOpen && (
-          <div className="md:hidden bg-[#E2F5F2] p-4">
-            <a href="#" className="block text-black px-4 py-2">Community</a>
-            <a href="#" className="block text-black px-4 py-2">Mentors</a>
-            <a href="#" className="block text-black px-4 py-2">Programs</a>
-            <button className="w-full bg-[#5C8D8D] text-white px-4 py-2 rounded-lg mt-2">Join now</button>
-          </div>
-        )}
-      </nav> */}
-  
-      {/* Hero section */}
       <Hero3 />
       <h1 className='text-center text-[#488B80]  text-2xl font-semibold mb-8 mt-20 '>Waits All India Test Series for NEET UG</h1>
       <h1 className='text-center text-[#ED7E0A]  text-2xl font-semibold mb-8' >Select the right test for you</h1>
-      <div className='flex gap-3 px-3 flex-wrap items-center justify-center'>
-        <TestLayoutCard/>
-        <TestLayoutCard/>
-        <TestLayoutCard/>
+      <div className="flex flex-wrap items-center justify-center gap-3 px-3">
+        {isAllLoading ? (
+          <Loader className="h-8 w-8 animate-spin" />
+        ) : allError.isError ? (
+          <div>{allError.message}</div>
+        ) : (
+          allTest.map((test) => <TestLayoutCard testTitle={test.test_name} testQuestions={test.questionsCount} testSubjects={test.subjects} id={test._id} />)
+        )}
       </div>
       {/* <Testimonials/> */}
       
@@ -131,7 +162,15 @@ const NeetTestSeries = () => {
       </div>
 
       <h1 className='text-center text-[#488B80]  text-2xl font-semibold mb-8 '>Subject wise All India Test series</h1>
-          <Cart/>
+      {
+        isSubjectLoading ? (
+          <Loader className="h-8 w-8 animate-spin" />
+        ) : (
+          subjectError.isError ? (
+            <div>{subjectError.message}</div>
+          ) : <Cart data={subjectTest}/>
+        )
+      }
 
       {/* Why WAITS section */}
       <div className="container mx-auto p-4 mt-8">

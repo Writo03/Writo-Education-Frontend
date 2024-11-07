@@ -17,11 +17,35 @@ const get_quizes = (req, res) => {
         .catch(err => res.status(500).json({ error: err.message }));
 }
 
+const getQuizesOptimized = async (req, res) => {
+    try {
+        const {type} = req.params;
+        const quizes = await quizModel.find({test_type : type}).sort({'createdAt': -1})
+
+        if(!quizes.length){
+            return res.status(404).json({
+                message : "quizes not found"
+            })
+        }
+
+        return res.status(200).json({
+            message : "quizes fetched successfully",
+            quizes
+        })
+    } catch (error) {
+        console.log("error while fetching quizes", error)
+        return res.status(500).json({ message : "Something went wrong internal error"})
+    }
+}
+
 // Get a specific quiz by id
 const get_quiz = (req, res) => {
     const id = req.params.id;
     quizModel.findById(id)
-        .then(result => res.json(result))
+        .then(result => res.status(200).json({
+            message : "quiz found successfully",
+            quiz : result
+        }))
         .catch(err => res.status(500).json({ error: err.message }));
 }
 
@@ -138,5 +162,6 @@ module.exports = {
     check_quiz,
     check_time_remaining,  // Added time remaining function
     test_results,
-    leader_board
+    leader_board,
+    getQuizesOptimized
 }

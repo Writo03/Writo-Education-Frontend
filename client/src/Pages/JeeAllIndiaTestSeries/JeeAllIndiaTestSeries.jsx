@@ -11,8 +11,10 @@ import Writo from "../../assets/Clip path group.png"
 import { CiSearch } from "react-icons/ci"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { useState, useEffect } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import { useSelector } from "react-redux"
+import axios from "axios"
+import { Loader } from "lucide-react"
 
 const features = [
   {
@@ -39,76 +41,74 @@ const features = [
 
 function JeeAllIndiaTestSeries() {
   const navigate = useNavigate()
+  const {testId} = useParams()
+
 
   const user = useSelector((state)=> state.user.user)
+  const [quiz, setQuiz] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState({
+    isError : false,
+    message : ""
+  })
 
+  const getQuiz = async () => {
+    setIsLoading(true)
+    try {
+      const res = await axios.get(`https://writo-education-frontend.onrender.com/api/quiz/get-quiz/${testId}`)
+      setQuiz(res.data.quiz)
+      setError({
+        isError : false,
+        message : ""
+      })
+      setIsLoading(false)
+    } catch (error) {
+      setError({
+        isError : true,
+        message : "error while loading the quiz"
+      })
+      setIsLoading(false)
+    }
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if(user?.student_services?.jeeTestSeries === false){
-      navigate("/jee-price")
+    if(user?.student_services?.neetTestSeries === false){
+      navigate("/neet-price")
     }
-  }, []);
+    getQuiz()
+  }, [user]);
 
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
+
+
+  if(isLoading){
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <Loader className="animate-spin h-8 w-8"/>
+      </div>
+    )
+  }
+
+  if(error.isError){
+    return (
+      <div className="h-screen flex items-center justify-center font-bold">
+        {
+          error.message
+        }
+      </div>
+    )
+  }
+
   return (
     <>
-      {/*nav bar */}
-
-      {/* <nav className="bg-[#EFF4F4] w-full">
-    <div className="container mx-auto flex justify-around items-center p-4">
-      <div className="flex items-center">
-        <img src={Writo} alt="Logo" className="h-12 w-12" />
-        <span className="ml-2 text-lg font-bold text-black">Writo Education</span>
-      </div>
-      <div className="hidden md:flex items-center space-x-14">
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search or Start a conversation"
-            className="px-4 py-2 w-80 bg-[#EFF4F4] rounded-full border border-gray-300"
-          />
-          <span className="absolute inset-y-0 right-4 flex items-center text-gray-500">
-            <CiSearch className="w-5 h-5" />
-          </span>
-        </div>
-        <a href="#" className="text-black font-medium">Community</a>
-        <a href="#" className="text-black font-medium">Mentors</a>
-        <a href="#" className="text-black font-medium">Programs</a>
-        <button className="bg-[#5C8D8D] text-white px-4 py-2 rounded-lg">Join now</button>
-      </div>
-      <div className="md:hidden">
-        <button onClick={toggleMenu}>
-          {isOpen ? <FaTimes className="text-black h-6 w-6" /> : <FaBars className="text-black h-6 w-6" />}
-        </button>
-      </div>
-    </div>
-    {isOpen && (
-      <div className="md:hidden bg-[#E2F5F2] p-4">
-        <div className="relative mb-4">
-          <input
-            type="text"
-            placeholder="Search or Start a conversation"
-            className="px-4 py-2 w-full bg-white rounded-full border border-gray-300"
-          />
-          <span className="absolute inset-y-0 right-4 flex items-center text-gray-500">
-            <CiSearch className="w-5 h-5" />
-          </span>
-        </div>
-        <a href="#" className="block text-black px-4 py-2">Community</a>
-        <a href="#" className="block text-black px-4 py-2">Mentors</a>
-        <a href="#" className="block text-black px-4 py-2">Programs</a>
-        <button className="w-full bg-[#5C8D8D] text-white px-4 py-2 rounded-lg mt-2">Join now</button>
-      </div>
-    )}
-  </nav> */}
 
       {/*hero section */}
-      <div className="flex flex-col md:flex-row border p-6 rounded-lg shadow-lg max-w-screen-lg mx-auto mb-6">
+      <div className="flex flex-col md:flex-row border p-6 rounded-lg shadow-lg max-w-screen-lg mx-auto  mb-6">
         <div className="flex-1">
           <h2 className="text-[#488B80] text-xl font-semibold mb-2">
             JEE All India Test Series
@@ -121,17 +121,13 @@ function JeeAllIndiaTestSeries() {
             />
           </div>
           <h3 className="text-lg font-semibold mb-2 text-[#0A7F56]  mt-8">
-            Mock Test – 01
+            {quiz.test_name}
           </h3>
           <div className="mb-4">
             <div className="flex gap-y-3 flex-col lg:flex-row  md:gap-x-12">
               <p className="flex items-center">
-                <MdDateRange className="h-6 w-6  text-gray-600 mr-2" />
-                From 12 June 2024
-              </p>
-              <p className="flex items-center">
                 <TbAddressBook className="h-6 w-6 text-gray-600 mr-2" />
-                180 Questions 720 Marks
+                {quiz.questionsCount} Questions 
               </p>
             </div>
             <p className="flex items-center mt-4">
@@ -141,20 +137,15 @@ function JeeAllIndiaTestSeries() {
           </div>
           <div className="mb-4">
             <h4 className="font-semibold mb-4">Syllabus</h4>
-            <p>
-              Biology<span className="ml-8 mr-4"> -</span>{" "}
+            {quiz.subjects.map((sub) => (
+              <p key={sub}>
+              {sub}<span className="ml-8 mr-4"> -</span>{" "}
               <span className="text-sm">Full syllabus mock questions</span>
             </p>
-            <p>
-              Physics<span className="ml-7 mr-4"> -</span>{" "}
-              <span className="text-sm">Full syllabus mock questions</span>
-            </p>
-            <p>
-              Chemistry<span className="ml-3 mr-3"> -</span>{" "}
-              <span className="text-sm">Full syllabus mock questions</span>
-            </p>
+            ))}
+           
           </div>
-          <Link to={"/test/66bcbf02c6fc8d227f01d422"}>
+          <Link to={`/test/${quiz._id}`}>
             <button className="bg-[#488B80] mt-4 text-white py-2 px-4 rounded">
               Take test
             </button>
@@ -168,9 +159,7 @@ function JeeAllIndiaTestSeries() {
           />
         </div>
       </div>
-
       {/* Why WAITS section */}
-
       <div className="lg:w-[80%] w-full mx-auto p-4">
         <h1 className="text-center text-2xl font-semibold mb-8">
           Why take WAITS?

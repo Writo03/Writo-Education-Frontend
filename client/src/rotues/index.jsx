@@ -237,11 +237,11 @@ const router = createBrowserRouter([
         element: <JeePrice />,
       },
       {
-        path: "neet-all-india-test-series",
+        path: "neet-all-india-test-series/:testId",
         element: <NeetAllIndiaTestseries />,
       },
       {
-        path: "jee-all-india-test-series",
+        path: "jee-all-india-test-series/:testId",
         element: <JeeAllIndiaTestSeries />,
       },
       {
