@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 // Custom Accordion Components
 const Accordion = ({ children, type = "single", className = "" }) => {
@@ -86,6 +87,7 @@ const Profile = () => {
   //   }
   // };
 const user=useSelector((state)=>state.user.user.user)
+const navigate =useNavigate()
   const items = [
     {
       value: "personal-information",
@@ -139,7 +141,19 @@ const user=useSelector((state)=>state.user.user.user)
                     </p>
                   </div>
                 </div>
-                <button className="rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-[#488B80] opacity-0 transition-opacity group-hover:opacity-100">
+                <button className="rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-[#488B80] opacity-0 transition-opacity group-hover:opacity-100"
+                onClick={()=>{
+                  if(service==="neetTestSeries"){
+                    navigate('/neet-price')
+                  }
+                  if(service==="jeeTestSeries"){
+                    navigate('/jee-price')
+                  } 
+                  if(service==="doubtClearing"){
+                    navigate('/doubtsection')
+                  }
+
+                }}>
                   {isActive ? 'Manage' : 'Activate'}
                 </button>
               </div>
