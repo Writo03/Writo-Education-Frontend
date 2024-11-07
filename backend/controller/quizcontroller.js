@@ -20,7 +20,7 @@ const get_quizes = (req, res) => {
 const getQuizesOptimized = async (req, res) => {
     try {
         const {type} = req.params;
-        const quizes = await quizModel.find({type : type}).sort({'createdAt': -1})
+        const quizes = await quizModel.find({test_type : type}).sort({'createdAt': -1})
 
         if(!quizes.length){
             return res.status(404).json({
@@ -42,7 +42,10 @@ const getQuizesOptimized = async (req, res) => {
 const get_quiz = (req, res) => {
     const id = req.params.id;
     quizModel.findById(id)
-        .then(result => res.json(result))
+        .then(result => res.status(200).json({
+            message : "quiz found successfully",
+            quiz : result
+        }))
         .catch(err => res.status(500).json({ error: err.message }));
 }
 

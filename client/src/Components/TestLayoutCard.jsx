@@ -7,7 +7,7 @@ const TestLayoutCard = ({
   testTime = "10.00 am Onwards",
   testQuestions = 200,
   testDuration = "200 minutes",
-  testSubjects = "Maths, Physics, Chemistry",
+  testSubjects = ["Maths", "Physics", "Chemistry"],
   id = "66bcbf02c6fc8d227f01d422",
 }) => {
   return (
@@ -25,12 +25,16 @@ const TestLayoutCard = ({
         </div>
         <div className="flex">
           <span className="w-24 font-semibold">Subjects</span>
-          <span>: {testSubjects}</span>
+          <span className="flex gap-1">
+            {testSubjects.map((sub) => (
+              <span key={sub}>{sub}</span>
+            ))}
+          </span>
         </div>
       </div>
 
       <div className="flex justify-between">
-        <Link to={`/jee-all-india-test-series`}>
+        <Link to={`/neet-all-india-test-series/${id}`}>
           <button className="rounded bg-teal-600 px-4 py-2 font-bold text-white hover:bg-teal-700">
             GoTo Test
           </button>

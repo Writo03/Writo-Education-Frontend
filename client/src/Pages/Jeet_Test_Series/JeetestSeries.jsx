@@ -81,16 +81,14 @@ const JeeTestSeries = () => {
     setIsAllLoading(true);
     try {
       const res = await axios.get(
-        "http://localhost:8080/api/quiz/get-quizes-optimized/jee-all",
+        "https://writo-education-frontend.onrender.com/api/quiz/get-quizes-optimized/jee-all",
       );
-      console.log(res.data);
       setAllError({
         isError: false,
         message: "",
       });
       setAllTest(res.data.quizes);
     } catch (error) {
-      console.log(error);
       setAllError({
         isError: true,
         message: error.response.data.message,
@@ -103,16 +101,14 @@ const JeeTestSeries = () => {
     setIsSubjectLoading(true);
     try {
       const res = await axios.get(
-        "http://localhost:8080/api/quiz/get-quizes-optimized/jee-subject",
+        "https://writo-education-frontend.onrender.com/api/quiz/get-quizes-optimized/jee-subject",
       );
-      console.log(res.data);
       setSubjectError({
         isError: false,
         message: "",
       });
       setSubjectTest(res.data.quizes);
     } catch (error) {
-      console.log(error);
       setSubjectError({
         isError: true,
         message: error.response.data.message,
@@ -190,7 +186,15 @@ const JeeTestSeries = () => {
       <h1 className="mb-8 mt-4 text-center text-2xl font-semibold text-[#488B80]">
         Subject wise All India Test series
       </h1>
-      <Cart />
+      {
+        isSubjectLoading ? (
+          <Loader className="h-8 w-8 animate-spin" />
+        ) : (
+          subjectError.isError ? (
+            <div>{subjectError.message}</div>
+          ) : <Cart data={subjectTest}/>
+        )
+      }
 
       {/* Why WAITS section */}
       <div className="container mx-auto mt-8 p-4">
