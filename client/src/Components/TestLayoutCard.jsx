@@ -13,8 +13,6 @@ const TestLayoutCard = ({
   return (
     <div className="w-full overflow-hidden rounded-lg bg-white p-6 shadow-lg md:w-[45%] lg:w-[30%]">
       <h2 className="mb-2 text-2xl font-bold text-[#07744E]">{testTitle}</h2>
-      <p className="mb-1 text-black">Conducted from {testDate}</p>
-      <p className="mb-4 text-black">{testTime}</p>
 
       <div className="mb-6 space-y-2">
         <div className="flex">
