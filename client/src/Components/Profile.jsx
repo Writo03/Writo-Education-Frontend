@@ -150,7 +150,7 @@ const navigate =useNavigate()
                     navigate('/jee-price')
                   } 
                   if(service==="doubtClearing"){
-                    navigate('/doubtsection')
+                    navigate('/doubtcourses')
                   }
 
                 }}>
