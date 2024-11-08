@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaUser,
   FaMoneyBillWave,
@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 // Custom Accordion Components
 const Accordion = ({ children, type = "single", className = "" }) => {
@@ -86,8 +86,23 @@ const Profile = () => {
   //     doubtClearing: false
   //   }
   // };
-const user=useSelector((state)=>state.user.user.user)
+const user=useSelector((state)=>state.user?.user?.user)
 const navigate =useNavigate()
+const auth =useSelector((state) =>state.user.isAuthorized )
+
+useEffect(() => {
+
+  if(!auth){
+    console.log(auth)
+  navigate('/email')
+  }
+ 
+}, [])
+
+if(!auth){
+  console.log(auth)
+navigate('/email')
+}
   const items = [
     {
       value: "personal-information",
@@ -185,7 +200,7 @@ const navigate =useNavigate()
     //   ),
     // },
   ];
-
+ 
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Profile Header */}

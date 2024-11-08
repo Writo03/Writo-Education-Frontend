@@ -9,6 +9,7 @@ import { userlogin } from "../redux/userSlice.js";
 import { useNavigate } from 'react-router-dom';
 export default function Hero3() {
     const user = useSelector((state) => state.user.user.user);
+    const auth =useSelector((state) =>state.user.isAuthorized )
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [price, setPrice] = React.useState(99); // Set the appropriate price
@@ -41,7 +42,7 @@ export default function Hero3() {
           }
         },
         prefill: {
-        //   "contact": user.phoneNo
+          "contact": user.phoneNo
         },
         theme: {
           color: "#3399cc",
@@ -52,6 +53,9 @@ export default function Hero3() {
     };
   
     const handlePayment = async () => {
+        if(!auth){
+            navigate('/email')
+        }
       try {
         const orderUrl = `https://writo-education-frontend.onrender.com/api/payment/orders`;
         // const orderUrl = `http://localhost:8080/api/payment/orders`;
