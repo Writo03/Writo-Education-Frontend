@@ -13,7 +13,6 @@ function HeroSlider({ items }) {
       style={{
         "--swiper-navigation-color": "#488B80",
         "--swiper-pagination-color": "#488B80",
-        "--swiper-pagination-bullet-size": isMobile() ? "8px" : "12px",
         "--swiper-navigation-size": isMobile() ? "25px" : "35px",
       }}
       autoplay={true}
@@ -26,11 +25,11 @@ function HeroSlider({ items }) {
       className="mySwiper h-full w-full"
     >
       {items.map((item, idx) => (
-        <SwiperSlide key={idx} className="lg:group h-full w-full pb-6 md:pb-8">
+        <SwiperSlide key={idx} className="group h-full w-full">
           <img
             src={item}
             alt={`Slider ${idx}`}
-            className="h-full w-full object-cover object-center lg:transition-all lg:duration-700 lg:ease-in-out lg:group-hover:scale-[1.2]"
+            className="h-full w-full object-cover object-center lg:transition-all lg:duration-700 lg:ease-in-out lg:group-hover:scale-[1.01]"
           />
         </SwiperSlide>
       ))}
