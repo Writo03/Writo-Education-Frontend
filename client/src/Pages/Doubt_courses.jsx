@@ -1,11 +1,10 @@
 import React,{useEffect} from 'react'
 import Hero3 from '../Components_2/Hero3'
-import NavScrollExample from '../Components_2/NavScrollExample'
 import ConnectCoaches from '../Components_2/ConnectCoaches'
 import Contactus from '../Components_2/Contactus'
-import Navvv from '../Components_2/Navvv'
 import GetMore from '../Components_2/GetMore'
-import Navbar from '../Components/Navbar'
+import { ToastContainer, toast } from 'react-toastify';
+
 import blue from  '../assets/blue.png'
 
 export default function Doubt_courses() {
@@ -28,6 +27,7 @@ export default function Doubt_courses() {
           </div>
           <GetMore/>
           <Contactus />
+          <ToastContainer/>
     </div>
   )
 }

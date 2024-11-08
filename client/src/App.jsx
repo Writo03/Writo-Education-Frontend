@@ -103,7 +103,7 @@ function App() {
         <Route path="/jobform" element={<JobForm />} />
         <Route path="/sgp" element={<SGP />} />
         <Route path="/doubtcourses" element={<Doubt_courses />} />
-        <Route path="/doubtsection" element={<DoubtSection />} />
+        {/* <Route path="/doubtsection" element={<DoubtSection />} /> */}
 
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<Blog />} />
