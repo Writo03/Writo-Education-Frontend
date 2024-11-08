@@ -120,9 +120,9 @@ const JeeTestSeries = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    // if(user?.student_services?.jeeTestSeries === false){
-    //   navigate("/jee-price")
-    // }
+    if(user?.student_services?.jeeTestSeries === false){
+      navigate("/jee-price")
+    }
     getAllTest();
     getAllSubject();
   }, [user]);
