@@ -1,5 +1,5 @@
 const quizModel = require('../models/quiz')
-const UserModel = require('../models/User')
+const UserModel = require('../models/UserModel.js')
 const mongoose = require('mongoose')
 // Schema for the user tests
 const testSchema = mongoose.Schema({
@@ -53,7 +53,6 @@ const get_quiz = (req, res) => {
 const submit_quiz = async (req, res) => {
     const userId = req.params.id;
     const test = req.body;
-    
     try {
         const user = await UserModel.findById(userId);
         if (!user) return res.status(404).json({ message: 'User not found' });

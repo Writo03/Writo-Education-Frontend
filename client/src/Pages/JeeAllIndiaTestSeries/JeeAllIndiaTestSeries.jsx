@@ -1,15 +1,11 @@
 import studyTimeImg from "../../assets/allindiatest.png"
 import vectoeImg from "../../assets/Vector 515.png"
-import { MdDateRange } from "react-icons/md"
 import { TbAddressBook } from "react-icons/tb"
 import { IoMdTime } from "react-icons/io"
 import Whywaits1 from "../../assets/whywaits1.png"
 import Whywaits2 from "../../assets/whywaits2.png"
 import Whywaits3 from "../../assets/whywaits3.png"
 import Contactus from "../../Components/Contactus"
-import Writo from "../../assets/Clip path group.png"
-import { CiSearch } from "react-icons/ci"
-import { FaBars, FaTimes } from "react-icons/fa"
 import { useState, useEffect } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { useSelector } from "react-redux"
@@ -79,11 +75,6 @@ function JeeAllIndiaTestSeries() {
     getQuiz()
   }, [user]);
 
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
 
 
   if(isLoading){
@@ -132,21 +123,23 @@ function JeeAllIndiaTestSeries() {
             </div>
             <p className="flex items-center mt-4">
               <IoMdTime className="h-6 w-6 text-gray-600  mr-2" />
-              200 minutes
+              {quiz.time || 180} minutes
             </p>
           </div>
           <div className="mb-4">
-            <h4 className="font-semibold mb-4">Syllabus</h4>
+            <h4 className="font-semibold mb-4">Subjects</h4>
             {quiz.subjects.map((sub) => (
               <p key={sub}>
-              {sub}<span className="ml-8 mr-4"> -</span>{" "}
-              <span className="text-sm">Full syllabus mock questions</span>
+              {sub}
             </p>
             ))}
+            <div>
+              {quiz.description}
+            </div>
            
           </div>
           <Link to={`/test/${quiz._id}`}>
-            <button className="bg-[#488B80] mt-4 text-white py-2 px-4 rounded">
+            <button onClick={() => localStorage.setItem("quizStartTime", Date.now().toString())} className="bg-[#488B80] mt-4 text-white py-2 px-4 rounded">
               Take test
             </button>
           </Link>

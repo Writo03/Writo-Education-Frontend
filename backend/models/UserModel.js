@@ -1,5 +1,21 @@
 const mongoose = require('mongoose');
 
+const subSchema = mongoose.Schema({
+    question: String,
+    option1: String,
+    option2: String,
+    option3: String,
+    option4: String,
+    correct_option: String,
+    choosen_option: String,
+  });
+  
+  const test = mongoose.Schema({
+    test_id: String,
+    score: Number,
+    results: [subSchema],
+  });
+
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -68,7 +84,8 @@ const userSchema = new mongoose.Schema({
             type : Boolean,
             default : false
         }
-    }
+    },
+    tests: [test],
   
 }, {
     timestamps: true

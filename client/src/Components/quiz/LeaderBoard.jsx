@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Navbar from "../../Chatpages/Navbar"
 import axios from "axios"
+import { useSelector } from "react-redux"
 
 const LeaderBoard = () => {
   const { id } = useParams()
@@ -14,6 +15,8 @@ const LeaderBoard = () => {
   const [rank, setRank] = useState(null)
   const [highestScore, setHighestScore] = useState(null)
   const [taken, setTaken] = useState(false)
+
+  const user = useSelector((state) => state.user.user)
 
   // Define getOptionClass before it is used
   const getOptionClass = (option, correctOption, selectedOption) => {
@@ -35,16 +38,8 @@ const LeaderBoard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const token = localStorage.getItem("token")
-        const userResponse = await axios.get(
-          "https://writo-education-frontend.onrender.com/api/me",
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        )
-        const userId = userResponse.data.id
+        
+        const userId = user.id
 
         // Check if the user has taken the test
         const checkTest = await axios.get(

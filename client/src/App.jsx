@@ -142,7 +142,7 @@ function App() {
         />
         <Route path="/test_series" element={<Test_Series />} />
         <Route path="/test/:id" element={<Protected><Test /></Protected>} />
-        <Route path="/leaderboard/:id" element={<LeaderBoard />} />
+        <Route path="/leaderboard/:id" element={<Protected><LeaderBoard /></Protected>} />
       </Route>
 
       {/*  */}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
 const Test = () => {
@@ -26,37 +27,40 @@ const Test = () => {
   const [timeLeft, setTimeLeft] = useState(120);
   const navigate = useNavigate();
 
+  const user = useSelector((state) => state.user.user)
+
+
+
   // --- New state for enhanced UI ---
-  const [sections] = useState(["Quant", "Verbal"]); // Add sections for CAT prep
-  const [currentSection, setCurrentSection] = useState("Quant");
-  const [questionStatuses, setQuestionStatuses] = useState([]);
+  // const [sections] = useState(["Quant", "Verbal"]); // Add sections for CAT prep
+  // const [currentSection, setCurrentSection] = useState("Quant");
+  // const [questionStatuses, setQuestionStatuses] = useState([]);
   const [showInstructions, setShowInstructions] = useState(false);
 
   // Initialize question statuses when data loads
-  useEffect(() => {
-    if (data?.questions) {
-      setQuestionStatuses(
-        data.questions.map(() => ({
-          answered: false,
-          marked: false,
-          current: false,
-        })),
-      );
-    }
-  }, [data]);
+  // useEffect(() => {
+  //   if (data?.questions) {
+  //     setQuestionStatuses(
+  //       data.questions.map(() => ({
+  //         answered: false,
+  //         marked: false,
+  //         current: false,
+  //       })),
+  //     );
+  //   }
+  // }, [data]);
 
   // --- Existing timer logic ---
   useEffect(() => {
     const storedStartTime = localStorage.getItem("quizStartTime");
-    const storedIndex = parseInt(localStorage.getItem("quizCurrentIndex"), 10);
 
-    if (storedStartTime && storedIndex === currentIndex) {
+    if (storedStartTime) {
       const elapsedTime = Math.floor((Date.now() - storedStartTime) / 1000);
-      const remainingTime = Math.max(120 - elapsedTime, 0);
+      const remainingTime = Math.max((data?.time || 180) *60 - elapsedTime, 0);
       setTimeLeft(remainingTime);
     } else {
       localStorage.setItem("quizStartTime", Date.now().toString());
-      setTimeLeft(120);
+      setTimeLeft((data?.time || 180) * 60);
     }
 
     const timerInterval = setInterval(() => {
@@ -64,7 +68,7 @@ const Test = () => {
         const newTimeLeft = prev - 1;
         if (newTimeLeft <= 0) {
           clearInterval(timerInterval);
-          handleNext();
+          handleSubmit();
           return 0;
         }
         return newTimeLeft;
@@ -72,7 +76,7 @@ const Test = () => {
     }, 1000);
 
     return () => clearInterval(timerInterval);
-  }, [currentIndex]);
+  }, [data]);
 
   // --- Existing data fetching logic ---
   useEffect(() => {
@@ -82,7 +86,6 @@ const Test = () => {
       )
       .then((response) => {
         const quizData = response.data.quiz;
-        console.log(quizData);
         setData(quizData);
         if (quizData.questions.length > 0) {
           const firstQuestion = quizData.questions[0];
@@ -105,11 +108,11 @@ const Test = () => {
   // --- Enhanced option change handler ---
   const handleOptionChange = (option) => {
     setChoosen(option);
-    setQuestionStatuses((prev) =>
-      prev.map((status, idx) =>
-        idx === currentIndex ? { ...status, answered: true } : status,
-      ),
-    );
+    // setQuestionStatuses((prev) =>
+    //   prev.map((status, idx) =>
+    //     idx === currentIndex ? { ...status, answered: true } : status,
+    //   ),
+    // );
   };
 
   // --- Existing next handler with status update ---
@@ -176,9 +179,6 @@ const Test = () => {
       } else {
         setChoosen("");
       }
-      localStorage.setItem("quizCurrentIndex", nextIndex.toString());
-      localStorage.setItem("quizStartTime", Date.now().toString());
-      setTimeLeft(120);
     } else {
       setIsFinished(true);
     }
@@ -198,39 +198,19 @@ const Test = () => {
       setOption4(prevQuestion.option4);
       setCorrect(prevQuestion.correct);
       setChoosen(result.results[prevIndex].choosen_option);
-      localStorage.setItem("quizCurrentIndex", prevIndex.toString());
-      localStorage.setItem("quizStartTime", Date.now().toString());
-      setTimeLeft(120);
     }
   };
 
-  const handleMarkForReview = () => {
-    setQuestionStatuses((prev) =>
-      prev.map((status, idx) =>
-        idx === currentIndex ? { ...status, marked: !status.marked } : status,
-      ),
-    );
-  };
 
   // --- Existing submit handler ---
   const handleSubmit = async () => {
     try {
-      const token = localStorage.getItem("token");
-      const userResponse = await axios.get(
-        "https://writo-education-frontend.onrender.com/api/me",
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        },
-      );
-      const userId = userResponse.data.id;
+      const userId = user.id;
 
       const resultResponse = await axios.post(
-        `https://writo-education-frontend.onrender.com/api/quiz/submit-quiz/${userId}`,
+        `http://localhost:8080/api/quiz/submit-quiz/${userId}`,
         result,
       );
-      console.log("Submit Response:", resultResponse.data);
       alert("Quiz submitted successfully!");
       navigate("/");
     } catch (error) {
@@ -270,9 +250,12 @@ const Test = () => {
           <h1 className="text-2xl font-bold">Writo - Online Test</h1>
           <div className="flex items-center space-x-4">
             <div className="text-lg font-semibold">
-              Time Left: {Math.floor(timeLeft / 60)}:
-              {timeLeft % 60 < 10 ? "0" : ""}
-              {timeLeft % 60}
+              Time Left: 
+              {Math.floor(timeLeft / 60 / 60)}:{// hours
+              (timeLeft / 60) % 60 < 10 ? "0" : ""}{// minutes
+              Math.floor(timeLeft / 60) % 60}:{// seconds
+              timeLeft % 60 < 10 ? "0" : ""}{// seconds
+              timeLeft % 60}
             </div>
           </div>
         </div>
@@ -292,7 +275,7 @@ const Test = () => {
                   {/* Question header */}
                   <div className="mb-6">
                     <h2 className="text-xl font-semibold">
-                      {currentSection} - Question {currentIndex + 1}
+                      Question {currentIndex + 1}
                     </h2>
                   </div>
 
@@ -356,17 +339,10 @@ const Test = () => {
                     </button>
 
                     <button
-                      onClick={handleMarkForReview}
-                      className="rounded-lg border-2 border-yellow-500 px-6 py-2 text-yellow-500 hover:bg-yellow-50"
-                    >
-                      Mark for Review
-                    </button>
-
-                    <button
                       onClick={handleNext}
                       className="rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-700"
                     >
-                      Next
+                      {data.questions.length === currentIndex + 1 ? "Submit" : "Next"} 
                     </button>
                   </div>
                 </>

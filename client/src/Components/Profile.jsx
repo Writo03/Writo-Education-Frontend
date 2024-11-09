@@ -86,7 +86,7 @@ const Profile = () => {
   //     doubtClearing: false
   //   }
   // };
-const user=useSelector((state)=>state.user?.user?.user)
+const user=useSelector((state)=>state.user?.user)
 const navigate =useNavigate()
 const auth =useSelector((state) =>state.user.isAuthorized )
 
