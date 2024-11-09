@@ -208,7 +208,7 @@ const Test = () => {
       const userId = user.id;
 
       const resultResponse = await axios.post(
-        `http://localhost:8080/api/quiz/submit-quiz/${userId}`,
+        `https://writo-education-frontend.onrender.com/api/quiz/submit-quiz/${userId}`,
         result,
       );
       alert("Quiz submitted successfully!");
